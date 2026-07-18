@@ -11,7 +11,7 @@
 | Three-fresh-call repeat stability | Frozen 90/270 design inputs and nine provider score snapshots in `experiments/api_repeat_stability/` | `experiments/api_repeat_stability/analyze_repeat_stability.py` | `repeat_call_status_2430.csv`, provider/panel/variance tables and JSON report |
 | Reader experiment | `analysis/public_abc_cleaned_long.csv` | `scripts/recompute_public_from_release.py` | `analysis/public_abc_analysis_results.json` |
 | Exact 18-text API--reader bridge | Inputs, mapping, nine provider score snapshots and merged 162-row table in `experiments/api_reader_bridge_18/` | `qa_inputs.py`, `analyze_reader_bridge.py` | bridge cells, associations, version summary and JSON report |
-| Controlled A/B failure probes | `analysis/controlled_ab_*`, `analysis/difference_survey_cleaned_long.csv` | `scripts/recompute_public_from_release.py` | controlled-case summary and results JSON |
+| Controlled A/B failure probes | `analysis/controlled_ab_judge_dimension_scores.csv`, `analysis/controlled_ab_machine_judge_case_long.csv`, `analysis/controlled_ab_pair_text_crosswalk.csv`, `analysis/difference_survey_cleaned_long.csv` | `scripts/recompute_public_from_release.py` | controlled-case summary and results JSON |
 | Figures 1--4 | `output/figures/source_data/` | four current `scripts/make_*` files named in the root README | PDF/PNG (and Fig. 1 SVG) under `output/figures/` |
 
 ## Scope of reproducibility

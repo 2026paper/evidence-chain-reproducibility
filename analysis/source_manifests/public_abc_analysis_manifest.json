@@ -55,14 +55,26 @@
   "randomization_adherence": "10 anonymous participant clusters appear across forms in the final data; primary retains all eligible responses with participant-clustered GEE and the fixed single-form sensitivity",
   "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes.",
   "script": {
-    "path": "ADMA2026_重构稿\\scripts\\public_questionnaire_analyses.py",
+    "bytes": 94693,
+    "path": "scripts/public_questionnaire_analyses.py",
     "sha256": "38830e2ac56e86cbbf1818cf3734c92cf680a6e8bb089a92d73876353b2772ba"
   },
   "semantic_crosswalk": {
-    "audit_path": "ADMA2026_重构稿\\analysis\\public_semantic_crosswalk_audit.json",
-    "audit_sha256": "b238f674cc7bef6de8e0528bc730003b0a7a5a1163199855a5fe8d7774d767ec",
-    "path": "ADMA2026_重构稿\\analysis\\public_semantic_crosswalk.csv",
-    "sha256": "868b0c627b1cb65a1779ca6a6d24863c945cf8cc33ef1f6024dac50c14f9e940",
+    "audit": {
+      "bytes": 14627,
+      "path": "analysis/public_semantic_crosswalk_audit.json",
+      "sha256": "76312131c605c002c6cf454436ade86f7f272382caa0ebc9cbbe405cc0a0248a"
+    },
+    "full_text_release": {
+      "bytes": 42272,
+      "path": "materials/public_semantic_crosswalk_full.csv",
+      "sha256": "3435888ce38e1d8358dbb16b7ee417d02b15883e7c10bd25c040ddb4b50be6ba"
+    },
+    "hash_release": {
+      "bytes": 31895,
+      "path": "analysis/public_semantic_crosswalk_hash_release.csv",
+      "sha256": "a08d283287d267aafd4119c951bc0ef687259e45a999212c4fcca701e2d2b696"
+    },
     "status": "18/18 form-material mappings to six traced upstream disagreement cases; adaptations are not exact texts"
   },
   "software": {
@@ -77,24 +89,42 @@
   "source_mapping_status": "completed_18_of_18_to_six_upstream_disagreement_cases_nonexact_lay_adaptations",
   "sources": {
     "A": {
+      "availability": "withheld_by_design",
       "columns": 51,
       "file": "A.xlsx",
+      "released_instrument": {
+        "bytes": 7565,
+        "path": "materials/public_form_A_instrument.txt",
+        "sha256": "7fa06d7710adda9ded2d616b0df789f81718b2f82e9b6d0c82d1266b54a34588"
+      },
       "reported_dimension_before_reset": "A1:A1",
       "rows": 60,
       "sha256": "75007e42e4e20b32c90e7014b65beb994b91a6547da69ef15e050fec8db6f8ff",
       "worksheet": "TextData_20260712223133_1"
     },
     "B": {
+      "availability": "withheld_by_design",
       "columns": 51,
       "file": "B.xlsx",
+      "released_instrument": {
+        "bytes": 8424,
+        "path": "materials/public_form_B_instrument.txt",
+        "sha256": "cfc507f351f651223b7810f0da553ac388672f419ac4ebafeb7198636cd73e28"
+      },
       "reported_dimension_before_reset": "A1:A1",
       "rows": 60,
       "sha256": "8651fb359593c1a85c6807fff03849886c8f2cfa6c7ccaa8eba8fb58b76299fc",
       "worksheet": "TextData_20260712224215_1"
     },
     "C": {
+      "availability": "withheld_by_design",
       "columns": 51,
       "file": "C.xlsx",
+      "released_instrument": {
+        "bytes": 9021,
+        "path": "materials/public_form_C_instrument.txt",
+        "sha256": "cf175ec0b7806356fb7014d0c422e1764c950622f9968aadc3a5de2acbc232f3"
+      },
       "reported_dimension_before_reset": "A1:A1",
       "rows": 60,
       "sha256": "149b8307c10838cd56cd812218c73e0130d3307bc4d3f711e33aeabd478e8da4",

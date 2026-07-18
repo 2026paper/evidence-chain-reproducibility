@@ -87,66 +87,138 @@
   },
   "inputs": {
     "case_disagreement_examples": {
-      "bytes": 4706,
-      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/main_study_data/case_disagreement_examples.csv",
-      "sha256": "be80b5f4c5822e619f6641ebcf584dc9c54e95a3c6ecafa87d86873f3e5f8801"
+      "availability": "incorporated_into_released_crosswalk",
+      "released_in": [
+        {
+          "bytes": 31895,
+          "path": "analysis/public_semantic_crosswalk_hash_release.csv",
+          "sha256": "a08d283287d267aafd4119c951bc0ef687259e45a999212c4fcca701e2d2b696"
+        },
+        {
+          "bytes": 42272,
+          "path": "materials/public_semantic_crosswalk_full.csv",
+          "sha256": "3435888ce38e1d8358dbb16b7ee417d02b15883e7c10bd25c040ddb4b50be6ba"
+        }
+      ],
+      "source_bytes": 4706,
+      "source_label": "case_disagreement_examples.csv",
+      "source_sha256": "be80b5f4c5822e619f6641ebcf584dc9c54e95a3c6ecafa87d86873f3e5f8801"
     },
     "controlled_exact_api_scores": {
-      "bytes": 74418,
-      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/diagnostics/official_ab_judge_run_20260521_155532/official_ab_judge_scores_long_with_metadata.csv",
-      "sha256": "7e9428aa52570e5d5c34d0e4e55acba1c978f167199850e25414489b395c8c3d"
+      "availability": "released_as_derived_case_table",
+      "release": {
+        "bytes": 8779,
+        "path": "analysis/controlled_ab_machine_judge_case_long.csv",
+        "sha256": "6844fa35a44ba3d7a38df955cf42202a4c918434681e5e609f45babffe6397ec"
+      },
+      "source_bytes": 74418,
+      "source_label": "official_ab_judge_scores_long_with_metadata.csv",
+      "source_sha256": "7e9428aa52570e5d5c34d0e4e55acba1c978f167199850e25414489b395c8c3d"
     },
     "controlled_pairs": {
-      "bytes": 6069,
-      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/diagnostics/controlled_ab_pairs_for_llm_judge.json",
-      "sha256": "2d6119c4a34843f957c653fb5eae71a327ece89d9dbdf07b0235d33111df0ba0"
+      "availability": "released",
+      "release": {
+        "bytes": 5980,
+        "path": "materials/controlled_ab_pairs_full.json",
+        "sha256": "0a680625eea996764e4a60cc27ecd2fc18430448579a18be92f4c222b61c2dac"
+      },
+      "source_bytes": 6069,
+      "source_label": "controlled_ab_pairs_for_llm_judge.json",
+      "source_sha256": "2d6119c4a34843f957c653fb5eae71a327ece89d9dbdf07b0235d33111df0ba0"
     },
     "generated_items_810": {
-      "bytes": 708658,
-      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/main_study_data/generated_items_810.csv",
-      "sha256": "75c32947f916973ab9c2b03e496df77411b41699c1a01adbe4a42771f64024be"
+      "availability": "released",
+      "release": {
+        "bytes": 707847,
+        "path": "materials/generated_items_810.csv",
+        "sha256": "e850c3e14cbb61edc05ae3bd2dc549d3ec7670db4ef1d9058c6bf5684e5431ce"
+      },
+      "source_bytes": 708658,
+      "source_label": "generated_items_810.csv",
+      "source_sha256": "75c32947f916973ab9c2b03e496df77411b41699c1a01adbe4a42771f64024be"
     },
     "public_instrument_A": {
-      "bytes": 7429,
-      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/rebuttal_update_20260714/auxiliary_surveys/instruments/public_reader_A_instrument_zh.txt",
-      "sha256": "446d98fe5b4fc4feb68f226506f2c7ab9d50dbf11f078c4c11ed3fd90a7e408f"
+      "availability": "released",
+      "release": {
+        "bytes": 7565,
+        "path": "materials/public_form_A_instrument.txt",
+        "sha256": "7fa06d7710adda9ded2d616b0df789f81718b2f82e9b6d0c82d1266b54a34588"
+      },
+      "source_bytes": 7429,
+      "source_label": "public_reader_A_instrument_zh.txt",
+      "source_sha256": "446d98fe5b4fc4feb68f226506f2c7ab9d50dbf11f078c4c11ed3fd90a7e408f"
     },
     "public_instrument_B": {
-      "bytes": 8283,
-      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/rebuttal_update_20260714/auxiliary_surveys/instruments/public_reader_B_instrument_zh.txt",
-      "sha256": "51cbe65be4b4ff68b2be188932b4c0b750431f751869ec9bde7162e0ba7c5dba"
+      "availability": "released",
+      "release": {
+        "bytes": 8424,
+        "path": "materials/public_form_B_instrument.txt",
+        "sha256": "cfc507f351f651223b7810f0da553ac388672f419ac4ebafeb7198636cd73e28"
+      },
+      "source_bytes": 8283,
+      "source_label": "public_reader_B_instrument_zh.txt",
+      "source_sha256": "51cbe65be4b4ff68b2be188932b4c0b750431f751869ec9bde7162e0ba7c5dba"
     },
     "public_instrument_C": {
-      "bytes": 8880,
-      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/rebuttal_update_20260714/auxiliary_surveys/instruments/public_reader_C_instrument_zh.txt",
-      "sha256": "efad8846997dfa24556d41bdb88aec644681d06356c2d087a7795caaa1a42d19"
+      "availability": "released",
+      "release": {
+        "bytes": 9021,
+        "path": "materials/public_form_C_instrument.txt",
+        "sha256": "cf175ec0b7806356fb7014d0c422e1764c950622f9968aadc3a5de2acbc232f3"
+      },
+      "source_bytes": 8880,
+      "source_label": "public_reader_C_instrument_zh.txt",
+      "source_sha256": "efad8846997dfa24556d41bdb88aec644681d06356c2d087a7795caaa1a42d19"
     },
     "raw_A_workbook": {
-      "bytes": 24571,
-      "path": "数据与问卷源文件/A.xlsx",
-      "sha256": "75007e42e4e20b32c90e7014b65beb994b91a6547da69ef15e050fec8db6f8ff"
+      "availability": "withheld_by_design",
+      "reason": "Raw platform workbook; de-identified analysis data and the visible instrument are released separately.",
+      "source_bytes": 24571,
+      "source_label": "A.xlsx",
+      "source_sha256": "75007e42e4e20b32c90e7014b65beb994b91a6547da69ef15e050fec8db6f8ff"
     },
     "raw_B_workbook": {
-      "bytes": 25313,
-      "path": "数据与问卷源文件/B.xlsx",
-      "sha256": "8651fb359593c1a85c6807fff03849886c8f2cfa6c7ccaa8eba8fb58b76299fc"
+      "availability": "withheld_by_design",
+      "reason": "Raw platform workbook; de-identified analysis data and the visible instrument are released separately.",
+      "source_bytes": 25313,
+      "source_label": "B.xlsx",
+      "source_sha256": "8651fb359593c1a85c6807fff03849886c8f2cfa6c7ccaa8eba8fb58b76299fc"
     },
     "raw_C_workbook": {
-      "bytes": 25509,
-      "path": "数据与问卷源文件/C.xlsx",
-      "sha256": "149b8307c10838cd56cd812218c73e0130d3307bc4d3f711e33aeabd478e8da4"
+      "availability": "withheld_by_design",
+      "reason": "Raw platform workbook; de-identified analysis data and the visible instrument are released separately.",
+      "source_bytes": 25509,
+      "source_label": "C.xlsx",
+      "source_sha256": "149b8307c10838cd56cd812218c73e0130d3307bc4d3f711e33aeabd478e8da4"
     },
     "raw_difference_workbook": {
-      "bytes": 31905,
-      "path": "数据与问卷源文件/差异.xlsx",
-      "sha256": "b7b21ad2d0dae1a15832417b5785591e87eeea2684d0fe68788eb3f7b3352f34"
+      "availability": "withheld_by_design",
+      "reason": "Raw platform workbook; de-identified analysis data and the visible instrument are released separately.",
+      "source_bytes": 31905,
+      "source_label": "difference_survey.xlsx",
+      "source_sha256": "b7b21ad2d0dae1a15832417b5785591e87eeea2684d0fe68788eb3f7b3352f34"
     }
   },
   "outputs": {
-    "audit_json": "ADMA2026_重构稿/analysis/public_semantic_crosswalk_audit.json",
-    "audit_markdown": "ADMA2026_重构稿/notes/public_semantic_crosswalk_audit.md",
-    "candidate_csv": "ADMA2026_重构稿/analysis/public_semantic_crosswalk_candidates.csv",
-    "crosswalk_csv": "ADMA2026_重构稿/analysis/public_semantic_crosswalk.csv"
+    "audit_json": {
+      "path": "analysis/public_semantic_crosswalk_audit.json",
+      "self_hash_omitted": true
+    },
+    "candidate_csv": {
+      "bytes": 27642,
+      "path": "analysis/public_semantic_crosswalk_candidates.csv",
+      "sha256": "1ae83ac095b3046ee360f8b44c1fa38a927b099badffb026384d664be941687a"
+    },
+    "full_text_crosswalk_csv": {
+      "bytes": 42272,
+      "path": "materials/public_semantic_crosswalk_full.csv",
+      "sha256": "3435888ce38e1d8358dbb16b7ee417d02b15883e7c10bd25c040ddb4b50be6ba"
+    },
+    "hash_crosswalk_csv": {
+      "bytes": 31895,
+      "path": "analysis/public_semantic_crosswalk_hash_release.csv",
+      "sha256": "a08d283287d267aafd4119c951bc0ef687259e45a999212c4fcca701e2d2b696"
+    }
   },
   "privacy": {
     "output_contains_only_instrument_text_and_scientific_item_ids": true,

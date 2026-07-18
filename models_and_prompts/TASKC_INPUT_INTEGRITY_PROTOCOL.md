@@ -1,17 +1,15 @@
-# Corrected Task-C input-integrity protocol
+# One-shot matrix input-integrity provenance
 
-Each Task-C item must expose the following semantic fields to the judge before any API call:
+The released historical scoring matrix is a fixed one-shot snapshot with one authoritative retained score row for each of 810 items evaluated by nine judges (7,290 item-judge rows). It is evidence about agreement among judges under the recorded single-call conditions; it is not repeat-call stability evidence.
 
-1. complete question stem;
-2. options A, B, C, and D;
-3. the correct answer label together with its option text;
-4. the generated explanation;
-5. task/domain/concept context used by the judging prompt;
-6. no generator identity in the judged content block.
+The reviewer-facing provenance chain is:
 
-The offline audit rejects a payload when any required field is absent, the rendered block is below the minimum length, the block collapses to an answer label, a source-item mapping is not one-to-one, or the source/rendered hashes do not match the retained manifest. Output validation separately checks parseability, required score keys, numeric values, and the 1–5 range. Attempt rows and retained final rows are stored separately; a retry never becomes an additional authoritative row.
+- `materials/generated_items_810.csv`: normalized scientific item and stimulus content;
+- `data/40_GitHub/rebuttal_update_20260714/api_test_scores_7290.csv`: the frozen one-shot score matrix and its retained provenance and hash fields;
+- `analysis/api_stimulus_equivalence_810.csv`: task-aware rendered-stimulus signatures and equivalence audit;
+- `models_and_prompts/judge_system_prompt.txt` and `models_and_prompts/judge_user_prompt_template.txt`: the released judging instructions;
+- `models_and_prompts/taskc_run_inventory.csv`: credential-free run-level provenance extracted from the locked run manifests.
 
-`data/taskc_test_inputs_270.csv` contains the exact task-aware content blocks. `data/taskc_payload_audit_270.csv` contains the 270 item-level decisions. The final prompt hash for every corrected Task-C item–judge pair is in `data/api_test_scores_7290.csv`.
+The `api_source_regime` values in the released matrix are frozen internal provenance codes that distinguish the recorded input regimes used for Tasks A/B and Task C. They are not experimental conditions, quality labels, or scientific conclusions. All 7,290 retained rows passed the declared input-integrity checks and the six-score output-schema checks before inclusion in the matrix.
 
-This protocol establishes semantic input completeness and output-schema validity only. It does not establish construct validity or the scientific correctness of any individual score.
-
+The normalized item archive is not a raw provider HTTP payload. Credentials, raw attempt logs, provider payloads, and unsuccessful retries are withheld. This note establishes traceable input provenance and score-schema validity only; it does not establish construct validity or the scientific correctness of any individual score.

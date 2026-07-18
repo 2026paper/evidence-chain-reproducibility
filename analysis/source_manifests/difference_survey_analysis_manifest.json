@@ -27,14 +27,26 @@
   },
   "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes.",
   "script": {
-    "path": "ADMA2026_重构稿\\scripts\\public_questionnaire_analyses.py",
+    "bytes": 94693,
+    "path": "scripts/public_questionnaire_analyses.py",
     "sha256": "38830e2ac56e86cbbf1818cf3734c92cf680a6e8bb089a92d73876353b2772ba"
   },
   "semantic_crosswalk": {
-    "audit_path": "ADMA2026_重构稿\\analysis\\public_semantic_crosswalk_audit.json",
-    "audit_sha256": "b238f674cc7bef6de8e0528bc730003b0a7a5a1163199855a5fe8d7774d767ec",
-    "path": "ADMA2026_重构稿\\analysis\\public_semantic_crosswalk.csv",
-    "sha256": "868b0c627b1cb65a1779ca6a6d24863c945cf8cc33ef1f6024dac50c14f9e940",
+    "audit": {
+      "bytes": 14627,
+      "path": "analysis/public_semantic_crosswalk_audit.json",
+      "sha256": "76312131c605c002c6cf454436ade86f7f272382caa0ebc9cbbe405cc0a0248a"
+    },
+    "full_text_release": {
+      "bytes": 42272,
+      "path": "materials/public_semantic_crosswalk_full.csv",
+      "sha256": "3435888ce38e1d8358dbb16b7ee417d02b15883e7c10bd25c040ddb4b50be6ba"
+    },
+    "hash_release": {
+      "bytes": 31895,
+      "path": "analysis/public_semantic_crosswalk_hash_release.csv",
+      "sha256": "a08d283287d267aafd4119c951bc0ef687259e45a999212c4fcca701e2d2b696"
+    },
     "status": "16/16 controlled IDs linked; seven concepts map only at concept level to the 810 frame and one case is external"
   },
   "software": {
@@ -47,8 +59,14 @@
     "statsmodels": "0.14.6"
   },
   "source": {
+    "availability": "withheld_by_design",
     "columns": 56,
     "file": "差异.xlsx",
+    "released_instrument": {
+      "bytes": 14428,
+      "path": "materials/difference_survey_instrument.txt",
+      "sha256": "bc326e77c957a5588580d6def04f207a41991c8901a00cf352bfe222edc61fd9"
+    },
     "reported_dimension_before_reset": "A1:A1",
     "rows": 60,
     "sha256": "b7b21ad2d0dae1a15832417b5785591e87eeea2684d0fe68788eb3f7b3352f34",

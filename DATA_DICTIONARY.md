@@ -10,7 +10,7 @@ Keys are randomized independently across studies. They cannot be used to link th
 
 ## Crosswalks
 
-- `human_api_crosswalk.csv` and `api_stimulus_equivalence_810.csv` contain item/provenance IDs and hashes, not participant data.
+- `human_api_crosswalk.csv` and `api_stimulus_equivalence_810.csv` contain item/provenance IDs and hashes, not participant data. The paper's 796 distinct stimuli are the 796 unique task-aware `stimulus_signature_sha256` values in the latter file; deduplicating only one text/output column from the 810-record archive is not the same operation.
 - `public_semantic_crosswalk_hash_release.csv` and `questionnaire_item_dictionary_hash_release.csv` are compact hash-only analysis crosswalks.
 - `controlled_ab_pair_text_crosswalk.csv` contains pair hashes and exact-match flags only.
 
@@ -23,6 +23,12 @@ Keys are randomized independently across studies. They cannot be used to link th
 - `materials/difference_survey_instrument.txt`, `materials/difference_survey_answer_key.json`, and `materials/controlled_ab_pairs_full.json` provide the eight controlled pairs, response prompts, keys, and expected directions.
 
 These files contain scientific content only. They contain no response, participant key, timestamp, duration, background value, device/location field, or participant open text.
+
+## Controlled A/B judge dimensions
+
+- `analysis/controlled_ab_judge_dimension_scores.csv` contains the 144 validated judge-item records used to construct the controlled A/B quality contrasts (eight cases, two versions, and nine judge providers). The released columns are limited to the join keys `case_id`, `version`, and `judge_provider`; the five ordinal quality dimensions `fa`, `cc`, `lc`, `tf`, and `mq`; and the derived `quality_mean`.
+- `quality_mean` is the unweighted arithmetic mean `(fa + cc + lc + tf + mq) / 5`. Pivoting by `version` and joining on `case_id` plus `judge_provider` reproduces `quality_A` and `quality_B` in `analysis/controlled_ab_machine_judge_case_long.csv` exactly.
+- Provider-response payloads, backend identifiers, token counts, retry metadata, timestamps, local paths, and free-text responses are not included in the dimension-score release.
 
 ## Score direction
 

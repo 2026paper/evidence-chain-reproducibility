@@ -21,10 +21,10 @@ Only `visible_text`/`generated_text` is intended as model stimulus. `comprehensi
 
 The canonical text uses Unicode NFC, LF line endings, and no trailing newline. The instrument transcription has one LF between visible lines. The crosswalk uses paragraph spacing, so QA collapses consecutive crosswalk line breaks to one LF before requiring exact equality. `visible_text_sha256` is SHA-256 over the canonical UTF-8 bytes.
 
-Run QA from any working directory:
+Run QA from the repository root:
 
 ```powershell
-python -X utf8 qa_inputs.py
+python -X utf8 experiments/api_reader_bridge_18/qa_inputs.py
 ```
 
 Expected result: `PASS: 18 records; 6 concepts x 3 versions; all source, text, and file hashes verified.`

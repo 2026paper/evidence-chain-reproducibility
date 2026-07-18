@@ -14,8 +14,11 @@ def sha256(path: Path) -> str:
 
 errors = []
 manifest = ROOT / "manifests/sha256_manifest.csv"
+manifest_paths = set()
 with manifest.open(encoding="utf-8", newline="") as f:
     for row in csv.DictReader(f):
+        relative = row["path"].replace("\\", "/")
+        manifest_paths.add(relative)
         path = ROOT / row["path"]
         if not path.exists():
             errors.append(f"missing: {row['path']}")
@@ -23,6 +26,18 @@ with manifest.open(encoding="utf-8", newline="") as f:
             errors.append(f"hash mismatch: {row['path']}")
         elif path.stat().st_size != int(row["bytes"]):
             errors.append(f"size mismatch: {row['path']}")
+
+actual_paths = {
+    path.relative_to(ROOT).as_posix()
+    for path in ROOT.rglob("*")
+    if path.is_file()
+    and ".git" not in path.relative_to(ROOT).parts
+    and path.relative_to(ROOT).as_posix() != "manifests/sha256_manifest.csv"
+}
+for relative in sorted(actual_paths - manifest_paths):
+    errors.append(f"unlisted file: {relative}")
+for relative in sorted(manifest_paths - actual_paths):
+    errors.append(f"manifest references absent file: {relative}")
 
 for path in ROOT.rglob("*"):
     if path.is_file() and path.suffix.lower() in {".xlsx", ".xls", ".doc", ".docx"}:
@@ -98,6 +113,50 @@ if not controlled_pairs.exists():
     errors.append("missing scientific material: materials/controlled_ab_pairs_full.json")
 elif len(json.loads(controlled_pairs.read_text(encoding="utf-8"))) != 8:
     errors.append("controlled A/B material count is not 8")
+
+dimension_scores = ROOT / "analysis/controlled_ab_judge_dimension_scores.csv"
+case_scores = ROOT / "analysis/controlled_ab_machine_judge_case_long.csv"
+dimension_means = {}
+if not dimension_scores.exists():
+    errors.append("missing controlled A/B dimension scores")
+else:
+    with dimension_scores.open(encoding="utf-8-sig", newline="") as f:
+        dimension_rows = list(csv.DictReader(f))
+    if len(dimension_rows) != 144:
+        errors.append(f"controlled A/B dimension row count is {len(dimension_rows)} != 144")
+    for row in dimension_rows:
+        key = (row["case_id"], row["judge_provider"], row["version"])
+        try:
+            values = [float(row[field]) for field in ["fa", "cc", "lc", "tf", "mq"]]
+            released_mean = float(row["quality_mean"])
+        except (KeyError, ValueError):
+            errors.append(f"invalid controlled A/B dimension row: {key}")
+            continue
+        if key in dimension_means:
+            errors.append(f"duplicate controlled A/B dimension key: {key}")
+        if row["version"] not in {"A", "B"} or any(value < 1 or value > 5 for value in values):
+            errors.append(f"out-of-range controlled A/B dimension row: {key}")
+        computed_mean = sum(values) / 5
+        if abs(computed_mean - released_mean) > 1e-12:
+            errors.append(f"controlled A/B quality_mean mismatch: {key}")
+        dimension_means[key] = computed_mean
+
+if not case_scores.exists():
+    errors.append("missing controlled A/B case-level judge table")
+else:
+    with case_scores.open(encoding="utf-8-sig", newline="") as f:
+        case_rows = list(csv.DictReader(f))
+    if len(case_rows) != 72:
+        errors.append(f"controlled A/B case-level row count is {len(case_rows)} != 72")
+    for row in case_rows:
+        for version in ["A", "B"]:
+            key = (row["case_id"], row["judge_provider"], version)
+            expected = dimension_means.get(key)
+            if expected is None:
+                errors.append(f"missing controlled A/B dimension key for case table: {key}")
+                continue
+            if abs(expected - float(row[f"quality_{version}"])) > 1e-12:
+                errors.append(f"controlled A/B case-table composite mismatch: {key}")
 
 for form in ["A", "B", "C"]:
     path = ROOT / f"materials/public_form_{form}_instrument.txt"
