@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="345.6pt" height="180pt" viewBox="0 0 345.6 180" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-17T22:59:45.030869</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 180 
+L 345.6 180 
+L 345.6 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 12.096 32.81768 
+L 333.504 32.81768 
+L 333.504 13.922652 
+L 12.096 13.922652 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #eaf4f9; stroke: #0072b2; stroke-width: 0.75; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 12.096 32.81768 
+L 63.936 32.81768 
+L 63.936 13.922652 
+L 12.096 13.922652 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 12.096 73.392265 
+L 333.504 73.392265 
+L 333.504 53.502762 
+L 12.096 53.502762 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #f7f8fa"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 12.096 73.392265 
+L 14.1696 73.392265 
+L 14.1696 53.502762 
+L 12.096 53.502762 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 69.8112 71.403315 
+L 171.072 71.403315 
+L 171.072 55.491713 
+L 69.8112 55.491713 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #eaf4f9; stroke: #0072b2; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 248.1408 69.21547 
+L 249.3504 69.21547 
+L 249.3504 57.679558 
+L 248.1408 57.679558 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 12.096 97.856354 
+L 333.504 97.856354 
+L 333.504 77.966851 
+L 12.096 77.966851 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #f7f8fa"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 12.096 97.856354 
+L 14.1696 97.856354 
+L 14.1696 77.966851 
+L 12.096 77.966851 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 69.8112 95.867403 
+L 171.072 95.867403 
+L 171.072 79.955801 
+L 69.8112 79.955801 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #eaf6f2; stroke: #009e73; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 248.1408 93.679558 
+L 249.3504 93.679558 
+L 249.3504 82.143646 
+L 248.1408 82.143646 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 12.096 122.320442 
+L 333.504 122.320442 
+L 333.504 102.430939 
+L 12.096 102.430939 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #f7f8fa"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 12.096 122.320442 
+L 14.1696 122.320442 
+L 14.1696 102.430939 
+L 12.096 102.430939 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 69.8112 120.331492 
+L 171.072 120.331492 
+L 171.072 104.41989 
+L 69.8112 104.41989 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #eaf6f2; stroke: #009e73; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 248.1408 118.143646 
+L 249.3504 118.143646 
+L 249.3504 106.607735 
+L 248.1408 106.607735 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 12.096 146.78453 
+L 333.504 146.78453 
+L 333.504 126.895028 
+L 12.096 126.895028 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #f7f8fa"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 12.096 146.78453 
+L 14.1696 146.78453 
+L 14.1696 126.895028 
+L 12.096 126.895028 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 69.8112 144.79558 
+L 171.072 144.79558 
+L 171.072 128.883978 
+L 69.8112 128.883978 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #fbefea; stroke-dasharray: 2.405,1.04; stroke-dashoffset: 0; stroke: #d55e00; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 248.1408 142.607735 
+L 249.3504 142.607735 
+L 249.3504 131.071823 
+L 248.1408 131.071823 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 12.096 171.248619 
+L 333.504 171.248619 
+L 333.504 151.359116 
+L 12.096 151.359116 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #f7f8fa"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 12.096 171.248619 
+L 14.1696 171.248619 
+L 14.1696 151.359116 
+L 12.096 151.359116 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 69.8112 169.259669 
+L 171.072 169.259669 
+L 171.072 153.348066 
+L 69.8112 153.348066 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #fbefea; stroke-dasharray: 2.405,1.04; stroke-dashoffset: 0; stroke: #d55e00; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 248.1408 167.071823 
+L 249.3504 167.071823 
+L 249.3504 155.535912 
+L 248.1408 155.535912 
+z
+" clip-path="url(#p6f1de70b50)" style="fill: #d55e00"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 167.616 30.033149 
+L 167.616 16.707182 
+" clip-path="url(#p6f1de70b50)" style="fill: none; stroke: #d5dbe2; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 247.104 30.033149 
+L 247.104 16.707182 
+" clip-path="url(#p6f1de70b50)" style="fill: none; stroke: #d5dbe2; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 12.096 49.325967 
+L 333.504 49.325967 
+" clip-path="url(#p6f1de70b50)" style="fill: none; stroke: #1b232c; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 12.096 176.81768 
+L 333.504 176.81768 
+" clip-path="url(#p6f1de70b50)" style="fill: none; stroke: #d5dbe2; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1b232c" x="12.096" y="9.562475" transform="rotate(-0 12.096 9.562475)">Five parallel evidence contracts</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(23.236156 21.688893)">SHARED</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(13.316937 28.481606)">PROVENANCE</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(70.1568 21.667828)">810 source records</text>
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(70.1568 28.492828)">796 unique visible texts</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(174.528 21.669468)">fixed API panel</text>
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(174.528 28.494468)">9 judges</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(254.016 21.679049)">common rubric</text>
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(254.016 28.481606)">6 dimensions</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #637080" transform="translate(14.8608 40.186131)">EVIDENCE</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #637080" transform="translate(14.8608 46.978843)">LAYER</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #637080" transform="translate(69.8112 40.186131)">POST-QC</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #637080" transform="translate(69.8112 46.978843)">MATERIAL</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #637080" transform="translate(176.256 40.094125)">ANALYSIS /</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #637080" transform="translate(176.256 46.978975)">RESAMPLING UNIT(S)</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #637080" transform="translate(255.0528 40.186131)">LICENSED</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #637080" transform="translate(255.0528 46.978843)">INFERENCE</text>
+   </g>
+   <g id="text_10">
+    <g id="patch_24">
+     <path d="M 18.220872 67.903451 
+L 24.633528 67.903451 
+L 24.633528 58.991576 
+L 18.220872 58.991576 
+z
+" style="fill: #0072b2"/>
+    </g>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="21.4272" y="65.262045" transform="rotate(-0 21.4272 65.262045)">1</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(31.104 61.819751)">API</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(31.104 68.612464)">stability</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(74.6496 61.82522)">9-judge score matrix</text>
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(74.6496 68.709808)">810 items × 6 dimensions</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(176.256 61.865689)">visible text ×</text>
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(176.256 68.658401)">dimension</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(255.0528 61.862408)">fixed-panel</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(255.0528 68.65512)">stability</text>
+   </g>
+   <g id="text_15">
+    <g id="patch_25">
+     <path d="M 18.220872 92.36754 
+L 24.633528 92.36754 
+L 24.633528 83.455665 
+L 18.220872 83.455665 
+z
+" style="fill: #009e73"/>
+    </g>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="21.4272" y="89.726133" transform="rotate(-0 21.4272 89.726133)">2</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(31.104 86.329777)">Broad</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(31.104 93.12249)">review</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(74.6496 86.319933)">18/22 reviews retained</text>
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(74.6496 93.12249)">178 linked visible texts</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(176.256 86.329777)">concept cluster</text>
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(176.256 93.12249)">within domain</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(255.0528 86.329777)">broad human–API</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(255.0528 93.12249)">criterion association</text>
+   </g>
+   <g id="text_20">
+    <g id="patch_26">
+     <path d="M 18.220872 116.831628 
+L 24.633528 116.831628 
+L 24.633528 107.919753 
+L 18.220872 107.919753 
+z
+" style="fill: #009e73"/>
+    </g>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="21.4272" y="114.190222" transform="rotate(-0 21.4272 114.190222)">3</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(31.104 110.793866)">Selected</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(31.104 117.586578)">review</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(74.6496 110.784022)">95/162 reviews retained</text>
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(74.6496 117.586578)">30 selected items</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(176.256 110.747797)">domain × task blocks</text>
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(176.256 117.632647)">concept-cluster CI</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(255.0528 110.793866)">selected-set</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(255.0528 117.586578)">human–API association</text>
+   </g>
+   <g id="text_25">
+    <g id="patch_27">
+     <path d="M 18.220872 141.295717 
+L 24.633528 141.295717 
+L 24.633528 132.383842 
+L 18.220872 132.383842 
+z
+" style="fill: #d55e00"/>
+    </g>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="21.4272" y="138.65431" transform="rotate(-0 21.4272 138.65431)">4</text>
+   </g>
+   <g id="text_26">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(31.104 135.165948)">Reader</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(31.104 142.050798)">fielding</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(74.6496 135.238529)">178/180 responses retained</text>
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(74.6496 142.063529)">6 lay-adapted cases</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(176.256 135.165948)">participant cluster</text>
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(176.256 142.050798)">(n = 167)</text>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(255.0528 135.212017)">relative version ×</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(255.0528 142.004729)">phase change</text>
+   </g>
+   <g id="text_30">
+    <g id="patch_28">
+     <path d="M 18.220872 165.759805 
+L 24.633528 165.759805 
+L 24.633528 156.84793 
+L 18.220872 156.84793 
+z
+" style="fill: #d55e00"/>
+    </g>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="21.4272" y="163.118399" transform="rotate(-0 21.4272 163.118399)">5</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(31.104 159.722042)">Failure</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(31.104 166.514755)">probes</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(74.6496 159.635505)">60 readers · 8 case pairs</text>
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(74.6496 166.530199)">fixed 9-judge API panel</text>
+   </g>
+   <g id="text_33">
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(176.256 159.71863)">respondent / case /</text>
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(176.256 166.60348)">fixed panel</text>
+   </g>
+   <g id="text_34">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(255.0528 159.675974)">directional failure</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #1b232c" transform="translate(255.0528 166.560824)">profile</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p6f1de70b50">
+   <rect x="0" y="0" width="345.6" height="180"/>
+  </clipPath>
+ </defs>
+</svg>

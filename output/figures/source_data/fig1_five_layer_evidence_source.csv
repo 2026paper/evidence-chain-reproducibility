@@ -1,0 +1,6 @@
+﻿layer,label,post_qc_material,analysis_resampling_units,licensed_inference,material_type
+1,API stability,9-judge score matrix | 810 items × 6 dimensions,visible text × | dimension,fixed-panel stability,observed
+2,Broad review,18/22 reviews retained | 178 linked visible texts,concept cluster | within domain,broad human–API criterion association,observed
+3,Selected review,95/162 reviews retained | 30 selected items,domain × task blocks | concept-cluster CI,selected-set human–API association,observed
+4,Reader fielding,178/180 responses retained | 6 lay-adapted cases,participant cluster | (n = 167),relative version × phase change,adapted
+5,Failure probes,60 readers · 8 case pairs | fixed 9-judge API panel,respondent / case / | fixed panel,directional failure profile,engineered

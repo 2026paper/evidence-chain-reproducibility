@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "experiment_id": "api_repeat_stability_90x9x3",
+  "opaque_seed_namespace": "20260717|opaque-v1",
+  "runner_order_seed_namespace": "20260717|runner-order-v1",
+  "selected_order_attempt": 3,
+  "rows": 270,
+  "unique_opaque_item_ids": 270,
+  "unique_source_stimuli": 90,
+  "source_repetition_counts": {
+    "3": 90
+  },
+  "replicate_counts": {
+    "1": 90,
+    "2": 90,
+    "3": 90
+  },
+  "adjacent_same_source_pairs": 0,
+  "minimum_intervening_rows_between_same_source": 1,
+  "historical_matrix_used_as_rep1": false,
+  "design": {
+    "base_stimuli": 90,
+    "fresh_replicates_per_stimulus": 3,
+    "runner_rows": 270,
+    "judges": 9,
+    "planned_fresh_api_calls": 2430,
+    "runner_columns": [
+      "item_id",
+      "domain",
+      "concept",
+      "task_type",
+      "generated_text"
+    ],
+    "opaque_id_rule": "ri_ + first 20 hex characters of SHA256(opaque namespace | source_item_uid | replicate_index)",
+    "order_rule": "first SHA256-sorted attempt with zero adjacent rows from the same source stimulus",
+    "generated_text_rule": "canonical task-aware content_json from repeat_sample_90.csv",
+    "mapping_boundary": "source and replicate identifiers occur only in mapping_270.csv, not runner_inputs_270.csv"
+  },
+  "sha256": {
+    "repeat_sample_90.csv": "77414cf7173872df2c6d38d4f4d38ca55fe068d2bae761ab92b39cd6e9960683",
+    "runner_inputs_270.csv": "ad5ae4c40ad9eabe3924df9e3d89f64d12035c84b7d2eff13f84a08b7aea5fc9",
+    "mapping_270.csv": "aa590087724b82746786f230bc9ed628962117a59bc8c99b496ab168aa3a4db8"
+  }
+}

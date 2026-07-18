@@ -1,0 +1,23 @@
+{
+  "all_api_items_present": true,
+  "all_api_records_have_nine_judges": true,
+  "api_aggregate_source": "<RESTRICTED_SOURCE>/api_test_item_aggregates_810.csv",
+  "api_stimulus_equivalence_sha256": "751b01e88fb7828d2585c8abb4333bba33c955dd2311bcbf566d15c2656dc8d5",
+  "crosswalk_sha256": "3e4899c647d2def2776f696377ce9805f23dbab0a5e4b61d03950b2a0bab99a8",
+  "final_questionnaire_provenance_manifests": [
+    "<RESTRICTED_SOURCE>/最终问卷可见案例溯源清单.csv",
+    "<RESTRICTED_SOURCE>/最终问卷可见案例溯源清单.csv",
+    "<RESTRICTED_SOURCE>/最终问卷可见案例溯源清单.csv",
+    "<RESTRICTED_SOURCE>/最终问卷可见案例溯源清单.csv"
+  ],
+  "generated_item_source": "<RESTRICTED_SOURCE>/generated_items_810.csv",
+  "n_direct_unique_exact": 204,
+  "n_final_questionnaire_provenance_manifests": 4,
+  "n_first_wave": 180,
+  "n_provenance_resolved_exact": 1,
+  "n_questionnaire_items": 210,
+  "n_schedule_resolved_exact": 5,
+  "n_second_wave": 30,
+  "questionnaire_dictionary": "<RESTRICTED_SOURCE>/questionnaire_item_dictionary.csv",
+  "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes."
+}

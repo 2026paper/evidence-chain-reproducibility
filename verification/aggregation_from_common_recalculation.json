@@ -1,0 +1,223 @@
+{
+  "analysis_ready_input": {
+    "domain_concept_clusters": 30,
+    "methods": 13,
+    "path": "experiments/api_aggregation_human_baselines/aggregation_human_common_data.csv",
+    "rows": 13884,
+    "rows_per_method": 1068,
+    "sha256": "1815e0faebb0b95c1693fbcf343abda5d5bdee1607e43c016c25349d9190e4da",
+    "visible_texts_per_method": 178
+  },
+  "bootstrap_metadata": {
+    "clusters_by_domain": {
+      "Biology": 6,
+      "Chemistry": 6,
+      "Climate/Environment": 6,
+      "Geoscience": 6,
+      "Physics": 6
+    },
+    "clusters_total": 30,
+    "draws": 5000,
+    "invalid_proportion_by_method": {
+      "ensemble::mean": 0.0,
+      "ensemble::median": 0.0,
+      "ensemble::no_self_mean": 0.0,
+      "ensemble::trimmed_one_each_tail": 0.0,
+      "single::anthropic": 0.0,
+      "single::deepseek": 0.0,
+      "single::doubao": 0.0,
+      "single::gemini": 0.0,
+      "single::glm": 0.0,
+      "single::kimi": 0.0,
+      "single::mimo": 0.0,
+      "single::openai": 0.0,
+      "single::qwen": 0.0
+    },
+    "method": "domain-stratified nonparametric domain-by-concept cluster bootstrap",
+    "seed": 20260717,
+    "standardization": "method-by-dimension constants frozen from original common sample"
+  },
+  "entry_point": "experiments/api_aggregation_human_baselines/recompute_aggregation_from_common.py",
+  "exploratory_value_validation": {
+    "all_checks_pass": true,
+    "checks": {
+      "historical_median_0.154_is_frozen_mean_scale": true,
+      "mean_matches_0.232": true,
+      "no_self_matches_0.210": true,
+      "single_range_matches_0.098_to_0.213": true,
+      "trimmed_matches_0.233": true
+    },
+    "median_scale_note": "The previously quoted median beta near .154 is exactly reproduced only when the median is placed on the primary mean panel's frozen API SD. Under the unified method-specific standardization used for formal comparison, median beta is about .197. Both values are reported; only the method-standardized beta receives the common CI/p workflow.",
+    "observed": {
+      "mean": 0.2315638531463481,
+      "median_method_standardized": 0.19701785971438054,
+      "median_primary_mean_frozen_scale": 0.15446097339659254,
+      "no_self": 0.21033042489470735,
+      "single_max": 0.21303496755684068,
+      "single_min": 0.0984346859830093,
+      "trimmed": 0.23339139640111323
+    }
+  },
+  "frozen_result_checks": {
+    "constants_csv": {
+      "maximum_absolute_numeric_difference": 8.881784197001252e-16,
+      "numeric_columns": [
+        "n_rows",
+        "api_mean_quality_aligned",
+        "api_sample_sd",
+        "human_mean_quality_aligned",
+        "human_sample_sd"
+      ],
+      "rows": 78,
+      "text_columns": [
+        "method_id",
+        "dimension"
+      ]
+    },
+    "paired_csv": {
+      "maximum_absolute_numeric_difference": 5.4817261840867104e-15,
+      "numeric_columns": [
+        "beta_difference_mean_minus_comparator",
+        "paired_cluster_bootstrap_ci_low",
+        "paired_cluster_bootstrap_ci_high",
+        "paired_cluster_bootstrap_se",
+        "paired_cluster_bootstrap_valid_draws",
+        "ci_crosses_zero"
+      ],
+      "rows": 12,
+      "text_columns": [
+        "reference_method_id",
+        "reference_method_label",
+        "comparator_method_id",
+        "comparator_method_label",
+        "direction_at_point",
+        "inference_role"
+      ]
+    },
+    "results_csv": {
+      "maximum_absolute_numeric_difference": 1.5543122344752192e-15,
+      "numeric_columns": [
+        "expected_judges_per_source_uid",
+        "n_rows",
+        "n_stimuli",
+        "n_domain_concept_clusters",
+        "standardized_beta",
+        "beta_on_primary_mean_frozen_scale",
+        "lin_ccc_quality_aligned_raw_scale",
+        "mae_quality_aligned_raw_scale",
+        "rmse_quality_aligned_raw_scale",
+        "spearman_rho_quality_aligned_raw_scale",
+        "pearson_r_quality_aligned_raw_scale",
+        "human_mean_quality_aligned",
+        "api_mean_quality_aligned",
+        "bootstrap_ci_low",
+        "bootstrap_ci_high",
+        "bootstrap_se",
+        "bootstrap_valid_draws",
+        "freedman_lane_p_two_sided",
+        "freedman_lane_p_holm_13"
+      ],
+      "rows": 13,
+      "text_columns": [
+        "method_id",
+        "method_type",
+        "method_label",
+        "definition",
+        "risk_direction",
+        "controls",
+        "inference_scope"
+      ]
+    },
+    "results_json_methods": {
+      "maximum_absolute_numeric_difference": 1.5404344466674047e-15,
+      "numeric_columns": [
+        "expected_judges_per_source_uid",
+        "n_rows",
+        "n_stimuli",
+        "n_domain_concept_clusters",
+        "standardized_beta",
+        "beta_on_primary_mean_frozen_scale",
+        "lin_ccc_quality_aligned_raw_scale",
+        "mae_quality_aligned_raw_scale",
+        "rmse_quality_aligned_raw_scale",
+        "spearman_rho_quality_aligned_raw_scale",
+        "pearson_r_quality_aligned_raw_scale",
+        "human_mean_quality_aligned",
+        "api_mean_quality_aligned",
+        "bootstrap_ci_low",
+        "bootstrap_ci_high",
+        "bootstrap_se",
+        "bootstrap_valid_draws",
+        "freedman_lane_p_two_sided",
+        "freedman_lane_p_holm_13"
+      ],
+      "rows": 13,
+      "text_columns": [
+        "method_id",
+        "method_type",
+        "method_label",
+        "definition",
+        "risk_direction",
+        "controls",
+        "inference_scope"
+      ]
+    },
+    "results_json_paired": {
+      "maximum_absolute_numeric_difference": 5.440092820663267e-15,
+      "numeric_columns": [
+        "beta_difference_mean_minus_comparator",
+        "paired_cluster_bootstrap_ci_low",
+        "paired_cluster_bootstrap_ci_high",
+        "paired_cluster_bootstrap_se",
+        "paired_cluster_bootstrap_valid_draws",
+        "ci_crosses_zero"
+      ],
+      "rows": 12,
+      "text_columns": [
+        "reference_method_id",
+        "reference_method_label",
+        "comparator_method_id",
+        "comparator_method_label",
+        "direction_at_point",
+        "inference_role"
+      ]
+    }
+  },
+  "permutation_metadata": {
+    "draws": 10000,
+    "joint_six_dimension_movement": true,
+    "max_abs_identity_difference": 3.3306690738754696e-16,
+    "method": "Freedman--Lane residual permutation",
+    "n_strata": 15,
+    "permutation_strata": "domain-by-task",
+    "seed": 20260717,
+    "shared_stimulus_maps_across_all_13_methods": true,
+    "stratum_sizes": {
+      "Biology||A": 12,
+      "Biology||B": 12,
+      "Biology||C": 12,
+      "Chemistry||A": 12,
+      "Chemistry||B": 12,
+      "Chemistry||C": 12,
+      "Climate/Environment||A": 12,
+      "Climate/Environment||B": 12,
+      "Climate/Environment||C": 12,
+      "Geoscience||A": 12,
+      "Geoscience||B": 12,
+      "Geoscience||C": 12,
+      "Physics||A": 11,
+      "Physics||B": 11,
+      "Physics||C": 12
+    }
+  },
+  "privacy_boundary": "The public entry point starts from a frozen, de-identified analysis-ready common table; it does not reconstruct that table from raw participant exports or identifiers.",
+  "qa_status": "PASS",
+  "recomputed": {
+    "cluster_bootstrap_draws": 5000,
+    "freedman_lane_permutations": 10000,
+    "paired_beta_differences": true,
+    "point_and_raw_scale_metrics": true,
+    "standardization_constants": true
+  },
+  "tolerance": 1e-12
+}

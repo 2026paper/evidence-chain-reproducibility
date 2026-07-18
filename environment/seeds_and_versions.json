@@ -1,0 +1,48 @@
+{
+  "analysis_environment_recorded": {
+    "numpy": "2.4.4",
+    "openpyxl": "3.1.5",
+    "pandas": "3.0.2",
+    "patsy": "1.0.2",
+    "python": "3.12.7",
+    "scipy": "1.17.1",
+    "statsmodels": "0.14.6"
+  },
+  "figure_build_environment_observed_at_packaging": {
+    "Pillow": "12.2.0",
+    "matplotlib": "3.10.9",
+    "seaborn": "MISSING"
+  },
+  "release_privacy_transform": {
+    "cryptographic_rekey": "secrets.SystemRandom / token_hex; mapping intentionally not retained",
+    "reason": "privacy transform, not inferential analysis",
+    "row_shuffle": "secrets.SystemRandom; order intentionally not reproducible"
+  },
+  "scripts_and_seeds": {
+    "alignment_analysis.py": {
+      "bootstrap_repetitions": 5000,
+      "bootstrap_seed": 20260717,
+      "permutation_repetitions": 10000,
+      "permutation_seed": 20260717,
+      "second_exact_permutation": "complete enumeration; no seed",
+      "version": "3.0.0"
+    },
+    "final_time_cleaning.py": {
+      "rule_version": "3.0.0",
+      "version": "1.0.0"
+    },
+    "public_questionnaire_analyses.py": {
+      "abc_bootstrap_seed": 2026071701,
+      "bootstrap_repetitions": 10000,
+      "difference_bootstrap_seed": 2026071702,
+      "difference_signflip_seed": 2026071703,
+      "signflip_repetitions": 100000,
+      "version": "1.0.1"
+    },
+    "reliability_analysis.py": {
+      "bootstrap_repetitions": 5000,
+      "seed": 20260717,
+      "version": "3.0.0"
+    }
+  }
+}

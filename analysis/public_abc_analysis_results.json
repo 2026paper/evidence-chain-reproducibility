@@ -1,0 +1,1961 @@
+{
+  "analysis_version": "1.0.1",
+  "design": "author-confirmed random assignment among three separately published lay-version forms; allocation implementation is not independently encoded in the exports",
+  "item_sampling_status": "six archived examples; no probability-sampling claim",
+  "primary": {
+    "cluster": "privacy-safe cross-form participant",
+    "coefficients": [
+      {
+        "ci_high": 2.195621334763863,
+        "ci_low": 1.3020115130388656,
+        "estimate": 1.7488164239013644,
+        "p_value": 1.7013498798312405e-14,
+        "standard_error": 0.22796587814206734,
+        "statistic": 7.671395553379746,
+        "term": "Intercept"
+      },
+      {
+        "ci_high": 0.18756374915770718,
+        "ci_low": -1.0296297695133152,
+        "estimate": -0.421033010177804,
+        "p_value": 0.17512409084910996,
+        "standard_error": 0.31051425645371283,
+        "statistic": -1.355921673247121,
+        "term": "C(version, Treatment(reference=\"A\"))[T.B]"
+      },
+      {
+        "ci_high": 0.2043887862047638,
+        "ci_low": -0.8592227751052988,
+        "estimate": -0.32741699445026745,
+        "p_value": 0.2275509724024547,
+        "standard_error": 0.2713344657605178,
+        "statistic": -1.206691503538104,
+        "term": "C(version, Treatment(reference=\"A\"))[T.C]"
+      },
+      {
+        "ci_high": 0.1726422708311121,
+        "ci_low": -0.5276032226440124,
+        "estimate": -0.17748047590645016,
+        "p_value": 0.3204546759569955,
+        "standard_error": 0.17863733696092676,
+        "statistic": -0.9935239683139162,
+        "term": "C(concept)[T.evolution_no_goal]"
+      },
+      {
+        "ci_high": 1.0148736576432957,
+        "ci_low": 0.01547338741683113,
+        "estimate": 0.5151735225300634,
+        "p_value": 0.043315496689440146,
+        "standard_error": 0.2549537333618389,
+        "statistic": 2.020654946828772,
+        "term": "C(concept)[T.geological_time]"
+      },
+      {
+        "ci_high": 1.3420346451230563,
+        "ci_low": 0.31050138388420667,
+        "estimate": 0.8262680145036315,
+        "p_value": 0.0016900561898886785,
+        "standard_error": 0.26315107557471784,
+        "statistic": 3.1398998187602887,
+        "term": "C(concept)[T.net_force_vs_velocity]"
+      },
+      {
+        "ci_high": 1.6293906563639706,
+        "ci_low": 0.4669352842058201,
+        "estimate": 1.0481629702848954,
+        "p_value": 0.00040851441533433166,
+        "standard_error": 0.2965501869747226,
+        "statistic": 3.5345213603734433,
+        "term": "C(concept)[T.plant_respiration]"
+      },
+      {
+        "ci_high": 0.5677294875481689,
+        "ci_low": -0.2852034498258339,
+        "estimate": 0.1412630188611675,
+        "p_value": 0.5161963854408502,
+        "standard_error": 0.21758893125124468,
+        "statistic": 0.6492196916857618,
+        "term": "C(concept)[T.projectile_motion]"
+      },
+      {
+        "ci_high": 1.2977894234297005,
+        "ci_low": 0.3462211687397955,
+        "estimate": 0.822005296084748,
+        "p_value": 0.0007086740872760176,
+        "standard_error": 0.242751464362548,
+        "statistic": 3.3862011841752997,
+        "term": "phase"
+      },
+      {
+        "ci_high": 1.0272701315425146,
+        "ci_low": -0.5091779998274708,
+        "estimate": 0.2590460658575219,
+        "p_value": 0.508675048208715,
+        "standard_error": 0.39195825624585257,
+        "statistic": 0.6609021795806679,
+        "term": "phase:C(version, Treatment(reference=\"A\"))[T.B]"
+      },
+      {
+        "ci_high": 2.045729211881087,
+        "ci_low": 0.4398346273154209,
+        "estimate": 1.242781919598254,
+        "p_value": 0.0024166767659934826,
+        "standard_error": 0.4096745137239148,
+        "statistic": 3.0335836815950468,
+        "term": "phase:C(version, Treatment(reference=\"A\"))[T.C]"
+      }
+    ],
+    "converged": true,
+    "covariance": "robust sandwich",
+    "dependence_parameter": 0.22582227724979267,
+    "family_link": "binomial_logit",
+    "formula": "correct ~ phase * C(version, Treatment(reference=\"A\")) + C(concept)",
+    "marginal": {
+      "cells": [
+        {
+          "ci_high": 0.9264596133868915,
+          "ci_low": 0.848922254701517,
+          "phase": 0,
+          "probability": 0.8876909340442043,
+          "standard_error": 0.019780301907835855,
+          "version": "A"
+        },
+        {
+          "ci_high": 0.9735939772808799,
+          "ci_low": 0.9200156839875142,
+          "phase": 1,
+          "probability": 0.9468048306341971,
+          "standard_error": 0.01366818311866556,
+          "version": "A"
+        },
+        {
+          "ci_high": 0.9058764336531735,
+          "ci_low": 0.7732141708662117,
+          "phase": 0,
+          "probability": 0.8395453022596926,
+          "standard_error": 0.033843035849991356,
+          "version": "B"
+        },
+        {
+          "ci_high": 0.9859931280606731,
+          "ci_low": 0.8902410174964801,
+          "phase": 1,
+          "probability": 0.9381170727785766,
+          "standard_error": 0.024427007669394277,
+          "version": "B"
+        },
+        {
+          "ci_high": 0.9043509280948738,
+          "ci_low": 0.7986300058756839,
+          "phase": 0,
+          "probability": 0.8514904669852789,
+          "standard_error": 0.026970118597357706,
+          "version": "C"
+        },
+        {
+          "ci_high": 0.9959784552769742,
+          "ci_low": 0.9597940279139983,
+          "phase": 1,
+          "probability": 0.9778862415954862,
+          "standard_error": 0.009230890885851478,
+          "version": "C"
+        }
+      ],
+      "changes": [
+        {
+          "change": 0.059113896589992776,
+          "ci_high": 0.0928866976268465,
+          "ci_low": 0.025341095553139056,
+          "standard_error": 0.017231337567041673,
+          "version": "A"
+        },
+        {
+          "change": 0.098571770518884,
+          "ci_high": 0.1497968079404655,
+          "ci_low": 0.04734673309730251,
+          "standard_error": 0.026135703423959853,
+          "version": "B"
+        },
+        {
+          "change": 0.12639577461020735,
+          "ci_high": 0.17118499130839404,
+          "ci_low": 0.08160655791202065,
+          "standard_error": 0.022852061084529265,
+          "version": "C"
+        }
+      ],
+      "pairwise_change_differences": [
+        {
+          "ci_high": 0.10086805381262716,
+          "ci_low": -0.021952305954844722,
+          "contrast": "B-A",
+          "difference_in_change": 0.03945787392889122,
+          "p_holm": 0.41581844326476913,
+          "p_value": 0.20790922163238457,
+          "scale": "average_marginal_probability",
+          "standard_error": 0.03133230016884576,
+          "z": 1.2593353732811758
+        },
+        {
+          "ci_high": 0.1225086623345554,
+          "ci_low": 0.012055093705873737,
+          "contrast": "C-A",
+          "difference_in_change": 0.06728187802021457,
+          "p_holm": 0.05084983559360158,
+          "p_value": 0.016949945197867192,
+          "scale": "average_marginal_probability",
+          "standard_error": 0.02817744853985209,
+          "z": 2.3877917095671766
+        },
+        {
+          "ci_high": 0.09836478167579366,
+          "ci_low": -0.04271677349314695,
+          "contrast": "C-B",
+          "difference_in_change": 0.02782400409132335,
+          "p_holm": 0.4394718354208622,
+          "p_value": 0.4394718354208622,
+          "scale": "average_marginal_probability",
+          "standard_error": 0.035990853985525734,
+          "z": 0.7730854094907889
+        }
+      ]
+    },
+    "n_long_rows": 2136,
+    "n_participant_clusters": 167,
+    "n_responses": 178,
+    "omnibus_interaction": {
+      "df": 2,
+      "hypothesis": "joint version-by-phase interaction",
+      "p_value": 0.009668141427595292,
+      "statistic": 9.277838375649432,
+      "terms": [
+        "phase:C(version, Treatment(reference=\"A\"))[T.B]",
+        "phase:C(version, Treatment(reference=\"A\"))[T.C]"
+      ]
+    },
+    "pairwise_inference_status": "confirmatory_with_holm",
+    "pairwise_logit_scale_interactions": [
+      {
+        "ci_high": 1.0272701315425146,
+        "ci_low": -0.5091779998274708,
+        "contrast": "B-A",
+        "difference_in_change": 0.2590460658575219,
+        "p_holm": 0.508675048208715,
+        "p_value": 0.508675048208715,
+        "scale": "log_odds_change",
+        "standard_error": 0.39195825624585257,
+        "z": 0.6609021795806679
+      },
+      {
+        "ci_high": 2.045729211881087,
+        "ci_low": 0.4398346273154209,
+        "contrast": "C-A",
+        "difference_in_change": 1.242781919598254,
+        "p_holm": 0.007250030297980448,
+        "p_value": 0.0024166767659934826,
+        "scale": "log_odds_change",
+        "standard_error": 0.4096745137239148,
+        "z": 3.0335836815950468
+      },
+      {
+        "ci_high": 1.9110273692549256,
+        "ci_low": 0.056444338226538604,
+        "contrast": "C-B",
+        "difference_in_change": 0.983735853740732,
+        "p_holm": 0.07518559411839387,
+        "p_value": 0.037592797059196936,
+        "scale": "log_odds_change",
+        "standard_error": 0.473116609707398,
+        "z": 2.079267211415659
+      }
+    ],
+    "working_correlation": "exchangeable"
+  },
+  "randomization_adherence": "not perfect one-exposure adherence: 10 final anonymous participant clusters contributed 21 eligible responses across forms; all were retained with participant-clustered covariance",
+  "release_privacy_redactions": [
+    "randomization_balance_descriptive (contains sparse background cells)"
+  ],
+  "respondent_total_correct": {
+    "A": {
+      "post": {
+        "frequency_0_to_6": {
+          "0": 0,
+          "1": 0,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "5": 7,
+          "6": 50
+        },
+        "max": 6,
+        "mean": 5.733333333333333,
+        "median": 6.0,
+        "min": 2,
+        "n": 60,
+        "q1": 6.0,
+        "q3": 6.0,
+        "sd": 0.7333846926031609
+      },
+      "pre": {
+        "frequency_0_to_6": {
+          "0": 0,
+          "1": 0,
+          "2": 1,
+          "3": 1,
+          "4": 9,
+          "5": 11,
+          "6": 38
+        },
+        "max": 6,
+        "mean": 5.4,
+        "median": 6.0,
+        "min": 2,
+        "n": 60,
+        "q1": 5.0,
+        "q3": 6.0,
+        "sd": 0.9242495810848892
+      }
+    },
+    "B": {
+      "post": {
+        "frequency_0_to_6": {
+          "0": 1,
+          "1": 0,
+          "2": 3,
+          "3": 1,
+          "4": 0,
+          "5": 8,
+          "6": 47
+        },
+        "max": 6,
+        "mean": 5.516666666666667,
+        "median": 6.0,
+        "min": 0,
+        "n": 60,
+        "q1": 6.0,
+        "q3": 6.0,
+        "sd": 1.2142050013530394
+      },
+      "pre": {
+        "frequency_0_to_6": {
+          "0": 1,
+          "1": 2,
+          "2": 3,
+          "3": 8,
+          "4": 2,
+          "5": 12,
+          "6": 32
+        },
+        "max": 6,
+        "mean": 4.866666666666666,
+        "median": 6.0,
+        "min": 0,
+        "n": 60,
+        "q1": 4.0,
+        "q3": 6.0,
+        "sd": 1.5888026262914894
+      }
+    },
+    "C": {
+      "post": {
+        "frequency_0_to_6": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 2,
+          "5": 3,
+          "6": 53
+        },
+        "max": 6,
+        "mean": 5.879310344827586,
+        "median": 6.0,
+        "min": 4,
+        "n": 58,
+        "q1": 6.0,
+        "q3": 6.0,
+        "sd": 0.4220911270569779
+      },
+      "pre": {
+        "frequency_0_to_6": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 5,
+          "4": 5,
+          "5": 12,
+          "6": 33
+        },
+        "max": 6,
+        "mean": 5.137931034482759,
+        "median": 6.0,
+        "min": 1,
+        "n": 58,
+        "q1": 5.0,
+        "q3": 6.0,
+        "sd": 1.2628049516997895
+      }
+    }
+  },
+  "robustness": {
+    "chronologically_first_eligible_response": {
+      "cluster": "privacy-safe cross-form participant",
+      "coefficients": [
+        {
+          "ci_high": 2.326573702604605,
+          "ci_low": 1.3157990070296752,
+          "estimate": 1.82118635481714,
+          "p_value": 1.6315748938609429e-12,
+          "standard_error": 0.25785542580062476,
+          "statistic": 7.062819598084748,
+          "term": "Intercept"
+        },
+        {
+          "ci_high": -0.08721333636734052,
+          "ci_low": -1.3949131741486238,
+          "estimate": -0.7410632552579821,
+          "p_value": 0.026324390165606015,
+          "standard_error": 0.33360302742709885,
+          "statistic": -2.22139247648142,
+          "term": "C(version, Treatment(reference=\"A\"))[T.B]"
+        },
+        {
+          "ci_high": 0.3513625123807224,
+          "ci_low": -0.9435585501543959,
+          "estimate": -0.2960980188868368,
+          "p_value": 0.37007393937882016,
+          "standard_error": 0.3303430758802944,
+          "statistic": -0.8963348727615926,
+          "term": "C(version, Treatment(reference=\"A\"))[T.C]"
+        },
+        {
+          "ci_high": 0.1579927284690925,
+          "ci_low": -0.5277357039796672,
+          "estimate": -0.18487148775528733,
+          "p_value": 0.2905994739092923,
+          "standard_error": 0.17493393701560286,
+          "statistic": -1.056807449196082,
+          "term": "C(concept)[T.evolution_no_goal]"
+        },
+        {
+          "ci_high": 1.103800187059502,
+          "ci_low": 0.056058636592270394,
+          "estimate": 0.5799294118258862,
+          "p_value": 0.030029820306581738,
+          "standard_error": 0.2672859192137415,
+          "statistic": 2.1696968307639577,
+          "term": "C(concept)[T.geological_time]"
+        },
+        {
+          "ci_high": 1.3285788123521765,
+          "ci_low": 0.2977439928386719,
+          "estimate": 0.8131614025954241,
+          "p_value": 0.001986875791848732,
+          "standard_error": 0.2629728983911434,
+          "statistic": 3.092187094450834,
+          "term": "C(concept)[T.net_force_vs_velocity]"
+        },
+        {
+          "ci_high": 1.6225964580682808,
+          "ci_low": 0.45325877250293267,
+          "estimate": 1.0379276152856067,
+          "p_value": 0.0005025251382880985,
+          "standard_error": 0.29830591143228513,
+          "statistic": 3.4794067951992775,
+          "term": "C(concept)[T.plant_respiration]"
+        },
+        {
+          "ci_high": 0.5469772030113189,
+          "ci_low": -0.31381814650420087,
+          "estimate": 0.116579528253559,
+          "p_value": 0.5954984613763066,
+          "standard_error": 0.21959468549048952,
+          "statistic": 0.5308850166075989,
+          "term": "C(concept)[T.projectile_motion]"
+        },
+        {
+          "ci_high": 1.4175215659471958,
+          "ci_low": 0.3303891078103318,
+          "estimate": 0.8739553368787638,
+          "p_value": 0.0016256517644754804,
+          "standard_error": 0.277334804800503,
+          "statistic": 3.1512645428958392,
+          "term": "phase"
+        },
+        {
+          "ci_high": 0.8864164412731559,
+          "ci_low": -0.614784336384296,
+          "estimate": 0.13581605244443,
+          "p_value": 0.7228576592885385,
+          "standard_error": 0.38296641915329366,
+          "statistic": 0.3546421974665763,
+          "term": "phase:C(version, Treatment(reference=\"A\"))[T.B]"
+        },
+        {
+          "ci_high": 2.5117247945740244,
+          "ci_low": 0.3725367143611631,
+          "estimate": 1.4421307544675936,
+          "p_value": 0.008226872992064654,
+          "standard_error": 0.5457212727087088,
+          "statistic": 2.6426141449636393,
+          "term": "phase:C(version, Treatment(reference=\"A\"))[T.C]"
+        }
+      ],
+      "converged": true,
+      "covariance": "robust sandwich",
+      "dependence_parameter": 0.2338368636358127,
+      "family_link": "binomial_logit",
+      "formula": "correct ~ phase * C(version, Treatment(reference=\"A\")) + C(concept)",
+      "marginal": {
+        "cells": [
+          {
+            "ci_high": 0.9370416591207704,
+            "ci_low": 0.8521542483349216,
+            "phase": 0,
+            "probability": 0.894597953727846,
+            "standard_error": 0.02165534965321552,
+            "version": "A"
+          },
+          {
+            "ci_high": 0.9813534059398021,
+            "ci_low": 0.9239899791803514,
+            "phase": 1,
+            "probability": 0.9526716925600768,
+            "standard_error": 0.014633796133991751,
+            "version": "A"
+          },
+          {
+            "ci_high": 0.8745769913703575,
+            "ci_low": 0.7342388712764562,
+            "phase": 0,
+            "probability": 0.8044079313234068,
+            "standard_error": 0.03580119869570832,
+            "version": "B"
+          },
+          {
+            "ci_high": 0.9692621814109846,
+            "ci_low": 0.8648881517596042,
+            "phase": 1,
+            "probability": 0.9170751665852944,
+            "standard_error": 0.026626517240793585,
+            "version": "B"
+          },
+          {
+            "ci_high": 0.9163334883657324,
+            "ci_low": 0.8114673840328026,
+            "phase": 0,
+            "probability": 0.8639004361992675,
+            "standard_error": 0.02675204880296274,
+            "version": "C"
+          },
+          {
+            "ci_high": 1.0,
+            "ci_low": 0.9675820598351714,
+            "phase": 1,
+            "probability": 0.9843670707727202,
+            "standard_error": 0.00856393845496489,
+            "version": "C"
+          }
+        ],
+        "changes": [
+          {
+            "change": 0.05807373883223077,
+            "ci_high": 0.09361578962883432,
+            "ci_low": 0.022531688035627218,
+            "standard_error": 0.01813403260312675,
+            "version": "A"
+          },
+          {
+            "change": 0.1126672352618876,
+            "ci_high": 0.16790492124807896,
+            "ci_low": 0.05742954927569623,
+            "standard_error": 0.02818301071953321,
+            "version": "B"
+          },
+          {
+            "change": 0.12046663457345275,
+            "ci_high": 0.16660773132298812,
+            "ci_low": 0.07432553782391738,
+            "standard_error": 0.02354180847887536,
+            "version": "C"
+          }
+        ],
+        "pairwise_change_differences": [
+          {
+            "ci_high": 0.12132153656443652,
+            "ci_low": -0.01213454370512286,
+            "contrast": "B-A",
+            "difference_in_change": 0.05459349642965683,
+            "p_holm": 0.21762961326894276,
+            "p_value": 0.10881480663447138,
+            "scale": "average_marginal_probability",
+            "standard_error": 0.034045544030973,
+            "z": 1.603543076885195
+          },
+          {
+            "ci_high": 0.12137677203950517,
+            "ci_low": 0.003409019442938789,
+            "contrast": "C-A",
+            "difference_in_change": 0.062392895741221976,
+            "p_holm": 0.11444939028950696,
+            "p_value": 0.038149796763168986,
+            "scale": "average_marginal_probability",
+            "standard_error": 0.030094367428963226,
+            "z": 2.0732416419284565
+          },
+          {
+            "ci_high": 0.0805255881753089,
+            "ci_low": -0.06492678955217861,
+            "contrast": "C-B",
+            "difference_in_change": 0.007799399311565147,
+            "p_holm": 0.8335169790237194,
+            "p_value": 0.8335169790237194,
+            "scale": "average_marginal_probability",
+            "standard_error": 0.03710588022912597,
+            "z": 0.21019308161952913
+          }
+        ]
+      },
+      "n_long_rows": 2004,
+      "n_participant_clusters": 167,
+      "n_responses": 167,
+      "omnibus_interaction": {
+        "df": 2,
+        "hypothesis": "joint version-by-phase interaction",
+        "p_value": 0.02503670400685296,
+        "statistic": 7.3748247410668055,
+        "terms": [
+          "phase:C(version, Treatment(reference=\"A\"))[T.B]",
+          "phase:C(version, Treatment(reference=\"A\"))[T.C]"
+        ]
+      },
+      "pairwise_inference_status": "confirmatory_if_omnibus_p_below_0.05_else_descriptive",
+      "pairwise_logit_scale_interactions": [
+        {
+          "ci_high": 0.8864164412731559,
+          "ci_low": -0.614784336384296,
+          "contrast": "B-A",
+          "difference_in_change": 0.13581605244443,
+          "p_holm": 0.7228576592885385,
+          "p_value": 0.7228576592885385,
+          "scale": "log_odds_change",
+          "standard_error": 0.38296641915329366,
+          "z": 0.3546421974665763
+        },
+        {
+          "ci_high": 2.5117247945740244,
+          "ci_low": 0.3725367143611631,
+          "contrast": "C-A",
+          "difference_in_change": 1.4421307544675936,
+          "p_holm": 0.02468061897619396,
+          "p_value": 0.008226872992064654,
+          "scale": "log_odds_change",
+          "standard_error": 0.5457212727087088,
+          "z": 2.6426141449636393
+        },
+        {
+          "ci_high": 2.372447528334541,
+          "ci_low": 0.24018187571178595,
+          "contrast": "C-B",
+          "difference_in_change": 1.3063147020231636,
+          "p_holm": 0.03265503142825488,
+          "p_value": 0.01632751571412744,
+          "scale": "log_odds_change",
+          "standard_error": 0.5439553148531796,
+          "z": 2.401511054958171
+        }
+      ],
+      "working_correlation": "exchangeable"
+    },
+    "excluding_nonparallel_adaptation_pair": {
+      "cluster": "privacy-safe cross-form participant",
+      "coefficients": [
+        {
+          "ci_high": 2.1687598318837926,
+          "ci_low": 1.2012819645211241,
+          "estimate": 1.6850208982024584,
+          "p_value": 8.65906567293131e-12,
+          "standard_error": 0.24681011360259952,
+          "statistic": 6.8271955051063635,
+          "term": "Intercept"
+        },
+        {
+          "ci_high": 0.1422264863422233,
+          "ci_low": -1.1054521432904116,
+          "estimate": -0.4816128284740942,
+          "p_value": 0.13024915815435745,
+          "standard_error": 0.31829121337794086,
+          "statistic": -1.5131200869884658,
+          "term": "C(version, Treatment(reference=\"A\"))[T.B]"
+        },
+        {
+          "ci_high": 0.07300060494637622,
+          "ci_low": -1.0067719500045844,
+          "estimate": -0.4668856725291041,
+          "p_value": 0.0900853078928671,
+          "standard_error": 0.27545724397694776,
+          "statistic": -1.694947882975902,
+          "term": "C(version, Treatment(reference=\"A\"))[T.C]"
+        },
+        {
+          "ci_high": 1.173281998673169,
+          "ci_low": 0.1885549131924858,
+          "estimate": 0.6809184559328274,
+          "p_value": 0.006717186444108168,
+          "standard_error": 0.2512105052052193,
+          "statistic": 2.710549287644521,
+          "term": "C(concept)[T.geological_time]"
+        },
+        {
+          "ci_high": 1.488372470472814,
+          "ci_low": 0.48488473683430466,
+          "estimate": 0.9866286036535594,
+          "p_value": 0.00011616984244518338,
+          "standard_error": 0.2559964727805952,
+          "statistic": 3.854071085187026,
+          "term": "C(concept)[T.net_force_vs_velocity]"
+        },
+        {
+          "ci_high": 1.7705085430808118,
+          "ci_low": 0.6384377575635382,
+          "estimate": 1.204473150322175,
+          "p_value": 3.037591709393765e-05,
+          "standard_error": 0.2887988744810884,
+          "statistic": 4.17062965527952,
+          "term": "C(concept)[T.plant_respiration]"
+        },
+        {
+          "ci_high": 0.6525323809261361,
+          "ci_low": -0.025957410073131182,
+          "estimate": 0.3132874854265025,
+          "p_value": 0.07029627748204412,
+          "standard_error": 0.17308731087691107,
+          "statistic": 1.8099968382390148,
+          "term": "C(concept)[T.projectile_motion]"
+        },
+        {
+          "ci_high": 0.9763514552128747,
+          "ci_low": 0.04875958473968994,
+          "estimate": 0.5125555199762823,
+          "p_value": 0.030309808984726704,
+          "standard_error": 0.23663492742466474,
+          "statistic": 2.166018032732974,
+          "term": "phase"
+        },
+        {
+          "ci_high": 1.1135346397861245,
+          "ci_low": -0.31997232876747567,
+          "estimate": 0.3967811555093244,
+          "p_value": 0.2779221223598505,
+          "standard_error": 0.3656972729756568,
+          "statistic": 1.0849989453865487,
+          "term": "phase:C(version, Treatment(reference=\"A\"))[T.B]"
+        },
+        {
+          "ci_high": 2.0855155564782173,
+          "ci_low": 0.5555894756091668,
+          "estimate": 1.320552516043692,
+          "p_value": 0.0007157402570634378,
+          "standard_error": 0.39029443727969293,
+          "statistic": 3.38347767712958,
+          "term": "phase:C(version, Treatment(reference=\"A\"))[T.C]"
+        }
+      ],
+      "converged": true,
+      "covariance": "robust sandwich",
+      "dependence_parameter": 0.2414039077813569,
+      "excluded_concept": "adaptation",
+      "excluded_concept_index": 5,
+      "excluded_post_item": "Q17",
+      "excluded_pre_item": "Q11",
+      "family_link": "binomial_logit",
+      "formula": "correct ~ phase * C(version, Treatment(reference=\"A\")) + C(concept)",
+      "n_concepts": 5,
+      "n_long_rows": 1780,
+      "n_participant_clusters": 167,
+      "n_responses": 178,
+      "omnibus_interaction": {
+        "df": 2,
+        "hypothesis": "joint version-by-phase interaction",
+        "p_value": 0.003266657160939765,
+        "statistic": 11.447976183788706,
+        "terms": [
+          "phase:C(version, Treatment(reference=\"A\"))[T.B]",
+          "phase:C(version, Treatment(reference=\"A\"))[T.C]"
+        ]
+      },
+      "rationale": "Q11 asks whether random variants can be advantageous in a particular environment, whereas Q17 asks whether simple structures can be retained or evolve when adaptive; the pair is scientifically related but not a fully equivalent pre/post item.",
+      "remaining_concepts": [
+        "projectile_motion",
+        "evolution_no_goal",
+        "geological_time",
+        "plant_respiration",
+        "net_force_vs_velocity"
+      ],
+      "status": "fixed_content_parallelism_sensitivity",
+      "working_correlation": "exchangeable"
+    },
+    "independence_working_correlation": {
+      "cluster": "privacy-safe cross-form participant",
+      "coefficients": [
+        {
+          "ci_high": 2.371233738324316,
+          "ci_low": 1.3965803048774528,
+          "estimate": 1.8839070216008844,
+          "p_value": 3.541102094011366e-14,
+          "standard_error": 0.2486406487912036,
+          "statistic": 7.576826358681595,
+          "term": "Intercept"
+        },
+        {
+          "ci_high": -0.13781976516342376,
+          "ci_low": -1.3729823501599316,
+          "estimate": -0.7554010576616778,
+          "p_value": 0.016514115025023507,
+          "standard_error": 0.31509828617753005,
+          "statistic": -2.3973505753569095,
+          "term": "C(version, Treatment(reference=\"A\"))[T.B]"
+        },
+        {
+          "ci_high": 0.19047743800425126,
+          "ci_low": -1.0298243923478045,
+          "estimate": -0.41967347717177667,
+          "p_value": 0.17762598333320678,
+          "standard_error": 0.31130720767770254,
+          "statistic": -1.3481007404308676,
+          "term": "C(version, Treatment(reference=\"A\"))[T.C]"
+        },
+        {
+          "ci_high": 0.16858261168408104,
+          "ci_low": -0.5217251409143319,
+          "estimate": -0.17657126461512543,
+          "p_value": 0.3160230706306921,
+          "standard_error": 0.17610215239756252,
+          "statistic": -1.0026638641900518,
+          "term": "C(concept)[T.evolution_no_goal]"
+        },
+        {
+          "ci_high": 0.9972110463435919,
+          "ci_low": 0.023087821761908822,
+          "estimate": 0.5101494340527504,
+          "p_value": 0.0400851184727365,
+          "standard_error": 0.24850538894220578,
+          "statistic": 2.0528707092601297,
+          "term": "C(concept)[T.geological_time]"
+        },
+        {
+          "ci_high": 1.3106065895941694,
+          "ci_low": 0.3221997719280834,
+          "estimate": 0.8164031807611264,
+          "p_value": 0.0012046458897162968,
+          "standard_error": 0.2521492296446549,
+          "statistic": 3.237777810829146,
+          "term": "C(concept)[T.net_force_vs_velocity]"
+        },
+        {
+          "ci_high": 1.5919023797266654,
+          "ci_low": 0.47602813562627544,
+          "estimate": 1.0339652576764704,
+          "p_value": 0.00028102406501794616,
+          "standard_error": 0.28466702778782255,
+          "statistic": 3.6321918478284028,
+          "term": "C(concept)[T.plant_respiration]"
+        },
+        {
+          "ci_high": 0.5585965683797084,
+          "ci_low": -0.27810841336335224,
+          "estimate": 0.14024407750817805,
+          "p_value": 0.5111567025808492,
+          "standard_error": 0.21344907058060322,
+          "statistic": 0.6570376583355452,
+          "term": "C(concept)[T.projectile_motion]"
+        },
+        {
+          "ci_high": 1.472337103728489,
+          "ci_low": 0.2881088682571832,
+          "estimate": 0.880222985992836,
+          "p_value": 0.003572455297989925,
+          "standard_error": 0.302104590903799,
+          "statistic": 2.913636576523032,
+          "term": "phase"
+        },
+        {
+          "ci_high": 0.8943543271052954,
+          "ci_low": -0.6621823518186076,
+          "estimate": 0.11608598764334392,
+          "p_value": 0.7700213850566353,
+          "standard_error": 0.39708297989189234,
+          "statistic": 0.292346923746137,
+          "term": "phase:C(version, Treatment(reference=\"A\"))[T.B]"
+        },
+        {
+          "ci_high": 2.189803207946203,
+          "ci_low": 0.29348901166837105,
+          "estimate": 1.2416461098072868,
+          "p_value": 0.010268800002552378,
+          "standard_error": 0.4837625107491046,
+          "statistic": 2.566643925930933,
+          "term": "phase:C(version, Treatment(reference=\"A\"))[T.C]"
+        }
+      ],
+      "converged": true,
+      "covariance": "robust sandwich",
+      "dependence_parameter": null,
+      "family_link": "binomial_logit",
+      "formula": "correct ~ phase * C(version, Treatment(reference=\"A\")) + C(concept)",
+      "marginal": {
+        "cells": [
+          {
+            "ci_high": 0.9386510110151359,
+            "ci_low": 0.8613489889848641,
+            "phase": 0,
+            "probability": 0.9,
+            "standard_error": 0.019720265943665362,
+            "version": "A"
+          },
+          {
+            "ci_high": 0.9862248254283792,
+            "ci_low": 0.9248862856827316,
+            "phase": 1,
+            "probability": 0.9555555555555554,
+            "standard_error": 0.01564787420316858,
+            "version": "A"
+          },
+          {
+            "ci_high": 0.8775529349067868,
+            "ci_low": 0.7446692873154352,
+            "phase": 0,
+            "probability": 0.811111111111111,
+            "standard_error": 0.033899512603170485,
+            "version": "B"
+          },
+          {
+            "ci_high": 0.9702210440149224,
+            "ci_low": 0.8686678448739664,
+            "phase": 1,
+            "probability": 0.9194444444444444,
+            "standard_error": 0.02590690439773247,
+            "version": "B"
+          },
+          {
+            "ci_high": 0.9100179152762019,
+            "ci_low": 0.8026257628847174,
+            "phase": 0,
+            "probability": 0.8563218390804597,
+            "standard_error": 0.027396460659119253,
+            "version": "C"
+          },
+          {
+            "ci_high": 0.9978329102172412,
+            "ci_low": 0.9619372047252877,
+            "phase": 1,
+            "probability": 0.9798850574712644,
+            "standard_error": 0.009157235993899445,
+            "version": "C"
+          }
+        ],
+        "changes": [
+          {
+            "change": 0.05555555555555536,
+            "ci_high": 0.08791774497462582,
+            "ci_low": 0.023193366136484907,
+            "standard_error": 0.016511624537154393,
+            "version": "A"
+          },
+          {
+            "change": 0.10833333333333339,
+            "ci_high": 0.15812751081156398,
+            "ci_low": 0.0585391558551028,
+            "standard_error": 0.02540565942588778,
+            "version": "B"
+          },
+          {
+            "change": 0.12356321839080475,
+            "ci_high": 0.16901263811191264,
+            "ci_low": 0.07811379866969685,
+            "standard_error": 0.023188905551126005,
+            "version": "C"
+          }
+        ],
+        "pairwise_change_differences": [
+          {
+            "ci_high": 0.1116044166081627,
+            "ci_low": -0.006048861052606623,
+            "contrast": "B-A",
+            "difference_in_change": 0.052777777777778034,
+            "p_holm": 0.15734864581233574,
+            "p_value": 0.07867432290616787,
+            "scale": "average_marginal_probability",
+            "standard_error": 0.030014142756908637,
+            "z": 1.7584302908544565
+          },
+          {
+            "ci_high": 0.12311832163695828,
+            "ci_low": 0.012897004033540507,
+            "contrast": "C-A",
+            "difference_in_change": 0.0680076628352494,
+            "p_holm": 0.04673658701750663,
+            "p_value": 0.015578862339168878,
+            "scale": "average_marginal_probability",
+            "standard_error": 0.028118199740615,
+            "z": 2.418635028650733
+          },
+          {
+            "ci_high": 0.0828000565689612,
+            "ci_low": -0.052340286454018475,
+            "contrast": "C-B",
+            "difference_in_change": 0.01522988505747136,
+            "p_holm": 0.6586604528504696,
+            "p_value": 0.6586604528504696,
+            "scale": "average_marginal_probability",
+            "standard_error": 0.034475210791869,
+            "z": 0.4417633629397079
+          }
+        ]
+      },
+      "n_long_rows": 2136,
+      "n_participant_clusters": 167,
+      "n_responses": 178,
+      "omnibus_interaction": {
+        "df": 2,
+        "hypothesis": "joint version-by-phase interaction",
+        "p_value": 0.02199557756227958,
+        "statistic": 7.633827731454822,
+        "terms": [
+          "phase:C(version, Treatment(reference=\"A\"))[T.B]",
+          "phase:C(version, Treatment(reference=\"A\"))[T.C]"
+        ]
+      },
+      "pairwise_inference_status": "confirmatory_if_omnibus_p_below_0.05_else_descriptive",
+      "pairwise_logit_scale_interactions": [
+        {
+          "ci_high": 0.8943543271052954,
+          "ci_low": -0.6621823518186076,
+          "contrast": "B-A",
+          "difference_in_change": 0.11608598764334392,
+          "p_holm": 0.7700213850566353,
+          "p_value": 0.7700213850566353,
+          "scale": "log_odds_change",
+          "standard_error": 0.39708297989189234,
+          "z": 0.292346923746137
+        },
+        {
+          "ci_high": 2.189803207946203,
+          "ci_low": 0.29348901166837105,
+          "contrast": "C-A",
+          "difference_in_change": 1.2416461098072868,
+          "p_holm": 0.030806400007657136,
+          "p_value": 0.010268800002552378,
+          "scale": "log_odds_change",
+          "standard_error": 0.4837625107491046,
+          "z": 2.566643925930933
+        },
+        {
+          "ci_high": 2.029085680515178,
+          "ci_low": 0.22203456381270803,
+          "contrast": "C-B",
+          "difference_in_change": 1.1255601221639429,
+          "p_holm": 0.030806400007657136,
+          "p_value": 0.014621921232761128,
+          "scale": "log_odds_change",
+          "standard_error": 0.46099089854616165,
+          "z": 2.4416102914692015
+        }
+      ],
+      "working_correlation": "independence"
+    },
+    "post_reading_adjusted_for_matching_pre": {
+      "coefficients": [
+        {
+          "ci_high": 2.9292160790466553,
+          "ci_low": 1.2536317340682115,
+          "estimate": 2.0914239065574334,
+          "p_value": 9.94319295609341e-07,
+          "standard_error": 0.4274528405101418,
+          "statistic": 4.892759407239947,
+          "term": "Intercept"
+        },
+        {
+          "ci_high": 0.7343868584059285,
+          "ci_low": -0.9648374561841078,
+          "estimate": -0.11522529888908961,
+          "p_value": 0.7903837025289817,
+          "standard_error": 0.43348355581870407,
+          "statistic": -0.26581238744216706,
+          "term": "C(version, Treatment(reference=\"A\"))[T.B]"
+        },
+        {
+          "ci_high": 2.048312698994052,
+          "ci_low": 0.15823358569064283,
+          "estimate": 1.1032731423423474,
+          "p_value": 0.02212981222423639,
+          "standard_error": 0.48217189912980857,
+          "statistic": 2.288132394968393,
+          "term": "C(version, Treatment(reference=\"A\"))[T.C]"
+        },
+        {
+          "ci_high": 1.5057722960071032,
+          "ci_low": -0.6484187429747661,
+          "estimate": 0.4286767765161686,
+          "p_value": 0.43535997909706736,
+          "standard_error": 0.5495486284375257,
+          "statistic": 0.7800524909596819,
+          "term": "C(concept)[T.evolution_no_goal]"
+        },
+        {
+          "ci_high": -0.3704990062537541,
+          "ci_low": -2.5127940348501285,
+          "estimate": -1.4416465205519413,
+          "p_value": 0.008342227289529025,
+          "standard_error": 0.5465138761463283,
+          "statistic": -2.637895547533989,
+          "term": "C(concept)[T.geological_time]"
+        },
+        {
+          "ci_high": 0.6609858582793388,
+          "ci_low": -1.7528559148181784,
+          "estimate": -0.5459350282694199,
+          "p_value": 0.37531351146401526,
+          "standard_error": 0.6157872777606103,
+          "statistic": -0.8865643185334762,
+          "term": "C(concept)[T.net_force_vs_velocity]"
+        },
+        {
+          "ci_high": -0.02327880363181456,
+          "ci_low": -1.7177248713807474,
+          "estimate": -0.870501837506281,
+          "p_value": 0.04402873762368994,
+          "standard_error": 0.4322645928992847,
+          "statistic": -2.013817119897912,
+          "term": "C(concept)[T.plant_respiration]"
+        },
+        {
+          "ci_high": -0.3094536638405587,
+          "ci_low": -2.1907350092022737,
+          "estimate": -1.2500943365214163,
+          "p_value": 0.009193958294131369,
+          "standard_error": 0.47992752933243227,
+          "statistic": -2.6047564686699003,
+          "term": "C(concept)[T.projectile_motion]"
+        },
+        {
+          "ci_high": 2.87768261693129,
+          "ci_low": 1.3724629662952947,
+          "estimate": 2.1250727916132925,
+          "p_value": 3.12716429447938e-08,
+          "standard_error": 0.38399166069095564,
+          "statistic": 5.534163913324135,
+          "term": "pre_correct"
+        }
+      ],
+      "converged": true,
+      "formula": "post_correct ~ C(version, Treatment(reference=\"A\")) + pre_correct + C(concept)",
+      "n_participant_clusters": 167,
+      "n_responses": 178,
+      "n_rows": 1068,
+      "version_omnibus_wald": {
+        "df": 2,
+        "p_value": 0.03776215777135939,
+        "statistic": 6.552895589937772
+      }
+    },
+    "single_form_participants": {
+      "cluster": "privacy-safe cross-form participant",
+      "coefficients": [
+        {
+          "ci_high": 2.369076886638269,
+          "ci_low": 1.2763988457895064,
+          "estimate": 1.8227378662138878,
+          "p_value": 6.193931912063238e-11,
+          "standard_error": 0.2787495202635527,
+          "statistic": 6.538981177404437,
+          "term": "Intercept"
+        },
+        {
+          "ci_high": -0.031014381943749725,
+          "ci_low": -1.4056082421286362,
+          "estimate": -0.718311312036193,
+          "p_value": 0.040520070892314894,
+          "standard_error": 0.35066814263616775,
+          "statistic": -2.0484076672498586,
+          "term": "C(version, Treatment(reference=\"A\"))[T.B]"
+        },
+        {
+          "ci_high": 0.4008945099160533,
+          "ci_low": -0.9896648061811222,
+          "estimate": -0.2943851481325344,
+          "p_value": 0.406618340487617,
+          "standard_error": 0.3547410378623612,
+          "statistic": -0.8298592965349423,
+          "term": "C(version, Treatment(reference=\"A\"))[T.C]"
+        },
+        {
+          "ci_high": 0.1578361777346173,
+          "ci_low": -0.5511408292338776,
+          "estimate": -0.19665232574963018,
+          "p_value": 0.2769090766616603,
+          "standard_error": 0.18086480480274514,
+          "statistic": -1.0872890718794253,
+          "term": "C(concept)[T.evolution_no_goal]"
+        },
+        {
+          "ci_high": 1.1363528609559266,
+          "ci_low": 0.031754199411899164,
+          "estimate": 0.5840535301839128,
+          "p_value": 0.0382047501363158,
+          "standard_error": 0.281790550810362,
+          "statistic": 2.0726512244797246,
+          "term": "C(concept)[T.geological_time]"
+        },
+        {
+          "ci_high": 1.2361149592831995,
+          "ci_low": 0.2222217302632914,
+          "estimate": 0.7291683447732454,
+          "p_value": 0.004815540664960597,
+          "standard_error": 0.25865098466537356,
+          "statistic": 2.819120699333883,
+          "term": "C(concept)[T.net_force_vs_velocity]"
+        },
+        {
+          "ci_high": 1.620296201176416,
+          "ci_low": 0.41360596039379804,
+          "estimate": 1.016951080785107,
+          "p_value": 0.0009546515071954366,
+          "standard_error": 0.30783479959347126,
+          "statistic": 3.3035611377534297,
+          "term": "C(concept)[T.plant_respiration]"
+        },
+        {
+          "ci_high": 0.5001558406738721,
+          "ci_low": -0.37792839017631097,
+          "estimate": 0.06111372524878054,
+          "p_value": 0.7849894302220954,
+          "standard_error": 0.2240051954465489,
+          "statistic": 0.27282280273433757,
+          "term": "C(concept)[T.projectile_motion]"
+        },
+        {
+          "ci_high": 1.4865783170393096,
+          "ci_low": 0.28486526872455775,
+          "estimate": 0.8857217928819336,
+          "p_value": 0.003862475767728895,
+          "standard_error": 0.3065650843060666,
+          "statistic": 2.8891802694583837,
+          "term": "phase"
+        },
+        {
+          "ci_high": 0.9133090531825849,
+          "ci_low": -0.6681054333426257,
+          "estimate": 0.12260180991997957,
+          "p_value": 0.7612048479909218,
+          "standard_error": 0.40342947600037715,
+          "statistic": 0.30389898907601126,
+          "term": "phase:C(version, Treatment(reference=\"A\"))[T.B]"
+        },
+        {
+          "ci_high": 2.677093151334044,
+          "ci_low": 0.3084585979255612,
+          "estimate": 1.4927758746298025,
+          "p_value": 0.013494626071199087,
+          "standard_error": 0.6042546118428629,
+          "statistic": 2.4704418392060212,
+          "term": "phase:C(version, Treatment(reference=\"A\"))[T.C]"
+        }
+      ],
+      "converged": true,
+      "covariance": "robust sandwich",
+      "dependence_parameter": 0.25105689657005187,
+      "family_link": "binomial_logit",
+      "formula": "correct ~ phase * C(version, Treatment(reference=\"A\")) + C(concept)",
+      "marginal": {
+        "cells": [
+          {
+            "ci_high": 0.939776879829644,
+            "ci_low": 0.845025901732857,
+            "phase": 0,
+            "probability": 0.8924013907812505,
+            "standard_error": 0.02417161204087694,
+            "version": "A"
+          },
+          {
+            "ci_high": 0.9840077015930119,
+            "ci_low": 0.9203236045744779,
+            "phase": 1,
+            "probability": 0.9521656530837449,
+            "standard_error": 0.016246241645475622,
+            "version": "A"
+          },
+          {
+            "ci_high": 0.8743614663572168,
+            "ci_low": 0.7340213003395459,
+            "phase": 0,
+            "probability": 0.8041913833483814,
+            "standard_error": 0.03580172062462783,
+            "version": "B"
+          },
+          {
+            "ci_high": 0.9692230438344576,
+            "ci_low": 0.8646287342941821,
+            "phase": 1,
+            "probability": 0.9169258890643198,
+            "standard_error": 0.026682712122595664,
+            "version": "B"
+          },
+          {
+            "ci_high": 0.9169350017494068,
+            "ci_low": 0.8057602709475552,
+            "phase": 0,
+            "probability": 0.861347636348481,
+            "standard_error": 0.02836142186254026,
+            "version": "C"
+          },
+          {
+            "ci_high": 1.0,
+            "ci_low": 0.9671270110015819,
+            "phase": 1,
+            "probability": 0.9849892083853904,
+            "standard_error": 0.009113533475463407,
+            "version": "C"
+          }
+        ],
+        "changes": [
+          {
+            "change": 0.05976426230249443,
+            "ci_high": 0.09968170905910029,
+            "ci_low": 0.019846815545888574,
+            "standard_error": 0.02036641850129369,
+            "version": "A"
+          },
+          {
+            "change": 0.11273450571593846,
+            "ci_high": 0.1679258611159138,
+            "ci_low": 0.057543150315963146,
+            "standard_error": 0.02815937223097857,
+            "version": "B"
+          },
+          {
+            "change": 0.1236415720369094,
+            "ci_high": 0.17237830304614044,
+            "ci_low": 0.07490484102767835,
+            "standard_error": 0.024866136007426754,
+            "version": "C"
+          }
+        ],
+        "pairwise_change_differences": [
+          {
+            "ci_high": 0.12226326688547982,
+            "ci_low": -0.016322780058591765,
+            "contrast": "B-A",
+            "difference_in_change": 0.05297024341344403,
+            "p_holm": 0.2681253977594122,
+            "p_value": 0.1340626988797061,
+            "scale": "average_marginal_probability",
+            "standard_error": 0.03535423304642857,
+            "z": 1.4982716028341336
+          },
+          {
+            "ci_high": 0.1277752112354858,
+            "ci_low": -2.0591766655864152e-05,
+            "contrast": "C-A",
+            "difference_in_change": 0.06387730973441497,
+            "p_holm": 0.15022162719611407,
+            "p_value": 0.050073875732038024,
+            "scale": "average_marginal_probability",
+            "standard_error": 0.032601569215092385,
+            "z": 1.9593323656593795
+          },
+          {
+            "ci_high": 0.08538778167698287,
+            "ci_low": -0.063573649035041,
+            "contrast": "C-B",
+            "difference_in_change": 0.010907066320970937,
+            "p_holm": 0.7740969833713458,
+            "p_value": 0.7740969833713458,
+            "scale": "average_marginal_probability",
+            "standard_error": 0.038001063256012005,
+            "z": 0.2870200301367981
+          }
+        ]
+      },
+      "n_long_rows": 1884,
+      "n_participant_clusters": 157,
+      "n_responses": 157,
+      "omnibus_interaction": {
+        "df": 2,
+        "hypothesis": "joint version-by-phase interaction",
+        "p_value": 0.03802924988164992,
+        "statistic": 6.53879936324239,
+        "terms": [
+          "phase:C(version, Treatment(reference=\"A\"))[T.B]",
+          "phase:C(version, Treatment(reference=\"A\"))[T.C]"
+        ]
+      },
+      "pairwise_inference_status": "confirmatory_if_omnibus_p_below_0.05_else_descriptive",
+      "pairwise_logit_scale_interactions": [
+        {
+          "ci_high": 0.9133090531825849,
+          "ci_low": -0.6681054333426257,
+          "contrast": "B-A",
+          "difference_in_change": 0.12260180991997957,
+          "p_holm": 0.7612048479909218,
+          "p_value": 0.7612048479909218,
+          "scale": "log_odds_change",
+          "standard_error": 0.40342947600037715,
+          "z": 0.30389898907601126
+        },
+        {
+          "ci_high": 2.677093151334044,
+          "ci_low": 0.3084585979255612,
+          "contrast": "C-A",
+          "difference_in_change": 1.4927758746298025,
+          "p_holm": 0.040483878213597266,
+          "p_value": 0.013494626071199087,
+          "scale": "log_odds_change",
+          "standard_error": 0.6042546118428629,
+          "z": 2.4704418392060212
+        },
+        {
+          "ci_high": 2.5246196637232847,
+          "ci_low": 0.2157284656963614,
+          "contrast": "C-B",
+          "difference_in_change": 1.370174064709823,
+          "p_holm": 0.040483878213597266,
+          "p_value": 0.02000693834818798,
+          "scale": "log_odds_change",
+          "standard_error": 0.5890136799041111,
+          "z": 2.3262177288189325
+        }
+      ],
+      "working_correlation": "exchangeable"
+    }
+  },
+  "secondary": {
+    "concept_specific_change": [
+      {
+        "bonferroni_95_fwer_ci_high": 0.3282813811130443,
+        "bonferroni_95_fwer_ci_low": 0.005051952220289063,
+        "change": 0.16666666666666666,
+        "concept": "adaptation",
+        "n": 60,
+        "p_holm_18": 0.026477588327564,
+        "p_value": 0.0020367375636587692,
+        "post_accuracy": 0.9833333333333333,
+        "pre_accuracy": 0.8166666666666667,
+        "standard_error": 0.054027962349425,
+        "version": "A",
+        "z": 3.0848223664026526
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.4186308157359056,
+        "bonferroni_95_fwer_ci_low": 0.0813691842640944,
+        "change": 0.25,
+        "concept": "evolution_no_goal",
+        "n": 60,
+        "p_holm_18": 0.00015673259013582723,
+        "p_value": 9.219564125636896e-06,
+        "post_accuracy": 0.9833333333333333,
+        "pre_accuracy": 0.7333333333333333,
+        "standard_error": 0.05637345210021216,
+        "version": "A",
+        "z": 4.43471156521669
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.024301142792413383,
+        "bonferroni_95_fwer_ci_low": -0.19096780945908004,
+        "change": -0.08333333333333333,
+        "concept": "geological_time",
+        "n": 60,
+        "p_holm_18": 0.2447969104445677,
+        "p_value": 0.02056085784303981,
+        "post_accuracy": 0.9166666666666666,
+        "pre_accuracy": 1.0,
+        "standard_error": 0.03598231413236439,
+        "version": "A",
+        "z": -2.315952582337636
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.07110099485568329,
+        "bonferroni_95_fwer_ci_low": -0.07110099485568329,
+        "change": 0.0,
+        "concept": "net_force_vs_velocity",
+        "n": 60,
+        "p_holm_18": 1.0,
+        "p_value": 1.0,
+        "post_accuracy": 0.95,
+        "pre_accuracy": 0.95,
+        "standard_error": 0.023769134427076417,
+        "version": "A",
+        "z": 0.0
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.03657260170668291,
+        "bonferroni_95_fwer_ci_low": -0.10323926837334957,
+        "change": -0.03333333333333333,
+        "concept": "plant_respiration",
+        "n": 60,
+        "p_holm_18": 1.0,
+        "p_value": 0.15376648546203056,
+        "post_accuracy": 0.9666666666666667,
+        "pre_accuracy": 1.0,
+        "standard_error": 0.023369624723103312,
+        "version": "A",
+        "z": -1.4263529572376854
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.13304387050612604,
+        "bonferroni_95_fwer_ci_low": -0.06637720383945936,
+        "change": 0.03333333333333333,
+        "concept": "projectile_motion",
+        "n": 60,
+        "p_holm_18": 1.0,
+        "p_value": 0.31731050786291415,
+        "post_accuracy": 0.9333333333333333,
+        "pre_accuracy": 0.9,
+        "standard_error": 0.03333333333333333,
+        "version": "A",
+        "z": 1.0
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.39215317906816716,
+        "bonferroni_95_fwer_ci_low": 0.04118015426516622,
+        "change": 0.21666666666666667,
+        "concept": "adaptation",
+        "n": 60,
+        "p_holm_18": 0.003542266000773501,
+        "p_value": 0.00022139162504834382,
+        "post_accuracy": 0.9166666666666666,
+        "pre_accuracy": 0.7,
+        "standard_error": 0.058665318423131246,
+        "version": "B",
+        "z": 3.6932666947093025
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.43888182846786145,
+        "bonferroni_95_fwer_ci_low": 0.09445150486547188,
+        "change": 0.26666666666666666,
+        "concept": "evolution_no_goal",
+        "n": 60,
+        "p_holm_18": 6.521690159131079e-05,
+        "p_value": 3.6231611995172655e-06,
+        "post_accuracy": 0.95,
+        "pre_accuracy": 0.6833333333333333,
+        "standard_error": 0.05757170261178304,
+        "version": "B",
+        "z": 4.631905164675271
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.18158487292590875,
+        "bonferroni_95_fwer_ci_low": -0.08158487292590876,
+        "change": 0.05,
+        "concept": "geological_time",
+        "n": 60,
+        "p_holm_18": 1.0,
+        "p_value": 0.2556850742319666,
+        "post_accuracy": 0.8833333333333333,
+        "pre_accuracy": 0.8333333333333334,
+        "standard_error": 0.04398895598428735,
+        "version": "B",
+        "z": 1.136648935652389
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.16072139501225435,
+        "bonferroni_95_fwer_ci_low": -0.06072139501225436,
+        "change": 0.05,
+        "concept": "net_force_vs_velocity",
+        "n": 60,
+        "p_holm_18": 1.0,
+        "p_value": 0.1767498270010759,
+        "post_accuracy": 0.9333333333333333,
+        "pre_accuracy": 0.8833333333333333,
+        "standard_error": 0.037014274235423576,
+        "version": "B",
+        "z": 1.3508302143649427
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.07110099485568329,
+        "bonferroni_95_fwer_ci_low": -0.07110099485568329,
+        "change": 0.0,
+        "concept": "plant_respiration",
+        "n": 60,
+        "p_holm_18": 1.0,
+        "p_value": 1.0,
+        "post_accuracy": 0.95,
+        "pre_accuracy": 0.95,
+        "standard_error": 0.023769134427076417,
+        "version": "B",
+        "z": 0.0
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.23888182846786143,
+        "bonferroni_95_fwer_ci_low": -0.10554849513452809,
+        "change": 0.06666666666666667,
+        "concept": "projectile_motion",
+        "n": 60,
+        "p_holm_18": 1.0,
+        "p_value": 0.24687371182768292,
+        "post_accuracy": 0.8833333333333333,
+        "pre_accuracy": 0.8166666666666667,
+        "standard_error": 0.05757170261178303,
+        "version": "B",
+        "z": 1.157976291168818
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.32207784814739154,
+        "bonferroni_95_fwer_ci_low": 0.02274973805950503,
+        "change": 0.1724137931034483,
+        "concept": "adaptation",
+        "n": 58,
+        "p_holm_18": 0.007964945788263787,
+        "p_value": 0.0005689246991616991,
+        "post_accuracy": 1.0,
+        "pre_accuracy": 0.8275862068965517,
+        "standard_error": 0.05003284483517322,
+        "version": "C",
+        "z": 3.4460121880225554
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.34498045800708155,
+        "bonferroni_95_fwer_ci_low": 0.03432988682050467,
+        "change": 0.1896551724137931,
+        "concept": "evolution_no_goal",
+        "n": 58,
+        "p_holm_18": 0.003896181011013472,
+        "p_value": 0.00025974540073423147,
+        "post_accuracy": 0.9827586206896551,
+        "pre_accuracy": 0.7931034482758621,
+        "standard_error": 0.051925399928434354,
+        "version": "C",
+        "z": 3.6524547268809364
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.19741074731343772,
+        "bonferroni_95_fwer_ci_low": -0.024996954209989444,
+        "change": 0.08620689655172414,
+        "concept": "geological_time",
+        "n": 58,
+        "p_holm_18": 0.2447969104445677,
+        "p_value": 0.020399742537047308,
+        "post_accuracy": 0.9827586206896551,
+        "pre_accuracy": 0.896551724137931,
+        "standard_error": 0.03717555967998435,
+        "version": "C",
+        "z": 2.318913213245817
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.19741074731343772,
+        "bonferroni_95_fwer_ci_low": -0.024996954209989444,
+        "change": 0.08620689655172414,
+        "concept": "net_force_vs_velocity",
+        "n": 58,
+        "p_holm_18": 0.2447969104445677,
+        "p_value": 0.020399742537047308,
+        "post_accuracy": 1.0,
+        "pre_accuracy": 0.9137931034482759,
+        "standard_error": 0.03717555967998435,
+        "version": "C",
+        "z": 2.318913213245817
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.244773204154551,
+        "bonferroni_95_fwer_ci_low": -0.03787665243041306,
+        "change": 0.10344827586206896,
+        "concept": "plant_respiration",
+        "n": 58,
+        "p_holm_18": 0.2569727132268639,
+        "p_value": 0.028552523691873766,
+        "post_accuracy": 0.9655172413793104,
+        "pre_accuracy": 0.8620689655172413,
+        "standard_error": 0.047245066335558215,
+        "version": "C",
+        "z": 2.1896101304489086
+      },
+      {
+        "bonferroni_95_fwer_ci_high": 0.244773204154551,
+        "bonferroni_95_fwer_ci_low": -0.03787665243041306,
+        "change": 0.10344827586206896,
+        "concept": "projectile_motion",
+        "n": 58,
+        "p_holm_18": 0.2569727132268639,
+        "p_value": 0.028552523691873766,
+        "post_accuracy": 0.9482758620689655,
+        "pre_accuracy": 0.8448275862068966,
+        "standard_error": 0.047245066335558215,
+        "version": "C",
+        "z": 2.1896101304489086
+      }
+    ],
+    "confidence": {
+      "coefficients": [
+        {
+          "ci_high": 0.5623946074531143,
+          "ci_low": 0.4517859638832789,
+          "estimate": 0.5070902856681966,
+          "p_value": 3.282288768591938e-72,
+          "standard_error": 0.028217009200756305,
+          "statistic": 17.971085527186382,
+          "term": "Intercept"
+        },
+        {
+          "ci_high": 0.04172437238718146,
+          "ci_low": -0.08455364829230144,
+          "estimate": -0.021414637952559986,
+          "p_value": 0.5062077531317111,
+          "standard_error": 0.03221437273224095,
+          "statistic": -0.6647541496633792,
+          "term": "C(version, Treatment(reference=\"A\"))[T.B]"
+        },
+        {
+          "ci_high": 0.06382830111935178,
+          "ci_low": -0.05934495056616569,
+          "estimate": 0.002241675276593044,
+          "p_value": 0.9431269939616002,
+          "standard_error": 0.031422325271559165,
+          "statistic": 0.07134020977823748,
+          "term": "C(version, Treatment(reference=\"A\"))[T.C]"
+        },
+        {
+          "ci_high": 0.04825882769201447,
+          "ci_low": -0.02978998958235509,
+          "estimate": 0.00923441905482969,
+          "p_value": 0.6427982400953769,
+          "standard_error": 0.019910778435218372,
+          "statistic": 0.46378995602179784,
+          "term": "C(concept)[T.evolution_no_goal]"
+        },
+        {
+          "ci_high": 0.010607870971879638,
+          "ci_low": -0.07710305255669492,
+          "estimate": -0.03324759079240764,
+          "p_value": 0.13731009850147485,
+          "standard_error": 0.022375646751783995,
+          "statistic": -1.4858828958656505,
+          "term": "C(concept)[T.geological_time]"
+        },
+        {
+          "ci_high": -0.025237549792132746,
+          "ci_low": -0.12109814014600753,
+          "estimate": -0.07316784496907014,
+          "p_value": 0.002771771411881032,
+          "standard_error": 0.024454681593644296,
+          "statistic": -2.991977004030437,
+          "term": "C(concept)[T.net_force_vs_velocity]"
+        },
+        {
+          "ci_high": 0.1641858562672493,
+          "ci_low": 0.07842871260031409,
+          "estimate": 0.12130728443378169,
+          "p_value": 2.9410200540678595e-08,
+          "standard_error": 0.021877224363145608,
+          "statistic": 5.544912024495029,
+          "term": "C(concept)[T.plant_respiration]"
+        },
+        {
+          "ci_high": 0.012889211044407808,
+          "ci_low": -0.06836936927358664,
+          "estimate": -0.027740079114589415,
+          "p_value": 0.18083574181316997,
+          "standard_error": 0.020729610584416795,
+          "statistic": -1.338186214430996,
+          "term": "C(concept)[T.projectile_motion]"
+        }
+      ],
+      "method": "normalized midrank OLS with concept fixed effects and participant-clustered robust covariance",
+      "outcome": "confidence_score",
+      "pairwise_version_contrasts": [
+        {
+          "ci_high": 0.04172437238718146,
+          "ci_low": -0.08455364829230144,
+          "contrast": "B-A",
+          "p_holm": 1.0,
+          "p_value": 0.5062077531317111,
+          "rank_percentile_difference": -0.021414637952559986,
+          "standard_error": 0.03221437273224095,
+          "z": -0.6647541496633792
+        },
+        {
+          "ci_high": 0.06382830111935178,
+          "ci_low": -0.05934495056616569,
+          "contrast": "C-A",
+          "p_holm": 1.0,
+          "p_value": 0.9431269939616002,
+          "rank_percentile_difference": 0.002241675276593044,
+          "standard_error": 0.031422325271559165,
+          "z": 0.07134020977823748
+        },
+        {
+          "ci_high": 0.08225243114105635,
+          "ci_low": -0.0349398046827503,
+          "contrast": "C-B",
+          "p_holm": 1.0,
+          "p_value": 0.4287847411554876,
+          "rank_percentile_difference": 0.023656313229153028,
+          "standard_error": 0.029896527882196832,
+          "z": 0.7912729305010765
+        }
+      ],
+      "raw_ordinal_summary": [
+        {
+          "mean_score": 4.15,
+          "median_score": 4.0,
+          "n_concept_ratings": 360,
+          "n_responses": 60,
+          "sd_score": 0.8638515811859979,
+          "version": "A"
+        },
+        {
+          "mean_score": 4.036111111111111,
+          "median_score": 4.0,
+          "n_concept_ratings": 360,
+          "n_responses": 60,
+          "sd_score": 0.9965547273819364,
+          "version": "B"
+        },
+        {
+          "mean_score": 4.17816091954023,
+          "median_score": 4.0,
+          "n_concept_ratings": 348,
+          "n_responses": 58,
+          "sd_score": 0.8051599139292613,
+          "version": "C"
+        }
+      ]
+    },
+    "misleading_risk": {
+      "coefficients": [
+        {
+          "ci_high": 0.570024117043425,
+          "ci_low": 0.44965402988901926,
+          "estimate": 0.5098390734662221,
+          "p_value": 6.60377058765261e-62,
+          "standard_error": 0.030707219138685616,
+          "statistic": 16.60323167537877,
+          "term": "Intercept"
+        },
+        {
+          "ci_high": 0.07533196219303549,
+          "ci_low": -0.08522324392420642,
+          "estimate": -0.004945640865585471,
+          "p_value": 0.9038914480594,
+          "standard_error": 0.04095871337016417,
+          "statistic": -0.1207469780822768,
+          "term": "C(version, Treatment(reference=\"A\"))[T.B]"
+        },
+        {
+          "ci_high": 0.14529367825492107,
+          "ci_low": -0.00805780571054622,
+          "estimate": 0.06861793627218742,
+          "p_value": 0.0794317757005401,
+          "standard_error": 0.03912099537927335,
+          "statistic": 1.7539925967359669,
+          "term": "C(version, Treatment(reference=\"A\"))[T.C]"
+        },
+        {
+          "ci_high": -0.006112278341041048,
+          "ci_low": -0.07358094221192374,
+          "estimate": -0.0398466102764824,
+          "p_value": 0.020608158788813863,
+          "standard_error": 0.017211710113825284,
+          "statistic": -2.3150872291577613,
+          "term": "C(concept)[T.evolution_no_goal]"
+        },
+        {
+          "ci_high": -0.022562043982542135,
+          "ci_low": -0.0930010162371251,
+          "estimate": -0.05778153010983362,
+          "p_value": 0.0013019868423033289,
+          "standard_error": 0.017969455768115282,
+          "statistic": -3.215541464108237,
+          "term": "C(concept)[T.geological_time]"
+        },
+        {
+          "ci_high": 0.05573625359846005,
+          "ci_low": -0.013501476844684869,
+          "estimate": 0.02111738837688759,
+          "p_value": 0.23186390847421556,
+          "standard_error": 0.017663010899507163,
+          "statistic": 1.1955712702117403,
+          "term": "C(concept)[T.net_force_vs_velocity]"
+        },
+        {
+          "ci_high": -0.040454714806019136,
+          "ci_low": -0.11717479325273306,
+          "estimate": -0.0788147540293761,
+          "p_value": 5.650429466649615e-05,
+          "standard_error": 0.019571808219914274,
+          "statistic": -4.0269531125479885,
+          "term": "C(concept)[T.plant_respiration]"
+        },
+        {
+          "ci_high": 0.008355223361822428,
+          "ci_low": -0.06407209412729765,
+          "estimate": -0.027858435382737613,
+          "p_value": 0.1316157940272646,
+          "standard_error": 0.018476696015951703,
+          "statistic": -1.5077606601681526,
+          "term": "C(concept)[T.projectile_motion]"
+        }
+      ],
+      "method": "normalized midrank OLS with concept fixed effects and participant-clustered robust covariance",
+      "outcome": "misleading_risk_score",
+      "pairwise_version_contrasts": [
+        {
+          "ci_high": 0.07533196219303549,
+          "ci_low": -0.08522324392420642,
+          "contrast": "B-A",
+          "p_holm": 0.9038914480594,
+          "p_value": 0.9038914480594,
+          "rank_percentile_difference": -0.004945640865585471,
+          "standard_error": 0.04095871337016417,
+          "z": -0.1207469780822768
+        },
+        {
+          "ci_high": 0.14529367825492107,
+          "ci_low": -0.00805780571054622,
+          "contrast": "C-A",
+          "p_holm": 0.23196673476916274,
+          "p_value": 0.0794317757005401,
+          "rank_percentile_difference": 0.06861793627218742,
+          "standard_error": 0.03912099537927335,
+          "z": 1.7539925967359669
+        },
+        {
+          "ci_high": 0.1551865318518357,
+          "ci_low": -0.008059377576289939,
+          "contrast": "C-B",
+          "p_holm": 0.23196673476916274,
+          "p_value": 0.07732224492305424,
+          "rank_percentile_difference": 0.07356357713777288,
+          "standard_error": 0.04164512988906647,
+          "z": 1.7664388929445096
+        }
+      ],
+      "raw_ordinal_summary": [
+        {
+          "mean_score": 2.7472222222222222,
+          "median_score": 2.0,
+          "n_concept_ratings": 360,
+          "n_responses": 60,
+          "sd_score": 1.2081400127106945,
+          "version": "A"
+        },
+        {
+          "mean_score": 2.727777777777778,
+          "median_score": 2.0,
+          "n_concept_ratings": 360,
+          "n_responses": 60,
+          "sd_score": 1.2392402900328614,
+          "version": "B"
+        },
+        {
+          "mean_score": 3.0373563218390807,
+          "median_score": 3.0,
+          "n_concept_ratings": 348,
+          "n_responses": 58,
+          "sd_score": 1.1961927690303016,
+          "version": "C"
+        }
+      ]
+    }
+  },
+  "source_mapping_status": "completed_18_of_18_to_six_upstream_disagreement_cases_nonexact_lay_adaptations"
+}

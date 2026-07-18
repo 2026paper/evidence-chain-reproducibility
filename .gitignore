@@ -1,0 +1,31 @@
+
+# Credentials and local environments
+.env
+.env.*
+*.key
+*.pem
+*.p12
+venv/
+.venv/
+
+# Python/editor artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.idea/
+.vscode/
+
+# Restricted/raw inputs and provider traces
+*.xlsx
+*.xls
+*.doc
+*.docx
+**/api_call_log.jsonl
+**/stdout.log
+**/stderr.log
+**/*_stdout.log
+**/*_stderr.log
+**/failed_attempts/
+**/pilot/
+**/raw_payload*/

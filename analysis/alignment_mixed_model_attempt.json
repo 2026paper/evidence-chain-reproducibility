@@ -1,0 +1,139 @@
+{
+  "fallback_used": true,
+  "fixed_design_columns": 12,
+  "fixed_design_rank": 12,
+  "formula": "human_z ~ api_z + C(domain) + C(task) + C(dimension)",
+  "model": "respondent-level crossed variance-component linear mixed model",
+  "n_domain_concept_clusters": 24,
+  "n_raters": 9,
+  "n_rows": 1908,
+  "n_stimuli": 142,
+  "objective_fallback_reasons": [
+    "both prespecified optimizers did not converge successfully",
+    "at least one variance component is on the <1e-8 boundary",
+    "statsmodels flagged a singular Hessian",
+    "Hessian absolute condition number is >=1e12",
+    "optimizer log-likelihood range is unavailable or exceeds 1e-4"
+  ],
+  "optimizer_log_likelihood_range": 6.221132074353591,
+  "optimizer_slope_range": 0.011731153945871764,
+  "optimizers": [
+    {
+      "all_fixed_coefficients_and_se_finite": true,
+      "api_z_p": 6.349662054417687e-06,
+      "api_z_se": 0.040315335149127295,
+      "api_z_slope": 0.1819995023663895,
+      "boundary_variance_component_lt_1e_8": false,
+      "converged": false,
+      "fixed_coefficients": {
+        "C(dimension)[T.fa]": 0.04339957571396886,
+        "C(dimension)[T.lc]": 0.009384268799041718,
+        "C(dimension)[T.mq]": -0.01897524800571265,
+        "C(dimension)[T.risk]": -0.06356083291760563,
+        "C(dimension)[T.tf]": -0.10826281730607043,
+        "C(domain)[T.Chemistry]": -0.37114490561050706,
+        "C(domain)[T.Geoscience]": 0.4414912486460744,
+        "C(domain)[T.Physics]": -0.38984025453818516,
+        "C(task)[T.B]": 0.3106483867895972,
+        "C(task)[T.C]": 0.5172615304498731,
+        "Intercept": -0.1797179996341193,
+        "api_z": 0.1819995023663895
+      },
+      "fixed_standard_errors": {
+        "C(dimension)[T.fa]": 0.09358807601698467,
+        "C(dimension)[T.lc]": 0.09358812226293169,
+        "C(dimension)[T.mq]": 0.09358886214273117,
+        "C(dimension)[T.risk]": 0.09358681618960678,
+        "C(dimension)[T.tf]": 0.09358975883727115,
+        "C(domain)[T.Chemistry]": 1.1374485693859124,
+        "C(domain)[T.Geoscience]": 1.0743778952077296,
+        "C(domain)[T.Physics]": 1.0744772361648123,
+        "C(task)[T.B]": 0.10933370908896566,
+        "C(task)[T.C]": 0.10132593572108797,
+        "Intercept": 0.9296465267804881,
+        "api_z": 0.040315335149127295
+      },
+      "hessian_abs_condition_number": 207254.10096433293,
+      "hessian_available": true,
+      "hessian_eigenvalue_max": -0.42471814714937284,
+      "hessian_eigenvalue_min": -88024.57775068053,
+      "hessian_singular_flag": false,
+      "log_likelihood": -3114.33273677985,
+      "optimizer": "lbfgs",
+      "residual_scale": 1.392570383794233,
+      "success": true,
+      "variance_components": [
+        0.08624553059298694,
+        0.8323428042892735,
+        0.12302737321480957
+      ],
+      "warnings": [
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+        "MixedLM optimization failed, trying a different optimizer may help.",
+        "Gradient optimization failed, |grad| = 49.888326",
+        "The Hessian matrix at the estimated parameter values is not positive definite."
+      ]
+    },
+    {
+      "all_fixed_coefficients_and_se_finite": true,
+      "api_z_p": 3.579736096330549e-05,
+      "api_z_se": 0.04119673316832093,
+      "api_z_slope": 0.17026834842051775,
+      "boundary_variance_component_lt_1e_8": true,
+      "converged": true,
+      "fixed_coefficients": {
+        "C(dimension)[T.fa]": 0.04358897804718527,
+        "C(dimension)[T.lc]": 0.009575596210611296,
+        "C(dimension)[T.mq]": -0.019195094096980864,
+        "C(dimension)[T.risk]": -0.06368695529350343,
+        "C(dimension)[T.tf]": -0.10801272959804378,
+        "C(domain)[T.Chemistry]": -0.36980987036645757,
+        "C(domain)[T.Geoscience]": 0.4363024219646405,
+        "C(domain)[T.Physics]": -0.39067162602928246,
+        "C(task)[T.B]": 0.30091871838767015,
+        "C(task)[T.C]": 0.5195395995839296,
+        "Intercept": -0.17558001603562562,
+        "api_z": 0.17026834842051775
+      },
+      "fixed_standard_errors": {
+        "C(dimension)[T.fa]": 0.09330878764612377,
+        "C(dimension)[T.lc]": 0.09330883608082803,
+        "C(dimension)[T.mq]": 0.0933096109779596,
+        "C(dimension)[T.risk]": 0.09330746819237906,
+        "C(dimension)[T.tf]": 0.09331055011120912,
+        "C(domain)[T.Chemistry]": 0.6554363223849825,
+        "C(domain)[T.Geoscience]": 0.619074451611507,
+        "C(domain)[T.Physics]": 0.6192330161753825,
+        "C(task)[T.B]": 0.1194812884006384,
+        "C(task)[T.C]": 0.11169711226878883,
+        "Intercept": 0.5414561554546418,
+        "api_z": 0.04119673316832093
+      },
+      "hessian_abs_condition_number": 8.480796312132954e+17,
+      "hessian_available": true,
+      "hessian_eigenvalue_max": 2.758524211614605e-12,
+      "hessian_eigenvalue_min": -20489.42987101224,
+      "hessian_singular_flag": true,
+      "log_likelihood": -3108.1116047054966,
+      "optimizer": "powell",
+      "residual_scale": 1.3842679049278195,
+      "success": true,
+      "variance_components": [
+        2.629589397276989e-09,
+        0.27351325146864414,
+        0.17445497338513782
+      ],
+      "warnings": [
+        "The MLE may be on the boundary of the parameter space."
+      ]
+    }
+  ],
+  "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes.",
+  "stable_for_primary_inference": false,
+  "top_level_group": "single constant group",
+  "variance_components": {
+    "domain_concept": "0 + C(domain_concept)",
+    "rater": "0 + C(participant_id)",
+    "stimulus": "0 + C(stimulus_signature_sha256)"
+  }
+}

@@ -1,0 +1,10 @@
+﻿generator_family,judge_provider
+Alibaba Qwen,qwen
+Anthropic Claude,anthropic
+ByteDance Doubao,doubao
+DeepSeek,deepseek
+Google Gemini,gemini
+Mimo,mimo
+Moonshot Kimi,kimi
+OpenAI GPT,openai
+Zhipu GLM,glm

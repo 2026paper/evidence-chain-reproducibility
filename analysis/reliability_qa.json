@@ -1,0 +1,55 @@
+{
+  "checks": {
+    "api_estimate_rows_match_scopes_dimensions": true,
+    "api_input_rows_7290": true,
+    "api_items_810": true,
+    "api_judges_9": true,
+    "api_point_metrics_finite": true,
+    "api_scope_result_item_counts_match": true,
+    "crosswalk_rows_210": true,
+    "ensemble_curve_rows_match_scopes_dimensions_panels": true,
+    "ensemble_panel_sizes_1_to_9": true,
+    "final_primary_equals_formal_cleaned": true,
+    "formula_self_checks_passed": true,
+    "human_crosswalk_complete": true,
+    "human_estimate_rows_match_observed_groups": true,
+    "human_input_rows_match_final_manifest": true,
+    "one_rater_all_point_and_ci_na": true,
+    "panel_curve_rows_match_observed_second_panels": true,
+    "scope_sizes_match_observed_inputs": true
+  },
+  "final_cleaning": {
+    "manifest_path": "analysis\\final_cleaning_manifest.json",
+    "manifest_sha256": "dc4bb2cbbbe63683cd38668634209000f1dbb80b64d1933b212642c6d260418b",
+    "rule_version": "3.0.0"
+  },
+  "formula_self_checks": {
+    "irrCAC_example_ac1": 0.77544,
+    "irrCAC_example_quadratic_ac2": 0.914,
+    "ordinal_alpha_example": 0.815388,
+    "perfect_icc_a1": 1.0,
+    "perfect_icc_ak": 1.0,
+    "perfect_interval_alpha": 1.0,
+    "perfect_kendall_w": 1.0
+  },
+  "observed": {
+    "api_result_rows": 24,
+    "ensemble_curve_rows": 216,
+    "expected_human_result_rows": 54,
+    "expected_panel_curve_rows": 540,
+    "first_wave": "首轮专家复核",
+    "human_input_rows": 5364,
+    "human_result_rows": 54,
+    "one_rater_groups": 6,
+    "panel_curve_rows": 540,
+    "scope_item_counts": {
+      "all810": 810,
+      "broad180": 180,
+      "final_first_human_covered": 144,
+      "selected30": 30
+    },
+    "second_wave": "二次专家复核"
+  },
+  "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes.",
+  "status": "PASS"
+}

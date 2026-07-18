@@ -1,0 +1,193 @@
+{
+  "cleaning_rule_version": "3.0.0",
+  "command_parameters": {
+    "bootstrap": 5000,
+    "permutations": 10000,
+    "quick": false
+  },
+  "created_utc": "2026-07-16T20:15:18.448916+00:00",
+  "final_cleaning_manifest_sha256": "dc4bb2cbbbe63683cd38668634209000f1dbb80b64d1933b212642c6d260418b",
+  "inputs": {
+    "api_stimulus_equivalence_810": {
+      "bytes": 143945,
+      "path": "<RESTRICTED_SOURCE>/api_stimulus_equivalence_810.csv",
+      "sha256": "751b01e88fb7828d2585c8abb4333bba33c955dd2311bcbf566d15c2656dc8d5"
+    },
+    "cleaned_human_ratings_long": {
+      "bytes": 645472,
+      "path": "<RESTRICTED_SOURCE>/cleaned_human_ratings_long.csv",
+      "sha256": "528f2da6b6e86d347e5325972175575f07bc0791a548ee4395108174c61c0373"
+    },
+    "current_api_test_scores_7290": {
+      "bytes": 2187083,
+      "path": "<RESTRICTED_SOURCE>/api_test_scores_7290.csv",
+      "sha256": "4bb91453c6ccfc22e0c24f99c487543686455b7875148f85e759113181a70da4"
+    },
+    "final_cleaning_manifest": {
+      "bytes": 10088,
+      "path": "<RESTRICTED_SOURCE>/final_cleaning_manifest.json",
+      "sha256": "dc4bb2cbbbe63683cd38668634209000f1dbb80b64d1933b212642c6d260418b"
+    },
+    "human_api_crosswalk": {
+      "bytes": 81321,
+      "path": "<RESTRICTED_SOURCE>/human_api_crosswalk.csv",
+      "sha256": "3e4899c647d2def2776f696377ce9805f23dbab0a5e4b61d03950b2a0bab99a8"
+    },
+    "sensitivity_panel_attention_only": {
+      "bytes": 1155934,
+      "path": "<RESTRICTED_SOURCE>/attention_only.csv",
+      "sha256": "d93197c906b4ba18392fe67595dead6b0d2dfbe9de347969a7cd490a0b8fb752"
+    },
+    "sensitivity_panel_final_primary": {
+      "bytes": 645472,
+      "path": "<RESTRICTED_SOURCE>/final_primary.csv",
+      "sha256": "528f2da6b6e86d347e5325972175575f07bc0791a548ee4395108174c61c0373"
+    },
+    "sensitivity_panel_second_case05_case07_mean": {
+      "bytes": 445402,
+      "path": "<RESTRICTED_SOURCE>/second_case05_case07_mean.csv",
+      "sha256": "0f307597150ed347e22ce27e55f796bb4574f882d8814406155a50ca34a8c44c"
+    },
+    "sensitivity_panel_strict_first_both_pairs": {
+      "bytes": 89038,
+      "path": "<RESTRICTED_SOURCE>/strict_first_both_pairs.csv",
+      "sha256": "ec1d77bbdb48ea4fa93d836b9fbbce4c0808bc28e4239d5d93b7d3a490ab643d"
+    },
+    "sensitivity_panel_threshold_85": {
+      "bytes": 733924,
+      "path": "<RESTRICTED_SOURCE>/threshold_85.csv",
+      "sha256": "bfd44624ee97495a7b00c5543a8a55783e17b75e0e9edf0f66249aefed66af49"
+    },
+    "sensitivity_panel_threshold_95": {
+      "bytes": 484606,
+      "path": "<RESTRICTED_SOURCE>/threshold_95.csv",
+      "sha256": "958aa76a977edcfcd5aeda4357e6627a4b66fc047bad9765595d52beee1e7f59"
+    }
+  },
+  "legacy_human_derivatives_read": false,
+  "old_human_result_files_read": [],
+  "outputs": {
+    "absolute_agreement": {
+      "bytes": 6803,
+      "path": "<RESTRICTED_SOURCE>/alignment_absolute_agreement.csv",
+      "sha256": "8ccb5b0de845dde761d74bbc6b69510d1cdb7e1881012811efffb98fd5d0afcd"
+    },
+    "api_by_stimulus_dimension": {
+      "bytes": 785259,
+      "path": "<RESTRICTED_SOURCE>/alignment_api_by_stimulus_dimension.csv",
+      "sha256": "98aff40d69faae4778c72b73b895aa52a42b2138c0bd49d1f60e6d6c941872bf"
+    },
+    "cross_wave_overlap": {
+      "bytes": 27327,
+      "path": "<RESTRICTED_SOURCE>/alignment_cross_wave_overlap.csv",
+      "sha256": "9e0a20aa5da5cbaa2078f5d1f7814278b774609b6e612757bbf4524094f79935"
+    },
+    "cross_wave_overlap_summary": {
+      "bytes": 1132,
+      "path": "<RESTRICTED_SOURCE>/alignment_cross_wave_overlap_summary.csv",
+      "sha256": "3454fe2a7c17a46f6b5f44b63573f601c475eaae41429bcfe69c31c89d5d7c37"
+    },
+    "dispersion_disagreement": {
+      "bytes": 4916,
+      "path": "<RESTRICTED_SOURCE>/alignment_dispersion_disagreement.csv",
+      "sha256": "9e6f0b5ef49ec1ed292687c289b5f197d5bf1857ee240e0f30feceadbe5748b9"
+    },
+    "effects": {
+      "bytes": 15264,
+      "path": "<RESTRICTED_SOURCE>/alignment_effects.csv",
+      "sha256": "8b087f291f136638a8da49ac35de2eb9590d1c53a18820756786184a1848ba01"
+    },
+    "first_bootstrap_draws": {
+      "bytes": 604456,
+      "path": "<RESTRICTED_SOURCE>/alignment_first_bootstrap_draws.csv.gz",
+      "sha256": "847c9c93f369f22640a6f2d7f3fced890f17f353beaa5d2498f3a21e30c47201"
+    },
+    "first_permutation_draws": {
+      "bytes": 2030536,
+      "path": "<RESTRICTED_SOURCE>/alignment_first_permutation_draws.csv.gz",
+      "sha256": "6e890c912a7e2092731d9ec5945cc7fe9af1e38e6386a397e01dd9ffe524dee2"
+    },
+    "heterogeneity": {
+      "bytes": 1263,
+      "path": "<RESTRICTED_SOURCE>/alignment_heterogeneity.csv",
+      "sha256": "8040cbc92fbf4e3077fc55195f0683cafa0fb5f131fcd7c42512d7d1abe523f2"
+    },
+    "human_api_item_dimension": {
+      "bytes": 316634,
+      "path": "<RESTRICTED_SOURCE>/alignment_human_api_item_dimension.csv",
+      "sha256": "57b8073666be0c3a582984f0652a7edc0e1c961fe56435d06baa4852e6c607dd"
+    },
+    "leave_one_cluster": {
+      "bytes": 2241,
+      "path": "<RESTRICTED_SOURCE>/alignment_leave_one_cluster.csv",
+      "sha256": "aba974342b1b21329d6cac4ca38018b173fc5cf6fb7431ab3e2bf2de5ced6f66"
+    },
+    "mixed_model_attempt": {
+      "bytes": 5654,
+      "path": "<RESTRICTED_SOURCE>/alignment_mixed_model_attempt.json",
+      "sha256": "f3d608d6d5f70e1d9883b0c954c19e45e14c02c100f97d80c74db93305938c8f"
+    },
+    "model_form_checks": {
+      "bytes": 5417,
+      "path": "<RESTRICTED_SOURCE>/alignment_model_form_checks.csv",
+      "sha256": "73990ab5963d4407e83411b56530812cd1b346c48be2827582a6276ff9d31937"
+    },
+    "ordinal_gee_attempt": {
+      "bytes": 3411,
+      "path": "<RESTRICTED_SOURCE>/alignment_ordinal_gee_attempt.json",
+      "sha256": "fc1ef4a872b7d13c560458b5149fd9da06a31488f2de42a467dc9be65514a28b"
+    },
+    "second_concept_bootstrap_draws": {
+      "bytes": 471082,
+      "path": "<RESTRICTED_SOURCE>/alignment_second_concept_bootstrap_draws.csv.gz",
+      "sha256": "a80c66d9cf299ae7a2ebea67aa21c08915d5cd83ab834e2bf558bf4688da65db"
+    },
+    "second_exact_draws": {
+      "bytes": 4379651,
+      "path": "<RESTRICTED_SOURCE>/alignment_second_exact_draws.csv.gz",
+      "sha256": "aa68c35ef5dc68d4f096c11330f74a08d39b4010c676f8a2c1ff6fb82edce3d9"
+    },
+    "second_item_bootstrap_draws": {
+      "bytes": 508548,
+      "path": "<RESTRICTED_SOURCE>/alignment_second_item_bootstrap_draws.csv.gz",
+      "sha256": "16ed44ae8191b4f486e380b85b593b8c602009a465cced9fc2ebdfeab2924594"
+    },
+    "sensitivity": {
+      "bytes": 27611,
+      "path": "<RESTRICTED_SOURCE>/alignment_sensitivity.csv",
+      "sha256": "7cb95f5ce0cf27ce8209b94ab46a75b72d951ff53c8627a0a45fb7e5d73266d9"
+    },
+    "standardization_constants": {
+      "bytes": 1791,
+      "path": "<RESTRICTED_SOURCE>/alignment_standardization_constants.csv",
+      "sha256": "242a9580f582b7408309eed1f87f2eaa89bd380dc832d25d84857ee38473487d"
+    },
+    "validation": {
+      "bytes": 9950,
+      "path": "<RESTRICTED_SOURCE>/alignment_validation.json",
+      "sha256": "3df955dfb6e40f5c68f27a69bd74d2c6d395e022cf3273cc673c5cc0ba9f55bf"
+    }
+  },
+  "packages": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.7",
+    "scipy": "1.17.1",
+    "statsmodels": "0.14.6"
+  },
+  "qa_status": "PASS",
+  "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes.",
+  "script_path": "scripts/alignment_analysis.py",
+  "script_sha256": "cdfd5b779b4cf981689cbedd6ede4982b183e6b6d4d7c960fde07ca4b22ec005",
+  "script_version": "3.0.0",
+  "seeds": {
+    "dispersion_disagreement_bootstrap_each_wave": 20260717,
+    "first_cluster_bootstrap": 20260717,
+    "first_freedman_lane_permutation": 20260717,
+    "second_concept_cluster_bootstrap": 20260717,
+    "second_exact_permutation": "none (complete enumeration)",
+    "second_item_bootstrap_sensitivity": 20260717
+  },
+  "validation_path": "<RESTRICTED_SOURCE>/alignment_validation.json"
+}

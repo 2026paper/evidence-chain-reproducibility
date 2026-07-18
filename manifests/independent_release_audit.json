@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-07-16T22:05:36.3195167Z",
+  "method": "Independent read-only comparison of each public release table against its formal source, excluding only declared privacy-transformed fields.",
+  "checks": {
+    "human_participant_cluster_signatures_preserved": true,
+    "human_source_and_release_ids_disjoint": true,
+    "human_release_key_format_valid": true,
+    "abc_response_signatures_preserved": true,
+    "abc_source_and_release_response_ids_disjoint": true,
+    "difference_respondent_signatures_preserved": true,
+    "difference_source_and_release_ids_disjoint": true,
+    "all_34_public_crosswalk_text_hashes_and_character_counts_recomputed": true,
+    "exact_duration_columns_absent": true,
+    "individual_background_quasi_identifier_columns_absent": true
+  },
+  "observed_counts": {
+    "human_rows": 5364,
+    "human_participant_clusters": 104,
+    "abc_rows": 2136,
+    "abc_response_instances": 178,
+    "abc_participant_clusters": 167,
+    "difference_rows": 480,
+    "difference_respondents": 60,
+    "public_crosswalk_rows": 34
+  },
+  "small_cell_result": "No background field remains in an individual release, and sparse background JSON sections were removed; therefore no n<5 background cell is publicly reconstructible from this package.",
+      "note": "Scientific study-design strata (human-review wave/domain/task) were retained because they are required analytic factors rather than participant background attributes."
+}

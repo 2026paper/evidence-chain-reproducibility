@@ -1,0 +1,19 @@
+﻿item_id,judge_provider,paper_model_label,judge_model_requested,actual_api_model,judge_model_returned,judge_model,fa,cc,lc,tf,mq,risk,parse_success,retry_count,error_message,http_status,usage_prompt_tokens,usage_completion_tokens,system_fingerprint_or_backend_id
+rb18_00007c0f6079,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,5,5,5,5,1,True,0,,200,937,131,gemini-3.1-pro-preview
+rb18_06a41a675601,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,5,5,5,5,1,True,0,,200,927,91,gemini-3.1-pro-preview
+rb18_0750c04a6022,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,5,5,5,5,1,True,0,,200,961,131,gemini-3.1-pro-preview
+rb18_129767c542cc,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,4,3,5,4,5,2,True,0,,200,903,89,gemini-3.1-pro-preview
+rb18_13c2377f8265,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,5,5,5,5,1,True,0,,200,918,131,gemini-3.1-pro-preview
+rb18_185f4218daf7,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,4,5,5,5,1,True,0,,200,895,129,gemini-3.1-pro-preview
+rb18_32041e3f1e26,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,5,5,5,5,1,True,0,,200,963,131,gemini-3.1-pro-preview
+rb18_45570a054b7e,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,4,5,5,4,1,True,0,,200,935,131,gemini-3.1-pro-preview
+rb18_479be42075e3,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,5,5,5,5,1,True,0,,200,944,130,gemini-3.1-pro-preview
+rb18_5926132b8302,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,4,5,5,5,1,True,0,,200,906,92,gemini-3.1-pro-preview
+rb18_6c7eaacd12e1,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,5,5,5,5,1,True,0,,200,945,87,gemini-3.1-pro-preview
+rb18_7d107c521a36,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,5,5,5,5,1,True,0,,200,930,131,gemini-3.1-pro-preview
+rb18_931de414d2e0,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,5,5,5,5,1,True,0,,200,951,130,gemini-3.1-pro-preview
+rb18_93ef670f33a0,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,5,5,5,5,1,True,0,,200,931,130,gemini-3.1-pro-preview
+rb18_a91dc810f662,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,4,5,5,5,1,True,1,,200,894,130,gemini-3.1-pro-preview
+rb18_bbbb5f43784f,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,4,5,5,4,1,True,0,,200,900,88,gemini-3.1-pro-preview
+rb18_debd484e21cb,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,5,5,5,5,1,True,0,,200,946,128,gemini-3.1-pro-preview
+rb18_df546a2e1915,gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,gemini-3.1-pro-preview,gemini-3.1-pro,5,4,5,5,4,1,True,0,,200,894,89,gemini-3.1-pro-preview

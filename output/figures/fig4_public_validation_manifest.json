@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "dominant_claim": "the exact-text bridge is directionally favorable but familywise inconclusive, and aggregate probe success still hides A01",
+  "text_cells": 18,
+  "concept_blocks": 6,
+  "api_calls": 162,
+  "quality_r": 0.6702934835847044,
+  "quality_holm_p": 0.0553840877914952,
+  "risk_r": -0.580351493285052,
+  "risk_holm_p": 0.0553840877914952,
+  "figure_inches": [
+    4.800000000000001,
+    3.7199999999999998
+  ],
+  "sha256": {
+    "pdf": "71b1788a712f3dc8d48c5fe7f8f2a7f748868917a1872f8ec3039702708ce25e",
+    "png": "3d986ef61e61c370f8d712a5a4959aaf5e9a8ddf6ed83cf729f79ee8c8cea769"
+  }
+}

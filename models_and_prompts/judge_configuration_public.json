@@ -1,0 +1,29 @@
+{
+  "configuration_scope": "credential-free settings used by the audited official-API judging workflow",
+  "temperature": 0,
+  "top_p_policy": "omit unless an API requires it; if forced, set to 1 and record",
+  "seed": 20260514,
+  "n": 1,
+  "stream": false,
+  "max_output_tokens": 800,
+  "retry_parse_failures": 2,
+  "tools_enabled": false,
+  "web_search": false,
+  "retrieval_grounding": false,
+  "providers": [
+    {"provider": "openai", "paper_model_label": "GPT-5.5 Thinking", "requested_model": "gpt-5.5", "reasoning_effort": "high"},
+    {"provider": "gemini", "paper_model_label": "Gemini 3.1 Pro", "requested_model": "gemini-3.1-pro"},
+    {"provider": "kimi", "paper_model_label": "Kimi K2.6 Thinking", "requested_model": "kimi-k2.6-thinking"},
+    {"provider": "deepseek", "paper_model_label": "DeepSeek-V4 Expert Mode", "requested_model": "deepseek-v4"},
+    {"provider": "doubao", "paper_model_label": "Doubao 2.0 Pro", "requested_model": "doubao-seed-2-0-pro-260215"},
+    {"provider": "glm", "paper_model_label": "GLM-5.1", "requested_model": "glm-5.1"},
+    {"provider": "qwen", "paper_model_label": "Qwen3.5 Thinking", "requested_model": "qwen3.5-plus"},
+    {"provider": "anthropic", "paper_model_label": "Claude Sonnet 4.6", "requested_model": "claude-sonnet-4-6"},
+    {"provider": "mimo", "paper_model_label": "Mimo v2.5 Pro", "requested_model": "mimo-v2.5-pro"}
+  ],
+  "notes": [
+    "Actual returned model identifiers are retained row-by-row in data/api_test_scores_7290.csv.",
+    "Provider controls not exposed by an API are reported as unavailable rather than reconstructed.",
+    "No API key, endpoint credential, or raw provider trace is included."
+  ]
+}

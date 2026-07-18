@@ -1,0 +1,104 @@
+{
+  "analysis_version": "1.0.1",
+  "assignment_provenance": "study author confirms complete random assignment among A/B/C; export does not independently encode the algorithm",
+  "fixed_sensitivity_analyses": {
+    "excluding_nonparallel_adaptation_pair": {
+      "excluded_concept": "adaptation",
+      "excluded_post_item": "Q17",
+      "excluded_pre_item": "Q11",
+      "omnibus_interaction": {
+        "df": 2,
+        "hypothesis": "joint version-by-phase interaction",
+        "p_value": 0.003266657160939765,
+        "statistic": 11.447976183788706,
+        "terms": [
+          "phase:C(version, Treatment(reference=\"A\"))[T.B]",
+          "phase:C(version, Treatment(reference=\"A\"))[T.C]"
+        ]
+      },
+      "result_location": "analysis/public_abc_analysis_results.json#/robustness/excluding_nonparallel_adaptation_pair",
+      "status": "completed"
+    }
+  },
+  "item_sampling_status": "six archived examples; no probability-sampling claim",
+  "privacy": {
+    "internal_only_fields": [
+      "platform user ID for anonymous clustering",
+      "start time for fixed first-eligible sensitivity",
+      "duration for fixed QC"
+    ],
+    "output_contains_ip_location_device": false,
+    "output_contains_platform_user_id": false,
+    "output_contains_raw_response_id": false,
+    "output_contains_timestamp": false
+  },
+  "qa_status": "PASS",
+  "quality_control": {
+    "attention_fail_responses": 1,
+    "attention_pass_responses": 179,
+    "duration_exclusions_after_attention": 1,
+    "duration_floor_seconds": 72.0,
+    "duration_missing_or_nonpositive_retained": 0,
+    "final_by_version": {
+      "A": 60,
+      "B": 60,
+      "C": 58
+    },
+    "final_participant_clusters": 167,
+    "final_responses": 178,
+    "first_response_sensitivity_n": 167,
+    "raw_responses": 180,
+    "repeated_participant_clusters": 10,
+    "responses_in_repeated_clusters": 21,
+    "single_form_sensitivity_n": 157
+  },
+  "randomization_adherence": "10 anonymous participant clusters appear across forms in the final data; primary retains all eligible responses with participant-clustered GEE and the fixed single-form sensitivity",
+  "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes.",
+  "script": {
+    "path": "ADMA2026_重构稿\\scripts\\public_questionnaire_analyses.py",
+    "sha256": "38830e2ac56e86cbbf1818cf3734c92cf680a6e8bb089a92d73876353b2772ba"
+  },
+  "semantic_crosswalk": {
+    "audit_path": "ADMA2026_重构稿\\analysis\\public_semantic_crosswalk_audit.json",
+    "audit_sha256": "b238f674cc7bef6de8e0528bc730003b0a7a5a1163199855a5fe8d7774d767ec",
+    "path": "ADMA2026_重构稿\\analysis\\public_semantic_crosswalk.csv",
+    "sha256": "868b0c627b1cb65a1779ca6a6d24863c945cf8cc33ef1f6024dac50c14f9e940",
+    "status": "18/18 form-material mappings to six traced upstream disagreement cases; adaptations are not exact texts"
+  },
+  "software": {
+    "numpy": "2.4.4",
+    "openpyxl": "3.1.5",
+    "pandas": "3.0.2",
+    "patsy": "1.0.2",
+    "python": "3.12.7",
+    "scipy": "1.17.1",
+    "statsmodels": "0.14.6"
+  },
+  "source_mapping_status": "completed_18_of_18_to_six_upstream_disagreement_cases_nonexact_lay_adaptations",
+  "sources": {
+    "A": {
+      "columns": 51,
+      "file": "A.xlsx",
+      "reported_dimension_before_reset": "A1:A1",
+      "rows": 60,
+      "sha256": "75007e42e4e20b32c90e7014b65beb994b91a6547da69ef15e050fec8db6f8ff",
+      "worksheet": "TextData_20260712223133_1"
+    },
+    "B": {
+      "columns": 51,
+      "file": "B.xlsx",
+      "reported_dimension_before_reset": "A1:A1",
+      "rows": 60,
+      "sha256": "8651fb359593c1a85c6807fff03849886c8f2cfa6c7ccaa8eba8fb58b76299fc",
+      "worksheet": "TextData_20260712224215_1"
+    },
+    "C": {
+      "columns": 51,
+      "file": "C.xlsx",
+      "reported_dimension_before_reset": "A1:A1",
+      "rows": 60,
+      "sha256": "149b8307c10838cd56cd812218c73e0130d3307bc4d3f711e33aeabd478e8da4",
+      "worksheet": "TextData_20260712222923_1"
+    }
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "analysis_version": "1.1.0",
+  "script": {
+    "path": "analyze_aggregation_human_baselines.py",
+    "sha256": "0f3b603952dcc244a1f0c822208b5dcff8a8e167fff32892f348d923d57c1193"
+  },
+  "inputs": {
+    "alignment_human_api_item_dimension.csv": "c2d7a69929f3a1a82c7170326a38805ff92b3ab8a54c2e9a1cbd0395e69ed623",
+    "human_api_crosswalk.csv": "3e4899c647d2def2776f696377ce9805f23dbab0a5e4b61d03950b2a0bab99a8",
+    "cleaned_human_ratings_long.csv": "f66b709a5a8415783648b8015c25a4926065508f3bebbfe3b300a3b6b967cbe5",
+    "broad_crosswalk_placements": 180,
+    "broad_visible_text_signatures": 178,
+    "api_test_scores_7290.csv": "4bb91453c6ccfc22e0c24f99c487543686455b7875148f85e759113181a70da4",
+    "api_stimulus_equivalence_810.csv": "751b01e88fb7828d2585c8abb4333bba33c955dd2311bcbf566d15c2656dc8d5",
+    "api_rows": 7290,
+    "source_uids": 810,
+    "judge_providers": 9
+  },
+  "methods": [
+    {
+      "method_id": "single::anthropic",
+      "method_type": "single_judge",
+      "method_label": "Claude Sonnet 4.6",
+      "expected_judges_per_source_uid": 1,
+      "definition": "one fixed judge family; equivalent source UIDs averaged within visible text",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    },
+    {
+      "method_id": "single::deepseek",
+      "method_type": "single_judge",
+      "method_label": "DeepSeek-V4 Expert Mode",
+      "expected_judges_per_source_uid": 1,
+      "definition": "one fixed judge family; equivalent source UIDs averaged within visible text",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    },
+    {
+      "method_id": "single::doubao",
+      "method_type": "single_judge",
+      "method_label": "Doubao 2.0 Pro",
+      "expected_judges_per_source_uid": 1,
+      "definition": "one fixed judge family; equivalent source UIDs averaged within visible text",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    },
+    {
+      "method_id": "single::gemini",
+      "method_type": "single_judge",
+      "method_label": "Gemini 3.1 Pro",
+      "expected_judges_per_source_uid": 1,
+      "definition": "one fixed judge family; equivalent source UIDs averaged within visible text",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    },
+    {
+      "method_id": "single::glm",
+      "method_type": "single_judge",
+      "method_label": "GLM-5.1",
+      "expected_judges_per_source_uid": 1,
+      "definition": "one fixed judge family; equivalent source UIDs averaged within visible text",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    },
+    {
+      "method_id": "single::kimi",
+      "method_type": "single_judge",
+      "method_label": "Kimi K2.6 Thinking",
+      "expected_judges_per_source_uid": 1,
+      "definition": "one fixed judge family; equivalent source UIDs averaged within visible text",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    },
+    {
+      "method_id": "single::mimo",
+      "method_type": "single_judge",
+      "method_label": "Mimo v2.5 Pro",
+      "expected_judges_per_source_uid": 1,
+      "definition": "one fixed judge family; equivalent source UIDs averaged within visible text",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    },
+    {
+      "method_id": "single::openai",
+      "method_type": "single_judge",
+      "method_label": "GPT-5.5 Thinking",
+      "expected_judges_per_source_uid": 1,
+      "definition": "one fixed judge family; equivalent source UIDs averaged within visible text",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    },
+    {
+      "method_id": "single::qwen",
+      "method_type": "single_judge",
+      "method_label": "Qwen3.5 Thinking",
+      "expected_judges_per_source_uid": 1,
+      "definition": "one fixed judge family; equivalent source UIDs averaged within visible text",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    },
+    {
+      "method_id": "ensemble::mean",
+      "method_type": "ensemble",
+      "method_label": "Nine-judge mean",
+      "expected_judges_per_source_uid": 9,
+      "definition": "arithmetic mean of the nine judge-family values for each visible text",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    },
+    {
+      "method_id": "ensemble::median",
+      "method_type": "ensemble",
+      "method_label": "Nine-judge median",
+      "expected_judges_per_source_uid": 9,
+      "definition": "median of the nine judge-family values for each visible text",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    },
+    {
+      "method_id": "ensemble::trimmed_one_each_tail",
+      "method_type": "ensemble",
+      "method_label": "Nine-judge trimmed mean",
+      "expected_judges_per_source_uid": 9,
+      "definition": "drop one lowest and one highest judge-family value, then average the remaining seven",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    },
+    {
+      "method_id": "ensemble::no_self_mean",
+      "method_type": "ensemble",
+      "method_label": "No-self mean",
+      "expected_judges_per_source_uid": 8,
+      "definition": "for each generated source UID exclude its same-family judge, then pool the eight retained values by visible text",
+      "risk_direction": "quality_aligned_high_is_good; aligned risk = 6 - raw risk"
+    }
+  ],
+  "bootstrap": {
+    "method": "domain-stratified nonparametric domain-by-concept cluster bootstrap",
+    "seed": 20260717,
+    "draws": 5000,
+    "clusters_total": 30,
+    "clusters_by_domain": {
+      "Biology": 6,
+      "Chemistry": 6,
+      "Climate/Environment": 6,
+      "Geoscience": 6,
+      "Physics": 6
+    },
+    "invalid_proportion_by_method": {
+      "single::anthropic": 0.0,
+      "single::deepseek": 0.0,
+      "single::doubao": 0.0,
+      "single::gemini": 0.0,
+      "single::glm": 0.0,
+      "single::kimi": 0.0,
+      "single::mimo": 0.0,
+      "single::openai": 0.0,
+      "single::qwen": 0.0,
+      "ensemble::mean": 0.0,
+      "ensemble::median": 0.0,
+      "ensemble::trimmed_one_each_tail": 0.0,
+      "ensemble::no_self_mean": 0.0
+    },
+    "standardization": "method-by-dimension constants frozen from original common sample"
+  },
+  "permutation": {
+    "method": "Freedman--Lane residual permutation",
+    "seed": 20260717,
+    "draws": 10000,
+    "permutation_strata": "domain-by-task",
+    "n_strata": 15,
+    "stratum_sizes": {
+      "Biology||A": 12,
+      "Biology||B": 12,
+      "Biology||C": 12,
+      "Chemistry||A": 12,
+      "Chemistry||B": 12,
+      "Chemistry||C": 12,
+      "Climate/Environment||A": 12,
+      "Climate/Environment||B": 12,
+      "Climate/Environment||C": 12,
+      "Geoscience||A": 12,
+      "Geoscience||B": 12,
+      "Geoscience||C": 12,
+      "Physics||A": 11,
+      "Physics||B": 11,
+      "Physics||C": 12
+    },
+    "joint_six_dimension_movement": true,
+    "shared_stimulus_maps_across_all_13_methods": true,
+    "max_abs_identity_difference": 4.163336342344337e-16
+  },
+  "software": {
+    "python": "3.12.7",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1"
+  },
+  "outputs": {
+    "aggregation_human_common_data.csv": "1815e0faebb0b95c1693fbcf343abda5d5bdee1607e43c016c25349d9190e4da",
+    "aggregation_human_results.csv": "86de8c9839ba6752e13c94f0240a6eeb8ea5e9da2000ac9b3e1210b0c4ffb7bd",
+    "aggregation_paired_beta_differences.csv": "0e6ddb5d83505f99a4454cc766ac9b3e398fdb6acb40d47d3ead2230907cb371",
+    "aggregation_standardization_constants.csv": "d6959015b8294ed0cee88d3fd69178c8c74f80dafc52b63563062716bb25550a",
+    "generator_judge_family_mapping.csv": "5c7eb1a38a5179463820ea4cd469acec770bec0e35c9e94e88a306451189b8ef",
+    "aggregation_human_results.json": "246f8c7f73e986c69ea9f7cec0de118787d7a2a15318a30619c48453682d8cba",
+    "AGGREGATION_HUMAN_BASELINES_REPORT.md": "b218502efff6e2e5ee939d7f3d691ccb52e6ba9d5f92ee4192b0088f2968ff45"
+  },
+  "qa": {
+    "common_rows_per_method": true,
+    "common_signature_set": true,
+    "all_bootstrap_draws_reportable": true,
+    "freedman_lane_identity_pass": true,
+    "exploratory_values_validated": true,
+    "no_secrets_or_credentials_read": true
+  },
+  "secret_handling": "No API credentials are read or written by this analysis."
+}

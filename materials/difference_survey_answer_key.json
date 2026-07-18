@@ -1,0 +1,56 @@
+{
+  "analysis_version": "1.0.1",
+  "cases": [
+    {
+      "case_id": "A01",
+      "concept": "projectile_motion",
+      "misleading_key": "B",
+      "suitability_key": "A"
+    },
+    {
+      "case_id": "A02",
+      "concept": "balanced_forces",
+      "misleading_key": "B",
+      "suitability_key": "A"
+    },
+    {
+      "case_id": "A03",
+      "concept": "evolutionary_direction",
+      "misleading_key": "A",
+      "suitability_key": "B"
+    },
+    {
+      "case_id": "A04",
+      "concept": "plant_respiration",
+      "misleading_key": "A",
+      "suitability_key": "B"
+    },
+    {
+      "case_id": "A05",
+      "concept": "geological_time",
+      "misleading_key": "B",
+      "suitability_key": "A"
+    },
+    {
+      "case_id": "A06",
+      "concept": "weather_vs_climate",
+      "misleading_key": "B",
+      "suitability_key": "A"
+    },
+    {
+      "case_id": "A07",
+      "concept": "chemical_equilibrium",
+      "misleading_key": "B",
+      "suitability_key": "A"
+    },
+    {
+      "case_id": "A08",
+      "concept": "greenhouse_effect",
+      "misleading_key": "A",
+      "suitability_key": "B"
+    }
+  ],
+  "choice_rule": "obvious/slight A or B collapse to selected version; ties/uncertain do not match a key",
+  "duration_floor_seconds": 96.0,
+  "logical_consistency_rule": "defined only when both questions select A or B; equals 1 when selections differ"
+}

@@ -1,0 +1,28 @@
+call_cell_id,judge_provider,paper_model_label,requested_model,reasoning_effort,repetition,fresh_call_required,cache_reuse_allowed,temperature,n,max_output_tokens
+openai_r1,openai,GPT-5.5 Thinking,gpt-5.5,high,1,true,false,0,1,800
+openai_r2,openai,GPT-5.5 Thinking,gpt-5.5,high,2,true,false,0,1,800
+openai_r3,openai,GPT-5.5 Thinking,gpt-5.5,high,3,true,false,0,1,800
+gemini_r1,gemini,Gemini 3.1 Pro,gemini-3.1-pro,,1,true,false,0,1,800
+gemini_r2,gemini,Gemini 3.1 Pro,gemini-3.1-pro,,2,true,false,0,1,800
+gemini_r3,gemini,Gemini 3.1 Pro,gemini-3.1-pro,,3,true,false,0,1,800
+kimi_r1,kimi,Kimi K2.6 Thinking,kimi-k2.6-thinking,,1,true,false,0,1,800
+kimi_r2,kimi,Kimi K2.6 Thinking,kimi-k2.6-thinking,,2,true,false,0,1,800
+kimi_r3,kimi,Kimi K2.6 Thinking,kimi-k2.6-thinking,,3,true,false,0,1,800
+deepseek_r1,deepseek,DeepSeek-V4 Expert Mode,deepseek-v4,,1,true,false,0,1,800
+deepseek_r2,deepseek,DeepSeek-V4 Expert Mode,deepseek-v4,,2,true,false,0,1,800
+deepseek_r3,deepseek,DeepSeek-V4 Expert Mode,deepseek-v4,,3,true,false,0,1,800
+doubao_r1,doubao,Doubao 2.0 Pro,doubao-seed-2-0-pro-260215,,1,true,false,0,1,800
+doubao_r2,doubao,Doubao 2.0 Pro,doubao-seed-2-0-pro-260215,,2,true,false,0,1,800
+doubao_r3,doubao,Doubao 2.0 Pro,doubao-seed-2-0-pro-260215,,3,true,false,0,1,800
+glm_r1,glm,GLM-5.1,glm-5.1,,1,true,false,0,1,800
+glm_r2,glm,GLM-5.1,glm-5.1,,2,true,false,0,1,800
+glm_r3,glm,GLM-5.1,glm-5.1,,3,true,false,0,1,800
+qwen_r1,qwen,Qwen3.5 Thinking,qwen3.5-plus,,1,true,false,0,1,800
+qwen_r2,qwen,Qwen3.5 Thinking,qwen3.5-plus,,2,true,false,0,1,800
+qwen_r3,qwen,Qwen3.5 Thinking,qwen3.5-plus,,3,true,false,0,1,800
+anthropic_r1,anthropic,Claude Sonnet 4.6,claude-sonnet-4-6,,1,true,false,0,1,800
+anthropic_r2,anthropic,Claude Sonnet 4.6,claude-sonnet-4-6,,2,true,false,0,1,800
+anthropic_r3,anthropic,Claude Sonnet 4.6,claude-sonnet-4-6,,3,true,false,0,1,800
+mimo_r1,mimo,Mimo v2.5 Pro,mimo-v2.5-pro,,1,true,false,0,1,800
+mimo_r2,mimo,Mimo v2.5 Pro,mimo-v2.5-pro,,2,true,false,0,1,800
+mimo_r3,mimo,Mimo v2.5 Pro,mimo-v2.5-pro,,3,true,false,0,1,800

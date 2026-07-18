@@ -1,0 +1,161 @@
+﻿layer,row_key,query_concept_id,confirmed_item_id,mapping_evidence,rank,item_id,generator,model,task,domain,concept_id,concept,score
+public_reader_ABC,ABC_A_1,C04,千问_C_C04,explicit_case_provenance,1,千问_C_C04,Alibaba Qwen,Alibaba Qwen,C,Physics,C04,抛体运动,0.17406868462947295
+public_reader_ABC,ABC_A_1,C04,千问_C_C04,explicit_case_provenance,2,DEEPSEEK_C_C04,DeepSeek,DeepSeek,C,Physics,C04,抛体运动,0.15275645979338529
+public_reader_ABC,ABC_A_1,C04,千问_C_C04,explicit_case_provenance,3,GLM_C_C04,Zhipu GLM,Zhipu GLM,C,Physics,C04,抛体运动,0.10671472488933562
+public_reader_ABC,ABC_A_1,C04,千问_C_C04,explicit_case_provenance,4,claude_C_C04,Anthropic Claude,Anthropic Claude,C,Physics,C04,抛体运动,0.10197794627053806
+public_reader_ABC,ABC_A_1,C04,千问_C_C04,explicit_case_provenance,5,千问_B_C04,Alibaba Qwen,Alibaba Qwen,B,Physics,C04,抛体运动,0.09354941945059084
+public_reader_ABC,ABC_A_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,1,DEEPSEEK_B_C14,DeepSeek,DeepSeek,B,Biology,C14,进化没有预设目标,0.3151439891340617
+public_reader_ABC,ABC_A_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,2,DEEPSEEK_C_C14,DeepSeek,DeepSeek,C,Biology,C14,进化没有预设目标,0.1199628679037165
+public_reader_ABC,ABC_A_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,3,千问_C_C14,Alibaba Qwen,Alibaba Qwen,C,Biology,C14,进化没有预设目标,0.09985358272097435
+public_reader_ABC,ABC_A_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,4,千问_A_C14,Alibaba Qwen,Alibaba Qwen,A,Biology,C14,进化没有预设目标,0.09924436123291316
+public_reader_ABC,ABC_A_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,5,GLM_C_C14,Zhipu GLM,Zhipu GLM,C,Biology,C14,进化没有预设目标,0.08318008768171793
+public_reader_ABC,ABC_A_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,1,DEEPSEEK_B_C20,DeepSeek,DeepSeek,B,Geoscience,C20,地质时间,0.27810410348115266
+public_reader_ABC,ABC_A_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,2,GPT_A_C20,OpenAI GPT,OpenAI GPT,A,Geoscience,C20,地质时间,0.15384246878803182
+public_reader_ABC,ABC_A_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,3,mimo_A_C20,Mimo,Mimo,A,Geoscience,C20,地质时间,0.1334652747703403
+public_reader_ABC,ABC_A_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,4,GLM_A_C20,Zhipu GLM,Zhipu GLM,A,Geoscience,C20,地质时间,0.05766067396345737
+public_reader_ABC,ABC_A_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,5,GPT_C_C20,OpenAI GPT,OpenAI GPT,C,Geoscience,C20,地质时间,0.048310681035220494
+public_reader_ABC,ABC_A_4,C18,Gemini_B_C18,explicit_case_provenance,1,Gemini_B_C18,Google Gemini,Google Gemini,B,Biology,C18,光合作用与细胞呼吸,0.3791563539160078
+public_reader_ABC,ABC_A_4,C18,Gemini_B_C18,explicit_case_provenance,2,DEEPSEEK_B_C18,DeepSeek,DeepSeek,B,Biology,C18,光合作用与细胞呼吸,0.17235915900057505
+public_reader_ABC,ABC_A_4,C18,Gemini_B_C18,explicit_case_provenance,3,Gemini_C_C18,Google Gemini,Google Gemini,C,Biology,C18,光合作用与细胞呼吸,0.11072887925095062
+public_reader_ABC,ABC_A_4,C18,Gemini_B_C18,explicit_case_provenance,4,千问_C_C18,Alibaba Qwen,Alibaba Qwen,C,Biology,C18,光合作用与细胞呼吸,0.09550127524275685
+public_reader_ABC,ABC_A_4,C18,Gemini_B_C18,explicit_case_provenance,5,KIMI_A_C18,Moonshot Kimi,Moonshot Kimi,A,Biology,C18,光合作用与细胞呼吸,0.06785782222961842
+public_reader_ABC,ABC_A_5,C14,GLM_A_C14,explicit_case_provenance,1,GLM_A_C14,Zhipu GLM,Zhipu GLM,A,Biology,C14,进化没有预设目标,0.19078520003260513
+public_reader_ABC,ABC_A_5,C14,GLM_A_C14,explicit_case_provenance,2,GLM_C_C14,Zhipu GLM,Zhipu GLM,C,Biology,C14,进化没有预设目标,0.15434714580118114
+public_reader_ABC,ABC_A_5,C14,GLM_A_C14,explicit_case_provenance,3,GPT_B_C14,OpenAI GPT,OpenAI GPT,B,Biology,C14,进化没有预设目标,0.10853745917350271
+public_reader_ABC,ABC_A_5,C14,GLM_A_C14,explicit_case_provenance,4,豆包_C_C14,ByteDance Doubao,ByteDance Doubao,C,Biology,C14,进化没有预设目标,0.1055356209645783
+public_reader_ABC,ABC_A_5,C14,GLM_A_C14,explicit_case_provenance,5,豆包_A_C14,ByteDance Doubao,ByteDance Doubao,A,Biology,C14,进化没有预设目标,0.10318094629490795
+public_reader_ABC,ABC_A_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,1,DEEPSEEK_B_C02,DeepSeek,DeepSeek,B,Physics,C02,净力与加速度,0.33347651371867104
+public_reader_ABC,ABC_A_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,2,mimo_A_C02,Mimo,Mimo,A,Physics,C02,净力与加速度,0.18904107910157544
+public_reader_ABC,ABC_A_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,3,mimo_B_C02,Mimo,Mimo,B,Physics,C02,净力与加速度,0.18152223236713488
+public_reader_ABC,ABC_A_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,4,DEEPSEEK_A_C02,DeepSeek,DeepSeek,A,Physics,C02,净力与加速度,0.14434294038610646
+public_reader_ABC,ABC_A_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,5,DEEPSEEK_C_C02,DeepSeek,DeepSeek,C,Physics,C02,净力与加速度,0.13312788677543833
+public_reader_ABC,ABC_B_1,C04,千问_C_C04,explicit_case_provenance,1,DEEPSEEK_C_C04,DeepSeek,DeepSeek,C,Physics,C04,抛体运动,0.15521349171230847
+public_reader_ABC,ABC_B_1,C04,千问_C_C04,explicit_case_provenance,2,千问_C_C04,Alibaba Qwen,Alibaba Qwen,C,Physics,C04,抛体运动,0.14696611655099256
+public_reader_ABC,ABC_B_1,C04,千问_C_C04,explicit_case_provenance,3,GLM_C_C04,Zhipu GLM,Zhipu GLM,C,Physics,C04,抛体运动,0.1442871797119618
+public_reader_ABC,ABC_B_1,C04,千问_C_C04,explicit_case_provenance,4,claude_C_C04,Anthropic Claude,Anthropic Claude,C,Physics,C04,抛体运动,0.12452831804082784
+public_reader_ABC,ABC_B_1,C04,千问_C_C04,explicit_case_provenance,5,GPT_A_C04,OpenAI GPT,OpenAI GPT,A,Physics,C04,抛体运动,0.09629310634688984
+public_reader_ABC,ABC_B_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,1,GPT_A_C14,OpenAI GPT,OpenAI GPT,A,Biology,C14,进化没有预设目标,0.09618718582969463
+public_reader_ABC,ABC_B_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,2,千问_A_C14,Alibaba Qwen,Alibaba Qwen,A,Biology,C14,进化没有预设目标,0.06982152066742044
+public_reader_ABC,ABC_B_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,3,千问_C_C14,Alibaba Qwen,Alibaba Qwen,C,Biology,C14,进化没有预设目标,0.054418562400755835
+public_reader_ABC,ABC_B_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,4,DEEPSEEK_B_C14,DeepSeek,DeepSeek,B,Biology,C14,进化没有预设目标,0.04825500765761423
+public_reader_ABC,ABC_B_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,5,Gemini_A_C14,Google Gemini,Google Gemini,A,Biology,C14,进化没有预设目标,0.044967926008044036
+public_reader_ABC,ABC_B_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,1,DEEPSEEK_B_C20,DeepSeek,DeepSeek,B,Geoscience,C20,地质时间,0.1691871798588935
+public_reader_ABC,ABC_B_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,2,GPT_A_C20,OpenAI GPT,OpenAI GPT,A,Geoscience,C20,地质时间,0.14649769811403054
+public_reader_ABC,ABC_B_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,3,Gemini_A_C20,Google Gemini,Google Gemini,A,Geoscience,C20,地质时间,0.12772808792802287
+public_reader_ABC,ABC_B_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,4,GLM_A_C20,Zhipu GLM,Zhipu GLM,A,Geoscience,C20,地质时间,0.10024966399192327
+public_reader_ABC,ABC_B_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,5,mimo_A_C20,Mimo,Mimo,A,Geoscience,C20,地质时间,0.09407482171351512
+public_reader_ABC,ABC_B_4,C18,Gemini_B_C18,explicit_case_provenance,1,GPT_A_C18,OpenAI GPT,OpenAI GPT,A,Biology,C18,光合作用与细胞呼吸,0.2957663985751249
+public_reader_ABC,ABC_B_4,C18,Gemini_B_C18,explicit_case_provenance,2,claude_A_C18,Anthropic Claude,Anthropic Claude,A,Biology,C18,光合作用与细胞呼吸,0.2444925093975058
+public_reader_ABC,ABC_B_4,C18,Gemini_B_C18,explicit_case_provenance,3,DEEPSEEK_B_C18,DeepSeek,DeepSeek,B,Biology,C18,光合作用与细胞呼吸,0.21153983011508926
+public_reader_ABC,ABC_B_4,C18,Gemini_B_C18,explicit_case_provenance,4,Gemini_B_C18,Google Gemini,Google Gemini,B,Biology,C18,光合作用与细胞呼吸,0.20273477048006353
+public_reader_ABC,ABC_B_4,C18,Gemini_B_C18,explicit_case_provenance,5,Gemini_A_C18,Google Gemini,Google Gemini,A,Biology,C18,光合作用与细胞呼吸,0.1961975306291371
+public_reader_ABC,ABC_B_5,C14,GLM_A_C14,explicit_case_provenance,1,Gemini_C_C14,Google Gemini,Google Gemini,C,Biology,C14,进化没有预设目标,0.10169973159030925
+public_reader_ABC,ABC_B_5,C14,GLM_A_C14,explicit_case_provenance,2,GLM_A_C14,Zhipu GLM,Zhipu GLM,A,Biology,C14,进化没有预设目标,0.07764750716411635
+public_reader_ABC,ABC_B_5,C14,GLM_A_C14,explicit_case_provenance,3,Gemini_A_C14,Google Gemini,Google Gemini,A,Biology,C14,进化没有预设目标,0.05640898403809258
+public_reader_ABC,ABC_B_5,C14,GLM_A_C14,explicit_case_provenance,4,KIMI_A_C14,Moonshot Kimi,Moonshot Kimi,A,Biology,C14,进化没有预设目标,0.046529063928615076
+public_reader_ABC,ABC_B_5,C14,GLM_A_C14,explicit_case_provenance,5,claude_A_C14,Anthropic Claude,Anthropic Claude,A,Biology,C14,进化没有预设目标,0.04001643271395486
+public_reader_ABC,ABC_B_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,1,GPT_B_C02,OpenAI GPT,OpenAI GPT,B,Physics,C02,净力与加速度,0.15951741905027328
+public_reader_ABC,ABC_B_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,2,mimo_A_C02,Mimo,Mimo,A,Physics,C02,净力与加速度,0.12445877574606862
+public_reader_ABC,ABC_B_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,3,GLM_C_C02,Zhipu GLM,Zhipu GLM,C,Physics,C02,净力与加速度,0.09861956345010145
+public_reader_ABC,ABC_B_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,4,KIMI_A_C02,Moonshot Kimi,Moonshot Kimi,A,Physics,C02,净力与加速度,0.09556315129075035
+public_reader_ABC,ABC_B_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,5,GLM_A_C02,Zhipu GLM,Zhipu GLM,A,Physics,C02,净力与加速度,0.09290646825154232
+public_reader_ABC,ABC_C_1,C04,千问_C_C04,explicit_case_provenance,1,DEEPSEEK_C_C04,DeepSeek,DeepSeek,C,Physics,C04,抛体运动,0.1387382271374664
+public_reader_ABC,ABC_C_1,C04,千问_C_C04,explicit_case_provenance,2,GLM_C_C04,Zhipu GLM,Zhipu GLM,C,Physics,C04,抛体运动,0.13344735372396824
+public_reader_ABC,ABC_C_1,C04,千问_C_C04,explicit_case_provenance,3,claude_C_C04,Anthropic Claude,Anthropic Claude,C,Physics,C04,抛体运动,0.11851312040027322
+public_reader_ABC,ABC_C_1,C04,千问_C_C04,explicit_case_provenance,4,GPT_A_C04,OpenAI GPT,OpenAI GPT,A,Physics,C04,抛体运动,0.10589749662236458
+public_reader_ABC,ABC_C_1,C04,千问_C_C04,explicit_case_provenance,5,千问_C_C04,Alibaba Qwen,Alibaba Qwen,C,Physics,C04,抛体运动,0.104881197541874
+public_reader_ABC,ABC_C_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,1,DEEPSEEK_B_C14,DeepSeek,DeepSeek,B,Biology,C14,进化没有预设目标,0.15626059294554598
+public_reader_ABC,ABC_C_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,2,claude_A_C14,Anthropic Claude,Anthropic Claude,A,Biology,C14,进化没有预设目标,0.10320594062210546
+public_reader_ABC,ABC_C_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,3,claude_C_C14,Anthropic Claude,Anthropic Claude,C,Biology,C14,进化没有预设目标,0.08338527802904398
+public_reader_ABC,ABC_C_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,4,mimo_A_C14,Mimo,Mimo,A,Biology,C14,进化没有预设目标,0.06667020742317045
+public_reader_ABC,ABC_C_2,C14,DEEPSEEK_B_C14,explicit_case_provenance,5,GLM_A_C14,Zhipu GLM,Zhipu GLM,A,Biology,C14,进化没有预设目标,0.06478355744596836
+public_reader_ABC,ABC_C_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,1,DEEPSEEK_B_C20,DeepSeek,DeepSeek,B,Geoscience,C20,地质时间,0.18040262394515624
+public_reader_ABC,ABC_C_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,2,GPT_C_C20,OpenAI GPT,OpenAI GPT,C,Geoscience,C20,地质时间,0.08293144220649429
+public_reader_ABC,ABC_C_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,3,Gemini_A_C20,Google Gemini,Google Gemini,A,Geoscience,C20,地质时间,0.07449606896256349
+public_reader_ABC,ABC_C_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,4,GLM_A_C20,Zhipu GLM,Zhipu GLM,A,Geoscience,C20,地质时间,0.07269334873968523
+public_reader_ABC,ABC_C_3,C20,DEEPSEEK_B_C20,explicit_case_provenance,5,KIMI_A_C20,Moonshot Kimi,Moonshot Kimi,A,Geoscience,C20,地质时间,0.07013110751265551
+public_reader_ABC,ABC_C_4,C18,Gemini_B_C18,explicit_case_provenance,1,DEEPSEEK_B_C18,DeepSeek,DeepSeek,B,Biology,C18,光合作用与细胞呼吸,0.22176316391025663
+public_reader_ABC,ABC_C_4,C18,Gemini_B_C18,explicit_case_provenance,2,豆包_A_C18,ByteDance Doubao,ByteDance Doubao,A,Biology,C18,光合作用与细胞呼吸,0.21760158915970973
+public_reader_ABC,ABC_C_4,C18,Gemini_B_C18,explicit_case_provenance,3,Gemini_B_C18,Google Gemini,Google Gemini,B,Biology,C18,光合作用与细胞呼吸,0.21733491266940713
+public_reader_ABC,ABC_C_4,C18,Gemini_B_C18,explicit_case_provenance,4,Gemini_A_C18,Google Gemini,Google Gemini,A,Biology,C18,光合作用与细胞呼吸,0.19572442413378832
+public_reader_ABC,ABC_C_4,C18,Gemini_B_C18,explicit_case_provenance,5,千问_C_C18,Alibaba Qwen,Alibaba Qwen,C,Biology,C18,光合作用与细胞呼吸,0.17704961230454822
+public_reader_ABC,ABC_C_5,C14,GLM_A_C14,explicit_case_provenance,1,GLM_A_C14,Zhipu GLM,Zhipu GLM,A,Biology,C14,进化没有预设目标,0.11494657133835184
+public_reader_ABC,ABC_C_5,C14,GLM_A_C14,explicit_case_provenance,2,Gemini_C_C14,Google Gemini,Google Gemini,C,Biology,C14,进化没有预设目标,0.1095683991001818
+public_reader_ABC,ABC_C_5,C14,GLM_A_C14,explicit_case_provenance,3,Gemini_A_C14,Google Gemini,Google Gemini,A,Biology,C14,进化没有预设目标,0.09777601704137455
+public_reader_ABC,ABC_C_5,C14,GLM_A_C14,explicit_case_provenance,4,GLM_C_C14,Zhipu GLM,Zhipu GLM,C,Biology,C14,进化没有预设目标,0.08005700168587725
+public_reader_ABC,ABC_C_5,C14,GLM_A_C14,explicit_case_provenance,5,GPT_A_C14,OpenAI GPT,OpenAI GPT,A,Biology,C14,进化没有预设目标,0.07342184275792968
+public_reader_ABC,ABC_C_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,1,DEEPSEEK_A_C02,DeepSeek,DeepSeek,A,Physics,C02,净力与加速度,0.190576517684608
+public_reader_ABC,ABC_C_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,2,DEEPSEEK_B_C02,DeepSeek,DeepSeek,B,Physics,C02,净力与加速度,0.1842050753227557
+public_reader_ABC,ABC_C_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,3,mimo_B_C02,Mimo,Mimo,B,Physics,C02,净力与加速度,0.17342257233835734
+public_reader_ABC,ABC_C_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,4,mimo_A_C02,Mimo,Mimo,A,Physics,C02,净力与加速度,0.14302056775426214
+public_reader_ABC,ABC_C_6,C02,DEEPSEEK_B_C02,explicit_case_provenance,5,KIMI_A_C02,Moonshot Kimi,Moonshot Kimi,A,Physics,C02,净力与加速度,0.13629514843039134
+constructed_controlled_contrast,DIFF_A01_A,C04,,retrieval_candidate_only_no_uid_provenance,1,千问_C_C04,Alibaba Qwen,Alibaba Qwen,C,Physics,C04,抛体运动,0.18433878768707987
+constructed_controlled_contrast,DIFF_A01_A,C04,,retrieval_candidate_only_no_uid_provenance,2,DEEPSEEK_C_C04,DeepSeek,DeepSeek,C,Physics,C04,抛体运动,0.16513193091727243
+constructed_controlled_contrast,DIFF_A01_A,C04,,retrieval_candidate_only_no_uid_provenance,3,GPT_A_C04,OpenAI GPT,OpenAI GPT,A,Physics,C04,抛体运动,0.13334541570424296
+constructed_controlled_contrast,DIFF_A01_A,C04,,retrieval_candidate_only_no_uid_provenance,4,GPT_C_C04,OpenAI GPT,OpenAI GPT,C,Physics,C04,抛体运动,0.12679478704286565
+constructed_controlled_contrast,DIFF_A01_A,C04,,retrieval_candidate_only_no_uid_provenance,5,GLM_C_C04,Zhipu GLM,Zhipu GLM,C,Physics,C04,抛体运动,0.11261691346736007
+constructed_controlled_contrast,DIFF_A01_B,C04,,retrieval_candidate_only_no_uid_provenance,1,千问_B_C04,Alibaba Qwen,Alibaba Qwen,B,Physics,C04,抛体运动,0.20875345563047518
+constructed_controlled_contrast,DIFF_A01_B,C04,,retrieval_candidate_only_no_uid_provenance,2,千问_C_C04,Alibaba Qwen,Alibaba Qwen,C,Physics,C04,抛体运动,0.16706529366590775
+constructed_controlled_contrast,DIFF_A01_B,C04,,retrieval_candidate_only_no_uid_provenance,3,千问_A_C04,Alibaba Qwen,Alibaba Qwen,A,Physics,C04,抛体运动,0.13488459965980407
+constructed_controlled_contrast,DIFF_A01_B,C04,,retrieval_candidate_only_no_uid_provenance,4,mimo_A_C04,Mimo,Mimo,A,Physics,C04,抛体运动,0.13431573577252778
+constructed_controlled_contrast,DIFF_A01_B,C04,,retrieval_candidate_only_no_uid_provenance,5,DEEPSEEK_C_C04,DeepSeek,DeepSeek,C,Physics,C04,抛体运动,0.11207152082868863
+constructed_controlled_contrast,DIFF_A02_A,C02,,retrieval_candidate_only_no_uid_provenance,1,DEEPSEEK_A_C02,DeepSeek,DeepSeek,A,Physics,C02,净力与加速度,0.12489238697395315
+constructed_controlled_contrast,DIFF_A02_A,C02,,retrieval_candidate_only_no_uid_provenance,2,claude_A_C02,Anthropic Claude,Anthropic Claude,A,Physics,C02,净力与加速度,0.12213055937940098
+constructed_controlled_contrast,DIFF_A02_A,C02,,retrieval_candidate_only_no_uid_provenance,3,豆包_A_C02,ByteDance Doubao,ByteDance Doubao,A,Physics,C02,净力与加速度,0.11251069399847294
+constructed_controlled_contrast,DIFF_A02_A,C02,,retrieval_candidate_only_no_uid_provenance,4,claude_B_C02,Anthropic Claude,Anthropic Claude,B,Physics,C02,净力与加速度,0.08099587624781228
+constructed_controlled_contrast,DIFF_A02_A,C02,,retrieval_candidate_only_no_uid_provenance,5,claude_C_C02,Anthropic Claude,Anthropic Claude,C,Physics,C02,净力与加速度,0.07296766401429487
+constructed_controlled_contrast,DIFF_A02_B,C02,,retrieval_candidate_only_no_uid_provenance,1,DEEPSEEK_A_C02,DeepSeek,DeepSeek,A,Physics,C02,净力与加速度,0.14469420827242982
+constructed_controlled_contrast,DIFF_A02_B,C02,,retrieval_candidate_only_no_uid_provenance,2,豆包_C_C02,ByteDance Doubao,ByteDance Doubao,C,Physics,C02,净力与加速度,0.08796966998752478
+constructed_controlled_contrast,DIFF_A02_B,C02,,retrieval_candidate_only_no_uid_provenance,3,豆包_A_C02,ByteDance Doubao,ByteDance Doubao,A,Physics,C02,净力与加速度,0.07694480251784497
+constructed_controlled_contrast,DIFF_A02_B,C02,,retrieval_candidate_only_no_uid_provenance,4,mimo_C_C02,Mimo,Mimo,C,Physics,C02,净力与加速度,0.07495306400351415
+constructed_controlled_contrast,DIFF_A02_B,C02,,retrieval_candidate_only_no_uid_provenance,5,DEEPSEEK_C_C02,DeepSeek,DeepSeek,C,Physics,C02,净力与加速度,0.06963190121515288
+constructed_controlled_contrast,DIFF_A03_A,C14,,retrieval_candidate_only_no_uid_provenance,1,千问_A_C14,Alibaba Qwen,Alibaba Qwen,A,Biology,C14,进化没有预设目标,0.20565883716115016
+constructed_controlled_contrast,DIFF_A03_A,C14,,retrieval_candidate_only_no_uid_provenance,2,GLM_B_C14,Zhipu GLM,Zhipu GLM,B,Biology,C14,进化没有预设目标,0.1278202746769437
+constructed_controlled_contrast,DIFF_A03_A,C14,,retrieval_candidate_only_no_uid_provenance,3,Gemini_A_C14,Google Gemini,Google Gemini,A,Biology,C14,进化没有预设目标,0.11759228946252101
+constructed_controlled_contrast,DIFF_A03_A,C14,,retrieval_candidate_only_no_uid_provenance,4,claude_A_C14,Anthropic Claude,Anthropic Claude,A,Biology,C14,进化没有预设目标,0.11342543920162602
+constructed_controlled_contrast,DIFF_A03_A,C14,,retrieval_candidate_only_no_uid_provenance,5,豆包_A_C14,ByteDance Doubao,ByteDance Doubao,A,Biology,C14,进化没有预设目标,0.10953499431242644
+constructed_controlled_contrast,DIFF_A03_B,C14,,retrieval_candidate_only_no_uid_provenance,1,千问_A_C14,Alibaba Qwen,Alibaba Qwen,A,Biology,C14,进化没有预设目标,0.13634327003040475
+constructed_controlled_contrast,DIFF_A03_B,C14,,retrieval_candidate_only_no_uid_provenance,2,claude_A_C14,Anthropic Claude,Anthropic Claude,A,Biology,C14,进化没有预设目标,0.10604031430319874
+constructed_controlled_contrast,DIFF_A03_B,C14,,retrieval_candidate_only_no_uid_provenance,3,GPT_A_C14,OpenAI GPT,OpenAI GPT,A,Biology,C14,进化没有预设目标,0.1009194120562607
+constructed_controlled_contrast,DIFF_A03_B,C14,,retrieval_candidate_only_no_uid_provenance,4,Gemini_A_C14,Google Gemini,Google Gemini,A,Biology,C14,进化没有预设目标,0.0830616229100424
+constructed_controlled_contrast,DIFF_A03_B,C14,,retrieval_candidate_only_no_uid_provenance,5,GLM_B_C14,Zhipu GLM,Zhipu GLM,B,Biology,C14,进化没有预设目标,0.07033019815547843
+constructed_controlled_contrast,DIFF_A04_A,C18,,retrieval_candidate_only_no_uid_provenance,1,GPT_A_C18,OpenAI GPT,OpenAI GPT,A,Biology,C18,光合作用与细胞呼吸,0.2913659355870222
+constructed_controlled_contrast,DIFF_A04_A,C18,,retrieval_candidate_only_no_uid_provenance,2,mimo_C_C18,Mimo,Mimo,C,Biology,C18,光合作用与细胞呼吸,0.2597071874032581
+constructed_controlled_contrast,DIFF_A04_A,C18,,retrieval_candidate_only_no_uid_provenance,3,claude_A_C18,Anthropic Claude,Anthropic Claude,A,Biology,C18,光合作用与细胞呼吸,0.2433087159951283
+constructed_controlled_contrast,DIFF_A04_A,C18,,retrieval_candidate_only_no_uid_provenance,4,千问_C_C18,Alibaba Qwen,Alibaba Qwen,C,Biology,C18,光合作用与细胞呼吸,0.23675542603771213
+constructed_controlled_contrast,DIFF_A04_A,C18,,retrieval_candidate_only_no_uid_provenance,5,千问_A_C18,Alibaba Qwen,Alibaba Qwen,A,Biology,C18,光合作用与细胞呼吸,0.220340061978467
+constructed_controlled_contrast,DIFF_A04_B,C18,,retrieval_candidate_only_no_uid_provenance,1,豆包_A_C18,ByteDance Doubao,ByteDance Doubao,A,Biology,C18,光合作用与细胞呼吸,0.4129443769388107
+constructed_controlled_contrast,DIFF_A04_B,C18,,retrieval_candidate_only_no_uid_provenance,2,Gemini_A_C18,Google Gemini,Google Gemini,A,Biology,C18,光合作用与细胞呼吸,0.3749189500670924
+constructed_controlled_contrast,DIFF_A04_B,C18,,retrieval_candidate_only_no_uid_provenance,3,GPT_A_C18,OpenAI GPT,OpenAI GPT,A,Biology,C18,光合作用与细胞呼吸,0.3075926088869203
+constructed_controlled_contrast,DIFF_A04_B,C18,,retrieval_candidate_only_no_uid_provenance,4,mimo_C_C18,Mimo,Mimo,C,Biology,C18,光合作用与细胞呼吸,0.2634549859949786
+constructed_controlled_contrast,DIFF_A04_B,C18,,retrieval_candidate_only_no_uid_provenance,5,claude_A_C18,Anthropic Claude,Anthropic Claude,A,Biology,C18,光合作用与细胞呼吸,0.24732674712150873
+constructed_controlled_contrast,DIFF_A05_A,C20,,retrieval_candidate_only_no_uid_provenance,1,千问_B_C20,Alibaba Qwen,Alibaba Qwen,B,Geoscience,C20,地质时间,0.3092493214445518
+constructed_controlled_contrast,DIFF_A05_A,C20,,retrieval_candidate_only_no_uid_provenance,2,claude_B_C20,Anthropic Claude,Anthropic Claude,B,Geoscience,C20,地质时间,0.15303050064584384
+constructed_controlled_contrast,DIFF_A05_A,C20,,retrieval_candidate_only_no_uid_provenance,3,claude_A_C20,Anthropic Claude,Anthropic Claude,A,Geoscience,C20,地质时间,0.12707496967107498
+constructed_controlled_contrast,DIFF_A05_A,C20,,retrieval_candidate_only_no_uid_provenance,4,千问_A_C20,Alibaba Qwen,Alibaba Qwen,A,Geoscience,C20,地质时间,0.11748460275956041
+constructed_controlled_contrast,DIFF_A05_A,C20,,retrieval_candidate_only_no_uid_provenance,5,KIMI_A_C20,Moonshot Kimi,Moonshot Kimi,A,Geoscience,C20,地质时间,0.10814136499542072
+constructed_controlled_contrast,DIFF_A05_B,C20,,retrieval_candidate_only_no_uid_provenance,1,千问_B_C20,Alibaba Qwen,Alibaba Qwen,B,Geoscience,C20,地质时间,0.17970601009380885
+constructed_controlled_contrast,DIFF_A05_B,C20,,retrieval_candidate_only_no_uid_provenance,2,千问_A_C20,Alibaba Qwen,Alibaba Qwen,A,Geoscience,C20,地质时间,0.17197049150382393
+constructed_controlled_contrast,DIFF_A05_B,C20,,retrieval_candidate_only_no_uid_provenance,3,DEEPSEEK_A_C20,DeepSeek,DeepSeek,A,Geoscience,C20,地质时间,0.15955225866907818
+constructed_controlled_contrast,DIFF_A05_B,C20,,retrieval_candidate_only_no_uid_provenance,4,KIMI_A_C20,Moonshot Kimi,Moonshot Kimi,A,Geoscience,C20,地质时间,0.15517352708991583
+constructed_controlled_contrast,DIFF_A05_B,C20,,retrieval_candidate_only_no_uid_provenance,5,claude_A_C20,Anthropic Claude,Anthropic Claude,A,Geoscience,C20,地质时间,0.15102892233168808
+constructed_controlled_contrast,DIFF_A06_A,C26,,retrieval_candidate_only_no_uid_provenance,1,Gemini_A_C26,Google Gemini,Google Gemini,A,Climate/Environment,C26,天气与气候,0.14615545091589222
+constructed_controlled_contrast,DIFF_A06_A,C26,,retrieval_candidate_only_no_uid_provenance,2,claude_A_C26,Anthropic Claude,Anthropic Claude,A,Climate/Environment,C26,天气与气候,0.13862980376534928
+constructed_controlled_contrast,DIFF_A06_A,C26,,retrieval_candidate_only_no_uid_provenance,3,豆包_A_C26,ByteDance Doubao,ByteDance Doubao,A,Climate/Environment,C26,天气与气候,0.11711006438486643
+constructed_controlled_contrast,DIFF_A06_A,C26,,retrieval_candidate_only_no_uid_provenance,4,DEEPSEEK_A_C26,DeepSeek,DeepSeek,A,Climate/Environment,C26,天气与气候,0.09446246392252793
+constructed_controlled_contrast,DIFF_A06_A,C26,,retrieval_candidate_only_no_uid_provenance,5,GLM_C_C26,Zhipu GLM,Zhipu GLM,C,Climate/Environment,C26,天气与气候,0.09212944035195059
+constructed_controlled_contrast,DIFF_A06_B,C26,,retrieval_candidate_only_no_uid_provenance,1,GLM_C_C26,Zhipu GLM,Zhipu GLM,C,Climate/Environment,C26,天气与气候,0.11918901733548948
+constructed_controlled_contrast,DIFF_A06_B,C26,,retrieval_candidate_only_no_uid_provenance,2,GPT_C_C26,OpenAI GPT,OpenAI GPT,C,Climate/Environment,C26,天气与气候,0.0902600391794701
+constructed_controlled_contrast,DIFF_A06_B,C26,,retrieval_candidate_only_no_uid_provenance,3,Gemini_A_C26,Google Gemini,Google Gemini,A,Climate/Environment,C26,天气与气候,0.08851148179237422
+constructed_controlled_contrast,DIFF_A06_B,C26,,retrieval_candidate_only_no_uid_provenance,4,千问_C_C26,Alibaba Qwen,Alibaba Qwen,C,Climate/Environment,C26,天气与气候,0.07179988917287491
+constructed_controlled_contrast,DIFF_A06_B,C26,,retrieval_candidate_only_no_uid_provenance,5,Gemini_C_C26,Google Gemini,Google Gemini,C,Climate/Environment,C26,天气与气候,0.06996477388649322
+constructed_controlled_contrast,DIFF_A08_A,C25,,retrieval_candidate_only_no_uid_provenance,1,豆包_A_C25,ByteDance Doubao,ByteDance Doubao,A,Climate/Environment,C25,温室效应,0.12782466641532433
+constructed_controlled_contrast,DIFF_A08_A,C25,,retrieval_candidate_only_no_uid_provenance,2,GLM_A_C25,Zhipu GLM,Zhipu GLM,A,Climate/Environment,C25,温室效应,0.12575547351875271
+constructed_controlled_contrast,DIFF_A08_A,C25,,retrieval_candidate_only_no_uid_provenance,3,千问_A_C25,Alibaba Qwen,Alibaba Qwen,A,Climate/Environment,C25,温室效应,0.11883025880801804
+constructed_controlled_contrast,DIFF_A08_A,C25,,retrieval_candidate_only_no_uid_provenance,4,claude_C_C25,Anthropic Claude,Anthropic Claude,C,Climate/Environment,C25,温室效应,0.10595381826413294
+constructed_controlled_contrast,DIFF_A08_A,C25,,retrieval_candidate_only_no_uid_provenance,5,千问_B_C25,Alibaba Qwen,Alibaba Qwen,B,Climate/Environment,C25,温室效应,0.10489888757201711
+constructed_controlled_contrast,DIFF_A08_B,C25,,retrieval_candidate_only_no_uid_provenance,1,GLM_B_C25,Zhipu GLM,Zhipu GLM,B,Climate/Environment,C25,温室效应,0.20974222500466436
+constructed_controlled_contrast,DIFF_A08_B,C25,,retrieval_candidate_only_no_uid_provenance,2,GLM_A_C25,Zhipu GLM,Zhipu GLM,A,Climate/Environment,C25,温室效应,0.20047585693993594
+constructed_controlled_contrast,DIFF_A08_B,C25,,retrieval_candidate_only_no_uid_provenance,3,claude_A_C25,Anthropic Claude,Anthropic Claude,A,Climate/Environment,C25,温室效应,0.18532463615405656
+constructed_controlled_contrast,DIFF_A08_B,C25,,retrieval_candidate_only_no_uid_provenance,4,Gemini_A_C25,Google Gemini,Google Gemini,A,Climate/Environment,C25,温室效应,0.1807156567004626
+constructed_controlled_contrast,DIFF_A08_B,C25,,retrieval_candidate_only_no_uid_provenance,5,mimo_C_C25,Mimo,Mimo,C,Climate/Environment,C25,温室效应,0.17636670497244325

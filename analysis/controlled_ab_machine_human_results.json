@@ -1,0 +1,185 @@
+{
+  "analysis_version": "1.0.1",
+  "interpretation": "This is an exact-stimulus paired mechanism bridge for seven cases. It does not establish criterion validity for the 810-item API corpus.",
+  "machine_direction_overall_all_8_cases": {
+    "both_alignment": 0.875,
+    "human_logical_consistency": 0.9728506787330317,
+    "human_misleading_accuracy": 0.85625,
+    "human_suitability_accuracy": 0.8729166666666667,
+    "n_judge_case_pairs": 72,
+    "quality_alignment": 0.9444444444444444,
+    "risk_alignment": 0.8888888888888888
+  },
+  "machine_human_exact_text_7_cases": {
+    "case_level_correlations": {
+      "quality_suitability": {
+        "n_exact_cases": 7,
+        "permutations": 5040,
+        "spearman_rho": -0.30895719032666236,
+        "status": "descriptive_small_n",
+        "two_sided_exact_permutation_p": 0.7142857142857143
+      },
+      "risk_misleading": {
+        "n_exact_cases": 7,
+        "permutations": 5040,
+        "spearman_rho": 0.13483997249264842,
+        "status": "descriptive_small_n",
+        "two_sided_exact_permutation_p": 0.8809523809523809
+      }
+    },
+    "human_logical_consistency": 0.9736887418210131,
+    "human_logical_consistency_bootstrap": {
+      "ci_high": 0.9976190476190477,
+      "ci_low": 0.9283333333333333,
+      "draws": 10000,
+      "estimate": 0.9681746031746032,
+      "method": "respondent_cluster_percentile_bootstrap",
+      "seed": 2026071734
+    },
+    "human_misleading_accuracy": 0.8547619047619046,
+    "human_misleading_inference": {
+      "bootstrap": {
+        "ci_high": 0.9023809523809522,
+        "ci_low": 0.8023809523809523,
+        "draws": 10000,
+        "estimate": 0.8547619047619046,
+        "method": "respondent_cluster_percentile_bootstrap",
+        "seed": 2026071733
+      },
+      "n_cases_per_respondent": 7,
+      "n_respondents": 60,
+      "sign_flip": {
+        "draws": 100000,
+        "method": "monte_carlo_respondent_level_sign_flip",
+        "observed_mean_minus_null": 0.3547619047619047,
+        "one_sided_p": 9.99990000099999e-06,
+        "plus_one_correction": true,
+        "seed": 2026071734,
+        "two_sided_p": 9.99990000099999e-06
+      }
+    },
+    "human_suitability_accuracy": 0.8642857142857141,
+    "human_suitability_inference": {
+      "bootstrap": {
+        "ci_high": 0.9166666666666665,
+        "ci_low": 0.8071428571428569,
+        "draws": 10000,
+        "estimate": 0.8642857142857142,
+        "method": "respondent_cluster_percentile_bootstrap",
+        "seed": 2026071732
+      },
+      "n_cases_per_respondent": 7,
+      "n_respondents": 60,
+      "sign_flip": {
+        "draws": 100000,
+        "method": "monte_carlo_respondent_level_sign_flip",
+        "observed_mean_minus_null": 0.3642857142857142,
+        "one_sided_p": 9.99990000099999e-06,
+        "plus_one_correction": true,
+        "seed": 2026071733,
+        "two_sided_p": 9.99990000099999e-06
+      }
+    },
+    "machine_both_alignment": 0.8571428571428571,
+    "machine_quality_alignment": 0.9365079365079365,
+    "machine_risk_alignment": 0.8730158730158729,
+    "n_cases": 7,
+    "n_machine_judge_case_pairs": 63
+  },
+  "raw_run_validation": {
+    "api_call_log_failed_or_unparsed_rows": 8,
+    "api_call_log_rows": 152,
+    "api_call_log_successful_parsed_http200_rows": 144,
+    "failed_retry_note": "The score CSV has 145 rows: 144 successful parsed HTTP-200 rows and one recorded failed Kimi A06_B row. The complete API call log has 152 attempts: 144 successful parsed HTTP-200 attempts and eight unsuccessful or unparsed attempts. Only the 144 validated provider-item results enter analysis; every provider-item has exactly one validated result.",
+    "failed_rows": 1,
+    "judge_case_pairs_recomputed": 72,
+    "model_coverage": [
+      {
+        "actual_api_model": "claude-sonnet-4-6",
+        "judge_model_requested": "claude-sonnet-4-6",
+        "judge_provider": "anthropic",
+        "paper_model_label": "Claude Sonnet 4.6",
+        "successful_items": 16
+      },
+      {
+        "actual_api_model": "deepseek-v4-pro",
+        "judge_model_requested": "deepseek-v4",
+        "judge_provider": "deepseek",
+        "paper_model_label": "DeepSeek-V4 Expert Mode",
+        "successful_items": 16
+      },
+      {
+        "actual_api_model": "doubao-seed-2-0-pro-260215",
+        "judge_model_requested": "doubao-seed-2-0-pro-260215",
+        "judge_provider": "doubao",
+        "paper_model_label": "Doubao 2.0 Pro",
+        "successful_items": 16
+      },
+      {
+        "actual_api_model": "gemini-3.1-pro-preview",
+        "judge_model_requested": "gemini-3.1-pro",
+        "judge_provider": "gemini",
+        "paper_model_label": "Gemini 3.1 Pro",
+        "successful_items": 16
+      },
+      {
+        "actual_api_model": "glm-5.1",
+        "judge_model_requested": "glm-5.1",
+        "judge_provider": "glm",
+        "paper_model_label": "GLM-5.1",
+        "successful_items": 16
+      },
+      {
+        "actual_api_model": "kimi-k2.6",
+        "judge_model_requested": "kimi-k2.6-thinking",
+        "judge_provider": "kimi",
+        "paper_model_label": "Kimi K2.6 Thinking",
+        "successful_items": 16
+      },
+      {
+        "actual_api_model": "mimo-v2.5-pro",
+        "judge_model_requested": "mimo-v2.5-pro",
+        "judge_provider": "mimo",
+        "paper_model_label": "Mimo v2.5 Pro",
+        "successful_items": 16
+      },
+      {
+        "actual_api_model": "gpt-5.5",
+        "judge_model_requested": "gpt-5.5",
+        "judge_provider": "openai",
+        "paper_model_label": "GPT-5.5 Thinking",
+        "successful_items": 16
+      },
+      {
+        "actual_api_model": "qwen3.5-plus",
+        "judge_model_requested": "qwen3.5-plus",
+        "judge_provider": "qwen",
+        "paper_model_label": "Qwen3.5 Thinking",
+        "successful_items": 16
+      }
+    ],
+    "pair_configuration_cases": 8,
+    "provider_item_cells": 144,
+    "quality_definition": "unweighted mean of FA, CC, LC, TF, and MQ; higher is better",
+    "raw_rows": 145,
+    "raw_score_csv_failed_or_unparsed_rows": 1,
+    "raw_score_csv_rows": 145,
+    "raw_score_csv_successful_parsed_http200_rows": 144,
+    "risk_definition": "risk dimension; higher is riskier",
+    "status": "PASS",
+    "successful_items": 16,
+    "successful_judge_providers": 9,
+    "successful_parsed_http200_rows": 144,
+    "validation_errors": []
+  },
+  "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes.",
+  "text_crosswalk": {
+    "exact_pairs": 7,
+    "nonexact_cases": [
+      "A08"
+    ],
+    "nonexact_note": "A08 machine version A includes the visible prefix '【科学卡片】' that is absent from the survey; A08 is excluded from exact-text machine-human aggregate claims.",
+    "status": "PARTIAL_7_OF_8_EXACT",
+    "total_pairs": 8
+  }
+}

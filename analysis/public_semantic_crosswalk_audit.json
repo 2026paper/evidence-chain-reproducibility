@@ -1,0 +1,311 @@
+{
+  "abc_confirmed_sources": [
+    {
+      "case_id": "C1",
+      "item_id": "千问_C_C04",
+      "legacy_item_id": "ITEM_064",
+      "material_no": 1
+    },
+    {
+      "case_id": "C2",
+      "item_id": "DEEPSEEK_B_C14",
+      "legacy_item_id": "ITEM_314",
+      "material_no": 2
+    },
+    {
+      "case_id": "C3",
+      "item_id": "DEEPSEEK_B_C20",
+      "legacy_item_id": "ITEM_320",
+      "material_no": 3
+    },
+    {
+      "case_id": "C4",
+      "item_id": "Gemini_B_C18",
+      "legacy_item_id": "ITEM_408",
+      "material_no": 4
+    },
+    {
+      "case_id": "C5",
+      "item_id": "GLM_A_C14",
+      "legacy_item_id": "ITEM_734",
+      "material_no": 5
+    },
+    {
+      "case_id": "C6",
+      "item_id": "DEEPSEEK_B_C02",
+      "legacy_item_id": "ITEM_302",
+      "material_no": 6
+    }
+  ],
+  "comparison_validity": {
+    "abc": {
+      "defensible_role": "randomized reader-response experiment over three adaptations of six traced disagreement cases; upstream item ID is provenance, not an unchanged stimulus",
+      "direct_original_api_vs_lay_outcome": false,
+      "generalization_limit": "six purposive disagreement cases and one text realization per form-concept; do not generalize a form effect to the full 810 corpus",
+      "reason": "The public text was rewritten and differs in length, mechanism detail, boundary conditions, and sometimes error repair from the upstream 810 item.",
+      "recommended_model": "participant-concept post_correct ~ pre_correct + form + concept, using a binomial GEE clustered by participant or a mixed logistic model with participant intercept; form-by-concept interaction exploratory"
+    },
+    "controlled": {
+      "direct_810_score_comparison": false,
+      "exact_controlled_text_comparison": true,
+      "generalization_limit": "engineered contrasts test discrimination/mechanism salience, not natural-error prevalence or corpus-wide validity",
+      "reason": "All 16 displayed texts have exact, separately scored controlled IDs A01_A-A08_B; those scores match the stimuli, whereas 810 candidates do not.",
+      "recommended_api_human_model": "for each case, compare human expected-choice share with exact-text judge score contrasts; use an eight-case exact-permutation Spearman analysis and report case-level heterogeneity",
+      "recommended_human_model": "expected-direction forced choice with crossed participant and case intercepts, supplemented by case-level exact binomial intervals and multiplicity control"
+    }
+  },
+  "controlled_810_boundary": {
+    "A01": "concept C04 only; unique 810 UID unresolved",
+    "A02": "concept C02 only; unique 810 UID unresolved",
+    "A03": "concept C14 only; unique 810 UID unresolved",
+    "A04": "concept C18 only; unique 810 UID unresolved",
+    "A05": "concept C20 only; unique 810 UID unresolved",
+    "A06": "concept C26 only; unique 810 UID unresolved",
+    "A07": "Chemical equilibrium is absent from the 30-concept 810 frame; exact external controlled IDs A07_A/A07_B exist",
+    "A08": "concept C25 only; unique 810 UID unresolved"
+  },
+  "counts": {
+    "abc_rows": 18,
+    "abc_unique_confirmed_810_items": 6,
+    "abc_unique_material_positions": 6,
+    "abc_unique_scientific_concept_ids": 5,
+    "controlled_cases": 8,
+    "controlled_cases_outside_810": 1,
+    "controlled_concept_links_to_810": 7,
+    "controlled_rows": 16,
+    "crosswalk_rows": 34,
+    "exact_controlled_api_item_ids": 16,
+    "exact_controlled_api_judges": 9,
+    "exact_controlled_api_score_rows": 144
+  },
+  "created_utc": "2026-07-16T20:54:54.446480+00:00",
+  "design_boundary": {
+    "abc_case_selection": "The six cases are the released C1-C6 API-human disagreement examples; no probability sampling of the 810 corpus is asserted.",
+    "abc_participant_assignment": "Author reports complete random assignment among three separate 见数平台 forms.",
+    "controlled_case_selection": "A01-A08 are constructed controlled contrasts with author-specified expected directions; no probability-sampling claim is asserted.",
+    "critical_distinction": "Participant randomization does not convert purposive case selection into random item sampling."
+  },
+  "inputs": {
+    "case_disagreement_examples": {
+      "bytes": 4706,
+      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/main_study_data/case_disagreement_examples.csv",
+      "sha256": "be80b5f4c5822e619f6641ebcf584dc9c54e95a3c6ecafa87d86873f3e5f8801"
+    },
+    "controlled_exact_api_scores": {
+      "bytes": 74418,
+      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/diagnostics/official_ab_judge_run_20260521_155532/official_ab_judge_scores_long_with_metadata.csv",
+      "sha256": "7e9428aa52570e5d5c34d0e4e55acba1c978f167199850e25414489b395c8c3d"
+    },
+    "controlled_pairs": {
+      "bytes": 6069,
+      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/diagnostics/controlled_ab_pairs_for_llm_judge.json",
+      "sha256": "2d6119c4a34843f957c653fb5eae71a327ece89d9dbdf07b0235d33111df0ba0"
+    },
+    "generated_items_810": {
+      "bytes": 708658,
+      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/main_study_data/generated_items_810.csv",
+      "sha256": "75c32947f916973ab9c2b03e496df77411b41699c1a01adbe4a42771f64024be"
+    },
+    "public_instrument_A": {
+      "bytes": 7429,
+      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/rebuttal_update_20260714/auxiliary_surveys/instruments/public_reader_A_instrument_zh.txt",
+      "sha256": "446d98fe5b4fc4feb68f226506f2c7ab9d50dbf11f078c4c11ed3fd90a7e408f"
+    },
+    "public_instrument_B": {
+      "bytes": 8283,
+      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/rebuttal_update_20260714/auxiliary_surveys/instruments/public_reader_B_instrument_zh.txt",
+      "sha256": "51cbe65be4b4ff68b2be188932b4c0b750431f751869ec9bde7162e0ba7c5dba"
+    },
+    "public_instrument_C": {
+      "bytes": 8880,
+      "path": "数据与问卷源文件/AI测试数据全集/40_GitHub发布修订/rebuttal_update_20260714/auxiliary_surveys/instruments/public_reader_C_instrument_zh.txt",
+      "sha256": "efad8846997dfa24556d41bdb88aec644681d06356c2d087a7795caaa1a42d19"
+    },
+    "raw_A_workbook": {
+      "bytes": 24571,
+      "path": "数据与问卷源文件/A.xlsx",
+      "sha256": "75007e42e4e20b32c90e7014b65beb994b91a6547da69ef15e050fec8db6f8ff"
+    },
+    "raw_B_workbook": {
+      "bytes": 25313,
+      "path": "数据与问卷源文件/B.xlsx",
+      "sha256": "8651fb359593c1a85c6807fff03849886c8f2cfa6c7ccaa8eba8fb58b76299fc"
+    },
+    "raw_C_workbook": {
+      "bytes": 25509,
+      "path": "数据与问卷源文件/C.xlsx",
+      "sha256": "149b8307c10838cd56cd812218c73e0130d3307bc4d3f711e33aeabd478e8da4"
+    },
+    "raw_difference_workbook": {
+      "bytes": 31905,
+      "path": "数据与问卷源文件/差异.xlsx",
+      "sha256": "b7b21ad2d0dae1a15832417b5785591e87eeea2684d0fe68788eb3f7b3352f34"
+    }
+  },
+  "outputs": {
+    "audit_json": "ADMA2026_重构稿/analysis/public_semantic_crosswalk_audit.json",
+    "audit_markdown": "ADMA2026_重构稿/notes/public_semantic_crosswalk_audit.md",
+    "candidate_csv": "ADMA2026_重构稿/analysis/public_semantic_crosswalk_candidates.csv",
+    "crosswalk_csv": "ADMA2026_重构稿/analysis/public_semantic_crosswalk.csv"
+  },
+  "privacy": {
+    "output_contains_only_instrument_text_and_scientific_item_ids": true,
+    "participant_identifiers_written": false,
+    "participant_rows_read": false,
+    "source_workbooks_used_for_hash_and_header_integrity_only": true
+  },
+  "raw_workbook_header_integrity": {
+    "abc": {
+      "A": {
+        "all_present": true,
+        "checks": [
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 1
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 2
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 3
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 4
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 5
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 6
+          }
+        ],
+        "header_columns": 51,
+        "materials_checked": 6
+      },
+      "B": {
+        "all_present": true,
+        "checks": [
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 1
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 2
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 3
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 4
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 5
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 6
+          }
+        ],
+        "header_columns": 51,
+        "materials_checked": 6
+      },
+      "C": {
+        "all_present": true,
+        "checks": [
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 1
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 2
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 3
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 4
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 5
+          },
+          {
+            "exposure_and_question_present_in_same_header": true,
+            "material_no": 6
+          }
+        ],
+        "header_columns": 51,
+        "materials_checked": 6
+      }
+    },
+    "all_present": true,
+    "difference": {
+      "all_present": true,
+      "cases_checked": 8,
+      "checks": [
+        {
+          "case_id": "A01",
+          "question_and_both_versions_present_in_same_header": true
+        },
+        {
+          "case_id": "A02",
+          "question_and_both_versions_present_in_same_header": true
+        },
+        {
+          "case_id": "A03",
+          "question_and_both_versions_present_in_same_header": true
+        },
+        {
+          "case_id": "A04",
+          "question_and_both_versions_present_in_same_header": true
+        },
+        {
+          "case_id": "A05",
+          "question_and_both_versions_present_in_same_header": true
+        },
+        {
+          "case_id": "A06",
+          "question_and_both_versions_present_in_same_header": true
+        },
+        {
+          "case_id": "A07",
+          "question_and_both_versions_present_in_same_header": true
+        },
+        {
+          "case_id": "A08",
+          "question_and_both_versions_present_in_same_header": true
+        }
+      ],
+      "header_columns": 56
+    },
+    "participant_rows_read": false,
+    "workbook_header_rows_read": 4
+  },
+  "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes.",
+  "retrieval_method": {
+    "candidate_filter": "manually verified concept_id, then top five cosine similarities among 27 within-concept items",
+    "corpus": "810 unique generated items",
+    "decision_rule": "retrieval never creates a one-to-one mapping; only the explicit C1-C6 original_item_uid bridge does",
+    "document_fields": [
+      "concept",
+      "output",
+      "text",
+      "all scalar content_json values"
+    ],
+    "normalization": "lowercase; whitespace and common punctuation removed",
+    "vectorizer": "character TF-IDF, ngram_range=(2,5), sublinear_tf=True, L2 normalization"
+  },
+  "schema_version": "1.0.0"
+}

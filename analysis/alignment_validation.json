@@ -1,0 +1,281 @@
+{
+  "checks": {
+    "api_complete_9_of_9": true,
+    "api_rows": 7290,
+    "bootstrap_effects_above_threshold_are_suppressed": true,
+    "bootstrap_invalid_proportions": {
+      "first_concept_cluster": 0.0,
+      "second_concept_cluster": 0.3436,
+      "second_item": 0.4
+    },
+    "bootstrap_invalid_proportions_by_effect": {
+      "first_concept_cluster": {
+        "dimension::cc": 0.0,
+        "dimension::fa": 0.0,
+        "dimension::lc": 0.0,
+        "dimension::mq": 0.0,
+        "dimension::risk": 0.0,
+        "dimension::tf": 0.0,
+        "domain::Biology": 0.0,
+        "domain::Chemistry": 0.0,
+        "domain::Geoscience": 0.0,
+        "domain::Physics": 0.0,
+        "overall::all": 0.0,
+        "task::A": 0.0,
+        "task::B": 0.0,
+        "task::C": 0.0
+      },
+      "second_concept_cluster": {
+        "dimension::cc": 0.0,
+        "dimension::fa": 0.0,
+        "dimension::lc": 0.0,
+        "dimension::mq": 0.0,
+        "dimension::risk": 0.0,
+        "dimension::tf": 0.0,
+        "domain::Biology": 0.2906,
+        "domain::Chemistry": 0.3436,
+        "domain::Climate/Environment": 0.342,
+        "domain::Geoscience": 0.3368,
+        "domain::Physics": 0.3248,
+        "overall::all": 0.0,
+        "task::A": 0.3212,
+        "task::B": 0.319,
+        "task::C": 0.3178
+      },
+      "second_item": {
+        "dimension::cc": 0.0,
+        "dimension::fa": 0.0,
+        "dimension::lc": 0.0,
+        "dimension::mq": 0.0,
+        "dimension::risk": 0.0,
+        "dimension::tf": 0.0,
+        "domain::Biology": 0.3516,
+        "domain::Chemistry": 0.3558,
+        "domain::Climate/Environment": 0.3498,
+        "domain::Geoscience": 0.3478,
+        "domain::Physics": 0.3526,
+        "overall::all": 0.0,
+        "task::A": 0.4,
+        "task::B": 0.3946,
+        "task::C": 0.395
+      }
+    },
+    "bootstrap_rank_deficiency_warnings": {
+      "second_concept_cluster": {
+        "domain::Biology": 0.2906,
+        "domain::Chemistry": 0.3436,
+        "domain::Climate/Environment": 0.342,
+        "domain::Geoscience": 0.3368,
+        "domain::Physics": 0.3248,
+        "task::A": 0.3212,
+        "task::B": 0.319,
+        "task::C": 0.3178
+      },
+      "second_item": {
+        "domain::Biology": 0.3516,
+        "domain::Chemistry": 0.3558,
+        "domain::Climate/Environment": 0.3498,
+        "domain::Geoscience": 0.3478,
+        "domain::Physics": 0.3526,
+        "task::A": 0.4,
+        "task::B": 0.3946,
+        "task::C": 0.395
+      }
+    },
+    "bootstrap_routine_reporting_threshold": "each effect must have <=1% invalid draws",
+    "cleaned_rows": 5364,
+    "crosswalk_rows": 210,
+    "dispersion_disagreement_rows": 14,
+    "dispersion_identifiable_stimuli_by_wave": {
+      "二次专家复核": 30,
+      "首轮专家复核": 106
+    },
+    "equivalence_rows": 810,
+    "final_primary_equals_cleaned": true,
+    "first_domain_concept_clusters": 24,
+    "first_effect_family_sizes": {
+      "dimension": 6,
+      "domain": 4,
+      "task": 3
+    },
+    "heterogeneity_null_allows_common_nonzero_slope": true,
+    "heterogeneity_omnibus_rows": 4,
+    "mixed_model_attempt_recorded": true,
+    "ordinal_gee_attempt_recorded": true,
+    "second_domain_concept_clusters": 21,
+    "second_effect_family_sizes": {
+      "dimension": 6,
+      "domain": 5,
+      "task": 3
+    },
+    "second_exact_permutations": 32768,
+    "second_pairs_one_high_one_low": true
+  },
+  "cross_wave_overlap": {
+    "rows": 144,
+    "stimuli": 24
+  },
+  "final_cleaning": {
+    "formal_primary_is_final_primary": true,
+    "manifest_path": "<RESTRICTED_SOURCE>/final_cleaning_manifest.json",
+    "manifest_sha256": "dc4bb2cbbbe63683cd38668634209000f1dbb80b64d1933b212642c6d260418b",
+    "rule_version": "3.0.0",
+    "rules": {
+      "absolute_seconds_per_unique_stimulus": 12,
+      "base_attention": "pass_all_keyed_attention_checks",
+      "base_repeat_similarity_pct": 90,
+      "cross_domain_identity_exclusion": "none",
+      "duration_operator": "exclude_if_valid_duration_strictly_below_floor",
+      "first_duration_floor_seconds": 432,
+      "first_unique_stimuli": 36,
+      "missing_duration": "retain",
+      "second_duration_floor_seconds": 72,
+      "second_unique_stimuli": 6
+    }
+  },
+  "first_inference": {
+    "bootstrap_draws": 5000,
+    "bootstrap_seed": 20260717,
+    "bootstrap_unit": "domain-by-concept cluster, resampled within domain",
+    "permutation_seed": 20260717,
+    "permutation_unit": "shared joint-stimulus domain-by-task maps; every simple effect uses its own subset-specific controls-only Freedman-Lane reduced model",
+    "permutations": 10000,
+    "qa": {
+      "identity_permutation_matches_observed_max_abs_difference": 1.1102230246251565e-15,
+      "joint_six_dimension_movement": true,
+      "minimum_size_strata": [
+        "Physics||A",
+        "Physics||B"
+      ],
+      "minimum_stratum_size": 11,
+      "movement_implementation": "one source stimulus index selects all included dimension residuals",
+      "n_strata": 12,
+      "observed_item_level_spearman": 0.0019587514347980933,
+      "permutation_strata": "domain-by-task",
+      "shared_stimulus_maps_across_all_effects": true,
+      "simple_effect_reduced_models": "each subset uses its own controls-only reduced model",
+      "stratum_size_by_label": {
+        "Biology||A": 12,
+        "Biology||B": 12,
+        "Biology||C": 12,
+        "Chemistry||A": 12,
+        "Chemistry||B": 12,
+        "Chemistry||C": 12,
+        "Geoscience||A": 12,
+        "Geoscience||B": 12,
+        "Geoscience||C": 12,
+        "Physics||A": 11,
+        "Physics||B": 11,
+        "Physics||C": 12
+      },
+      "stratum_sizes": [
+        11,
+        11,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ]
+    }
+  },
+  "generator_fixed_effect": {
+    "included": false,
+    "reason": "generator is not uniquely identifiable after pooling all text-equivalent UIDs by stimulus signature"
+  },
+  "headline": {
+    "first_ci": [
+      0.06664102272018697,
+      0.29122616189212175
+    ],
+    "first_permutation_p": 0.005099490050994901,
+    "first_positive_reliable_rule": true,
+    "first_standardized_slope": 0.1803250248910258,
+    "second_descriptive_concept_cluster_bootstrap_ci": [
+      0.32221327817509526,
+      0.8398278692420174
+    ],
+    "second_exact_p": 0.00872802734375,
+    "second_standardized_slope": 0.6345162910252145
+  },
+  "legacy_human_derivatives_read": false,
+  "mixed_model_estimability": {
+    "fallback_used": true,
+    "objective_fallback_reasons": [
+      "both prespecified optimizers did not converge successfully",
+      "at least one variance component is on the <1e-8 boundary",
+      "statsmodels flagged a singular Hessian",
+      "Hessian absolute condition number is >=1e12",
+      "optimizer log-likelihood range is unavailable or exceeds 1e-4"
+    ],
+    "stable_for_primary_inference": false
+  },
+  "model_form_checks": {
+    "dimension_spearman_rows": 12,
+    "model_form_rows": 16,
+    "ordinal_gee_attempt_success_by_wave": {
+      "二次专家复核": false,
+      "首轮专家复核": false
+    },
+    "six_dimension_mean_rows_are_unadjusted_descriptive": true
+  },
+  "qa_status": "PASS",
+  "quick_mode": false,
+  "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes.",
+  "risk_coding": "human and API risk transformed as 6 - raw for all main unified-direction models",
+  "script_version": "3.0.0",
+  "second_inference": {
+    "concept_cluster_bootstrap_draws": 5000,
+    "concept_cluster_bootstrap_role": "descriptive CI for purposively selected second review",
+    "concept_cluster_bootstrap_seed": 20260717,
+    "exchangeability_condition": "Within each domain-by-task block, the high-human-disagreement and low-human-disagreement-control stimuli are conditionally exchangeable under the null; each effect moves its own reduced-model residuals with one shared map.",
+    "identity_item_spearman_difference": 5.551115123125783e-17,
+    "identity_permutation_code": 0,
+    "identity_permutation_matches_observed_max_abs_difference": 2.4424906541753444e-15,
+    "item_bootstrap_sensitivity_draws": 5000,
+    "item_bootstrap_sensitivity_seed": 20260717,
+    "joint_six_dimension_movement": true,
+    "limitation": "Because selection_role was defined from prior human disagreement, exact block permutation supports conditional association only and cannot justify population-wide generalization from the purposively selected 30 stimuli.",
+    "n_exact_permutations": 32768,
+    "n_pairs": 15,
+    "observed_item_level_spearman": 0.46785317018909905,
+    "pairs": [
+      "Biology|A",
+      "Biology|B",
+      "Biology|C",
+      "Chemistry|A",
+      "Chemistry|B",
+      "Chemistry|C",
+      "Climate/Environment|A",
+      "Climate/Environment|B",
+      "Climate/Environment|C",
+      "Geoscience|A",
+      "Geoscience|B",
+      "Geoscience|C",
+      "Physics|A",
+      "Physics|B",
+      "Physics|C"
+    ],
+    "shared_stimulus_maps_across_all_effects": true,
+    "simple_effect_reduced_models": "each subset includes selection_role and its own remaining controls"
+  },
+  "standardization": {
+    "constants_rows": 12,
+    "frozen_during_all_bootstrap_and_permutation_draws": true,
+    "rule": "within each wave-by-dimension on the original matched sample",
+    "sd": "sample SD (ddof=1)"
+  },
+  "stimulus_folding": {
+    "api_rule": "mean of all current judge ratings over every text-equivalent source UID",
+    "api_signature_count": 796,
+    "first_review_stimuli": 142,
+    "human_rule": "mean placements within participant, then mean retained participants",
+    "second_review_stimuli": 30,
+    "unit": "stimulus_signature_sha256"
+  }
+}

@@ -1,0 +1,73 @@
+﻿judge_provider,paper_model_label,judge_model_requested,actual_api_model,case_id,domain,concept,expected_quality_preference,expected_riskier_version,quality_A,quality_B,risk_A,risk_B,quality_choice,risk_choice,quality_aligned,risk_aligned,both_aligned
+anthropic,Claude Sonnet 4.6,claude-sonnet-4-6,claude-sonnet-4-6,A01,Physics,Projectile motion,A,B,2.8,3,3,3,B,tie,0,0,0
+anthropic,Claude Sonnet 4.6,claude-sonnet-4-6,claude-sonnet-4-6,A02,Physics,Net force and acceleration,A,B,4.2,1.4,2,5,A,B,1,1,1
+anthropic,Claude Sonnet 4.6,claude-sonnet-4-6,claude-sonnet-4-6,A03,Biology,Evolution has no predetermined goal,B,A,3,4.2,3,2,B,A,1,1,1
+anthropic,Claude Sonnet 4.6,claude-sonnet-4-6,claude-sonnet-4-6,A04,Biology,Photosynthesis and cellular respiration,B,A,1.6,3.6,5,2,B,A,1,1,1
+anthropic,Claude Sonnet 4.6,claude-sonnet-4-6,claude-sonnet-4-6,A05,Geoscience,Geological time,A,B,3.8,1.8,2,5,A,B,1,1,1
+anthropic,Claude Sonnet 4.6,claude-sonnet-4-6,claude-sonnet-4-6,A06,Climate/Environment,Weather and climate,A,B,4,1.4,2,5,A,B,1,1,1
+anthropic,Claude Sonnet 4.6,claude-sonnet-4-6,claude-sonnet-4-6,A07,Chemistry,Chemical equilibrium,A,B,4,1.6,2,5,A,B,1,1,1
+anthropic,Claude Sonnet 4.6,claude-sonnet-4-6,claude-sonnet-4-6,A08,Climate/Environment,Greenhouse effect,B,A,2,3.8,5,2,B,A,1,1,1
+deepseek,DeepSeek-V4 Expert Mode,deepseek-v4,deepseek-v4-pro,A01,Physics,Projectile motion,A,B,3.4,3.6,2,2,B,tie,0,0,0
+deepseek,DeepSeek-V4 Expert Mode,deepseek-v4,deepseek-v4-pro,A02,Physics,Net force and acceleration,A,B,4.8,2.6,1,4,A,B,1,1,1
+deepseek,DeepSeek-V4 Expert Mode,deepseek-v4,deepseek-v4-pro,A03,Biology,Evolution has no predetermined goal,B,A,3,4.8,2,1,B,A,1,1,1
+deepseek,DeepSeek-V4 Expert Mode,deepseek-v4,deepseek-v4-pro,A04,Biology,Photosynthesis and cellular respiration,B,A,1.4,3.8,5,2,B,A,1,1,1
+deepseek,DeepSeek-V4 Expert Mode,deepseek-v4,deepseek-v4-pro,A05,Geoscience,Geological time,A,B,4.4,2,1,5,A,B,1,1,1
+deepseek,DeepSeek-V4 Expert Mode,deepseek-v4,deepseek-v4-pro,A06,Climate/Environment,Weather and climate,A,B,4.8,1.4,1,5,A,B,1,1,1
+deepseek,DeepSeek-V4 Expert Mode,deepseek-v4,deepseek-v4-pro,A07,Chemistry,Chemical equilibrium,A,B,4.6,1.8,1,5,A,B,1,1,1
+deepseek,DeepSeek-V4 Expert Mode,deepseek-v4,deepseek-v4-pro,A08,Climate/Environment,Greenhouse effect,B,A,1.8,4.6,5,1,B,A,1,1,1
+doubao,Doubao 2.0 Pro,doubao-seed-2-0-pro-260215,doubao-seed-2-0-pro-260215,A01,Physics,Projectile motion,A,B,4,4.2,1,2,B,B,0,1,0
+doubao,Doubao 2.0 Pro,doubao-seed-2-0-pro-260215,doubao-seed-2-0-pro-260215,A02,Physics,Net force and acceleration,A,B,4.2,1.6,1,5,A,B,1,1,1
+doubao,Doubao 2.0 Pro,doubao-seed-2-0-pro-260215,doubao-seed-2-0-pro-260215,A03,Biology,Evolution has no predetermined goal,B,A,3.2,4.6,2,1,B,A,1,1,1
+doubao,Doubao 2.0 Pro,doubao-seed-2-0-pro-260215,doubao-seed-2-0-pro-260215,A04,Biology,Photosynthesis and cellular respiration,B,A,2.2,4,5,2,B,A,1,1,1
+doubao,Doubao 2.0 Pro,doubao-seed-2-0-pro-260215,doubao-seed-2-0-pro-260215,A05,Geoscience,Geological time,A,B,4,1.8,1,5,A,B,1,1,1
+doubao,Doubao 2.0 Pro,doubao-seed-2-0-pro-260215,doubao-seed-2-0-pro-260215,A06,Climate/Environment,Weather and climate,A,B,4.8,1.8,1,5,A,B,1,1,1
+doubao,Doubao 2.0 Pro,doubao-seed-2-0-pro-260215,doubao-seed-2-0-pro-260215,A07,Chemistry,Chemical equilibrium,A,B,4.4,1.6,2,5,A,B,1,1,1
+doubao,Doubao 2.0 Pro,doubao-seed-2-0-pro-260215,doubao-seed-2-0-pro-260215,A08,Climate/Environment,Greenhouse effect,B,A,2,4.4,5,1,B,A,1,1,1
+gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,A01,Physics,Projectile motion,A,B,5,4.2,1,2,A,B,1,1,1
+gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,A02,Physics,Net force and acceleration,A,B,5,1.8,1,5,A,B,1,1,1
+gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,A03,Biology,Evolution has no predetermined goal,B,A,4.2,5,1,1,B,tie,1,0,0
+gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,A04,Biology,Photosynthesis and cellular respiration,B,A,2.2,5,5,1,B,A,1,1,1
+gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,A05,Geoscience,Geological time,A,B,4.8,2,1,5,A,B,1,1,1
+gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,A06,Climate/Environment,Weather and climate,A,B,5,1.6,1,5,A,B,1,1,1
+gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,A07,Chemistry,Chemical equilibrium,A,B,5,2,1,5,A,B,1,1,1
+gemini,Gemini 3.1 Pro,gemini-3.1-pro,gemini-3.1-pro-preview,A08,Climate/Environment,Greenhouse effect,B,A,2.2,5,5,1,B,A,1,1,1
+glm,GLM-5.1,glm-5.1,glm-5.1,A01,Physics,Projectile motion,A,B,4.2,4,3,3,A,tie,1,0,0
+glm,GLM-5.1,glm-5.1,glm-5.1,A02,Physics,Net force and acceleration,A,B,5,1.8,1,5,A,B,1,1,1
+glm,GLM-5.1,glm-5.1,glm-5.1,A03,Biology,Evolution has no predetermined goal,B,A,4.2,5,1,1,B,tie,1,0,0
+glm,GLM-5.1,glm-5.1,glm-5.1,A04,Biology,Photosynthesis and cellular respiration,B,A,2.6,4.8,5,1,B,A,1,1,1
+glm,GLM-5.1,glm-5.1,glm-5.1,A05,Geoscience,Geological time,A,B,5,2,1,5,A,B,1,1,1
+glm,GLM-5.1,glm-5.1,glm-5.1,A06,Climate/Environment,Weather and climate,A,B,5,1.6,1,5,A,B,1,1,1
+glm,GLM-5.1,glm-5.1,glm-5.1,A07,Chemistry,Chemical equilibrium,A,B,4.8,2,1,5,A,B,1,1,1
+glm,GLM-5.1,glm-5.1,glm-5.1,A08,Climate/Environment,Greenhouse effect,B,A,1.8,5,5,1,B,A,1,1,1
+kimi,Kimi K2.6 Thinking,kimi-k2.6-thinking,kimi-k2.6,A01,Physics,Projectile motion,A,B,4.2,3.6,1,3,A,B,1,1,1
+kimi,Kimi K2.6 Thinking,kimi-k2.6-thinking,kimi-k2.6,A02,Physics,Net force and acceleration,A,B,5,1.4,1,5,A,B,1,1,1
+kimi,Kimi K2.6 Thinking,kimi-k2.6-thinking,kimi-k2.6,A03,Biology,Evolution has no predetermined goal,B,A,3.8,4.8,2,1,B,A,1,1,1
+kimi,Kimi K2.6 Thinking,kimi-k2.6-thinking,kimi-k2.6,A04,Biology,Photosynthesis and cellular respiration,B,A,2.6,4.8,5,1,B,A,1,1,1
+kimi,Kimi K2.6 Thinking,kimi-k2.6-thinking,kimi-k2.6,A05,Geoscience,Geological time,A,B,4.8,2.8,1,5,A,B,1,1,1
+kimi,Kimi K2.6 Thinking,kimi-k2.6-thinking,kimi-k2.6,A06,Climate/Environment,Weather and climate,A,B,5,1.4,1,5,A,B,1,1,1
+kimi,Kimi K2.6 Thinking,kimi-k2.6-thinking,kimi-k2.6,A07,Chemistry,Chemical equilibrium,A,B,4.8,2.4,1,5,A,B,1,1,1
+kimi,Kimi K2.6 Thinking,kimi-k2.6-thinking,kimi-k2.6,A08,Climate/Environment,Greenhouse effect,B,A,1.8,5,5,1,B,A,1,1,1
+mimo,Mimo v2.5 Pro,mimo-v2.5-pro,mimo-v2.5-pro,A01,Physics,Projectile motion,A,B,3.2,4.2,2,2,B,tie,0,0,0
+mimo,Mimo v2.5 Pro,mimo-v2.5-pro,mimo-v2.5-pro,A02,Physics,Net force and acceleration,A,B,4.6,1.4,1,5,A,B,1,1,1
+mimo,Mimo v2.5 Pro,mimo-v2.5-pro,mimo-v2.5-pro,A03,Biology,Evolution has no predetermined goal,B,A,4.6,4.8,1,1,B,tie,1,0,0
+mimo,Mimo v2.5 Pro,mimo-v2.5-pro,mimo-v2.5-pro,A04,Biology,Photosynthesis and cellular respiration,B,A,1.6,4.2,5,2,B,A,1,1,1
+mimo,Mimo v2.5 Pro,mimo-v2.5-pro,mimo-v2.5-pro,A05,Geoscience,Geological time,A,B,4.6,1.4,1,5,A,B,1,1,1
+mimo,Mimo v2.5 Pro,mimo-v2.5-pro,mimo-v2.5-pro,A06,Climate/Environment,Weather and climate,A,B,4.8,1.4,1,5,A,B,1,1,1
+mimo,Mimo v2.5 Pro,mimo-v2.5-pro,mimo-v2.5-pro,A07,Chemistry,Chemical equilibrium,A,B,4.6,1.4,1,5,A,B,1,1,1
+mimo,Mimo v2.5 Pro,mimo-v2.5-pro,mimo-v2.5-pro,A08,Climate/Environment,Greenhouse effect,B,A,1.8,4.6,5,1,B,A,1,1,1
+openai,GPT-5.5 Thinking,gpt-5.5,gpt-5.5,A01,Physics,Projectile motion,A,B,4.8,4.2,1,2,A,B,1,1,1
+openai,GPT-5.5 Thinking,gpt-5.5,gpt-5.5,A02,Physics,Net force and acceleration,A,B,4.4,1.8,2,5,A,B,1,1,1
+openai,GPT-5.5 Thinking,gpt-5.5,gpt-5.5,A03,Biology,Evolution has no predetermined goal,B,A,4.2,4.8,2,1,B,A,1,1,1
+openai,GPT-5.5 Thinking,gpt-5.5,gpt-5.5,A04,Biology,Photosynthesis and cellular respiration,B,A,2,4.8,5,1,B,A,1,1,1
+openai,GPT-5.5 Thinking,gpt-5.5,gpt-5.5,A05,Geoscience,Geological time,A,B,4.8,2.2,1,5,A,B,1,1,1
+openai,GPT-5.5 Thinking,gpt-5.5,gpt-5.5,A06,Climate/Environment,Weather and climate,A,B,4.8,1.8,1,5,A,B,1,1,1
+openai,GPT-5.5 Thinking,gpt-5.5,gpt-5.5,A07,Chemistry,Chemical equilibrium,A,B,4.4,2,2,5,A,B,1,1,1
+openai,GPT-5.5 Thinking,gpt-5.5,gpt-5.5,A08,Climate/Environment,Greenhouse effect,B,A,2,4.8,5,1,B,A,1,1,1
+qwen,Qwen3.5 Thinking,qwen3.5-plus,qwen3.5-plus,A01,Physics,Projectile motion,A,B,4.8,4.4,1,1,A,tie,1,0,0
+qwen,Qwen3.5 Thinking,qwen3.5-plus,qwen3.5-plus,A02,Physics,Net force and acceleration,A,B,4.8,1.6,1,5,A,B,1,1,1
+qwen,Qwen3.5 Thinking,qwen3.5-plus,qwen3.5-plus,A03,Biology,Evolution has no predetermined goal,B,A,3.8,4.8,2,1,B,A,1,1,1
+qwen,Qwen3.5 Thinking,qwen3.5-plus,qwen3.5-plus,A04,Biology,Photosynthesis and cellular respiration,B,A,1.8,4.8,5,1,B,A,1,1,1
+qwen,Qwen3.5 Thinking,qwen3.5-plus,qwen3.5-plus,A05,Geoscience,Geological time,A,B,4.8,2.6,1,4,A,B,1,1,1
+qwen,Qwen3.5 Thinking,qwen3.5-plus,qwen3.5-plus,A06,Climate/Environment,Weather and climate,A,B,4.8,1.4,1,5,A,B,1,1,1
+qwen,Qwen3.5 Thinking,qwen3.5-plus,qwen3.5-plus,A07,Chemistry,Chemical equilibrium,A,B,4.6,1.8,1,5,A,B,1,1,1
+qwen,Qwen3.5 Thinking,qwen3.5-plus,qwen3.5-plus,A08,Climate/Environment,Greenhouse effect,B,A,2.4,4.8,5,1,B,A,1,1,1

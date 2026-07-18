@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "api_repeat_stability_90x9x3",
+  "status": "PASS",
+  "sampling_seed": 20260717,
+  "counts": {
+    "source_items": 810,
+    "historical_score_rows": 7290,
+    "selected_items": 90,
+    "selected_historical_crosswalk_rows": 810,
+    "planned_fresh_calls": 2430,
+    "planned_dimension_scores": 14580
+  },
+  "balance": {
+    "generator_counts": {
+      "Alibaba Qwen": 10,
+      "Anthropic Claude": 10,
+      "ByteDance Doubao": 10,
+      "DeepSeek": 10,
+      "Google Gemini": 10,
+      "Mimo": 10,
+      "Moonshot Kimi": 10,
+      "OpenAI GPT": 10,
+      "Zhipu GLM": 10
+    },
+    "task_counts": {
+      "A": 30,
+      "B": 30,
+      "C": 30
+    },
+    "domain_counts": {
+      "Biology": 18,
+      "Chemistry": 18,
+      "Climate/Environment": 18,
+      "Geoscience": 18,
+      "Physics": 18
+    },
+    "generator_by_task_counts": {
+      "Alibaba Qwen": {
+        "A": 3,
+        "B": 3,
+        "C": 4
+      },
+      "Anthropic Claude": {
+        "A": 3,
+        "B": 4,
+        "C": 3
+      },
+      "ByteDance Doubao": {
+        "A": 3,
+        "B": 3,
+        "C": 4
+      },
+      "DeepSeek": {
+        "A": 4,
+        "B": 3,
+        "C": 3
+      },
+      "Google Gemini": {
+        "A": 4,
+        "B": 3,
+        "C": 3
+      },
+      "Mimo": {
+        "A": 3,
+        "B": 4,
+        "C": 3
+      },
+      "Moonshot Kimi": {
+        "A": 4,
+        "B": 3,
+        "C": 3
+      },
+      "OpenAI GPT": {
+        "A": 3,
+        "B": 4,
+        "C": 3
+      },
+      "Zhipu GLM": {
+        "A": 3,
+        "B": 3,
+        "C": 4
+      }
+    },
+    "generator_by_domain_counts": {
+      "Alibaba Qwen": {
+        "Biology": 2,
+        "Chemistry": 2,
+        "Climate/Environment": 2,
+        "Geoscience": 2,
+        "Physics": 2
+      },
+      "Anthropic Claude": {
+        "Biology": 2,
+        "Chemistry": 2,
+        "Climate/Environment": 2,
+        "Geoscience": 2,
+        "Physics": 2
+      },
+      "ByteDance Doubao": {
+        "Biology": 2,
+        "Chemistry": 2,
+        "Climate/Environment": 2,
+        "Geoscience": 2,
+        "Physics": 2
+      },
+      "DeepSeek": {
+        "Biology": 2,
+        "Chemistry": 2,
+        "Climate/Environment": 2,
+        "Geoscience": 2,
+        "Physics": 2
+      },
+      "Google Gemini": {
+        "Biology": 2,
+        "Chemistry": 2,
+        "Climate/Environment": 2,
+        "Geoscience": 2,
+        "Physics": 2
+      },
+      "Mimo": {
+        "Biology": 2,
+        "Chemistry": 2,
+        "Climate/Environment": 2,
+        "Geoscience": 2,
+        "Physics": 2
+      },
+      "Moonshot Kimi": {
+        "Biology": 2,
+        "Chemistry": 2,
+        "Climate/Environment": 2,
+        "Geoscience": 2,
+        "Physics": 2
+      },
+      "OpenAI GPT": {
+        "Biology": 2,
+        "Chemistry": 2,
+        "Climate/Environment": 2,
+        "Geoscience": 2,
+        "Physics": 2
+      },
+      "Zhipu GLM": {
+        "Biology": 2,
+        "Chemistry": 2,
+        "Climate/Environment": 2,
+        "Geoscience": 2,
+        "Physics": 2
+      }
+    }
+  },
+  "checks": {
+    "source_has_810_rows": true,
+    "source_is_full_30x3x9_crossing": true,
+    "historical_matrix_has_7290_rows": true,
+    "sample_has_90_items": true,
+    "sample_has_90_unique_concept_task_strata": true,
+    "sample_has_90_unique_source_item_uids": true,
+    "sample_has_90_unique_api_item_ids": true,
+    "sample_has_90_unique_visible_text_hashes": true,
+    "each_generator_has_exactly_10_items": true,
+    "each_domain_has_18_items": true,
+    "each_task_has_30_items": true,
+    "each_generator_has_exactly_2_items_per_domain": true,
+    "each_generator_has_3_or_4_items_per_task": true,
+    "three_selected_generators_are_distinct_within_every_concept": true,
+    "every_selected_item_has_9_historical_judge_rows": true,
+    "every_selected_item_has_9_distinct_historical_judges": true,
+    "all_selected_historical_rows_pass_input_integrity": true,
+    "all_selected_historical_scores_complete": true,
+    "all_selected_historical_scores_integer_1_to_5": true
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "analysis_version": "1.0.3",
+  "status": "final_complete",
+  "script": {
+    "path": "analyze_repeat_stability.py",
+    "sha256": "facd14ab5c2d4347835000e8b1cbe932ff2ec021f06fc061c25f31a40aad3bd4"
+  },
+  "sources": {
+    "input_sources": {
+      "mapping_270.csv": "aa590087724b82746786f230bc9ed628962117a59bc8c99b496ab168aa3a4db8",
+      "judge_repetition_grid.csv": "68e6c186fbff9394130ec3264c066198ecab8fb8631dc4b9d7162361e71ef65c",
+      "repeat_sample_90.csv": "77414cf7173872df2c6d38d4f4d38ca55fe068d2bae761ab92b39cd6e9960683"
+    },
+    "run_snapshots": [
+      {
+        "judge_provider": "anthropic",
+        "path": "runs\\anthropic\\api_judge_scores_long.csv",
+        "sha256": "2cf6d8a1298d5a2560b2c580ee39825c641bdfeb7061aaa675aab474a75e9eaa",
+        "snapshot_rows": 270,
+        "run_manifest_path": "runs\\anthropic\\run_manifest.json",
+        "run_manifest_sha256": "8dc7230493709645ef627dc0d31e0157c49b4c5cc6c40295e7fd32ec4f781d8f"
+      },
+      {
+        "judge_provider": "deepseek",
+        "path": "runs\\deepseek\\api_judge_scores_long.csv",
+        "sha256": "f470f063d770bf15a8e319cef661d90be219d5f61305f74018c560ec6027343d",
+        "snapshot_rows": 270,
+        "run_manifest_path": "runs\\deepseek\\run_manifest.json",
+        "run_manifest_sha256": "7ab0646bc8d2e7a29c3f22ce31729139df21c7538eab340b2bd6f53f758a0323"
+      },
+      {
+        "judge_provider": "doubao",
+        "path": "runs\\doubao\\api_judge_scores_long.csv",
+        "sha256": "96da2dc6d0ac89ea0426f31524cdf14811a676613aa6d4a47b6d3ef1ac60dff8",
+        "snapshot_rows": 270,
+        "run_manifest_path": "runs\\doubao\\run_manifest.json",
+        "run_manifest_sha256": "382c19924bf35ac52c2bb89be6049809b08c0c04ae1070b10148cda3db5c25d9"
+      },
+      {
+        "judge_provider": "gemini",
+        "path": "runs\\gemini\\api_judge_scores_long.csv",
+        "sha256": "37940f635c7a4425bf561455995f208ce81aa8f2e11ed17e1425c001c4fc71c2",
+        "snapshot_rows": 270,
+        "run_manifest_path": "runs\\gemini\\run_manifest.json",
+        "run_manifest_sha256": "6c486b1675e0649b3c365d2fa5f24e41d947d628d96e6ff9c76f66aa360cb057"
+      },
+      {
+        "judge_provider": "glm",
+        "path": "runs\\glm\\api_judge_scores_long.csv",
+        "sha256": "88cdf71818208a9d0e5da79db37a2939778cf2cc67138a9068b68f78965d444c",
+        "snapshot_rows": 270,
+        "run_manifest_path": "runs\\glm\\run_manifest.json",
+        "run_manifest_sha256": "4eebffa26ccfed6895f73b776325c6e35538d1b758bf1ba6bab2f2dcae6bf766"
+      },
+      {
+        "judge_provider": "kimi",
+        "path": "runs\\kimi\\api_judge_scores_long.csv",
+        "sha256": "c5eef60a7d46729cdf68541bb81389f4e08a626b1cffc75b56ba5f2385872367",
+        "snapshot_rows": 270,
+        "run_manifest_path": "runs\\kimi\\run_manifest.json",
+        "run_manifest_sha256": "4e0474a45f864a68b90180e4517b4baeffe08b7fdd33382091689e090ad8917f"
+      },
+      {
+        "judge_provider": "mimo",
+        "path": "runs\\mimo\\api_judge_scores_long.csv",
+        "sha256": "7337b541483ee52b44f4c6982ac93ce3701cbf92db0e41622fb53caf1af037af",
+        "snapshot_rows": 270,
+        "run_manifest_path": "runs\\mimo\\run_manifest.json",
+        "run_manifest_sha256": "680dd93da162feae8f86d5163bbcfcb529f4963ee4a8d7b3ef5f075eee252926"
+      },
+      {
+        "judge_provider": "openai",
+        "path": "runs\\openai\\api_judge_scores_long.csv",
+        "sha256": "0175680fc815f95c19959b89cdcb916cc0a4214c2e8ce0f99396babe5b9596fa",
+        "snapshot_rows": 271,
+        "run_manifest_path": "runs\\openai\\run_manifest.json",
+        "run_manifest_sha256": "99adb013a8ad092bd23c2501ced0cccc36e5b081c60f8db3a1ddc824be9308d4"
+      },
+      {
+        "judge_provider": "qwen",
+        "path": "runs\\qwen\\api_judge_scores_long.csv",
+        "sha256": "2fed632b28b37c18c29612141f42ac66524472f98e6bdfd15639db71c59a67ab",
+        "snapshot_rows": 270,
+        "run_manifest_path": "runs\\qwen\\run_manifest.json",
+        "run_manifest_sha256": "4a5dcccdba1d050328e0897b2425bc1db855a68c34e102a064a6246c5bb6ed26"
+      }
+    ],
+    "provider_retry_deviations": {
+      "path": "provider_retry_deviations.json",
+      "sha256": "291316820585a60722eba610dcaf1f47c90af0d5bf67b8b6ee933b1caf3bf625",
+      "records": [
+        {
+          "provider": "kimi",
+          "scope": "one of 270 planned Kimi calls",
+          "trigger": "the planned call had one SSL EOF attempt and one response that ended at the 8192-token provider cap before forming complete schema-valid JSON",
+          "unchanged": [
+            "opaque planned-call identity",
+            "stimulus text",
+            "system prompt",
+            "user prompt template",
+            "requested model",
+            "score schema"
+          ],
+          "changed_for_parse_retry_only": {
+            "provider_max_output_tokens": {
+              "from": 8192,
+              "to": 16384
+            }
+          },
+          "selection_rule": "the first schema-valid response for the original planned call is the analyzed response; failed attempts are not additional repetitions",
+          "interpretation": "provider-specific retry accommodation, not a new experimental repetition or a prompt/model change"
+        }
+      ]
+    }
+  },
+  "software": {
+    "python": "3.12.7",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1"
+  },
+  "bootstrap": {
+    "seed": 2026071705,
+    "draws": 2000
+  },
+  "outputs": {
+    "repeat_call_status_2430.csv": "cfd2db5024c657ccce8124a4573636e03407b9d721930a737227d598e8c16503",
+    "repeat_provider_completion.csv": "97217a67bd7b38ba700fa8d14a117e800513f1952ff4b464e910d35d0633aaee",
+    "repeat_provider_dimension_summary.csv": "fdf81122b144a8890c2cce955a83ee7a658e8f73b25caa178bbeb1beedd9ccc1",
+    "repeat_provider_pairwise_metrics.csv": "e2d352a2c1fda34beb134e11a499f86f226ce260b6b8cccb33db4f00c0a6a430",
+    "repeat_panel_scores_by_stimulus_replicate.csv": "6a2e4e6f4d561ea66392eef6eb0172478c4cb255ced19ab47bf8a0a0772dbe3e",
+    "repeat_panel_dimension_summary.csv": "08c6fa6e128be232874356a12b907b7638616ca31a098766d5876531c73ea9bb",
+    "repeat_panel_pairwise_metrics.csv": "87b905ff4678eab46c3f8d82ed792e05004d07de9c2cf795909fbf22511d9edc",
+    "repeat_variance_decomposition.csv": "9596ed2f42e3d9fbeebefd652f18945bc73bf913b0720e69d4c5190f59dcd52e",
+    "REPEAT_STABILITY_REPORT.md": "864636a5f020a14738964f9ebac137f1ac6c8d7b75591224312be07c3bf0dc43",
+    "repeat_stability_analysis_results.json": "911f4814a2757d2bd76a75d7a45a235c4d8beefdf19d212ff014616e91410e82"
+  },
+  "qa": {
+    "planned_rows": 2430,
+    "valid_rows": 2430,
+    "missing_rows": 0,
+    "providers_complete": 9,
+    "all_nine_complete": true,
+    "score_range_valid_for_selected_rows": true,
+    "historical_scores_imported": false
+  },
+  "secret_handling": "No credential values are read or written by this analysis script."
+}

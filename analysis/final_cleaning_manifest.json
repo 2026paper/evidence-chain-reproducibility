@@ -1,0 +1,74 @@
+{
+  "analysis_label": "final_time_only_cleaning",
+  "counts": {
+    "base_primary_participants": 104,
+    "base_primary_time_exclusions": 0,
+    "eligible_raw_records": 184,
+    "final_long_rows": 5364,
+    "final_participants": {
+      "二次专家复核": 95,
+      "首轮专家复核": 9
+    },
+    "final_participants_total": 104,
+    "time_excluded_participants_by_panel": {
+      "attention_only": 1,
+      "final_primary": 0,
+      "second_case05_case07_mean": 0,
+      "strict_first_both_pairs": 0,
+      "threshold_85": 0,
+      "threshold_95": 0
+    }
+  },
+  "outputs": {
+    "cleaned_human_ratings_long": {
+      "bytes": 529717,
+      "path": "analysis/cleaned_human_ratings_long.csv",
+      "rows": 5364,
+      "sha256": "ef2ff9ad5c24e314b23d77d112e01ee12094f39cc435080d063d1020d7d07469"
+    },
+    "final_primary": {
+      "bytes": 529717,
+      "path": "analysis/final_sensitivity_panels/final_primary.csv",
+      "rows": 5364,
+      "sha256": "ef2ff9ad5c24e314b23d77d112e01ee12094f39cc435080d063d1020d7d07469"
+    }
+  },
+  "packages": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "python": "3.12.7"
+  },
+  "privacy": {
+    "exact_duration_written": false,
+    "raw_or_platform_id_written": false,
+    "rekey_mapping_retained": false,
+    "release_ids_nonreversibly_randomized": true,
+    "release_row_order_shuffled": true,
+    "source_file_column_removed": true
+  },
+  "qa_status": "PASS",
+  "release_note": "The public input contract has new non-reversible participant keys. Scores, study cells, item hashes, and clustering structure are unchanged.",
+  "restricted_input_attestation": {
+    "raw_workbook_count": 10,
+    "raw_workbooks_in_package": false,
+    "sorted_source_sha256_list_digest": "387e64a4e3af6bdde1985044724ad36d594ef6a3ffb0da64ff3621087da4f1c9"
+  },
+  "rule_version": "3.0.0",
+  "rules": {
+    "absolute_seconds_per_unique_stimulus": 12,
+    "base_attention": "pass_all_keyed_attention_checks",
+    "base_repeat_similarity_pct": 90,
+    "cross_domain_identity_exclusion": "none",
+    "duration_operator": "exclude_if_valid_duration_strictly_below_floor",
+    "first_duration_floor_seconds": 432,
+    "first_unique_stimuli": 36,
+    "missing_duration": "retain",
+    "second_duration_floor_seconds": 72,
+    "second_unique_stimuli": 6
+  },
+  "script_version": "1.0.0",
+  "source_manifest": {
+    "created_utc": "2026-07-16T20:11:56.527953+00:00",
+    "sha256": "dc4bb2cbbbe63683cd38668634209000f1dbb80b64d1933b212642c6d260418b"
+  }
+}

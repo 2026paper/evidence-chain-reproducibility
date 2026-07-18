@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "item_id": {"type": "string"},
+    "judge_model": {"type": "string"},
+    "paper_model_label": {"type": "string"},
+    "actual_api_model": {"type": "string"},
+    "fa": {"type": "integer", "enum": [1, 2, 3, 4, 5]},
+    "cc": {"type": "integer", "enum": [1, 2, 3, 4, 5]},
+    "lc": {"type": "integer", "enum": [1, 2, 3, 4, 5]},
+    "tf": {"type": "integer", "enum": [1, 2, 3, 4, 5]},
+    "mq": {"type": "integer", "enum": [1, 2, 3, 4, 5]},
+    "risk": {"type": "integer", "enum": [1, 2, 3, 4, 5]}
+  },
+  "required": ["item_id", "judge_model", "paper_model_label", "actual_api_model", "fa", "cc", "lc", "tf", "mq", "risk"]
+}

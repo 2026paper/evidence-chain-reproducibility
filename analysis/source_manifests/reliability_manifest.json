@@ -1,0 +1,117 @@
+{
+  "analysis": "ADMA 2026 final-cleaning reliability engine",
+  "api_ensemble_curve": {
+    "method": "exact enumeration of all nonempty subsets of nine current API judges",
+    "subset_count_all_sizes": 511
+  },
+  "bootstrap": {
+    "confidence_level": 0.95,
+    "method": "domain-stratified concept-cluster percentile bootstrap",
+    "repetitions": 5000
+  },
+  "cleaning_rule_version": "3.0.0",
+  "created_utc": "2026-07-16T20:21:13.313086+00:00",
+  "input_policy": {
+    "allowed_inputs_only": true,
+    "formal_human_input": "final cleaning rule version 3.0.0",
+    "legacy_human_derivatives_read": false
+  },
+  "inputs": {
+    "cleaned_human": {
+      "path": "analysis\\cleaned_human_ratings_long.csv",
+      "rows": 5364,
+      "sha256": "528f2da6b6e86d347e5325972175575f07bc0791a548ee4395108174c61c0373"
+    },
+    "current_api_scores": {
+      "path": "数据与问卷源文件\\AI测试数据全集\\40_GitHub发布修订\\rebuttal_update_20260714\\data\\api_test_scores_7290.csv",
+      "rows": 7290,
+      "sha256": "4bb91453c6ccfc22e0c24f99c487543686455b7875148f85e759113181a70da4"
+    },
+    "final_cleaning_manifest": {
+      "path": "analysis\\final_cleaning_manifest.json",
+      "rule_version": "3.0.0",
+      "sha256": "dc4bb2cbbbe63683cd38668634209000f1dbb80b64d1933b212642c6d260418b"
+    },
+    "final_primary": {
+      "path": "analysis\\final_sensitivity_panels\\final_primary.csv",
+      "rows": 5364,
+      "sha256": "528f2da6b6e86d347e5325972175575f07bc0791a548ee4395108174c61c0373"
+    },
+    "validated_crosswalk": {
+      "path": "analysis\\human_api_crosswalk.csv",
+      "rows": 210,
+      "sha256": "3e4899c647d2def2776f696377ce9805f23dbab0a5e4b61d03950b2a0bab99a8"
+    }
+  },
+  "metrics": {
+    "api": [
+      "alpha_interval",
+      "icc_a1",
+      "icc_ak",
+      "kendall_w"
+    ],
+    "human": [
+      "gwet_ac2",
+      "alpha_ordinal",
+      "icc_a1",
+      "icc_ak"
+    ],
+    "human_one_rater_policy": "all reliability estimates and intervals are NA",
+    "risk_direction": "raw high-is-risky scores; reliability is invariant to linear reversal"
+  },
+  "outputs": {
+    "api_ensemble_size_stability": {
+      "bytes": 69309,
+      "path": "analysis\\reliability_api_ensemble_size_stability.csv",
+      "sha256": "40e7f20fe485b6614e4c6996f0992ffa71966787fb882a6d7ba6e874a74b99fd"
+    },
+    "api_estimates": {
+      "bytes": 7598,
+      "path": "analysis\\reliability_api_estimates.csv",
+      "sha256": "095e7de91067445b01044f749a2f7687a100d5c0495a5590d25f3a2940807aaa"
+    },
+    "human_estimates": {
+      "bytes": 16535,
+      "path": "analysis\\reliability_human_estimates.csv",
+      "sha256": "6a7fabc68f8acccda7e0c7563b879b1e8cfaf37d47d154e244bfbe47b66b488d"
+    },
+    "human_panel_size_curve": {
+      "bytes": 188669,
+      "path": "analysis\\reliability_human_panel_size_curve.csv",
+      "sha256": "37b8a224daf30c59e60a3ed7207a028e6962146a4ff6a2b827aa1499a83868aa"
+    },
+    "qa": {
+      "bytes": 1809,
+      "path": "analysis\\reliability_qa.json",
+      "sha256": "8fd02c02e0ccd758d99d30fc2a012d529549dc209eb9e095a5dbe4f23a035824"
+    }
+  },
+  "qa_status": "PASS",
+  "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes.",
+  "scope_definitions": {
+    "all810": "all current API-scored items",
+    "broad180": "all 180 first-round questionnaire items, independent of retention",
+    "final_first_human_covered": "first-round items with at least one retained rating after final cleaning",
+    "selected30": "the 30 purposively selected second-review items"
+  },
+  "scope_item_counts": {
+    "all810": 810,
+    "broad180": 180,
+    "final_first_human_covered": 144,
+    "selected30": 30
+  },
+  "script_path": "scripts/reliability_analysis.py",
+  "script_sha256": "76c0ce2bce14688996e5267cfb4a9dab32c46e61fc0ef550280cbd59e617ad22",
+  "script_version": "3.0.0",
+  "second_review_panel_curve": {
+    "maximum_subpanels_per_size": 500,
+    "method": "all rater combinations when feasible, otherwise deterministic unique subpanel sampling without replacement"
+  },
+  "seed": 20260717,
+  "software": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "python": "3.12.7",
+    "scipy": "1.17.1"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-07-16T22:05:36.3195167Z",
+  "method": "Copied the completed package to an isolated system temporary directory, ran the byte-exact formal scripts there with reduced resampling counts, and deleted the temporary clone after success. The released frozen results were not overwritten.",
+  "release_inputs_tested": {
+    "final_cleaning_manifest_sha256": "aaa94bb1a8b2a0769a372246619be977a6046e6688b94ef0caec6c3ddc08d30b",
+    "api_test_scores_7290_sha256": "4bb91453c6ccfc22e0c24f99c487543686455b7875148f85e759113181a70da4"
+  },
+  "alignment": {
+    "command_shape": "python scripts/alignment_analysis.py --api-scores <released matrix> --bootstrap 100 --permutations 100 --quick",
+    "exit_code": 0,
+    "qa_status": "PASS",
+    "cleaned_rows": 5364,
+    "crosswalk_rows": 210,
+    "equivalence_rows": 810,
+    "api_rows": 7290,
+    "api_complete_9_of_9": true,
+    "final_primary_equals_cleaned": true,
+    "second_exact_permutations": 32768,
+    "headline_first_standardized_slope": 0.1803250248910258,
+    "headline_second_standardized_slope": 0.6345162910252145
+  },
+  "reliability": {
+    "command_shape": "python scripts/reliability_analysis.py --bootstrap-reps 100 --panel-max-subsets 50",
+    "exit_code": 0,
+    "qa_status": "PASS",
+    "human_result_rows": 54,
+    "human_panel_curve_rows": 540,
+    "api_result_rows": 24,
+    "api_ensemble_curve_rows": 216
+  },
+  "public_cleaned_only": {
+    "command_shape": "python scripts/recompute_public_from_release.py",
+    "exit_code": 0,
+    "qa_status": "PASS",
+    "abc_primary_p": 0.009668141427595464,
+    "abc_primary_frozen_p": 0.009668141427595292,
+    "abc_q11_q17_exclusion_p": 0.003266657160939916,
+    "abc_q11_q17_exclusion_frozen_p": 0.003266657160939765,
+    "controlled_cases": 8,
+    "exact_text_cases": 7,
+    "frozen_comparison_tolerance": 1e-10,
+    "raw_workbooks_or_call_logs_read": false
+  },
+  "scope_note": "Reduced resampling counts test alignment/reliability portability and input contracts only. They do not replace the frozen 5,000/10,000/full-enumeration formal results included in analysis/. The public cleaned-only check is a full deterministic headline recalculation."
+}

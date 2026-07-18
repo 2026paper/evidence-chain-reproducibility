@@ -1,0 +1,58 @@
+{
+  "analysis_version": "1.0.1",
+  "design": "eight constructed paired contrasts",
+  "privacy": {
+    "free_text_exported": false,
+    "output_contains_ip_location_device": false,
+    "output_contains_platform_user_id": false,
+    "output_contains_raw_response_id": false,
+    "output_contains_timestamp": false
+  },
+  "qa_status": "PASS",
+  "quality_control": {
+    "attention_rule": "not_applicable_no_keyed_attention_item",
+    "duration_exclusions": 0,
+    "duration_floor_seconds": 96.0,
+    "duration_missing_or_nonpositive_retained": 0,
+    "final_case_rows": 480,
+    "final_responses": 60,
+    "raw_responses": 60,
+    "repeated_item_rule": "not_applicable_no_intentional_repeat"
+  },
+  "random_seeds": {
+    "bootstrap_base": 2026071702,
+    "bootstrap_draws": 10000,
+    "signflip_base": 2026071703,
+    "signflip_draws": 100000
+  },
+  "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes.",
+  "script": {
+    "path": "ADMA2026_重构稿\\scripts\\public_questionnaire_analyses.py",
+    "sha256": "38830e2ac56e86cbbf1818cf3734c92cf680a6e8bb089a92d73876353b2772ba"
+  },
+  "semantic_crosswalk": {
+    "audit_path": "ADMA2026_重构稿\\analysis\\public_semantic_crosswalk_audit.json",
+    "audit_sha256": "b238f674cc7bef6de8e0528bc730003b0a7a5a1163199855a5fe8d7774d767ec",
+    "path": "ADMA2026_重构稿\\analysis\\public_semantic_crosswalk.csv",
+    "sha256": "868b0c627b1cb65a1779ca6a6d24863c945cf8cc33ef1f6024dac50c14f9e940",
+    "status": "16/16 controlled IDs linked; seven concepts map only at concept level to the 810 frame and one case is external"
+  },
+  "software": {
+    "numpy": "2.4.4",
+    "openpyxl": "3.1.5",
+    "pandas": "3.0.2",
+    "patsy": "1.0.2",
+    "python": "3.12.7",
+    "scipy": "1.17.1",
+    "statsmodels": "0.14.6"
+  },
+  "source": {
+    "columns": 56,
+    "file": "差异.xlsx",
+    "reported_dimension_before_reset": "A1:A1",
+    "rows": 60,
+    "sha256": "b7b21ad2d0dae1a15832417b5785591e87eeea2684d0fe68788eb3f7b3352f34",
+    "worksheet": "TextData_20260712224413_1"
+  },
+  "source_mapping_status": "completed_16_of_16_to_controlled_ids_with_concept_level_or_external_810_boundary"
+}

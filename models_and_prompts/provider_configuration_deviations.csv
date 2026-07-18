@@ -1,0 +1,10 @@
+provider,target_temperature,effective_temperature,target_seed,effective_seed,thinking_or_sampling,max_output_tokens,transport,response_format,interpretation
+openai,0,not sent; unsupported,20260514,unsupported,reasoning_effort=high,800,non-streaming,JSON schema,target defaults not literally accepted
+gemini,0,0,20260514,20260514,thinking enabled if available; thinking_level=low,800,non-streaming,application/json + schema,target defaults applied where supported
+kimi,0,1,20260514,provider-dependent/not asserted,thinking model,8192,streaming override,prompt-enforced JSON,provider-required temperature and token/transport overrides
+deepseek,0,0,20260514,provider-dependent/not asserted,thinking disabled to preserve JSON budget,800,non-streaming,json_object,target defaults with thinking disabled
+doubao,0,0,20260514,provider-dependent/not asserted,thinking disabled,800,non-streaming,prompt-enforced JSON,thinking disabled because default reasoning was impractically slow and logged chain-of-thought
+glm,0,may be ignored because do_sample=false,20260514,provider-dependent/not asserted,thinking enabled; do_sample=false,2000,non-streaming,json_object,reasoning-token override; deterministic sampling switch
+qwen,0,0,20260514,provider-dependent/not asserted,enable_thinking=true; thinking_budget=256,800,streaming override,json_object,streaming used for thinking mode
+anthropic,0,0,20260514,provider-dependent/not asserted,thinking enabled if available; top_p omitted,800,non-streaming,prompt-enforced JSON,target temperature; unsupported controls not reconstructed
+mimo,0,0,20260514,provider-dependent/not asserted,thinking enabled if available,800,non-streaming,json_object,target defaults where supported

@@ -1,0 +1,109 @@
+{
+  "experiment_id": "api_reader_bridge_18",
+  "manifest_version": "1.0.0",
+  "record_count": 18,
+  "design": {
+    "versions": ["A", "B", "C"],
+    "materials_per_version": 6,
+    "concept_keys_in_material_order": [
+      "projectile_motion",
+      "evolution_no_goal",
+      "geological_time",
+      "plant_respiration",
+      "adaptation",
+      "net_force_vs_velocity"
+    ],
+    "expected_cells": "6 concept slots x 3 reader-facing versions",
+    "unit": "one exact reader-visible material text"
+  },
+  "text_canonicalization": {
+    "unicode": "NFC",
+    "line_endings": "LF",
+    "paragraph_rule": "The instrument transcription's single visible line breaks are canonical; consecutive crosswalk line breaks are collapsed to one LF for source comparison.",
+    "trailing_newline_in_hashed_text": false,
+    "hash": "SHA-256 of canonical visible_text encoded as UTF-8"
+  },
+  "input_files": [
+    {
+      "path": "inputs.csv",
+      "sha256": "ccbfaf5db824981eccaf598e8294582dcc8c663aacb8146f348a13be27b4eda4",
+      "bytes": 11486,
+      "records": 18
+    },
+    {
+      "path": "inputs.jsonl",
+      "sha256": "295ee7518c3d596529b8d79bdca87d028d06a627c4cfaaf9067489d3c3565202",
+      "bytes": 25314,
+      "records": 18
+    },
+    {
+      "path": "runner_inputs.csv",
+      "sha256": "6d8691caa62c88e3493901bfee8f57db1a8f67e788c04a96de921d9fb8fa536e",
+      "bytes": 8879,
+      "records": 18,
+      "note": "Hash-sorted, opaque-ID runner view; version labels are withheld."
+    },
+    {
+      "path": "mapping.csv",
+      "sha256": "935c34d2d1cd69f98b6b472adedd73f2dcb9a6a8ce2b65cb87705972a0ce1c6b",
+      "bytes": 3750,
+      "records": 18,
+      "note": "Held-out map from opaque runner IDs to source version and provenance."
+    }
+  ],
+  "source_artifacts": [
+    {
+      "path_from_experiment_dir": "../../output/review_package/materials/public_form_A_instrument.txt",
+      "sha256": "7fa06d7710adda9ded2d616b0df789f81718b2f82e9b6d0c82d1266b54a34588",
+      "source_container_sha256": "a896a0b68f198ed9fac3bd93589201d225e6346698f203c280789cdc878e4084"
+    },
+    {
+      "path_from_experiment_dir": "../../output/review_package/materials/public_form_B_instrument.txt",
+      "sha256": "cfc507f351f651223b7810f0da553ac388672f419ac4ebafeb7198636cd73e28",
+      "source_container_sha256": "2c6247ffbbe260e1015fca293e12d41d9fbe3c34b65402f6d27d84ba1a5793e7"
+    },
+    {
+      "path_from_experiment_dir": "../../output/review_package/materials/public_form_C_instrument.txt",
+      "sha256": "cf175ec0b7806356fb7014d0c422e1764c950622f9968aadc3a5de2acbc232f3",
+      "source_container_sha256": "6e47579f8d33664408e75b932511fe366cd259570c4e4a0896f27829112188dc"
+    },
+    {
+      "path_from_experiment_dir": "../../output/review_package/materials/public_abc_answer_key.json",
+      "sha256": "46c02a0b68fc51ba6cc9ae1389d527be2128f010c3f47200f13f9b10b4c1e2d2",
+      "analysis_version": "1.0.1"
+    },
+    {
+      "path_from_experiment_dir": "../../output/review_package/materials/public_semantic_crosswalk_full.csv",
+      "sha256": "868b0c627b1cb65a1779ca6a6d24863c945cf8cc33ef1f6024dac50c14f9e940"
+    }
+  ],
+  "model_input_policy": {
+    "visible_text_is_model_input": true,
+    "runner_generated_text_equals_visible_text": true,
+    "runner_item_ids_hide_version": true,
+    "comprehension_question_is_metadata": true,
+    "correct_answers_are_excluded": true,
+    "participant_data_present": false,
+    "api_credentials_present": false
+  },
+  "items": [
+    {"item_id":"reader_A_01","version":"A","material_no":1,"concept_key":"projectile_motion","visible_text_sha256":"129767c542cc331f8964f791ac9786011e914888935ed61fe378d724123902fb"},
+    {"item_id":"reader_A_02","version":"A","material_no":2,"concept_key":"evolution_no_goal","visible_text_sha256":"a91dc810f66283998586f55616d913a8f5c33184e1043a8452f0e63b518c5587"},
+    {"item_id":"reader_A_03","version":"A","material_no":3,"concept_key":"geological_time","visible_text_sha256":"bbbb5f43784f809c198b104ab9205311fb588b4df34fbc7cc1dbc87c9c90af1a"},
+    {"item_id":"reader_A_04","version":"A","material_no":4,"concept_key":"plant_respiration","visible_text_sha256":"df546a2e19151618ad7a16d147bfbfe0137eaba193fa99efc5b0835f087e15fc"},
+    {"item_id":"reader_A_05","version":"A","material_no":5,"concept_key":"adaptation","visible_text_sha256":"185f4218daf7d457e8505e8d7c8c58de0a93df6d333be7c1428c8d5f452aae1d"},
+    {"item_id":"reader_A_06","version":"A","material_no":6,"concept_key":"net_force_vs_velocity","visible_text_sha256":"5926132b8302652daa79bd1458c7b679394b1eefda86a2b9867f245f2448a860"},
+    {"item_id":"reader_B_01","version":"B","material_no":1,"concept_key":"projectile_motion","visible_text_sha256":"00007c0f6079d4def1f0f554da96ad375327ad6dbebde59310c36bb361266d0a"},
+    {"item_id":"reader_B_02","version":"B","material_no":2,"concept_key":"evolution_no_goal","visible_text_sha256":"06a41a6756015352844d09343bec7398a7a4e630bfc5afae549dc9af984af3dc"},
+    {"item_id":"reader_B_03","version":"B","material_no":3,"concept_key":"geological_time","visible_text_sha256":"45570a054b7e21616343a19ec1ebaa0f577b3a2d6ba68288e6dffe967ae5b305"},
+    {"item_id":"reader_B_04","version":"B","material_no":4,"concept_key":"plant_respiration","visible_text_sha256":"7d107c521a368d49dee979673b8a5f527c057f5d989a9d99eaa5e569579532c7"},
+    {"item_id":"reader_B_05","version":"B","material_no":5,"concept_key":"adaptation","visible_text_sha256":"13c2377f8265a12ebc6d75efde2cab38e9c9ef8018a54ef26e95f7561750769b"},
+    {"item_id":"reader_B_06","version":"B","material_no":6,"concept_key":"net_force_vs_velocity","visible_text_sha256":"93ef670f33a046f8c9653354a6eae80fe54cf8807d8d8c4aae2107c63fdc0d13"},
+    {"item_id":"reader_C_01","version":"C","material_no":1,"concept_key":"projectile_motion","visible_text_sha256":"0750c04a60221d3678629f17bdb60316cbdda5643706a794f50ca55a81d8e0b5"},
+    {"item_id":"reader_C_02","version":"C","material_no":2,"concept_key":"evolution_no_goal","visible_text_sha256":"479be42075e3821668e0731653e5211b34c78db32b5486711ec20df04afef4e4"},
+    {"item_id":"reader_C_03","version":"C","material_no":3,"concept_key":"geological_time","visible_text_sha256":"6c7eaacd12e1b214645fb23be433998d4a6fcf387cc61ebbd85ca43c1b835bbc"},
+    {"item_id":"reader_C_04","version":"C","material_no":4,"concept_key":"plant_respiration","visible_text_sha256":"debd484e21cbc69e4e5252a8fd6ae9c9813c48c2bb10c0db71e6b7d089244b86"},
+    {"item_id":"reader_C_05","version":"C","material_no":5,"concept_key":"adaptation","visible_text_sha256":"931de414d2e0b2b70b49ebd634c052be8ab2715a134bb24f64ac30ce8314f5e7"},
+    {"item_id":"reader_C_06","version":"C","material_no":6,"concept_key":"net_force_vs_velocity","visible_text_sha256":"32041e3f1e26e235648940f68b4bf9504ef6d9e2cd4da4eb5fb9768a02ee2a8e"}
+  ]
+}

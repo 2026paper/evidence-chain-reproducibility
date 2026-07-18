@@ -1,0 +1,50 @@
+{
+  "analysis_version": "1.0.1",
+  "release_packaging_note": "Absolute local paths and credential/payload-shaped fields were sanitized. See manifests/source_to_release_map.csv for source and release hashes.",
+  "rules": {
+    "exact_text_eligibility": "NFC-normalized, outer-whitespace-stripped version A and B strings must both have identical SHA-256 hashes",
+    "failed_retry_handling": "exclude all unsuccessful or unparsed call attempts; retain a provider-item only when exactly one successful parsed HTTP-200 result is present",
+    "quality_direction": "compare the unweighted mean of FA/CC/LC/TF/MQ",
+    "risk_direction": "compare risk; higher is riskier",
+    "successful_row": "parse_success=True, HTTP 200, and all six score dimensions nonmissing"
+  },
+  "script": {
+    "path": "ADMA2026_重构稿\\scripts\\public_questionnaire_analyses.py",
+    "sha256": "38830e2ac56e86cbbf1818cf3734c92cf680a6e8bb089a92d73876353b2772ba"
+  },
+  "semantic_crosswalk": {
+    "audit_path": "ADMA2026_重构稿\\analysis\\public_semantic_crosswalk_audit.json",
+    "audit_sha256": "b238f674cc7bef6de8e0528bc730003b0a7a5a1163199855a5fe8d7774d767ec",
+    "path": "ADMA2026_重构稿\\analysis\\public_semantic_crosswalk.csv",
+    "sha256": "868b0c627b1cb65a1779ca6a6d24863c945cf8cc33ef1f6024dac50c14f9e940"
+  },
+  "software": {
+    "numpy": "2.4.4",
+    "openpyxl": "3.1.5",
+    "pandas": "3.0.2",
+    "patsy": "1.0.2",
+    "python": "3.12.7",
+    "scipy": "1.17.1",
+    "statsmodels": "0.14.6"
+  },
+  "source_files": {
+    "anonymized_inputs": {
+      "path": "数据与问卷源文件\\AI测试数据全集\\20_主数据与支持\\diagnostics\\official_ab_judge_run_20260521_155532\\controlled_ab_judge_inputs_anonymized.csv",
+      "sha256": "9c8eeab05b71763184690bd88a02cc8f263a92f1e8bf271c1c75ec86ca665747"
+    },
+    "api_call_log": {
+      "path": "数据与问卷源文件\\AI测试数据全集\\20_主数据与支持\\diagnostics\\official_ab_judge_run_20260521_155532\\api_call_log.jsonl",
+      "sha256": "6d3c7d99c25353850d166309d55bd83164277996082d1ed88003736db6c6b487"
+    },
+    "pair_configuration": {
+      "path": "数据与问卷源文件\\AI测试数据全集\\20_主数据与支持\\diagnostics\\controlled_ab_pairs_for_llm_judge.json",
+      "sha256": "2d6119c4a34843f957c653fb5eae71a327ece89d9dbdf07b0235d33111df0ba0"
+    },
+    "raw_scores": {
+      "path": "数据与问卷源文件\\AI测试数据全集\\20_主数据与支持\\diagnostics\\official_ab_judge_run_20260521_155532\\api_judge_scores_long.csv",
+      "sha256": "69bcedd512e8061012ca0344f5280bd9afc1eab03f87f1fa06a167b9d6ac6ff2"
+    }
+  },
+  "source_mapping_status": "completed_controlled_id_crosswalk_with_strict_current_export_text_audit",
+  "status": "PASS"
+}

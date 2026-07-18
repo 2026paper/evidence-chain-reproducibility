@@ -1,0 +1,144 @@
+{
+  "analysis_version": "1.0.0",
+  "script": {
+    "path": "analyze_reader_bridge.py",
+    "sha256": "eb164246c24437866d77bd3e8c5c4b573fec967ec4ee3c2cc861e13216d0b507"
+  },
+  "sources": {
+    "api_sources": [
+      {
+        "provider_directory": "anthropic",
+        "path": "runs\\anthropic\\api_judge_scores_long.csv",
+        "sha256": "a8d91a8e4746ae1d34eca8bdc7e639e17a9864f82236a7e23be166e7b8c46573",
+        "rows": 18,
+        "parse_success": 18
+      },
+      {
+        "provider_directory": "deepseek",
+        "path": "runs\\deepseek\\api_judge_scores_long.csv",
+        "sha256": "3330130fa629609d66d00b07b0744a8abe0a00b1871081bca8730931faaf40e5",
+        "rows": 18,
+        "parse_success": 18
+      },
+      {
+        "provider_directory": "doubao",
+        "path": "runs\\doubao\\api_judge_scores_long.csv",
+        "sha256": "e43c8092e300338df9f6b5658f9fb313989c5328c1befcec7a3c02b98cc547fd",
+        "rows": 18,
+        "parse_success": 18
+      },
+      {
+        "provider_directory": "gemini",
+        "path": "runs\\gemini\\api_judge_scores_long.csv",
+        "sha256": "d65057163b5eea6c4960fcbe8ebc45438bfae9579218fa9deea9efe5a23771f7",
+        "rows": 18,
+        "parse_success": 18
+      },
+      {
+        "provider_directory": "glm",
+        "path": "runs\\glm\\api_judge_scores_long.csv",
+        "sha256": "06284e55dea135f0bcf112fe8d06d9eb2fd0973ae502b0ab62cee786b2f22dbc",
+        "rows": 18,
+        "parse_success": 18
+      },
+      {
+        "provider_directory": "kimi",
+        "path": "runs\\kimi\\api_judge_scores_long.csv",
+        "sha256": "b7ec43c4e77775778ee5fc48186f0db404b6ccadfccde1f94f91e537b0c09fe1",
+        "rows": 18,
+        "parse_success": 18
+      },
+      {
+        "provider_directory": "mimo",
+        "path": "runs\\mimo\\api_judge_scores_long.csv",
+        "sha256": "9cb4c1e9bdf7704b3f4e582fbcafd5f85dd1a606256b0542a558fdb88b80488b",
+        "rows": 18,
+        "parse_success": 18
+      },
+      {
+        "provider_directory": "openai",
+        "path": "runs\\openai\\api_judge_scores_long.csv",
+        "sha256": "90d2cb1da14d1ecb9b7360716884eb0dd2fc286e431e0f02dd071e13d4b7df1d",
+        "rows": 18,
+        "parse_success": 18
+      },
+      {
+        "provider_directory": "qwen",
+        "path": "runs\\qwen\\api_judge_scores_long.csv",
+        "sha256": "e969f0e1164bd2656d365d756e511eb76ef8f5c390023daf7ac6d15d7b0a4ce6",
+        "rows": 18,
+        "parse_success": 18
+      }
+    ],
+    "reader_source": {
+      "path": "analysis\\public_abc_cleaned_long.csv",
+      "sha256": "4729e3b56ae90c9eef0a75e0e31f98d496d8bd4896f46f3af5bc00b83df68a53",
+      "long_rows": 2136,
+      "paired_response_concept_rows": 1068,
+      "responses": 178,
+      "participant_clusters": 167
+    },
+    "mapping": {
+      "path": "mapping.csv",
+      "sha256": "935c34d2d1cd69f98b6b472adedd73f2dcb9a6a8ce2b65cb87705972a0ce1c6b"
+    },
+    "runner_inputs": {
+      "path": "runner_inputs.csv",
+      "sha256": "6d8691caa62c88e3493901bfee8f57db1a8f67e788c04a96de921d9fb8fa536e"
+    }
+  },
+  "reader_bootstrap": {
+    "method": "nonparametric participant-cluster bootstrap, retaining all responses within a participant cluster",
+    "seed": 2026071704,
+    "draws": 10000,
+    "participant_clusters": 167
+  },
+  "complete_analysis_set": {
+    "primary": [
+      "api_quality_mean -> accuracy_change",
+      "api_risk_mean -> accuracy_change"
+    ],
+    "fixed_sensitivity": "exclude adaptation nonparallel pre/post pair",
+    "secondary": [
+      "api_quality_mean -> post_accuracy",
+      "api_risk_mean -> post_accuracy",
+      "api_quality_mean -> reader_confidence_mean",
+      "api_risk_mean -> reader_perceived_risk_mean"
+    ]
+  },
+  "software": {
+    "python": "3.12.7",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "statsmodels": "0.14.6"
+  },
+  "outputs": {
+    "api_scores_merged_162.csv": "b6f0a28847b1bcd701ce3d8a78f50ecb0e9012a40ae8e04ad722599060688649",
+    "reader_bridge_cells_18.csv": "504c0844fe65efaa46426b61bb41e39defdf63b244f3be01ab15ade8f0583986",
+    "reader_bridge_associations.csv": "4370968c0548f0f816447476ac605a783b877f3eb35b3b7fc432fdb97131cfcc",
+    "reader_bridge_version_summary.csv": "6d6a998f88bcb986be8edbee19fbb8ebaf128fcb3f2052608d4f656c4f67e204",
+    "reader_bridge_analysis_results.json": "1b9e1cde7956a7206e1e3915855e496ea6b9df74a9f3437a89621bfcc25167ec",
+    "READER_BRIDGE_REPORT.md": "1842c0cfbd6e83cef96a02008be4864bee7680a0feeae2d2b79c900f911616e9"
+  },
+  "qa": {
+    "status": "PASS",
+    "api_rows": 162,
+    "providers": 9,
+    "texts": 18,
+    "api_parse_success": 162,
+    "reader_responses": 178,
+    "reader_participant_clusters": 167,
+    "reader_paired_rows": 1068,
+    "analysis_cells": 18,
+    "concept_blocks": 6,
+    "version_cell_counts": {
+      "A": 60,
+      "B": 60,
+      "C": 58
+    },
+    "score_range_valid": true,
+    "privacy": "Only already-pseudonymized reader data are read; no respondent-level data are written by this script."
+  },
+  "secret_handling": "No credential values are read or written by this analysis script."
+}

@@ -1,0 +1,61 @@
+{
+  "analysis_version": "1.0.1",
+  "attention_key": "比较同意",
+  "concepts": [
+    {
+      "concept": "projectile_motion",
+      "concept_index": 1,
+      "post_correct_answer": "因为没有水平合力时，物体会由于惯性保持原有水平运动状态",
+      "pre_correct_answer": "不再受到向前的推力，水平运动主要由惯性保持"
+    },
+    {
+      "concept": "evolution_no_goal",
+      "concept_index": 2,
+      "post_correct_answer": "它的某些可遗传特征在当前环境下更有利于生存或繁殖",
+      "pre_correct_answer": "不会，进化没有预设目标，主要与变异、遗传和环境选择有关"
+    },
+    {
+      "concept": "geological_time",
+      "concept_index": 3,
+      "post_correct_answer": "板块运动通常很慢，但长期累积会造成明显地质结果",
+      "pre_correct_answer": "板块运动通常很慢，但长期累积会造成巨大地质变化"
+    },
+    {
+      "concept": "plant_respiration",
+      "concept_index": 4,
+      "post_correct_answer": "植物夜间进行细胞呼吸，白天也会进行呼吸，只是光照下还可能进行光合作用",
+      "pre_correct_answer": "白天和夜晚都进行呼吸，光照下还会进行光合作用"
+    },
+    {
+      "concept": "adaptation",
+      "concept_index": 5,
+      "post_correct_answer": "只要适合当前环境，简单结构也可能被保留或演化出来",
+      "pre_correct_answer": "随机变异中有些在特定环境下更利于生存和繁殖"
+    },
+    {
+      "concept": "net_force_vs_velocity",
+      "concept_index": 6,
+      "post_correct_answer": "如果速度不变，它的加速度为零，净力可以为零或近似为零",
+      "pre_correct_answer": "不一定，净力直接决定加速度，而不是直接决定速度大小"
+    }
+  ],
+  "confidence_mapping": {
+    "一般": 3,
+    "不太确定": 2,
+    "比较确定": 4,
+    "非常不确定": 1,
+    "非常确定": 5
+  },
+  "duration_floor_seconds": 72.0,
+  "misleading_risk_mapping": {
+    "一般": 3,
+    "可能较低": 2,
+    "可能较高": 4,
+    "完全不会": 1,
+    "非常可能": 5
+  },
+  "phase_mapping": {
+    "post": 1,
+    "pre": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "judge_system_prompt.txt": {
+    "raw_sha256": "396c9b4dd80dd0bbabfaa010bb0f06ab300c80f6417e47768455073a5624224f",
+    "utf8_strip_sha256": "565ba4a0972960100e6d10d66515d9065d5568e6f04b5ddf0f58f44a880883d5",
+    "bytes": 251
+  },
+  "judge_user_prompt_template.txt": {
+    "raw_sha256": "e943f11cc5ba0fcb5067600964ec17c1894faaf271e114a405c3e3c63d0a237f",
+    "utf8_strip_sha256": "51bab7cb50966d46237eb9628d38fd5bfd9372c9bc3cfef4633a5081ea4a1c9e",
+    "bytes": 2544
+  },
+  "judge_output_schema.json": {
+    "raw_sha256": "dff12112d6dbb2014f92a73eef846f6e1b635d1307d3c5e31257689e1b9eceaa",
+    "utf8_strip_sha256": "2eef24d3779de467e5d67e706b67c4e29f07bfb96a9aa62162dc77b7d5457c4a",
+    "bytes": 700
+  }
+}

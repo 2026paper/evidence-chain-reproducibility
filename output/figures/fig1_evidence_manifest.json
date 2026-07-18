@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "dominant_claim": "agreement, repeatability, human validity, reader linkage, and failure diagnosis require distinct evidence contracts",
+  "lanes": 6,
+  "arrows": 0,
+  "crossing_arrows": 0,
+  "figure_inches": [
+    4.800000000000001,
+    2.78
+  ],
+  "minimum_font_pt": 5.55,
+  "sha256": {
+    "pdf": "c9d31c2dad8c6636ad3f5280b20bcfb8cbfddbd9ba7945a3ee79b019d8da0750",
+    "png": "88a1d5194055dcefd0fe83e21dd6c5ef9d03cf622ddfaa0fc793583c82f026b2",
+    "svg": "6903fdb13bc8b37a300434e37587356527e60da095362de7bc341984413dda03"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "abc_deployment": "A, B, and C were deployed as three separate questionnaire forms",
+  "assignment_mechanism_author_confirmation": "complete random allocation of participants among the three forms",
+  "export_observation": {
+    "analysis_handling": "primary GEE clusters by anonymous participant; a fixed single-form-participant sensitivity is reported",
+    "anonymous_participant_clusters": 167,
+    "clusters_observed_across_forms": 10,
+    "eligible_response_instances": 178
+  },
+  "invalid_inference": "participant randomization does not license corpus-wide generalization or a direct unchanged-text API-versus-human validity claim",
+  "item_sampling": "six materials were purposively selected disagreement cases, not a probability sample of the 810-item corpus",
+  "platform": "见数平台",
+  "text_relationship": "the public materials are meaning-preserving popularized adaptations, not verbatim subsets of the upstream generated texts",
+  "valid_inference": "randomized reader-response comparison among A/B/C adaptations for these six cases"
+}
