@@ -8,7 +8,10 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
+
+os.environ.setdefault("SOURCE_DATE_EPOCH", "0")
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -163,6 +166,7 @@ def main() -> None:
             "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
             "font.size": 7.0,
             "pdf.fonttype": 42,
+            "svg.hashsalt": "adma2026-fig1-v1",
             "ps.fonttype": 42,
             "svg.fonttype": "none",
             "savefig.bbox": None,
@@ -316,24 +320,29 @@ def main() -> None:
     assert abs(pdf_width - width_in) < 0.01
     assert abs(pdf_height - height_in) < 0.01
     assert len(rows) == 5
-    print(
-        json.dumps(
-            {
-                "status": "PASS",
-                "claim": "shared provenance, five non-substitutable inferential contracts",
-                "figure_inches": [pdf_width, pdf_height],
-                "minimum_font_pt": 7.0,
-                "arrows": 0,
-                "branching_arrows": 0,
-                "crossing_arrows": 0,
-                "pdf_media_box_verified": True,
-                "vector_outputs": [str(pdf_path), str(svg_path)],
-                "sha256": {"pdf": sha256(pdf_path), "png": sha256(png_path)},
-            },
-            ensure_ascii=False,
-            indent=2,
-        )
+    source_path = SOURCE_DIR / "fig1_five_layer_evidence_source.csv"
+    report = {
+        "status": "PASS",
+        "dominant_claim": "shared provenance, five non-substitutable inferential contracts",
+        "lanes": len(rows),
+        "arrows": 0,
+        "branching_arrows": 0,
+        "crossing_arrows": 0,
+        "figure_inches": [pdf_width, pdf_height],
+        "minimum_font_pt": 7.0,
+        "pdf_media_box_verified": True,
+        "sha256": {
+            "pdf": sha256(pdf_path),
+            "png": sha256(png_path),
+            "svg": sha256(svg_path),
+            "source": sha256(source_path),
+        },
+    }
+    (FIG_DIR / "fig1_evidence_manifest.json").write_text(
+        json.dumps(report, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
     )
+    print(json.dumps(report, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

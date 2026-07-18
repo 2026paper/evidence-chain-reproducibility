@@ -4,7 +4,10 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
+
+os.environ.setdefault("SOURCE_DATE_EPOCH", "0")
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -12,6 +15,7 @@ from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.patches import Rectangle
 import numpy as np
 import pandas as pd
+from PIL import Image
 from pypdf import PdfReader
 
 
@@ -28,20 +32,20 @@ HUMAN_FILE = BASELINES / "aggregation_human_results.csv"
 INK = "#17212B"
 MUTED = "#667381"
 GRID = "#D9E0E6"
-# Restrained, colour-blind-safe family.  Aggregations also retain distinct
-# marker shapes, so the figure remains interpretable in greyscale.
-BLUE = "#1F4E79"       # mean: deep navy
-GREEN = "#2A8C82"      # trimmed mean: muted teal
-ORANGE_RED = "#C65D3B" # no-self mean: soft terracotta
-GREY = "#6C7782"       # median: neutral slate
-LIGHT_BLUE = "#8BAFC3" # individual judges: quiet blue-grey
+# Soft, colour-blind-safe family. Aggregations also retain distinct markers,
+# so the lighter palette remains interpretable in greyscale.
+BLUE = "#4F83AD"       # mean: soft blue
+GREEN = "#63A89C"      # trimmed mean: soft sea-green
+ORANGE_RED = "#D47E5D" # no-self mean: light terracotta
+GREY = "#7C8791"       # median: neutral slate
+LIGHT_BLUE = "#A2BDCC" # individual judges: quiet blue-grey
 REPEAT_CMAP = LinearSegmentedColormap.from_list(
     "repeatability_blue_teal",
-    ["#F3F6F8", "#CADDE2", "#88B8BE", "#438B94", "#1B5D6C", "#17324D"],
+    ["#F7F9FA", "#E3EEF0", "#C4DDE0", "#95C0C5", "#6A9EA8", "#477786"],
 )
 METRIC_CMAP = LinearSegmentedColormap.from_list(
     "metric_blue_teal",
-    ["#F3F6F8", "#C6DCE2", "#77ADB7", "#2F7C89", "#174F66"],
+    ["#F7F9FA", "#E3EEF0", "#C0D9DD", "#8BB6BD", "#578C98"],
 )
 
 DIMS = ["fa", "cc", "lc", "tf", "mq", "risk"]
@@ -98,6 +102,7 @@ def configure_style() -> None:
             "legend.fontsize": 4.9,
             "axes.linewidth": 0.6,
             "pdf.fonttype": 42,
+            "svg.hashsalt": "adma2026-fig2-v1",
             "ps.fonttype": 42,
         }
     )
@@ -271,8 +276,10 @@ def main() -> None:
         2,
         height_ratios=[0.90, 1.43],
         width_ratios=[1.17, 1.0],
-        left=0.115,
-        right=0.985,
+        # The export canvas is fixed.  This small left shift equalizes the
+        # visible-content margins rather than merely centering the page box.
+        left=0.1095,
+        right=0.9795,
         bottom=0.075,
         top=0.94,
         hspace=0.47,
@@ -293,6 +300,17 @@ def main() -> None:
     fig.savefig(png, dpi=600, bbox_inches=None, pad_inches=0)
     plt.close(fig)
 
+    with Image.open(png).convert("RGB") as image:
+        pixels = np.asarray(image)
+        mask = pixels.min(axis=2) < 245
+        _, xs = np.where(mask)
+        visible_bbox = [int(xs.min()), int(xs.max())]
+        visible_center_offset_px = float((xs.min() + xs.max()) / 2 - (image.width - 1) / 2)
+        if abs(visible_center_offset_px) > 8:
+            raise AssertionError(
+                f"Fig. 2 visible content is not centered: {visible_center_offset_px:.1f}px"
+            )
+
     page = PdfReader(pdf).pages[0]
     dims = [float(page.mediabox.width) / 72, float(page.mediabox.height) / 72]
     mean = human.set_index("method_id").loc["ensemble::mean"]
@@ -305,13 +323,15 @@ def main() -> None:
         "mean_beta": float(mean["standardized_beta"]),
         "mean_beta_ci": [float(mean["bootstrap_ci_low"]), float(mean["bootstrap_ci_high"])],
         "figure_inches": dims,
+        "visible_content_bbox_x_px": visible_bbox,
+        "visible_center_offset_px": visible_center_offset_px,
         "palette": {
-            "mean_deep_navy": BLUE,
-            "trimmed_muted_teal": GREEN,
-            "no_self_soft_terracotta": ORANGE_RED,
+            "mean_soft_blue": BLUE,
+            "trimmed_soft_sea_green": GREEN,
+            "no_self_light_terracotta": ORANGE_RED,
             "median_neutral_slate": GREY,
             "individual_judges_blue_grey": LIGHT_BLUE,
-            "heatmaps": "monotonic light-to-dark blue-teal; no yellow endpoint",
+            "heatmaps": "monotonic light blue-teal with a mid-tone endpoint",
         },
         "redundant_encoding": {
             "mean": "filled circle",

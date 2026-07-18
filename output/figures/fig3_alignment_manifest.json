@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "formal_lock": {
+    "quick": false,
+    "bootstrap": 5000,
+    "first_permutations": 10000,
+    "second_exact_permutations": 32768,
+    "qa": "PASS"
+  },
+  "png_pixels": [
+    2880,
+    1920
+  ],
+  "png_dpi": [
+    600.0,
+    600.0
+  ],
+  "pdf_media_box_pt": [
+    345.6,
+    230.4
+  ],
+  "figure_inches": [
+    4.8,
+    3.2
+  ],
+  "visible_content_bbox_x_px": [
+    248,
+    2627
+  ],
+  "visible_center_offset_px": -2.0,
+  "minimum_configured_font_pt": 7.0,
+  "source_rows": 129,
+  "panel_a_effects": 14,
+  "panel_a_formal_significant": 7,
+  "panel_b_sensitivity_points": 100,
+  "panel_b_min_slope": 0.1544489956197484,
+  "panel_b_max_slope": 0.7554476018900865,
+  "model_form_rows_excluded": 16,
+  "redundant_encoding": {
+    "first_review": "muted blue circle",
+    "selected_review": "muted orange square",
+    "primary_scenario": "retained in source table; not separately encoded",
+    "formal_significance_panel_A": "filled marker; no asterisk clutter",
+    "panel_B_family_summary": "open median marker plus min--max bar"
+  },
+  "sha256": {
+    "pdf": "901b15d5b1a7649ebd7783d37cedf9f7da1d9bae05e6656587cb4531631394d9",
+    "png": "28f4edc665b5bf0257980a8dc99eca9d2560eaedff6abd46d3334f678f2661a0",
+    "source": "93d4b32ec6f394524cdce83e0e991d53ce4915b51d74bd2eea625cbf09f37e8d"
+  },
+  "primary": {
+    "Broad review": {
+      "slope": 0.231563853146348,
+      "ci": [
+        0.13289145850262601,
+        0.33480702605769913
+      ],
+      "formal_p": 0.00019998000199980003
+    },
+    "Selected re-annotation": {
+      "slope": 0.6345162910252145,
+      "ci": [
+        0.32221327817509526,
+        0.8398278692420174
+      ],
+      "formal_p": 0.00872802734375
+    }
+  },
+  "input_hashes": {
+    "manifest": "dea77c87c874eed7c505e15781753baec9696450e938e46e67061faf75b98162",
+    "validation": "e730288e6f6a162a9598aefb364aef55891e7dcc19c9ec3ab288aa6ba64b7705",
+    "effects": "ed25631b6062d47c03fc4108a5bb1ec063147508bb8b9ea888604ea2e2f4d2ab",
+    "sensitivity": "d115a924adfd39d80fb95d163d04f357cb5181bf1db2d04d8283563e2d6447c2"
+  }
+}

@@ -15,74 +15,74 @@
       {
         "judge_provider": "anthropic",
         "path": "runs\\anthropic\\api_judge_scores_long.csv",
-        "sha256": "2cf6d8a1298d5a2560b2c580ee39825c641bdfeb7061aaa675aab474a75e9eaa",
+        "sha256": "cbc471ad7d4f8649c4f9545edbf5538a2dbb79e1566f01c7e2dbd962b5b99314",
         "snapshot_rows": 270,
         "run_manifest_path": "runs\\anthropic\\run_manifest.json",
-        "run_manifest_sha256": "8dc7230493709645ef627dc0d31e0157c49b4c5cc6c40295e7fd32ec4f781d8f"
+        "run_manifest_sha256": "ed60f662a1633df67820f4392850a142ba7bee20dcdcd581730856bf570db36f"
       },
       {
         "judge_provider": "deepseek",
         "path": "runs\\deepseek\\api_judge_scores_long.csv",
-        "sha256": "f470f063d770bf15a8e319cef661d90be219d5f61305f74018c560ec6027343d",
+        "sha256": "8df5f8e957c1789445c8c919aa339651b4d0b67be2ffceb689ac38c54a4bf098",
         "snapshot_rows": 270,
         "run_manifest_path": "runs\\deepseek\\run_manifest.json",
-        "run_manifest_sha256": "7ab0646bc8d2e7a29c3f22ce31729139df21c7538eab340b2bd6f53f758a0323"
+        "run_manifest_sha256": "6d5a5e980ed0eb5f3f59c0b57c7519cc21f57789035c367af48bcc48ecfe349e"
       },
       {
         "judge_provider": "doubao",
         "path": "runs\\doubao\\api_judge_scores_long.csv",
-        "sha256": "96da2dc6d0ac89ea0426f31524cdf14811a676613aa6d4a47b6d3ef1ac60dff8",
+        "sha256": "f446b1d2d9bac5a39d773cc399a24d914e99cb0f008a10af1ba8ee1a5e203c27",
         "snapshot_rows": 270,
         "run_manifest_path": "runs\\doubao\\run_manifest.json",
-        "run_manifest_sha256": "382c19924bf35ac52c2bb89be6049809b08c0c04ae1070b10148cda3db5c25d9"
+        "run_manifest_sha256": "8fa2bfca148d81ac65c6ccd854335adc7782793facf67ad1994ffcb46553d568"
       },
       {
         "judge_provider": "gemini",
         "path": "runs\\gemini\\api_judge_scores_long.csv",
-        "sha256": "37940f635c7a4425bf561455995f208ce81aa8f2e11ed17e1425c001c4fc71c2",
+        "sha256": "bbd9d37f87f6fa7078a03300f2268d590f4bc125dab23e06c7bdadae202c7a68",
         "snapshot_rows": 270,
         "run_manifest_path": "runs\\gemini\\run_manifest.json",
-        "run_manifest_sha256": "6c486b1675e0649b3c365d2fa5f24e41d947d628d96e6ff9c76f66aa360cb057"
+        "run_manifest_sha256": "c93a5ea5d06c9f776685896559cb0157ffca7902931a5749af373d946395b46a"
       },
       {
         "judge_provider": "glm",
         "path": "runs\\glm\\api_judge_scores_long.csv",
-        "sha256": "88cdf71818208a9d0e5da79db37a2939778cf2cc67138a9068b68f78965d444c",
+        "sha256": "3167d2322ba997096fb628d32fc80f11ddf0e28a910f7ea9e5fdadce7bf1094c",
         "snapshot_rows": 270,
         "run_manifest_path": "runs\\glm\\run_manifest.json",
-        "run_manifest_sha256": "4eebffa26ccfed6895f73b776325c6e35538d1b758bf1ba6bab2f2dcae6bf766"
+        "run_manifest_sha256": "d27862b46d6b59bb99c176bb9c1d13df617f930e88878857c7b06599782523f4"
       },
       {
         "judge_provider": "kimi",
         "path": "runs\\kimi\\api_judge_scores_long.csv",
-        "sha256": "c5eef60a7d46729cdf68541bb81389f4e08a626b1cffc75b56ba5f2385872367",
+        "sha256": "54784d7e7ba3e1c2efc514c64dab65f4e6348084900906f78b0b8d6b60ce14d8",
         "snapshot_rows": 270,
         "run_manifest_path": "runs\\kimi\\run_manifest.json",
-        "run_manifest_sha256": "4e0474a45f864a68b90180e4517b4baeffe08b7fdd33382091689e090ad8917f"
+        "run_manifest_sha256": "3d6692dc20d83f2e5fe20de8892ef8e59b9db4c30c12c7db011194b05aa4e951"
       },
       {
         "judge_provider": "mimo",
         "path": "runs\\mimo\\api_judge_scores_long.csv",
-        "sha256": "7337b541483ee52b44f4c6982ac93ce3701cbf92db0e41622fb53caf1af037af",
+        "sha256": "8098f3a7324c3b43b358ee9830d031168b4a84c102b985b2647b25b2735482dc",
         "snapshot_rows": 270,
         "run_manifest_path": "runs\\mimo\\run_manifest.json",
-        "run_manifest_sha256": "680dd93da162feae8f86d5163bbcfcb529f4963ee4a8d7b3ef5f075eee252926"
+        "run_manifest_sha256": "af4cbace517f6ca4951383c1bda0305528b6755801fbc0234ff5e9776000f4e7"
       },
       {
         "judge_provider": "openai",
         "path": "runs\\openai\\api_judge_scores_long.csv",
-        "sha256": "0175680fc815f95c19959b89cdcb916cc0a4214c2e8ce0f99396babe5b9596fa",
+        "sha256": "f4b2d37155c263d51255654b7f52c82c70615bee200cc3d60e1e11c275b9c196",
         "snapshot_rows": 271,
         "run_manifest_path": "runs\\openai\\run_manifest.json",
-        "run_manifest_sha256": "99adb013a8ad092bd23c2501ced0cccc36e5b081c60f8db3a1ddc824be9308d4"
+        "run_manifest_sha256": "ad6039f45195bf9691e0f54bbb26ae14d82cc60bd8cc63061c6a57cfb6a3dcd7"
       },
       {
         "judge_provider": "qwen",
         "path": "runs\\qwen\\api_judge_scores_long.csv",
-        "sha256": "2fed632b28b37c18c29612141f42ac66524472f98e6bdfd15639db71c59a67ab",
+        "sha256": "e39b2a432889e091ae6b33693c7a5f76e72afecd45db72fe228729d1b38f6e46",
         "snapshot_rows": 270,
         "run_manifest_path": "runs\\qwen\\run_manifest.json",
-        "run_manifest_sha256": "4a5dcccdba1d050328e0897b2425bc1db855a68c34e102a064a6246c5bb6ed26"
+        "run_manifest_sha256": "dd5d848a52ac3dde15c57494ddb381c515ce8b1f212fc57db25a3f68da862ded"
       }
     ],
     "provider_retry_deviations": {

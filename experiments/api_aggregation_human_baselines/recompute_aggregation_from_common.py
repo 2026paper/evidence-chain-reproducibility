@@ -20,6 +20,9 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
+# Dynamic loading below must remain read-only in a reviewer checkout.
+sys.dont_write_bytecode = True
+
 BASE = Path(__file__).resolve().parent
 REPOSITORY_ROOT = BASE.parents[1]
 OUTPUT = REPOSITORY_ROOT / "verification" / "aggregation_from_common_recalculation.json"

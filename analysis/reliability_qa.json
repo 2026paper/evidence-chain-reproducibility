@@ -20,8 +20,8 @@
   },
   "final_cleaning": {
     "manifest_path": "analysis\\final_cleaning_manifest.json",
-    "manifest_sha256": "dc4bb2cbbbe63683cd38668634209000f1dbb80b64d1933b212642c6d260418b",
-    "rule_version": "3.0.0"
+    "manifest_sha256": "37732f3e6533b2709982bcf7079eaf98821ce21938196b414f6aa8326527690d",
+    "rule_version": "4.0.0"
   },
   "formula_self_checks": {
     "irrCAC_example_ac1": 0.77544,
@@ -35,17 +35,17 @@
   "observed": {
     "api_result_rows": 24,
     "ensemble_curve_rows": 216,
-    "expected_human_result_rows": 54,
+    "expected_human_result_rows": 60,
     "expected_panel_curve_rows": 540,
     "first_wave": "首轮专家复核",
-    "human_input_rows": 5364,
-    "human_result_rows": 54,
-    "one_rater_groups": 6,
+    "human_input_rows": 7308,
+    "human_result_rows": 60,
+    "one_rater_groups": 0,
     "panel_curve_rows": 540,
     "scope_item_counts": {
       "all810": 810,
       "broad180": 180,
-      "final_first_human_covered": 144,
+      "final_first_human_covered": 180,
       "selected30": 30
     },
     "second_wave": "二次专家复核"

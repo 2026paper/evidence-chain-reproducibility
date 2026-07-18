@@ -4,7 +4,10 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
+
+os.environ.setdefault("SOURCE_DATE_EPOCH", "0")
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -28,11 +31,15 @@ PROBE_FILE = ANALYSIS / "controlled_ab_machine_human_case_summary.csv"
 INK = "#17212B"
 MUTED = "#667381"
 GRID = "#D8E0E7"
-BLUE = "#0072B2"
+BLUE = "#4F83AD"
 ORANGE = "#D55E00"
 GREY = "#737E89"
 RED = "#B5442A"
 VERSION_COLORS = {"A": GREY, "B": BLUE, "C": ORANGE}
+HEATMAP_CMAP = mpl.colors.LinearSegmentedColormap.from_list(
+    "soft_blue",
+    ["#F7F9FA", "#E5EFF2", "#C9DEE4", "#9FC1CC", "#6F9FAD"],
+)
 
 
 def sha256(path: Path) -> str:
@@ -52,6 +59,7 @@ def configure_style() -> None:
             "legend.fontsize": 5.6,
             "axes.linewidth": 0.65,
             "pdf.fonttype": 42,
+            "svg.hashsalt": "adma2026-fig4-v1",
             "ps.fonttype": 42,
         }
     )
@@ -193,7 +201,7 @@ def draw_probe_heatmap(ax: plt.Axes, probes: pd.DataFrame) -> pd.DataFrame:
     ]
     labels = ["Reader\nquality", "API\nquality", "Reader\nrisk", "API\nrisk"]
     matrix = probes.set_index("case_id").loc[[f"A{i:02d}" for i in range(1, 9)], cols].to_numpy()
-    im = ax.imshow(matrix, cmap="Blues", vmin=0.4, vmax=1.0, aspect="auto", interpolation="nearest")
+    im = ax.imshow(matrix, cmap=HEATMAP_CMAP, vmin=0.4, vmax=1.0, aspect="auto", interpolation="nearest")
     ax.set_xticks(np.arange(4), labels)
     ax.xaxis.tick_top()
     ax.tick_params(axis="x", labeltop=True, labelbottom=False, length=0, pad=1.5)
@@ -205,8 +213,7 @@ def draw_probe_heatmap(ax: plt.Axes, probes: pd.DataFrame) -> pd.DataFrame:
     for r in range(matrix.shape[0]):
         for c in range(matrix.shape[1]):
             value = matrix[r, c]
-            color = "white" if value > 0.73 else INK
-            ax.text(c, r, f"{value:.2f}".lstrip("0"), ha="center", va="center", fontsize=5.1, color=color, fontweight="semibold")
+            ax.text(c, r, f"{value:.2f}".lstrip("0"), ha="center", va="center", fontsize=5.1, color=INK, fontweight="semibold")
     ax.set_xticks(np.arange(-0.5, 4, 1), minor=True)
     ax.set_yticks(np.arange(-0.5, 8, 1), minor=True)
     ax.grid(which="minor", color="white", linewidth=0.7)
@@ -290,6 +297,10 @@ def main() -> None:
         "risk_r": float(primary.loc["api_risk_mean", "centered_pearson_r"]),
         "risk_holm_p": float(primary.loc["api_risk_mean", "p_holm_within_family"]),
         "figure_inches": dims,
+        "palette": {
+            "version_b_soft_blue": BLUE,
+            "probe_heatmap": ["#F7F9FA", "#E5EFF2", "#C9DEE4", "#9FC1CC", "#6F9FAD"],
+        },
         "sha256": {"pdf": sha256(pdf), "png": sha256(png)},
     }
     (FIG_DIR / "fig4_public_validation_manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")

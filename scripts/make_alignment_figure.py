@@ -29,7 +29,10 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
+
+os.environ.setdefault("SOURCE_DATE_EPOCH", "0")
 
 import matplotlib
 
@@ -94,10 +97,10 @@ FAMILY_LABELS = {
     "risk direction": "Risk coding",
 }
 
-# Muted, colorblind-safe conference palette. Wave is redundantly encoded by
+# Soft, colorblind-safe conference palette. Wave is redundantly encoded by
 # marker shape; significance in Panel A is encoded only by marker fill.
-BLUE = "#245B8A"
-ORANGE = "#C65A22"
+BLUE = "#4F83AD"
+ORANGE = "#D47E4F"
 BLACK = "#1B1F23"
 GRAY = "#66717B"
 MID_GRAY = "#AEB6BC"
@@ -142,6 +145,7 @@ def configure_style() -> None:
             "legend.handlelength": 1.25,
             "legend.handletextpad": 0.35,
             "pdf.fonttype": 42,
+            "svg.hashsalt": "adma2026-fig3-v1",
             "ps.fonttype": 42,
             "savefig.transparent": False,
         }
@@ -593,9 +597,10 @@ def build_figure(
         1,
         2,
         width_ratios=[1.22, 1.0],
-        # Center the plot frames themselves; labels no longer determine alignment.
-        left=0.170,
-        right=0.830,
+        # Shift the paired axes as one unit so the complete visible chart
+        # (including long left labels) is centered on the fixed export canvas.
+        left=0.236,
+        right=0.896,
         bottom=0.155,
         top=0.825,
         wspace=0.62,
@@ -675,6 +680,13 @@ def validate_outputs(
         image.verify()
     with Image.open(PNG_PATH) as image:
         corner = image.convert("RGB").getpixel((0, 0))
+        pixels = np.asarray(image.convert("RGB"))
+        mask = pixels.min(axis=2) < 245
+        _, xs = np.where(mask)
+        visible_bbox_x = [int(xs.min()), int(xs.max())]
+        visible_center_offset_px = float(
+            (xs.min() + xs.max()) / 2 - (image.width - 1) / 2
+        )
     pdf = PdfReader(str(PDF_PATH))
     if len(pdf.pages) != 1:
         raise AssertionError(f"figure PDF has {len(pdf.pages)} pages")
@@ -697,6 +709,11 @@ def validate_outputs(
         raise AssertionError(f"PNG is not 600 dpi: {dpi}")
     if corner != (255, 255, 255):
         raise AssertionError(f"PNG corner is not white: {corner}")
+    if abs(visible_center_offset_px) > 12:
+        raise AssertionError(
+            "Fig. 3 visible content is not centered: "
+            f"{visible_center_offset_px:.1f}px; bbox={visible_bbox_x}"
+        )
     if len(source) != 129:
         raise AssertionError(f"unexpected source row count {len(source)}")
     if excluded_model_form_rows != 16:
@@ -718,6 +735,8 @@ def validate_outputs(
         "png_dpi": [round(float(dpi[0]), 1), round(float(dpi[1]), 1)],
         "pdf_media_box_pt": [pdf_width_pt, pdf_height_pt],
         "figure_inches": [FIG_WIDTH_IN, FIG_HEIGHT_IN],
+        "visible_content_bbox_x_px": visible_bbox_x,
+        "visible_center_offset_px": visible_center_offset_px,
         "minimum_configured_font_pt": MIN_FONT_PT,
         "source_rows": len(source),
         "panel_a_effects": len(panel_a),
@@ -797,6 +816,10 @@ def main() -> None:
         "effects": sha256_file(EFFECTS_PATH),
         "sensitivity": sha256_file(SENSITIVITY_PATH),
     }
+    (FIGURE_DIR / "fig3_alignment_manifest.json").write_text(
+        json.dumps(report, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
 

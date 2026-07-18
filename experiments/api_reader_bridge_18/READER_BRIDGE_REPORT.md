@@ -8,9 +8,9 @@ The analysis reports a fixed two-endpoint primary set: (i) panel mean quality ve
 
 ## Primary results
 
-Panel quality was positively associated with reader accuracy change after within-concept centering (r=0.670, hierarchical 95% CI [-0.139, 0.890], exact two-sided p=0.0277, Holm p=0.0554).
+Panel quality was positively associated with reader accuracy change after within-concept centering (r=0.670, hierarchical 95% CI [-0.140, 0.893], exact two-sided p=0.0277, Holm p=0.0554).
 
-Panel misleading-risk was negatively associated with reader accuracy change (r=-0.580, hierarchical 95% CI [-0.830, 0.198], exact two-sided p=0.0552, Holm p=0.0554).
+Panel misleading-risk was negatively associated with reader accuracy change (r=-0.580, hierarchical 95% CI [-0.831, 0.206], exact two-sided p=0.0552, Holm p=0.0554).
 
 ## Fixed sensitivity and descriptive version pattern
 

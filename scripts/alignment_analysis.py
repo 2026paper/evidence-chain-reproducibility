@@ -35,8 +35,8 @@ from scipy.stats import norm, pearsonr, rankdata, spearmanr
 from statsmodels.stats.multitest import multipletests
 
 
-SCRIPT_VERSION = "3.0.0"
-CLEANING_RULE_VERSION = "3.0.0"
+SCRIPT_VERSION = "4.0.0"
+CLEANING_RULE_VERSION = "4.0.0"
 SEED_BOOTSTRAP = 20260717
 SEED_PERMUTATION = 20260717
 SEED_SECOND_BOOTSTRAP = 20260717
@@ -105,6 +105,8 @@ def validate_final_cleaning_manifest(
             f"{manifest.get('rule_version')!r} != {CLEANING_RULE_VERSION!r}"
         )
     required_rules = {
+        "first_repeat_similarity_pct": 75,
+        "second_repeat_similarity_pct": 90,
         "absolute_seconds_per_unique_stimulus": 12,
         "first_duration_floor_seconds": 432,
         "second_duration_floor_seconds": 72,
@@ -527,7 +529,9 @@ def load_and_validate_inputs(
     sensitivity_dir = analysis / "final_sensitivity_panels"
     expected = [
         "final_primary",
-        "threshold_85",
+        "threshold_70",
+        "threshold_80",
+        "threshold_90",
         "threshold_95",
         "attention_only",
         "strict_first_both_pairs",
@@ -2185,6 +2189,45 @@ def one_sensitivity_row(
     }
 
 
+def build_threshold_refit_sensitivity(
+    panels: dict[str, pd.DataFrame],
+    crosswalk: pd.DataFrame,
+    api_long: pd.DataFrame,
+) -> pd.DataFrame:
+    """Refit first-review standardization at each repeat-similarity threshold.
+
+    The main sensitivity table keeps primary standardization constants frozen so
+    one-factor changes stay on one scale.  This companion table answers a separate
+    interpretive question: whether the standardized point estimate crosses the
+    .20 materiality reference when each threshold defines its own human panel.
+    """
+    api_mean = aggregate_api(
+        api_long, method="mean", minimum_judges_per_uid=9, include_provenance=False
+    )
+    scenarios = (
+        ("threshold_70", 70),
+        ("final_primary", 75),
+        ("threshold_80", 80),
+        ("threshold_90", 90),
+        ("threshold_95", 95),
+    )
+    rows: list[dict[str, Any]] = []
+    for scenario, threshold in scenarios:
+        merged_raw = merge_panel_api(panels[scenario], crosswalk, api_mean)
+        refit, _constants = freeze_within_dimension_standardization(merged_raw)
+        first = refit[refit["wave"] == WAVE_FIRST].reset_index(drop=True)
+        row = one_sensitivity_row(
+            first,
+            WAVE_FIRST,
+            "QC threshold refit",
+            scenario,
+            "scenario-specific wave-by-dimension standardization; descriptive HC3 only",
+        )
+        row["threshold_pct"] = threshold
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
 def build_sensitivities(
     panels: dict[str, pd.DataFrame],
     crosswalk: pd.DataFrame,
@@ -2198,8 +2241,10 @@ def build_sensitivities(
     )
     qc_applicability = {
         "final_primary": {WAVE_FIRST, WAVE_SECOND},
-        "threshold_85": {WAVE_FIRST, WAVE_SECOND},
-        "threshold_95": {WAVE_FIRST, WAVE_SECOND},
+        "threshold_70": {WAVE_FIRST},
+        "threshold_80": {WAVE_FIRST},
+        "threshold_90": {WAVE_FIRST},
+        "threshold_95": {WAVE_FIRST},
         "attention_only": {WAVE_FIRST, WAVE_SECOND},
         "strict_first_both_pairs": {WAVE_FIRST},
         "second_case05_case07_mean": {WAVE_SECOND},
@@ -2565,6 +2610,11 @@ def main() -> None:
         standardization_constants,
         second_item_bootstrap,
     )
+    threshold_refit = build_threshold_refit_sensitivity(
+        panels,
+        crosswalk,
+        api_long,
+    )
     model_sensitivity_rows = []
     for row in model_form.to_dict(orient="records"):
         model_sensitivity_rows.append(
@@ -2609,6 +2659,7 @@ def main() -> None:
         "cross_wave_overlap": analysis / "alignment_cross_wave_overlap.csv",
         "cross_wave_overlap_summary": analysis / "alignment_cross_wave_overlap_summary.csv",
         "sensitivity": analysis / "alignment_sensitivity.csv",
+        "threshold_refit_sensitivity": analysis / "alignment_threshold_refit.csv",
         "leave_one_cluster": analysis / "alignment_leave_one_cluster.csv",
         "first_bootstrap_draws": analysis / "alignment_first_bootstrap_draws.csv.gz",
         "second_concept_bootstrap_draws": analysis / "alignment_second_concept_bootstrap_draws.csv.gz",
@@ -2631,6 +2682,7 @@ def main() -> None:
     write_csv(overlap, paths["cross_wave_overlap"])
     write_csv(overlap_summary, paths["cross_wave_overlap_summary"])
     write_csv(sensitivity, paths["sensitivity"])
+    write_csv(threshold_refit, paths["threshold_refit_sensitivity"])
     write_csv(influence, paths["leave_one_cluster"])
     write_csv(bootstrap, paths["first_bootstrap_draws"], compressed=True)
     write_csv(second_bootstrap, paths["second_concept_bootstrap_draws"], compressed=True)
@@ -2791,6 +2843,10 @@ def main() -> None:
         )
     if sensitivity["inference_role"].isna().any():
         raise AssertionError("Every sensitivity row must state its descriptive inference role")
+    if len(threshold_refit) != 5 or not (
+        threshold_refit["inference_role"] == "descriptive_HC3_only"
+    ).all():
+        raise AssertionError("Threshold-refit sensitivity must contain five descriptive rows")
     qa_status = "PASS"
     validation = {
         "qa_status": qa_status,
@@ -2906,6 +2962,7 @@ def main() -> None:
             "dispersion_identifiable_stimuli_by_wave": dispersion_counts,
             "mixed_model_attempt_recorded": True,
             "ordinal_gee_attempt_recorded": True,
+            "threshold_refit_rows": int(len(threshold_refit)),
         },
     }
     paths["validation"].write_text(stable_json(validation) + "\n", encoding="utf-8")

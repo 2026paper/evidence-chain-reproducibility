@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Generate outcome-independent QC sensitivity panels from the raw expert surveys.
 
-The primary cleaned file intentionally contains only the retained 90% panel.  This
-companion cleaning-stage program re-applies the already frozen gates to the raw
-workbooks and emits pseudonymized long-form panels for every prespecified one-factor
-sensitivity.  No legacy human-rating derivative is read.
+The primary rule uses 75% repeat similarity for the long first review and 90% for
+the short selected review, together with the shared attention and duration gates.
+This program emits pseudonymized long-form panels for fixed one-factor sensitivity
+checks.  No legacy human-rating derivative is read.
 """
 
 from __future__ import annotations
@@ -24,11 +24,13 @@ import clean_surveys as cs
 
 OUTPUT_DIR = cs.ANALYSIS_ROOT / "sensitivity_panels"
 SCENARIOS = (
-    "threshold_85",
-    "primary_90",
-    "threshold_95",
+    "first_threshold_70",
+    "primary_75_90",
+    "first_threshold_80",
+    "first_threshold_90",
+    "first_threshold_95",
     "no_repeat_attention_only",
-    "strict_first_both_pairs_90",
+    "strict_first_both_pairs_75",
     "second_case05_case07_mean",
 )
 
@@ -94,6 +96,7 @@ def second_rows_with_case05_case07_mean(
 
 def selection_flags(
     attention_pass: bool,
+    duration_pass: bool,
     primary_similarity: float | None,
     diagnostic_similarity: float | None,
     wave: str,
@@ -102,30 +105,45 @@ def selection_flags(
     diagnostic_value = (
         float(diagnostic_similarity) if diagnostic_similarity is not None else None
     )
+    eligible = attention_pass and duration_pass
     flags = {
-        "threshold_85": attention_pass
-        and primary_value is not None
-        and primary_value >= 85.0,
-        "primary_90": attention_pass
-        and primary_value is not None
-        and primary_value >= 90.0,
-        "threshold_95": attention_pass
-        and primary_value is not None
-        and primary_value >= 95.0,
-        "no_repeat_attention_only": attention_pass,
-        "strict_first_both_pairs_90": False,
+        "first_threshold_70": False,
+        "primary_75_90": False,
+        "first_threshold_80": False,
+        "first_threshold_90": False,
+        "first_threshold_95": False,
+        "no_repeat_attention_only": eligible,
+        "strict_first_both_pairs_75": False,
         "second_case05_case07_mean": False,
     }
     if wave == "首轮专家复核":
-        flags["strict_first_both_pairs_90"] = (
-            attention_pass
+        for scenario, threshold in (
+            ("first_threshold_70", 70.0),
+            ("primary_75_90", 75.0),
+            ("first_threshold_80", 80.0),
+            ("first_threshold_90", 90.0),
+            ("first_threshold_95", 95.0),
+        ):
+            flags[scenario] = (
+                eligible
+                and primary_value is not None
+                and primary_value >= threshold
+            )
+        flags["strict_first_both_pairs_75"] = (
+            eligible
             and primary_value is not None
-            and primary_value >= 90.0
+            and primary_value >= 75.0
             and diagnostic_value is not None
-            and diagnostic_value >= 90.0
+            and diagnostic_value >= 75.0
         )
     elif wave == "二次专家复核":
-        flags["second_case05_case07_mean"] = flags["primary_90"]
+        selected_primary = (
+            eligible
+            and primary_value is not None
+            and primary_value >= 90.0
+        )
+        flags["primary_75_90"] = selected_primary
+        flags["second_case05_case07_mean"] = selected_primary
     return flags
 
 
@@ -177,8 +195,16 @@ def main() -> None:
             diagnostic_similarity = (
                 diagnostic_metrics[0]["similarity"] if diagnostic_metrics else None
             )
+            duration = cs.positive_duration_seconds(data.headers, raw_row)
+            duration_floor = cs.duration_floor_for_wave(wave)
+            duration_pass = (
+                duration_floor is None
+                or duration is None
+                or duration >= duration_floor
+            )
             flags = selection_flags(
                 attention_pass,
+                duration_pass,
                 primary_similarity,
                 diagnostic_similarity,
                 wave,
@@ -193,6 +219,7 @@ def main() -> None:
                         "participant_id": participant_id,
                         "included": included,
                         "attention_pass": attention_pass,
+                        "duration_pass": duration_pass,
                         "primary_repeat_similarity_pct": primary_similarity,
                         "diagnostic_repeat_similarity_pct": diagnostic_similarity,
                     }
@@ -248,7 +275,7 @@ def main() -> None:
     # subset of the already accepted cleaned long file (row order is canonicalized).
     existing = pd.read_csv(cs.ANALYSIS_ROOT / "cleaned_human_ratings_long.csv")
     expert = existing[existing["wave"].isin(["首轮专家复核", "二次专家复核"])].copy()
-    primary = pd.read_csv(OUTPUT_DIR / "primary_90.csv")
+    primary = pd.read_csv(OUTPUT_DIR / "primary_75_90.csv")
     sort_keys = [
         "wave",
         "domain",

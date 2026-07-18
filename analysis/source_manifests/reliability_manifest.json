@@ -9,38 +9,43 @@
     "method": "domain-stratified concept-cluster percentile bootstrap",
     "repetitions": 5000
   },
-  "cleaning_rule_version": "3.0.0",
-  "created_utc": "2026-07-16T20:21:13.313086+00:00",
+  "cleaning_rule_version": "4.0.0",
+  "created_utc": "2026-07-17T07:56:38.886680+00:00",
   "input_policy": {
     "allowed_inputs_only": true,
-    "formal_human_input": "final cleaning rule version 3.0.0",
+    "formal_human_input": "final cleaning rule version 4.0.0",
     "legacy_human_derivatives_read": false
   },
   "inputs": {
     "cleaned_human": {
-      "path": "analysis\\cleaned_human_ratings_long.csv",
-      "rows": 5364,
-      "sha256": "528f2da6b6e86d347e5325972175575f07bc0791a548ee4395108174c61c0373"
+      "bytes": 725251,
+      "path": "analysis/cleaned_human_ratings_long.csv",
+      "rows": 7308,
+      "sha256": "4b72dc73afd9683028a50ce09cdfc011a0f139e4358b82f9ebe5184b252d8775"
     },
     "current_api_scores": {
-      "path": "数据与问卷源文件\\AI测试数据全集\\40_GitHub发布修订\\rebuttal_update_20260714\\data\\api_test_scores_7290.csv",
+      "bytes": 2187083,
+      "path": "data/40_GitHub/rebuttal_update_20260714/api_test_scores_7290.csv",
       "rows": 7290,
       "sha256": "4bb91453c6ccfc22e0c24f99c487543686455b7875148f85e759113181a70da4"
     },
     "final_cleaning_manifest": {
-      "path": "analysis\\final_cleaning_manifest.json",
-      "rule_version": "3.0.0",
-      "sha256": "dc4bb2cbbbe63683cd38668634209000f1dbb80b64d1933b212642c6d260418b"
+      "bytes": 2641,
+      "path": "analysis/final_cleaning_manifest.json",
+      "rule_version": "4.0.0",
+      "sha256": "985e922a33444b651a53e8173bd47251fb09e1ccec34b6e610ef0ba4ff102d43"
     },
     "final_primary": {
-      "path": "analysis\\final_sensitivity_panels\\final_primary.csv",
-      "rows": 5364,
-      "sha256": "528f2da6b6e86d347e5325972175575f07bc0791a548ee4395108174c61c0373"
+      "bytes": 725251,
+      "path": "analysis/final_sensitivity_panels/final_primary.csv",
+      "rows": 7308,
+      "sha256": "4b72dc73afd9683028a50ce09cdfc011a0f139e4358b82f9ebe5184b252d8775"
     },
     "validated_crosswalk": {
-      "path": "analysis\\human_api_crosswalk.csv",
+      "bytes": 81110,
+      "path": "analysis/human_api_crosswalk.csv",
       "rows": 210,
-      "sha256": "3e4899c647d2def2776f696377ce9805f23dbab0a5e4b61d03950b2a0bab99a8"
+      "sha256": "6a55a0fa3489394a1552b75c1e0674c9b41e89f71fa19f2945b5a68ac8420b73"
     }
   },
   "metrics": {
@@ -61,29 +66,33 @@
   },
   "outputs": {
     "api_ensemble_size_stability": {
-      "bytes": 69309,
-      "path": "analysis\\reliability_api_ensemble_size_stability.csv",
-      "sha256": "40e7f20fe485b6614e4c6996f0992ffa71966787fb882a6d7ba6e874a74b99fd"
+      "bytes": 69062,
+      "path": "analysis/reliability_api_ensemble_size_stability.csv",
+      "rows": 216,
+      "sha256": "bb7ddc6f60f7d1b8e2ab1c0503e801543947471c73d70fa34d17e9c6096233e4"
     },
     "api_estimates": {
-      "bytes": 7598,
-      "path": "analysis\\reliability_api_estimates.csv",
-      "sha256": "095e7de91067445b01044f749a2f7687a100d5c0495a5590d25f3a2940807aaa"
+      "bytes": 7575,
+      "path": "analysis/reliability_api_estimates.csv",
+      "rows": 24,
+      "sha256": "b24c699f95e0944d65c57a3ba47828dd54b4560e7394ef7db89cb652a0f35522"
     },
     "human_estimates": {
-      "bytes": 16535,
-      "path": "analysis\\reliability_human_estimates.csv",
-      "sha256": "6a7fabc68f8acccda7e0c7563b879b1e8cfaf37d47d154e244bfbe47b66b488d"
+      "bytes": 19640,
+      "path": "analysis/reliability_human_estimates.csv",
+      "rows": 60,
+      "sha256": "0d6b1e2450de3f4eb8363b51dbbcc5e7a02d95c1c928db46363432661b0aa13c"
     },
     "human_panel_size_curve": {
-      "bytes": 188669,
-      "path": "analysis\\reliability_human_panel_size_curve.csv",
-      "sha256": "37b8a224daf30c59e60a3ed7207a028e6962146a4ff6a2b827aa1499a83868aa"
+      "bytes": 188128,
+      "path": "analysis/reliability_human_panel_size_curve.csv",
+      "rows": 540,
+      "sha256": "764d223a1875282b5f68adaa32c4cb182d10dafd2470421344038cc9b25846f0"
     },
     "qa": {
-      "bytes": 1809,
-      "path": "analysis\\reliability_qa.json",
-      "sha256": "8fd02c02e0ccd758d99d30fc2a012d529549dc209eb9e095a5dbe4f23a035824"
+      "bytes": 1931,
+      "path": "analysis/reliability_qa.json",
+      "sha256": "fc6e21470c21a78a01979e23803a766c498b1baa67cfb13d622eec1700a77d74"
     }
   },
   "qa_status": "PASS",
@@ -97,12 +106,12 @@
   "scope_item_counts": {
     "all810": 810,
     "broad180": 180,
-    "final_first_human_covered": 144,
+    "final_first_human_covered": 180,
     "selected30": 30
   },
   "script_path": "scripts/reliability_analysis.py",
-  "script_sha256": "76c0ce2bce14688996e5267cfb4a9dab32c46e61fc0ef550280cbd59e617ad22",
-  "script_version": "3.0.0",
+  "script_sha256": "56d4d8e78db8c56e34eaa5b82ed80bcadba39e3442034d2cd11c5fb3a8673f61",
+  "script_version": "4.0.0",
   "second_review_panel_curve": {
     "maximum_subpanels_per_size": 500,
     "method": "all rater combinations when feasible, otherwise deterministic unique subpanel sampling without replacement"

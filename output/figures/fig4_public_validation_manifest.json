@@ -12,8 +12,18 @@
     4.800000000000001,
     3.7199999999999998
   ],
+  "palette": {
+    "version_b_soft_blue": "#4F83AD",
+    "probe_heatmap": [
+      "#F7F9FA",
+      "#E5EFF2",
+      "#C9DEE4",
+      "#9FC1CC",
+      "#6F9FAD"
+    ]
+  },
   "sha256": {
-    "pdf": "71b1788a712f3dc8d48c5fe7f8f2a7f748868917a1872f8ec3039702708ce25e",
-    "png": "3d986ef61e61c370f8d712a5a4959aaf5e9a8ddf6ed83cf729f79ee8c8cea769"
+    "pdf": "aef1ee23406d2a8c007f6d9b355db69b7c5be9a94b65a9773ef6f0a90aad4183",
+    "png": "a9dc59a8dcdd2d7cfd7ca36f0772c4763d1256752710fceca0fef22f3cb9e9c5"
   }
 }

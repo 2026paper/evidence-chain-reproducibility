@@ -257,7 +257,26 @@ def ordered_cells(frame: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
 def reader_cluster_bootstrap(
     wide: pd.DataFrame, ordered: pd.DataFrame, rng: np.random.Generator
 ) -> tuple[dict[str, np.ndarray], dict[str, Any]]:
-    participants = sorted(wide["participant_id"].unique().tolist())
+    # Order resampling units by their analysis-visible response content rather
+    # than by the participant label. Privacy-preserving rekeying must not alter
+    # a fixed-seed bootstrap merely because opaque cluster names changed.
+    signature_columns = [
+        "version",
+        "concept",
+        "pre_correct",
+        "post_correct",
+        "reader_confidence",
+        "reader_perceived_risk",
+    ]
+    signatures: dict[str, str] = {}
+    for participant, group in wide.groupby("participant_id", observed=True, sort=False):
+        rows = group[signature_columns].sort_values(signature_columns).to_dict("records")
+        payload = json.dumps(rows, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        signatures[str(participant)] = hashlib.sha256(payload.encode("utf-8")).hexdigest()
+    participants = sorted(
+        wide["participant_id"].astype(str).unique().tolist(),
+        key=lambda participant: (signatures[participant], participant),
+    )
     cell_keys = list(zip(ordered["concept_key"], ordered["version"]))
     cell_lookup = {key: index for index, key in enumerate(cell_keys)}
     participant_lookup = {value: index for index, value in enumerate(participants)}
@@ -292,6 +311,7 @@ def reader_cluster_bootstrap(
         "seed": SEED,
         "draws": N_BOOTSTRAP,
         "participant_clusters": len(participants),
+        "cluster_order": "SHA-256 of analysis-visible response content; invariant to opaque participant rekeying",
     }
 
 

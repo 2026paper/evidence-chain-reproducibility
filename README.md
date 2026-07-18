@@ -17,10 +17,25 @@ python -m pip install -r environment/requirements-analysis.txt
 python -m pip install -r environment/requirements-figures.txt
 python scripts/audit_anonymity.py
 python scripts/verify_release.py
+python scripts/verify_nested_manifests.py
 ```
 
 The SHA-256 inventory at `manifests/sha256_manifest.csv` covers every tracked
 file except the inventory itself.
+
+## Reproduce the core human and panel analyses
+
+The following commands rebuild the human reliability and human--API alignment
+outputs from the released, non-reversibly rekeyed response table and the frozen
+7,290-score API matrix. The alignment command is the full locked run (5,000
+bootstrap draws, 10,000 broad-review permutations, and all 32,768 selected-set
+swaps), so it is substantially slower than the other checks.
+
+```bash
+python scripts/reliability_analysis.py --api-scores data/40_GitHub/rebuttal_update_20260714/api_test_scores_7290.csv
+python scripts/alignment_analysis.py --api-scores data/40_GitHub/rebuttal_update_20260714/api_test_scores_7290.csv
+python scripts/recompute_public_from_release.py
+```
 
 ## Reproduce the three added API analyses
 
@@ -31,6 +46,7 @@ HTTP/provider responses. Live calls may drift after provider model updates.
 python experiments/api_repeat_stability/analyze_repeat_stability.py --require-complete
 python experiments/api_reader_bridge_18/qa_inputs.py
 python experiments/api_reader_bridge_18/analyze_reader_bridge.py
+python experiments/api_aggregation_human_baselines/analyze_aggregation_human_baselines.py
 python experiments/api_aggregation_human_baselines/recompute_aggregation_from_common.py
 ```
 

@@ -1,17 +1,20 @@
 {
   "status": "PASS",
-  "dominant_claim": "agreement, repeatability, human validity, reader linkage, and failure diagnosis require distinct evidence contracts",
-  "lanes": 6,
+  "dominant_claim": "shared provenance, five non-substitutable inferential contracts",
+  "lanes": 5,
   "arrows": 0,
+  "branching_arrows": 0,
   "crossing_arrows": 0,
   "figure_inches": [
     4.800000000000001,
-    2.78
+    2.5
   ],
-  "minimum_font_pt": 5.55,
+  "minimum_font_pt": 7.0,
+  "pdf_media_box_verified": true,
   "sha256": {
-    "pdf": "c9d31c2dad8c6636ad3f5280b20bcfb8cbfddbd9ba7945a3ee79b019d8da0750",
-    "png": "88a1d5194055dcefd0fe83e21dd6c5ef9d03cf622ddfaa0fc793583c82f026b2",
-    "svg": "6903fdb13bc8b37a300434e37587356527e60da095362de7bc341984413dda03"
+    "pdf": "45055c15910e1e318e1371e2558dcd3bb884b8e8e8b61469bccbce43359d2e91",
+    "png": "71caee79aeccb3cae52f16516766cf370f53ae9f23e6fe21074ef9cc4cfe3810",
+    "svg": "882a19f97dffb08b4967e3bc7a5f511b1d8eb696de1c2b2da4e030f25e85ac22",
+    "source": "e85732a6ec12d0bc2dd36a2fc3d8ac65998f7582142c4c6486d911097b9b3375"
   }
 }

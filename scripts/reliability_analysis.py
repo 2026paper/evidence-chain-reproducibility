@@ -38,8 +38,8 @@ import scipy
 from scipy.stats import rankdata
 
 
-SCRIPT_VERSION = "3.0.0"
-CLEANING_RULE_VERSION = "3.0.0"
+SCRIPT_VERSION = "4.0.0"
+CLEANING_RULE_VERSION = "4.0.0"
 SEED = 20260717
 CATEGORIES = np.arange(1.0, 6.0)
 DIMENSIONS: tuple[tuple[str, str], ...] = (
@@ -699,6 +699,8 @@ def validate_final_cleaning_manifest(
             f"{manifest.get('rule_version')!r} != {CLEANING_RULE_VERSION!r}"
         )
     required_rules = {
+        "first_repeat_similarity_pct": 75,
+        "second_repeat_similarity_pct": 90,
         "absolute_seconds_per_unique_stimulus": 12,
         "first_duration_floor_seconds": 432,
         "second_duration_floor_seconds": 72,
@@ -886,6 +888,10 @@ def parse_args() -> argparse.Namespace:
         default=500,
         help="Maximum second-wave rater subpanels evaluated at each size.",
     )
+    parser.add_argument(
+        "--api-scores",
+        help="Explicit path to the current api_test_scores_7290.csv.",
+    )
     return parser.parse_args()
 
 
@@ -905,7 +911,11 @@ def main() -> None:
     )
     final_cleaning_manifest_path = analysis / "final_cleaning_manifest.json"
     crosswalk_path = analysis / "human_api_crosswalk.csv"
-    api_path = find_unique_api_input(workspace)
+    api_path = (
+        Path(args.api_scores).expanduser().resolve()
+        if args.api_scores
+        else find_unique_api_input(workspace)
+    )
     for path in (
         human_path,
         final_primary_path,
@@ -1141,7 +1151,7 @@ def main() -> None:
         },
         "input_policy": {
             "legacy_human_derivatives_read": False,
-            "formal_human_input": "final cleaning rule version 3.0.0",
+            "formal_human_input": "final cleaning rule version 4.0.0",
             "allowed_inputs_only": True,
         },
         "inputs": {

@@ -23,8 +23,18 @@ OUTPUT_ROOT = SURVEY_ROOT / "清洗后的数据"
 TMP_ROOT = PROJECT_ROOT / "tmp" / "spreadsheets"
 ANALYSIS_ROOT = PROJECT_ROOT / "analysis"
 
-SIMILARITY_THRESHOLD = 90.0
-SENSITIVITY_THRESHOLDS = (80.0, 85.0, 90.0, 95.0, 100.0)
+FIRST_SIMILARITY_THRESHOLD = 75.0
+SECOND_SIMILARITY_THRESHOLD = 90.0
+SIMILARITY_THRESHOLD_BY_WAVE = {
+    "首轮专家复核": FIRST_SIMILARITY_THRESHOLD,
+    "二次专家复核": SECOND_SIMILARITY_THRESHOLD,
+}
+SENSITIVITY_THRESHOLDS = (70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 100.0)
+SECONDS_PER_UNIQUE_STIMULUS = 12
+DURATION_FLOOR_BY_WAVE = {
+    "首轮专家复核": 36 * SECONDS_PER_UNIQUE_STIMULUS,
+    "二次专家复核": 6 * SECONDS_PER_UNIQUE_STIMULUS,
+}
 DIMENSIONS = (
     "事实准确性",
     "概念完整性",
@@ -124,6 +134,29 @@ def as_float(value: Any) -> float | None:
     if not math.isfinite(number):
         return None
     return number
+
+
+def similarity_threshold_for_wave(wave: str) -> float | None:
+    return SIMILARITY_THRESHOLD_BY_WAVE.get(wave)
+
+
+def duration_floor_for_wave(wave: str) -> int | None:
+    return DURATION_FLOOR_BY_WAVE.get(wave)
+
+
+def positive_duration_seconds(headers: list[Any], row: list[Any]) -> float | None:
+    """Read a valid positive duration without exposing it in any output."""
+    normalized = {
+        str(header or "").strip().replace(" ", ""): index
+        for index, header in enumerate(headers)
+    }
+    index = normalized.get("作答总时长(秒)")
+    if index is None:
+        return None
+    value = as_float(row[index])
+    if value is None or value <= 0:
+        return None
+    return float(value)
 
 
 def normalized_manhattan_similarity(left: Iterable[Any], right: Iterable[Any]) -> dict[str, float | None]:
@@ -472,6 +505,8 @@ def clean_all() -> dict[str, Any]:
         relative_source = str(path.relative_to(SURVEY_ROOT))
         attention_columns, attention_expected, attention_rule = attention_spec(data, wave)
         primary_specs, diagnostic_specs = repeat_specs(data, wave)
+        repeat_threshold = similarity_threshold_for_wave(wave)
+        duration_floor = duration_floor_for_wave(wave)
 
         retained_rows: list[list[Any]] = []
         retained_ids: list[str] = []
@@ -489,15 +524,26 @@ def clean_all() -> dict[str, Any]:
             diagnostic_metrics = [row_repeat_metrics(row, spec) for spec in diagnostic_specs]
             repeat_similarities = [metric["similarity"] for metric in primary_metrics]
             repeat_pass = all(
-                similarity is not None and float(similarity) >= SIMILARITY_THRESHOLD
+                similarity is not None
+                and repeat_threshold is not None
+                and float(similarity) >= repeat_threshold
                 for similarity in repeat_similarities
             ) if primary_specs else True
+            duration = positive_duration_seconds(data.headers, row)
+            duration_pass = (
+                duration_floor is None
+                or duration is None
+                or duration >= duration_floor
+            )
 
             reasons: list[str] = []
             if not attention_pass:
                 reasons.append("ATTENTION_FAILED")
             if not repeat_pass:
-                reasons.append("REPEAT_SIMILARITY_LT_90")
+                threshold_label = int(repeat_threshold) if repeat_threshold is not None else "NA"
+                reasons.append(f"REPEAT_SIMILARITY_LT_{threshold_label}")
+            if not duration_pass:
+                reasons.append("DURATION_BELOW_ABSOLUTE_FLOOR")
             keep = not reasons
 
             if keep:
@@ -518,12 +564,19 @@ def clean_all() -> dict[str, Any]:
                 "attention_pass": attention_pass if attention_columns else None,
                 "attention_fail_cells": attention_failures if attention_columns else None,
                 "repeat_applicable": bool(primary_specs),
+                "repeat_threshold_pct": repeat_threshold,
                 "repeat_pair": primary.get("name"),
                 "repeat_similarity_pct": primary.get("similarity"),
                 "repeat_mae": primary.get("mae"),
                 "repeat_exact_agreement_pct": primary.get("exact_agreement"),
                 "diagnostic_repeat_pair": diagnostic.get("name"),
                 "diagnostic_repeat_similarity_pct": diagnostic.get("similarity"),
+                "duration_applicable": duration_floor is not None,
+                "duration_floor_seconds": duration_floor,
+                "duration_missing_or_nonpositive": (
+                    duration is None if duration_floor is not None else None
+                ),
+                "duration_pass": duration_pass if duration_floor is not None else None,
             }
             audit.append(audit_row)
             source_audit.append(audit_row)
@@ -547,8 +600,26 @@ def clean_all() -> dict[str, Any]:
         raw_n = len(data.rows)
         kept_n = len(retained_rows)
         attention_fail_n = sum(row["attention_pass"] is False for row in source_audit)
-        repeat_fail_n = sum(row["repeat_applicable"] and (row["repeat_similarity_pct"] is None or row["repeat_similarity_pct"] < SIMILARITY_THRESHOLD) for row in source_audit)
-        both_fail_n = sum(row["attention_pass"] is False and row["repeat_applicable"] and (row["repeat_similarity_pct"] is None or row["repeat_similarity_pct"] < SIMILARITY_THRESHOLD) for row in source_audit)
+        repeat_fail_n = sum(
+            row["repeat_applicable"]
+            and (
+                row["repeat_similarity_pct"] is None
+                or repeat_threshold is None
+                or row["repeat_similarity_pct"] < repeat_threshold
+            )
+            for row in source_audit
+        )
+        both_fail_n = sum(
+            row["attention_pass"] is False
+            and row["repeat_applicable"]
+            and (
+                row["repeat_similarity_pct"] is None
+                or repeat_threshold is None
+                or row["repeat_similarity_pct"] < repeat_threshold
+            )
+            for row in source_audit
+        )
+        duration_fail_n = sum(row["duration_pass"] is False for row in source_audit)
         similarities = [float(row["repeat_similarity_pct"]) for row in source_audit if row["repeat_similarity_pct"] is not None]
         similarity_min, similarity_median, similarity_max = summarize_numbers(similarities)
         summaries.append(
@@ -565,9 +636,13 @@ def clean_all() -> dict[str, Any]:
                 "attention_rule": attention_rule,
                 "attention_failed": attention_fail_n,
                 "repeat_applicable": bool(primary_specs),
+                "repeat_threshold_pct": repeat_threshold,
                 "repeat_rule": primary_specs[0]["name"] if primary_specs else "Not applicable",
                 "repeat_failed": repeat_fail_n,
                 "failed_both": both_fail_n,
+                "duration_applicable": duration_floor is not None,
+                "duration_floor_seconds": duration_floor,
+                "duration_failed": duration_fail_n,
                 "repeat_similarity_min": similarity_min,
                 "repeat_similarity_median": similarity_median,
                 "repeat_similarity_max": similarity_max,
@@ -578,6 +653,7 @@ def clean_all() -> dict[str, Any]:
         for threshold in SENSITIVITY_THRESHOLDS:
             threshold_kept = sum(
                 (row["attention_pass"] is not False)
+                and (row["duration_pass"] is not False)
                 and (
                     not row["repeat_applicable"]
                     or (row["repeat_similarity_pct"] is not None and row["repeat_similarity_pct"] >= threshold)
@@ -600,16 +676,27 @@ def clean_all() -> dict[str, Any]:
         if wave == "首轮专家复核":
             strict_kept = 0
             for row in source_audit:
-                primary_ok = row["repeat_similarity_pct"] is not None and row["repeat_similarity_pct"] >= SIMILARITY_THRESHOLD
-                diagnostic_ok = row["diagnostic_repeat_similarity_pct"] is not None and row["diagnostic_repeat_similarity_pct"] >= SIMILARITY_THRESHOLD
-                strict_kept += int(row["attention_pass"] is not False and primary_ok and diagnostic_ok)
+                primary_ok = (
+                    row["repeat_similarity_pct"] is not None
+                    and row["repeat_similarity_pct"] >= FIRST_SIMILARITY_THRESHOLD
+                )
+                diagnostic_ok = (
+                    row["diagnostic_repeat_similarity_pct"] is not None
+                    and row["diagnostic_repeat_similarity_pct"] >= FIRST_SIMILARITY_THRESHOLD
+                )
+                strict_kept += int(
+                    row["attention_pass"] is not False
+                    and row["duration_pass"] is not False
+                    and primary_ok
+                    and diagnostic_ok
+                )
             scenarios.append(
                 {
                     "source_file": relative_source,
                     "wave": wave,
                     "domain": domain,
                     "scenario": "strict_both_Q12_Q32_and_Q39_Q46",
-                    "threshold_pct": SIMILARITY_THRESHOLD,
+                    "threshold_pct": FIRST_SIMILARITY_THRESHOLD,
                     "retained": strict_kept,
                     "raw_responses": raw_n,
                     "retention_rate": strict_kept / raw_n if raw_n else None,
@@ -648,16 +735,17 @@ def clean_all() -> dict[str, Any]:
         raise ValueError(f"Expected 438 human questionnaire records, found {total_raw}")
     first_expert_kept = sum(row["retained"] for row in summaries if row["wave"] == "首轮专家复核")
     second_expert_kept = sum(row["retained"] for row in summaries if row["wave"] == "二次专家复核")
-    if first_expert_kept != 9 or second_expert_kept != 95:
+    if first_expert_kept != 18 or second_expert_kept != 95:
         raise ValueError(
-            f"Cleaning total mismatch: expected first=9 and second=95, got first={first_expert_kept}, second={second_expert_kept}"
+            f"Cleaning total mismatch: expected first=18 and second=95, got first={first_expert_kept}, second={second_expert_kept}"
         )
 
     payload = {
         "generated_at": datetime.now().astimezone().isoformat(),
         "survey_root": str(SURVEY_ROOT),
         "output_root": str(OUTPUT_ROOT),
-        "similarity_threshold_pct": SIMILARITY_THRESHOLD,
+        "similarity_threshold_pct_by_wave": SIMILARITY_THRESHOLD_BY_WAVE,
+        "duration_floor_seconds_by_wave": DURATION_FLOOR_BY_WAVE,
         "similarity_formula": "100 * (1 - sum(abs(x_i-y_i)) / (4*k)), for k paired 1-5 ratings",
         "pass_interpretation": "PASS means exclude the response",
         "dimensions": list(DIMENSIONS),

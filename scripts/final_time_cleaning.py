@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Publish the final result-blind duration-screened Full Paper panels.
 
-Final rule version 3.0.0:
+Final rule version 4.0.0:
   * pass the existing attention checks;
-  * repeated-item similarity >= 90%;
+  * repeated-item similarity >= 75% in the long first review and >= 90% in the
+    short selected review;
   * exclude valid duration < 12 seconds per analyzed unique stimulus
     (first review < 432 s; second review < 72 s);
   * retain missing/nonpositive duration;
@@ -30,8 +31,8 @@ import numpy as np
 import pandas as pd
 
 
-SCRIPT_VERSION = "1.0.0"
-RULE_VERSION = "3.0.0"
+SCRIPT_VERSION = "2.0.0"
+RULE_VERSION = "4.0.0"
 SECONDS_PER_UNIQUE_STIMULUS = 12
 FIRST_UNIQUE_STIMULI = 36
 SECOND_UNIQUE_STIMULI = 6
@@ -93,16 +94,25 @@ def base_qc(data: cleaning.WorkbookData, wave: str, row: list[Any]) -> bool:
         attention_pass = True
     primary_specs, _diagnostic_specs = cleaning.repeat_specs(data, wave)
     metrics = [cleaning.row_repeat_metrics(row, spec) for spec in primary_specs]
+    threshold = cleaning.similarity_threshold_for_wave(wave)
     repeat_pass = (
         all(
             metric["similarity"] is not None
-            and float(metric["similarity"]) >= cleaning.SIMILARITY_THRESHOLD
+            and threshold is not None
+            and float(metric["similarity"]) >= threshold
             for metric in metrics
         )
         if primary_specs
         else True
     )
-    return bool(attention_pass and repeat_pass)
+    duration = cleaning.positive_duration_seconds(data.headers, row)
+    duration_floor = cleaning.duration_floor_for_wave(wave)
+    duration_pass = (
+        duration_floor is None
+        or duration is None
+        or duration >= duration_floor
+    )
+    return bool(attention_pass and repeat_pass and duration_pass)
 
 
 def eligible_paths() -> list[Path]:
@@ -211,11 +221,13 @@ def main() -> None:
     )
 
     source_mapping = {
-        "final_primary": "primary_90",
-        "threshold_85": "threshold_85",
-        "threshold_95": "threshold_95",
+        "final_primary": "primary_75_90",
+        "threshold_70": "first_threshold_70",
+        "threshold_80": "first_threshold_80",
+        "threshold_90": "first_threshold_90",
+        "threshold_95": "first_threshold_95",
         "attention_only": "no_repeat_attention_only",
-        "strict_first_both_pairs": "strict_first_both_pairs_90",
+        "strict_first_both_pairs": "strict_first_both_pairs_75",
         "second_case05_case07_mean": "second_case05_case07_mean",
     }
     panels: dict[str, pd.DataFrame] = {}
@@ -231,11 +243,11 @@ def main() -> None:
         ].copy().reset_index(drop=True)
         input_panel_paths[source_name] = source_path
 
-    source_primary = pd.read_csv(SOURCE_PANEL_ROOT / "primary_90.csv")
+    source_primary = pd.read_csv(SOURCE_PANEL_ROOT / "primary_75_90.csv")
     reconstructed_base = set(metadata.loc[metadata["base_keep"], "participant_id"].astype(str))
     source_base = set(source_primary["participant_id"].astype(str))
     if reconstructed_base != source_base:
-        raise AssertionError("Raw attention/repeat reconstruction differs from primary_90")
+        raise AssertionError("Raw attention/repeat/duration reconstruction differs from primary_75_90")
 
     expected_columns = list(source_primary.columns)
     for name, panel in panels.items():
@@ -266,9 +278,9 @@ def main() -> None:
     }
     base_metadata = metadata[metadata["base_keep"]]
     base_time_exclusions = int(base_metadata["below_absolute_floor"].sum())
-    if len(panels["final_primary"]) != 5364 or base_time_exclusions != 0:
+    if len(panels["final_primary"]) != 7308 or base_time_exclusions != 0:
         raise AssertionError(
-            f"Expected unchanged 5,364-row primary with zero time exclusions; got {len(panels['final_primary'])}, {base_time_exclusions}"
+            f"Expected 7,308-row primary with duration already applied upstream; got {len(panels['final_primary'])}, {base_time_exclusions}"
         )
 
     outputs: dict[str, Any] = {
@@ -281,14 +293,15 @@ def main() -> None:
         outputs[name] = file_record(path, len(panels[name]))
 
     manifest = {
-        "analysis_label": "final_time_only_cleaning",
+        "analysis_label": "final_wave_specific_repeat_and_duration_cleaning",
         "rule_version": RULE_VERSION,
         "script_version": SCRIPT_VERSION,
         "qa_status": "PASS",
         "created_utc": datetime.now(timezone.utc).isoformat(),
         "rules": {
             "base_attention": "pass_all_keyed_attention_checks",
-            "base_repeat_similarity_pct": 90,
+            "first_repeat_similarity_pct": 75,
+            "second_repeat_similarity_pct": 90,
             "absolute_seconds_per_unique_stimulus": SECONDS_PER_UNIQUE_STIMULUS,
             "first_unique_stimuli": FIRST_UNIQUE_STIMULI,
             "first_duration_floor_seconds": FIRST_FLOOR_SECONDS,
@@ -302,6 +315,9 @@ def main() -> None:
             "eligible_raw_records": int(len(metadata)),
             "base_primary_participants": int(len(base_metadata)),
             "base_primary_time_exclusions": base_time_exclusions,
+            "eligible_raw_records_below_time_floor": int(
+                metadata["below_absolute_floor"].sum()
+            ),
             "final_participants": final_participants,
             "final_participants_total": int(panels["final_primary"]["participant_id"].nunique()),
             "final_long_rows": int(len(panels["final_primary"])),
@@ -337,7 +353,7 @@ def main() -> None:
         },
         "qa": {
             "status": "PASS",
-            "raw_base_qc_matches_primary_90": True,
+            "raw_base_qc_matches_primary_75_90": True,
             "root_cleaned_equals_final_primary_bytes": True,
             "all_panel_schemas_match": True,
             "all_panel_participants_map_to_eligible_forms": True,

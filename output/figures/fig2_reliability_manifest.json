@@ -13,13 +13,18 @@
     4.800000000000001,
     4.34
   ],
+  "visible_content_bbox_x_px": [
+    47,
+    2833
+  ],
+  "visible_center_offset_px": 0.5,
   "palette": {
-    "mean_deep_navy": "#1F4E79",
-    "trimmed_muted_teal": "#2A8C82",
-    "no_self_soft_terracotta": "#C65D3B",
-    "median_neutral_slate": "#6C7782",
-    "individual_judges_blue_grey": "#8BAFC3",
-    "heatmaps": "monotonic light-to-dark blue-teal; no yellow endpoint"
+    "mean_soft_blue": "#4F83AD",
+    "trimmed_soft_sea_green": "#63A89C",
+    "no_self_light_terracotta": "#D47E5D",
+    "median_neutral_slate": "#7C8791",
+    "individual_judges_blue_grey": "#A2BDCC",
+    "heatmaps": "monotonic light blue-teal with a mid-tone endpoint"
   },
   "redundant_encoding": {
     "mean": "filled circle",
@@ -28,7 +33,7 @@
     "median": "open diamond"
   },
   "sha256": {
-    "pdf": "9d6e8eda7909723dba3b009809f81f4d1ce06735dd915c94d8f04cda17d8d8cd",
-    "png": "b653eec63e0b98da3e2ad91721e055c16a7720728732884d7d747d2329f5be9f"
+    "pdf": "fa7f081df46e5316f0d9c4740605e3b9a2af6e848a5e63109fe7e6953872eaae",
+    "png": "d65535883783bfcf30b268e46d18e499aa34eff85bc9db39b5dc4978d10171eb"
   }
 }

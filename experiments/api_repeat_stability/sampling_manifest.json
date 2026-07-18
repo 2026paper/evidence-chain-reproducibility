@@ -1,23 +1,33 @@
 {
-  "schema_version": "1.0",
-  "experiment_id": "api_repeat_stability_90x9x3",
-  "created_date": "2026-07-17",
-  "sampling_seed": 20260717,
-  "source_hashes_sha256": {
-    "generated_items_810.csv": "75c32947f916973ab9c2b03e496df77411b41699c1a01adbe4a42771f64024be",
-    "api_test_scores_7290.csv": "4bb91453c6ccfc22e0c24f99c487543686455b7875148f85e759113181a70da4",
-    "judge_configuration_public.json": "91577c856149b2fcf63c5fb523953f2fc0e57a40f7723b04902296155897ad8c",
-    "judge_output_schema.json": "dff12112d6dbb2014f92a73eef846f6e1b635d1307d3c5e31257689e1b9eceaa"
+  "committed_outputs_sha256": {
+    "judge_repetition_grid.csv": "68e6c186fbff9394130ec3264c066198ecab8fb8631dc4b9d7162361e71ef65c",
+    "qa_report.json": "b1ef5b2b7a95024ff9ce755789147e8731768f897ea519fa360372b7074a3d01",
+    "repeat_sample_90.csv": "77414cf7173872df2c6d38d4f4d38ca55fe068d2bae761ab92b39cd6e9960683",
+    "repeat_sample_90.json": "221f640b9d3b4a0471df9917877adccc4e9cb3d5618bd94824242a9dc5ef27d4"
   },
+  "created_date": "2026-07-17",
+  "experiment_id": "api_repeat_stability_90x9x3",
+  "fresh_call_design": {
+    "cross_product": "repeat_sample_90.csv x judge_repetition_grid.csv",
+    "items": 90,
+    "judges": 9,
+    "planned_calls": 2430,
+    "repetitions": 3,
+    "requirement": "all three repetitions are fresh requests; do not treat the historical 7290 matrix as repetition 1"
+  },
+  "qa_status": "PASS",
+  "release_note": "The generated-item table is privacy-minimized in the review release; the restricted-source hash is retained separately from the released-file hash.",
+  "released_source_hashes_sha256": {
+    "materials/generated_items_810.csv": "e850c3e14cbb61edc05ae3bd2dc549d3ec7670db4ef1d9058c6bf5684e5431ce"
+  },
+  "restricted_source_hashes_sha256": {
+    "generated_items_810.csv": "75c32947f916973ab9c2b03e496df77411b41699c1a01adbe4a42771f64024be"
+  },
+  "sampling_seed": 20260717,
+  "schema_version": "1.0",
   "selection_rule": {
-    "eligible_population": "complete 30 concept x 3 task x 9 generator crossing",
-    "stratum": "concept_id x task_type",
-    "items_per_stratum": 1,
-    "outcome_blind": true,
-    "generator_order": "ascending SHA256(seed|generator|canonical_generator_name)",
-    "domain_order": "lexicographic canonical domain name",
-    "concept_order_within_domain": "ascending SHA256(seed|concept|domain|concept_id)",
     "allocation": "two 9-cell rounds per domain; every generator appears once per round; task assignment uses (generator_index + round_index) mod 3; within-task assignment uses SHA256-derived rotation",
+    "concept_order_within_domain": "ascending SHA256(seed|concept|domain|concept_id)",
     "constraints_satisfied": [
       "90 unique concept-task strata",
       "9 generators x 10 items",
@@ -27,21 +37,17 @@
       "three distinct selected generators within every concept",
       "90 distinct visible-text hashes"
     ],
-    "historical_outcomes_not_used": "fa/cc/lc/tf/mq/risk were not read for selection; historical matrix was used only to verify keys, judge coverage, score completeness/range, and input-integrity flags"
+    "domain_order": "lexicographic canonical domain name",
+    "eligible_population": "complete 30 concept x 3 task x 9 generator crossing",
+    "generator_order": "ascending SHA256(seed|generator|canonical_generator_name)",
+    "historical_outcomes_not_used": "fa/cc/lc/tf/mq/risk were not read for selection; historical matrix was used only to verify keys, judge coverage, score completeness/range, and input-integrity flags",
+    "items_per_stratum": 1,
+    "outcome_blind": true,
+    "stratum": "concept_id x task_type"
   },
-  "fresh_call_design": {
-    "items": 90,
-    "judges": 9,
-    "repetitions": 3,
-    "planned_calls": 2430,
-    "cross_product": "repeat_sample_90.csv x judge_repetition_grid.csv",
-    "requirement": "all three repetitions are fresh requests; do not treat the historical 7290 matrix as repetition 1"
-  },
-  "committed_outputs_sha256": {
-    "repeat_sample_90.csv": "77414cf7173872df2c6d38d4f4d38ca55fe068d2bae761ab92b39cd6e9960683",
-    "repeat_sample_90.json": "221f640b9d3b4a0471df9917877adccc4e9cb3d5618bd94824242a9dc5ef27d4",
-    "judge_repetition_grid.csv": "68e6c186fbff9394130ec3264c066198ecab8fb8631dc4b9d7162361e71ef65c",
-    "qa_report.json": "b1ef5b2b7a95024ff9ce755789147e8731768f897ea519fa360372b7074a3d01"
-  },
-  "qa_status": "PASS"
+  "source_hashes_sha256": {
+    "api_test_scores_7290.csv": "4bb91453c6ccfc22e0c24f99c487543686455b7875148f85e759113181a70da4",
+    "judge_configuration_public.json": "91577c856149b2fcf63c5fb523953f2fc0e57a40f7723b04902296155897ad8c",
+    "judge_output_schema.json": "dff12112d6dbb2014f92a73eef846f6e1b635d1307d3c5e31257689e1b9eceaa"
+  }
 }

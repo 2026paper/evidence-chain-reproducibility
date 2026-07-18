@@ -13,7 +13,7 @@
     "no_raw_workbooks_or_documents": true,
     "rekey_mapping_not_retained": true
   },
-  "created_utc": "2026-07-16T22:36:27.622870+00:00",
+  "created_utc": "2026-07-18T09:23:39.984796+00:00",
   "explicit_exclusions": [
     "raw IDs and platform IDs",
     "IP/location/device",
@@ -40,9 +40,9 @@
       "background_columns_removed": [],
       "exact_duration_removed": true,
       "file": "analysis/cleaned_human_ratings_long.csv",
-      "participant_clusters": 104,
+      "participant_clusters": 113,
       "random_rekey": true,
-      "records": 5364,
+      "records": 7308,
       "removed_columns": [
         "source_file"
       ],
@@ -76,9 +76,9 @@
       "background_columns_removed": [],
       "exact_duration_removed": true,
       "file": "analysis/final_sensitivity_panels/strict_first_both_pairs.csv",
-      "participant_clusters": 4,
+      "participant_clusters": 13,
       "random_rekey": true,
-      "records": 864,
+      "records": 2808,
       "removed_columns": [
         "source_file"
       ],
@@ -87,10 +87,34 @@
     {
       "background_columns_removed": [],
       "exact_duration_removed": true,
-      "file": "analysis/final_sensitivity_panels/threshold_85.csv",
-      "participant_clusters": 123,
+      "file": "analysis/final_sensitivity_panels/threshold_70.csv",
+      "participant_clusters": 18,
       "random_rekey": true,
-      "records": 6048,
+      "records": 3888,
+      "removed_columns": [
+        "source_file"
+      ],
+      "row_shuffle": true
+    },
+    {
+      "background_columns_removed": [],
+      "exact_duration_removed": true,
+      "file": "analysis/final_sensitivity_panels/threshold_80.csv",
+      "participant_clusters": 13,
+      "random_rekey": true,
+      "records": 2808,
+      "removed_columns": [
+        "source_file"
+      ],
+      "row_shuffle": true
+    },
+    {
+      "background_columns_removed": [],
+      "exact_duration_removed": true,
+      "file": "analysis/final_sensitivity_panels/threshold_90.csv",
+      "participant_clusters": 9,
+      "random_rekey": true,
+      "records": 1944,
       "removed_columns": [
         "source_file"
       ],
@@ -100,9 +124,9 @@
       "background_columns_removed": [],
       "exact_duration_removed": true,
       "file": "analysis/final_sensitivity_panels/threshold_95.csv",
-      "participant_clusters": 81,
+      "participant_clusters": 6,
       "random_rekey": true,
-      "records": 3996,
+      "records": 1296,
       "removed_columns": [
         "source_file"
       ],

@@ -1,142 +1,142 @@
 {
   "abc": {
     "frozen_result_comparison": {
-      "primary_p_difference": -1.9081958235744878e-16,
-      "primary_statistic_difference": 3.907985046680551e-14,
-      "q11_q17_exclusion_p_difference": 4.85722573273506e-17,
-      "q11_q17_exclusion_statistic_difference": -3.019806626980426e-14
+      "primary_p_difference": 6.938893903907228e-18,
+      "primary_statistic_difference": -1.7763568394002505e-15,
+      "q11_q17_exclusion_p_difference": 1.3487475025719675e-16,
+      "q11_q17_exclusion_statistic_difference": -8.348877145181177e-14
     },
     "input": {
       "participant_clusters": 167,
       "path": "analysis/public_abc_cleaned_long.csv",
       "response_instances": 178,
       "rows": 2136,
-      "sha256": "4729e3b56ae90c9eef0a75e0e31f98d496d8bd4896f46f3af5bc00b83df68a53"
+      "sha256": "19c53c56dfa1c24bea2cec089b61cf34f39b5819fafa24f086825536c4e86ed6"
     },
     "primary": {
       "cluster": "privacy-safe cross-form participant",
       "coefficients": [
         {
-          "ci_high": 2.195621334763866,
-          "ci_low": 1.3020115130388648,
+          "ci_high": 2.1956213347638593,
+          "ci_low": 1.302011513038871,
           "estimate": 1.7488164239013653,
-          "p_value": 1.701349879831608e-14,
-          "standard_error": 0.22796587814206828,
-          "statistic": 7.671395553379718,
+          "p_value": 1.701349879830189e-14,
+          "standard_error": 0.2279658781420651,
+          "statistic": 7.671395553379825,
           "term": "Intercept"
         },
         {
-          "ci_high": 0.18756374915770713,
-          "ci_low": -1.0296297695133145,
-          "estimate": -0.4210330101778037,
-          "p_value": 0.17512409084911007,
-          "standard_error": 0.31051425645371267,
-          "statistic": -1.3559216732471209,
+          "ci_high": 0.18756374915770568,
+          "ci_low": -1.0296297695133139,
+          "estimate": -0.42103301017780415,
+          "p_value": 0.17512409084910885,
+          "standard_error": 0.3105142564537121,
+          "statistic": -1.3559216732471249,
           "term": "C(version, Treatment(reference=\"A\"))[T.B]"
         },
         {
-          "ci_high": 0.20438878620476297,
-          "ci_low": -0.8592227751052989,
-          "estimate": -0.32741699445026795,
-          "p_value": 0.2275509724024537,
-          "standard_error": 0.2713344657605176,
-          "statistic": -1.2066915035381067,
+          "ci_high": 0.20438878620476086,
+          "ci_low": -0.8592227751052972,
+          "estimate": -0.3274169944502682,
+          "p_value": 0.2275509724024516,
+          "standard_error": 0.2713344657605166,
+          "statistic": -1.206691503538112,
           "term": "C(version, Treatment(reference=\"A\"))[T.C]"
         },
         {
-          "ci_high": 0.17264227083111242,
-          "ci_low": -0.5276032226440133,
-          "estimate": -0.1774804759064504,
-          "p_value": 0.3204546759569956,
-          "standard_error": 0.17863733696092704,
-          "statistic": -0.993523968313916,
+          "ci_high": 0.17264227083111097,
+          "ci_low": -0.5276032226440123,
+          "estimate": -0.17748047590645064,
+          "p_value": 0.3204546759569934,
+          "standard_error": 0.17863733696092643,
+          "statistic": -0.9935239683139206,
           "term": "C(concept)[T.evolution_no_goal]"
         },
         {
-          "ci_high": 1.014873657643295,
-          "ci_low": 0.01547338741683113,
-          "estimate": 0.5151735225300631,
-          "p_value": 0.043315496689440146,
-          "standard_error": 0.25495373336183874,
-          "statistic": 2.020654946828772,
+          "ci_high": 1.0148736576432944,
+          "ci_low": 0.015473387416830908,
+          "estimate": 0.5151735225300627,
+          "p_value": 0.04331549668944024,
+          "standard_error": 0.25495373336183863,
+          "statistic": 2.020654946828771,
           "term": "C(concept)[T.geological_time]"
         },
         {
-          "ci_high": 1.342034645123051,
-          "ci_low": 0.3105013838842089,
-          "estimate": 0.82626801450363,
-          "p_value": 0.0016900561898885804,
-          "standard_error": 0.2631510755747159,
-          "statistic": 3.1398998187603055,
+          "ci_high": 1.3420346451230538,
+          "ci_low": 0.3105013838842079,
+          "estimate": 0.8262680145036309,
+          "p_value": 0.0016900561898886242,
+          "standard_error": 0.26315107557471684,
+          "statistic": 3.139899818760298,
           "term": "C(concept)[T.net_force_vs_velocity]"
         },
         {
-          "ci_high": 1.6293906563639688,
-          "ci_low": 0.46693528420582064,
-          "estimate": 1.0481629702848947,
-          "p_value": 0.00040851441533432397,
-          "standard_error": 0.29655018697472196,
-          "statistic": 3.534521360373448,
+          "ci_high": 1.6293906563639728,
+          "ci_low": 0.46693528420582175,
+          "estimate": 1.0481629702848974,
+          "p_value": 0.00040851441533432467,
+          "standard_error": 0.29655018697472274,
+          "statistic": 3.5345213603734478,
           "term": "C(concept)[T.plant_respiration]"
         },
         {
-          "ci_high": 0.5677294875481682,
-          "ci_low": -0.28520344982583323,
-          "estimate": 0.1412630188611675,
-          "p_value": 0.5161963854408496,
-          "standard_error": 0.21758893125124432,
-          "statistic": 0.6492196916857629,
+          "ci_high": 0.5677294875481673,
+          "ci_low": -0.2852034498258322,
+          "estimate": 0.14126301886116754,
+          "p_value": 0.5161963854408483,
+          "standard_error": 0.21758893125124382,
+          "statistic": 0.6492196916857647,
           "term": "C(concept)[T.projectile_motion]"
         },
         {
-          "ci_high": 1.2977894234297005,
-          "ci_low": 0.34622116873979447,
-          "estimate": 0.8220052960847475,
-          "p_value": 0.0007086740872760326,
-          "standard_error": 0.24275146436254827,
-          "statistic": 3.3862011841752935,
+          "ci_high": 1.2977894234296996,
+          "ci_low": 0.34622116873979825,
+          "estimate": 0.8220052960847489,
+          "p_value": 0.0007086740872759735,
+          "standard_error": 0.24275146436254708,
+          "statistic": 3.386201184175316,
           "term": "phase"
         },
         {
-          "ci_high": 1.0272701315425166,
-          "ci_low": -0.5091779998274701,
-          "estimate": 0.25904606585752327,
-          "p_value": 0.508675048208713,
-          "standard_error": 0.3919582562458529,
-          "statistic": 0.6609021795806709,
+          "ci_high": 1.027270131542515,
+          "ci_low": -0.5091779998274699,
+          "estimate": 0.2590460658575226,
+          "p_value": 0.5086750482087137,
+          "standard_error": 0.39195825624585245,
+          "statistic": 0.6609021795806699,
           "term": "phase:C(version, Treatment(reference=\"A\"))[T.B]"
         },
         {
-          "ci_high": 2.045729211881082,
-          "ci_low": 0.4398346273154219,
-          "estimate": 1.242781919598252,
-          "p_value": 0.0024166767659934284,
-          "standard_error": 0.4096745137239132,
-          "statistic": 3.0335836815950534,
+          "ci_high": 2.0457292118810853,
+          "ci_low": 0.43983462731542067,
+          "estimate": 1.242781919598253,
+          "p_value": 0.002416676765993473,
+          "standard_error": 0.4096745137239144,
+          "statistic": 3.0335836815950477,
           "term": "phase:C(version, Treatment(reference=\"A\"))[T.C]"
         }
       ],
       "converged": true,
       "covariance": "robust sandwich",
-      "dependence_parameter": 0.225822277249793,
+      "dependence_parameter": 0.22582227724979295,
       "family_link": "binomial_logit",
       "formula": "correct ~ phase * C(version, Treatment(reference=\"A\")) + C(concept)",
       "marginal": {
         "cells": [
           {
-            "ci_high": 0.9264596133868916,
-            "ci_low": 0.8489222547015169,
+            "ci_high": 0.9264596133868912,
+            "ci_low": 0.8489222547015174,
             "phase": 0,
             "probability": 0.8876909340442043,
-            "standard_error": 0.01978030190783591,
+            "standard_error": 0.01978030190783572,
             "version": "A"
           },
           {
             "ci_high": 0.9735939772808799,
-            "ci_low": 0.9200156839875142,
+            "ci_low": 0.9200156839875144,
             "phase": 1,
-            "probability": 0.9468048306341971,
-            "standard_error": 0.013668183118665578,
+            "probability": 0.9468048306341972,
+            "standard_error": 0.01366818311866548,
             "version": "A"
           },
           {
@@ -144,7 +144,7 @@
             "ci_low": 0.7732141708662117,
             "phase": 0,
             "probability": 0.8395453022596926,
-            "standard_error": 0.03384303584999132,
+            "standard_error": 0.033843035849991356,
             "version": "B"
           },
           {
@@ -152,7 +152,7 @@
             "ci_low": 0.8902410174964803,
             "phase": 1,
             "probability": 0.9381170727785767,
-            "standard_error": 0.02442700766939424,
+            "standard_error": 0.024427007669394256,
             "version": "B"
           },
           {
@@ -160,74 +160,74 @@
             "ci_low": 0.7986300058756839,
             "phase": 0,
             "probability": 0.8514904669852789,
-            "standard_error": 0.02697011859735766,
+            "standard_error": 0.02697011859735769,
             "version": "C"
           },
           {
-            "ci_high": 0.9959784552769739,
+            "ci_high": 0.9959784552769742,
             "ci_low": 0.9597940279139983,
             "phase": 1,
-            "probability": 0.9778862415954861,
-            "standard_error": 0.009230890885851451,
+            "probability": 0.9778862415954862,
+            "standard_error": 0.009230890885851469,
             "version": "C"
           }
         ],
         "changes": [
           {
-            "change": 0.059113896589992776,
-            "ci_high": 0.09288669762684659,
-            "ci_low": 0.02534109555313896,
-            "standard_error": 0.017231337567041722,
+            "change": 0.05911389658999289,
+            "ci_high": 0.09288669762684643,
+            "ci_low": 0.025341095553139355,
+            "standard_error": 0.01723133756704158,
             "version": "A"
           },
           {
             "change": 0.0985717705188841,
-            "ci_high": 0.14979680794046557,
-            "ci_low": 0.04734673309730265,
-            "standard_error": 0.02613570342395984,
+            "ci_high": 0.1497968079404656,
+            "ci_low": 0.04734673309730261,
+            "standard_error": 0.026135703423959857,
             "version": "B"
           },
           {
-            "change": 0.12639577461020723,
-            "ci_high": 0.17118499130839387,
-            "ci_low": 0.0816065579120206,
-            "standard_error": 0.022852061084529245,
+            "change": 0.12639577461020735,
+            "ci_high": 0.171184991308394,
+            "ci_low": 0.08160655791202068,
+            "standard_error": 0.02285206108452926,
             "version": "C"
           }
         ],
         "pairwise_change_differences": [
           {
-            "ci_high": 0.1008680538126273,
-            "ci_low": -0.02195230595484464,
+            "ci_high": 0.10086805381262712,
+            "ci_low": -0.02195230595484468,
             "contrast": "B-A",
-            "difference_in_change": 0.03945787392889133,
-            "p_holm": 0.41581844326476736,
-            "p_value": 0.20790922163238368,
+            "difference_in_change": 0.03945787392889122,
+            "p_holm": 0.4158184432647689,
+            "p_value": 0.20790922163238446,
             "scale": "average_marginal_probability",
-            "standard_error": 0.03133230016884577,
-            "z": 1.2593353732811787
+            "standard_error": 0.031332300168845736,
+            "z": 1.2593353732811765
           },
           {
-            "ci_high": 0.12250866233455526,
-            "ci_low": 0.012055093705873661,
+            "ci_high": 0.12250866233455517,
+            "ci_low": 0.012055093705873751,
             "contrast": "C-A",
             "difference_in_change": 0.06728187802021446,
-            "p_holm": 0.050849835593601844,
-            "p_value": 0.016949945197867283,
+            "p_holm": 0.05084983559360133,
+            "p_value": 0.01694994519786711,
             "scale": "average_marginal_probability",
-            "standard_error": 0.028177448539852074,
-            "z": 2.3877917095671743
+            "standard_error": 0.02817744853985203,
+            "z": 2.387791709567178
           },
           {
-            "ci_high": 0.09836478167579336,
-            "ci_low": -0.042716773493147106,
+            "ci_high": 0.09836478167579356,
+            "ci_low": -0.04271677349314708,
             "contrast": "C-B",
-            "difference_in_change": 0.02782400409132313,
-            "p_holm": 0.43947183542086543,
-            "p_value": 0.43947183542086543,
+            "difference_in_change": 0.02782400409132324,
+            "p_holm": 0.4394718354208641,
+            "p_value": 0.4394718354208641,
             "scale": "average_marginal_probability",
-            "standard_error": 0.0359908539855257,
-            "z": 0.7730854094907834
+            "standard_error": 0.03599085398552574,
+            "z": 0.7730854094907856
           }
         ]
       },
@@ -237,8 +237,8 @@
       "omnibus_interaction": {
         "df": 2,
         "hypothesis": "joint version-by-phase interaction",
-        "p_value": 0.009668141427595102,
-        "statistic": 9.277838375649472,
+        "p_value": 0.0096681414275953,
+        "statistic": 9.27783837564943,
         "terms": [
           "phase:C(version, Treatment(reference=\"A\"))[T.B]",
           "phase:C(version, Treatment(reference=\"A\"))[T.C]"
@@ -247,37 +247,37 @@
       "pairwise_inference_status": "confirmatory_if_omnibus_p_below_0.05_else_descriptive",
       "pairwise_logit_scale_interactions": [
         {
-          "ci_high": 1.0272701315425166,
-          "ci_low": -0.5091779998274701,
+          "ci_high": 1.027270131542515,
+          "ci_low": -0.5091779998274699,
           "contrast": "B-A",
-          "difference_in_change": 0.25904606585752327,
-          "p_holm": 0.508675048208713,
-          "p_value": 0.508675048208713,
+          "difference_in_change": 0.2590460658575226,
+          "p_holm": 0.5086750482087137,
+          "p_value": 0.5086750482087137,
           "scale": "log_odds_change",
-          "standard_error": 0.3919582562458529,
-          "z": 0.6609021795806709
+          "standard_error": 0.39195825624585245,
+          "z": 0.6609021795806699
         },
         {
-          "ci_high": 2.045729211881082,
-          "ci_low": 0.4398346273154219,
+          "ci_high": 2.0457292118810853,
+          "ci_low": 0.43983462731542067,
           "contrast": "C-A",
-          "difference_in_change": 1.242781919598252,
-          "p_holm": 0.007250030297980286,
-          "p_value": 0.0024166767659934284,
+          "difference_in_change": 1.242781919598253,
+          "p_holm": 0.007250030297980419,
+          "p_value": 0.002416676765993473,
           "scale": "log_odds_change",
-          "standard_error": 0.4096745137239132,
-          "z": 3.0335836815950534
+          "standard_error": 0.4096745137239144,
+          "z": 3.0335836815950477
         },
         {
-          "ci_high": 1.9110273692549185,
-          "ci_low": 0.056444338226538715,
+          "ci_high": 1.9110273692549242,
+          "ci_low": 0.056444338226536495,
           "contrast": "C-B",
-          "difference_in_change": 0.9837358537407286,
-          "p_holm": 0.07518559411839376,
-          "p_value": 0.03759279705919688,
+          "difference_in_change": 0.9837358537407304,
+          "p_holm": 0.07518559411839473,
+          "p_value": 0.037592797059197366,
           "scale": "log_odds_change",
-          "standard_error": 0.4731166097073962,
-          "z": 2.0792672114156594
+          "standard_error": 0.4731166097073982,
+          "z": 2.079267211415654
         }
       ],
       "working_correlation": "exchangeable"
@@ -286,93 +286,93 @@
       "cluster": "privacy-safe cross-form participant",
       "coefficients": [
         {
-          "ci_high": 2.1687598318837975,
-          "ci_low": 1.2012819645211188,
-          "estimate": 1.6850208982024582,
-          "p_value": 8.659065672935705e-12,
-          "standard_error": 0.24681011360260213,
-          "statistic": 6.827195505106291,
+          "ci_high": 2.168759831883798,
+          "ci_low": 1.2012819645211175,
+          "estimate": 1.6850208982024577,
+          "p_value": 8.659065672936491e-12,
+          "standard_error": 0.2468101136026025,
+          "statistic": 6.827195505106278,
           "term": "Intercept"
         },
         {
-          "ci_high": 0.14222648634222507,
-          "ci_low": -1.1054521432904152,
-          "estimate": -0.4816128284740951,
+          "ci_high": 0.14222648634222496,
+          "ci_low": -1.1054521432904145,
+          "estimate": -0.48161282847409476,
           "p_value": 0.13024915815435842,
-          "standard_error": 0.3182912133779422,
+          "standard_error": 0.318291213377942,
           "statistic": -1.5131200869884622,
           "term": "C(version, Treatment(reference=\"A\"))[T.B]"
         },
         {
-          "ci_high": 0.07300060494637856,
-          "ci_low": -1.006771950004587,
-          "estimate": -0.46688567252910423,
-          "p_value": 0.09008530789286845,
+          "ci_high": 0.07300060494637939,
+          "ci_low": -1.0067719500045862,
+          "estimate": -0.4668856725291034,
+          "p_value": 0.09008530789286905,
           "standard_error": 0.275457243976949,
-          "statistic": -1.6949478829758948,
+          "statistic": -1.6949478829758917,
           "term": "C(version, Treatment(reference=\"A\"))[T.C]"
         },
         {
-          "ci_high": 1.173281998673168,
-          "ci_low": 0.18855491319248707,
-          "estimate": 0.6809184559328275,
-          "p_value": 0.006717186444108019,
-          "standard_error": 0.2512105052052187,
-          "statistic": 2.710549287644528,
+          "ci_high": 1.1732819986731684,
+          "ci_low": 0.18855491319248774,
+          "estimate": 0.6809184559328281,
+          "p_value": 0.0067171864441079605,
+          "standard_error": 0.25121050520521865,
+          "statistic": 2.7105492876445307,
           "term": "C(concept)[T.geological_time]"
         },
         {
-          "ci_high": 1.4883724704728138,
-          "ci_low": 0.48488473683430544,
+          "ci_high": 1.4883724704728136,
+          "ci_low": 0.48488473683430566,
           "estimate": 0.9866286036535596,
-          "p_value": 0.0001161698424451803,
-          "standard_error": 0.25599647278059484,
-          "statistic": 3.854071085187032,
+          "p_value": 0.00011616984244517973,
+          "standard_error": 0.25599647278059473,
+          "statistic": 3.8540710851870337,
           "term": "C(concept)[T.net_force_vs_velocity]"
         },
         {
-          "ci_high": 1.77050854308081,
-          "ci_low": 0.63843775756354,
-          "estimate": 1.204473150322175,
-          "p_value": 3.0375917093935888e-05,
-          "standard_error": 0.28879887448108743,
-          "statistic": 4.170629655279534,
+          "ci_high": 1.7705085430808105,
+          "ci_low": 0.6384377575635406,
+          "estimate": 1.2044731503221755,
+          "p_value": 3.037591709393549e-05,
+          "standard_error": 0.2887988744810874,
+          "statistic": 4.170629655279536,
           "term": "C(concept)[T.plant_respiration]"
         },
         {
-          "ci_high": 0.6525323809261361,
-          "ci_low": -0.02595741007313107,
-          "estimate": 0.31328748542650253,
-          "p_value": 0.07029627748204403,
-          "standard_error": 0.17308731087691104,
-          "statistic": 1.8099968382390155,
+          "ci_high": 0.6525323809261356,
+          "ci_low": -0.025957410073130294,
+          "estimate": 0.31328748542650264,
+          "p_value": 0.07029627748204333,
+          "standard_error": 0.1730873108769107,
+          "statistic": 1.8099968382390197,
           "term": "C(concept)[T.projectile_motion]"
         },
         {
-          "ci_high": 0.9763514552128773,
-          "ci_low": 0.048759584739687,
-          "estimate": 0.5125555199762821,
-          "p_value": 0.030309808984727748,
-          "standard_error": 0.23663492742466613,
-          "statistic": 2.16601803273296,
+          "ci_high": 0.9763514552128788,
+          "ci_low": 0.04875958473968589,
+          "estimate": 0.5125555199762823,
+          "p_value": 0.03030980898472817,
+          "standard_error": 0.2366349274246668,
+          "statistic": 2.166018032732955,
           "term": "phase"
         },
         {
-          "ci_high": 1.1135346397861254,
-          "ci_low": -0.3199723287674769,
-          "estimate": 0.3967811555093243,
-          "p_value": 0.2779221223598515,
-          "standard_error": 0.36569727297565735,
-          "statistic": 1.0849989453865467,
+          "ci_high": 1.1135346397861252,
+          "ci_low": -0.3199723287674787,
+          "estimate": 0.39678115550932325,
+          "p_value": 0.27792212235985303,
+          "standard_error": 0.36569727297565774,
+          "statistic": 1.0849989453865427,
           "term": "phase:C(version, Treatment(reference=\"A\"))[T.B]"
         },
         {
-          "ci_high": 2.085515556478221,
-          "ci_low": 0.5555894756091666,
-          "estimate": 1.3205525160436937,
-          "p_value": 0.0007157402570634495,
-          "standard_error": 0.39029443727969393,
-          "statistic": 3.3834776771295756,
+          "ci_high": 2.0855155564782217,
+          "ci_low": 0.5555894756091645,
+          "estimate": 1.320552516043693,
+          "p_value": 0.0007157402570634691,
+          "standard_error": 0.39029443727969465,
+          "statistic": 3.383477677129568,
           "term": "phase:C(version, Treatment(reference=\"A\"))[T.C]"
         }
       ],
@@ -392,8 +392,8 @@
       "omnibus_interaction": {
         "df": 2,
         "hypothesis": "joint version-by-phase interaction",
-        "p_value": 0.0032666571609398136,
-        "statistic": 11.447976183788676,
+        "p_value": 0.0032666571609399,
+        "statistic": 11.447976183788622,
         "terms": [
           "phase:C(version, Treatment(reference=\"A\"))[T.B]",
           "phase:C(version, Treatment(reference=\"A\"))[T.C]"
@@ -554,7 +554,7 @@
     "inputs": {
       "human_difference_long": {
         "rows": 480,
-        "sha256": "12236e995db37cc71411b5812d7b099a81a34e5661ca6f67572ebf1d93896024"
+        "sha256": "b118eb08ee847222a0b1f0951e77516ac1ccbbe720cd28916697b35b119f2acb"
       },
       "machine_case_long": {
         "rows": 72,

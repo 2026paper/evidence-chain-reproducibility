@@ -2,77 +2,77 @@
   "analysis_version": "1.0.0",
   "script": {
     "path": "analyze_reader_bridge.py",
-    "sha256": "eb164246c24437866d77bd3e8c5c4b573fec967ec4ee3c2cc861e13216d0b507"
+    "sha256": "7ec47821b1000d164f79e761bba7cefe4b561d4f8a05b421cdc165ef0b9022ca"
   },
   "sources": {
     "api_sources": [
       {
         "provider_directory": "anthropic",
         "path": "runs\\anthropic\\api_judge_scores_long.csv",
-        "sha256": "a8d91a8e4746ae1d34eca8bdc7e639e17a9864f82236a7e23be166e7b8c46573",
+        "sha256": "e9e12b6e12bc0eeb235f6587921e17eea6dd10f99d65572a604ca5848979b4eb",
         "rows": 18,
         "parse_success": 18
       },
       {
         "provider_directory": "deepseek",
         "path": "runs\\deepseek\\api_judge_scores_long.csv",
-        "sha256": "3330130fa629609d66d00b07b0744a8abe0a00b1871081bca8730931faaf40e5",
+        "sha256": "bfbe8bba130ffa6b82d472d4cabf8a178059bcac65fb9d956b50e6a231a5a013",
         "rows": 18,
         "parse_success": 18
       },
       {
         "provider_directory": "doubao",
         "path": "runs\\doubao\\api_judge_scores_long.csv",
-        "sha256": "e43c8092e300338df9f6b5658f9fb313989c5328c1befcec7a3c02b98cc547fd",
+        "sha256": "f524dbdfefbbdcdf98e2c202ee8c0a3559768fa1f5bef10da67aaf3016480117",
         "rows": 18,
         "parse_success": 18
       },
       {
         "provider_directory": "gemini",
         "path": "runs\\gemini\\api_judge_scores_long.csv",
-        "sha256": "d65057163b5eea6c4960fcbe8ebc45438bfae9579218fa9deea9efe5a23771f7",
+        "sha256": "fa0631690ff086c62201a5ec7a61e516cb175bc0fc64fd38b9299b1aed0a788a",
         "rows": 18,
         "parse_success": 18
       },
       {
         "provider_directory": "glm",
         "path": "runs\\glm\\api_judge_scores_long.csv",
-        "sha256": "06284e55dea135f0bcf112fe8d06d9eb2fd0973ae502b0ab62cee786b2f22dbc",
+        "sha256": "05a30909a3132a6e0c6f02e7a095215fc17f8705af81723e917b3691afafe2ac",
         "rows": 18,
         "parse_success": 18
       },
       {
         "provider_directory": "kimi",
         "path": "runs\\kimi\\api_judge_scores_long.csv",
-        "sha256": "b7ec43c4e77775778ee5fc48186f0db404b6ccadfccde1f94f91e537b0c09fe1",
+        "sha256": "6c1cbeb8fe432a4c13736edcdcf98d197f0edf29f5920f6b437579c1b99cdb41",
         "rows": 18,
         "parse_success": 18
       },
       {
         "provider_directory": "mimo",
         "path": "runs\\mimo\\api_judge_scores_long.csv",
-        "sha256": "9cb4c1e9bdf7704b3f4e582fbcafd5f85dd1a606256b0542a558fdb88b80488b",
+        "sha256": "6f8eb963ac9d1ad1ccdbb265741491fb4e92291c6b07dc19ba26826756fc1fa4",
         "rows": 18,
         "parse_success": 18
       },
       {
         "provider_directory": "openai",
         "path": "runs\\openai\\api_judge_scores_long.csv",
-        "sha256": "90d2cb1da14d1ecb9b7360716884eb0dd2fc286e431e0f02dd071e13d4b7df1d",
+        "sha256": "9aba4eb9b614148b8cf806f37ab63558e31013cc04787dc1ba277f2beef349c7",
         "rows": 18,
         "parse_success": 18
       },
       {
         "provider_directory": "qwen",
         "path": "runs\\qwen\\api_judge_scores_long.csv",
-        "sha256": "e969f0e1164bd2656d365d756e511eb76ef8f5c390023daf7ac6d15d7b0a4ce6",
+        "sha256": "eeb308976a64beb39e72cd44a1faba6563e745b3e5c2d4f607f2d8a42b04b44e",
         "rows": 18,
         "parse_success": 18
       }
     ],
     "reader_source": {
       "path": "analysis\\public_abc_cleaned_long.csv",
-      "sha256": "4729e3b56ae90c9eef0a75e0e31f98d496d8bd4896f46f3af5bc00b83df68a53",
+      "sha256": "19c53c56dfa1c24bea2cec089b61cf34f39b5819fafa24f086825536c4e86ed6",
       "long_rows": 2136,
       "paired_response_concept_rows": 1068,
       "responses": 178,
@@ -91,7 +91,8 @@
     "method": "nonparametric participant-cluster bootstrap, retaining all responses within a participant cluster",
     "seed": 2026071704,
     "draws": 10000,
-    "participant_clusters": 167
+    "participant_clusters": 167,
+    "cluster_order": "SHA-256 of analysis-visible response content; invariant to opaque participant rekeying"
   },
   "complete_analysis_set": {
     "primary": [
@@ -115,11 +116,11 @@
   },
   "outputs": {
     "api_scores_merged_162.csv": "b6f0a28847b1bcd701ce3d8a78f50ecb0e9012a40ae8e04ad722599060688649",
-    "reader_bridge_cells_18.csv": "504c0844fe65efaa46426b61bb41e39defdf63b244f3be01ab15ade8f0583986",
-    "reader_bridge_associations.csv": "4370968c0548f0f816447476ac605a783b877f3eb35b3b7fc432fdb97131cfcc",
+    "reader_bridge_cells_18.csv": "bde1dcf87071ec1379d4de747d48116f53786274fc4101ed94eaa5ca80a15b38",
+    "reader_bridge_associations.csv": "7f6b5849227bed54cd46c037560ee16f930db669f5afc8d5f5bd18e6df2f610b",
     "reader_bridge_version_summary.csv": "6d6a998f88bcb986be8edbee19fbb8ebaf128fcb3f2052608d4f656c4f67e204",
-    "reader_bridge_analysis_results.json": "1b9e1cde7956a7206e1e3915855e496ea6b9df74a9f3437a89621bfcc25167ec",
-    "READER_BRIDGE_REPORT.md": "1842c0cfbd6e83cef96a02008be4864bee7680a0feeae2d2b79c900f911616e9"
+    "reader_bridge_analysis_results.json": "093adfd641624e9ad26e08b04fa88197863f343bdd68bc944b11362d6ba82e59",
+    "READER_BRIDGE_REPORT.md": "c33caafe0a1b6111f4c9232f19478e02f343963d5ca72f269b7ef88967769dc8"
   },
   "qa": {
     "status": "PASS",

@@ -1,10 +1,10 @@
 {
   "email_matches": 0,
-  "file_count_before_hash_manifest": 214,
+  "file_count_before_hash_manifest": 215,
   "forbidden_or_sensitive_findings": [],
   "overall_status": "PASS",
   "reader_bridge_score_rows": 162,
   "repeat_analysis_rows": 2430,
   "text_files_scanned": 199,
-  "total_bytes_before_hash_manifest": 25736406
+  "total_bytes_before_hash_manifest": 26541068
 }
