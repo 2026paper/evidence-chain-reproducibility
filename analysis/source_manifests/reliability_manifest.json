@@ -84,10 +84,10 @@
       "sha256": "0d6b1e2450de3f4eb8363b51dbbcc5e7a02d95c1c928db46363432661b0aa13c"
     },
     "human_panel_size_curve": {
-      "bytes": 188128,
+      "bytes": 188069,
       "path": "analysis/reliability_human_panel_size_curve.csv",
       "rows": 540,
-      "sha256": "764d223a1875282b5f68adaa32c4cb182d10dafd2470421344038cc9b25846f0"
+      "sha256": "2a8ec5f22a683b91827d5a7fc2b6249840087597025ec50896bc644befd5ff8a"
     },
     "qa": {
       "bytes": 1931,

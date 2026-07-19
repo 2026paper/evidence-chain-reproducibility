@@ -165,9 +165,9 @@
       "sha256": "e5d799418cd43d2456e3b000d1d9e85a39e014f11ec0a747bf4c115d3799cf54"
     },
     "ordinal_gee_attempt": {
-      "bytes": 2660,
+      "bytes": 2272,
       "path": "analysis/alignment_ordinal_gee_attempt.json",
-      "sha256": "6e4f5daeeb8404540cbe6f4e9ea29dff0683765ccdeb33b08f4bca0248257b59"
+      "sha256": "b92c8d3e00d46a387f0fd40fab174c873f19bfc6a3e7b251437cac8e1edef85f"
     },
     "second_concept_bootstrap_draws": {
       "bytes": 471082,
@@ -203,9 +203,9 @@
       "sha256": "f15d19b63580dcbc38bc99a628749ef1839e3d63b13215db0631ab61a486fa20"
     },
     "validation": {
-      "bytes": 9829,
+      "bytes": 9828,
       "path": "analysis/alignment_validation.json",
-      "sha256": "e730288e6f6a162a9598aefb364aef55891e7dcc19c9ec3ab288aa6ba64b7705"
+      "sha256": "cb13d0d122bcb3cf82eaced34c6d31e63d8b6f147f91742d0e48f26cf53bf41f"
     }
   },
   "packages": {

@@ -3,7 +3,7 @@
 **Overall status: PASS**
 
 - Files audited before the generated audit report and SHA manifest: 216
-- Bytes audited before the generated audit report and SHA manifest: 26548761
+- Bytes audited before the generated audit report and SHA manifest: 26548313
 - Text files scanned: 200
 - Repeat-stability analysis rows: 2430
 - Reader-bridge API score rows: 162
